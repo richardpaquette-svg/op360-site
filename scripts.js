@@ -28,11 +28,10 @@ const LOGO_SVG_SM = `<svg class="logo-svg-sm" viewBox="0 0 40 40" fill="none" xm
 function buildNav(activePage) {
   const pages = [
     { href: "index.html", label: "Accueil" },
-    { href: "diagnostic.html", label: "Diagnostic Flash" },
-    { href: "offres.html", label: "Nos Offres" },
     { href: "equipe.html", label: "Qui sommes-nous" },
-    { href: "pourqui.html", label: "Pour qui" },
-    { href: "contact.html", label: "Contact" },
+    { href: "offres.html", label: "Notre approche" },
+    { href: "offres.html", label: "Nos offres" },
+    { href: "contact.html", label: "Nous contacter" },
   ];
 
   const links = pages.map(p =>
@@ -52,7 +51,6 @@ function buildNav(activePage) {
       </button>
     </nav>`;
 
-  // Scroll effect
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
@@ -116,7 +114,7 @@ function buildFooter() {
         </div>
         <div class="footer-bottom">
           <span>© 2026 Operating Partners 360 — Tous droits réservés</span>
-          <span>Valeurs <strong style="color:var(--cyan)">FIT</strong> — Fiabilité · Impact · Transmission</span>
+          <span>Valeurs <strong style="color:var(--cyan)">FMT</strong> — Fiabilité · Impact · Transmission</span>
           <span><a href="mentions.html">Mentions légales</a></span>
         </div>
       </div>
@@ -137,7 +135,6 @@ function initReveal() {
   });
 }
 
-// ── Init page ─────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
 });
