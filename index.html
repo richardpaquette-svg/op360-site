@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operating Partners 360 — De la Vision à l'Exécution</title>
+<meta name="description" content="OP360 accompagne les dirigeants de PME, ETI et investisseurs pour transformer leurs ambitions en résultats opérationnels. Diagnostic Flash en 5 jours.">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 110px 48px 80px;
+  background: var(--navy);
+}
+.hero-photo {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80');
+  background-size: cover; background-position: center;
+  opacity: 0.18;
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,35,50,0.7) 0%, rgba(26,35,50,0.85) 100%); }
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(0,212,170,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,170,0.04) 1px, transparent 1px); background-size: 72px 72px; }
+.hero-content { position: relative; z-index: 2; max-width: 900px; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.25);
+  border-radius: 100px; padding: 7px 20px; margin-bottom: 32px;
+  font-size: 12px; font-weight: 700; color: var(--cyan);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  animation: fadeUp 0.7s ease both;
+}
+.hero-eyebrow::before { content:''; width:7px; height:7px; background:var(--cyan); border-radius:50%; animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
+
+.hero h1 {
+  font-size: clamp(36px, 5.2vw, 60px); font-weight: 700;
+  color: var(--white); line-height: 1.12; letter-spacing: -0.025em;
+  margin-bottom: 16px; animation: fadeUp 0.7s 0.1s ease both;
+}
+.hero h1 .accent { color: var(--cyan); display: block; }
+
+.hero-sub {
+  font-size: clamp(17px, 2.2vw, 21px); font-weight: 300;
+  color: rgba(255,255,255,0.7); line-height: 1.55; margin-bottom: 44px;
+  max-width: 680px; margin-left: auto; margin-right: auto;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+.hero-sub strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+
+.hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 48px; animation: fadeUp 0.7s 0.3s ease both; }
+.hero-tag {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 6px; padding: 9px 20px; font-size: 14px; font-weight: 600;
+  color: rgba(255,255,255,0.8); transition: all 0.2s;
+}
+.hero-tag:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0,212,170,0.08); }
+
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.7s 0.4s ease both; }
+
+.hero-stats {
+  display: flex; justify-content: center; gap: 56px; flex-wrap: wrap;
+  margin-top: 72px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.08);
+  animation: fadeUp 0.7s 0.55s ease both;
+}
+.hero-stat { text-align: center; }
+.hero-stat-nb { font-size: 38px; font-weight: 700; color: var(--cyan); line-height: 1; }
+.hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 6px; line-height: 1.4; }
+
+.hero-scroll {
+  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: rgba(255,255,255,0.28); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  animation: fadeUp 1s 0.8s ease both;
+}
+.scroll-bar { width: 1px; height: 44px; background: linear-gradient(to bottom, rgba(0,212,170,0.6), transparent); animation: scrollPulse 1.8s infinite; }
+@keyframes scrollPulse { 0%{opacity:1}100%{opacity:0;transform:translateY(12px)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none} }
+
+/* ── STAT CHOC ── */
+.stat-choc-wrap { background: var(--white); padding: 0 48px; }
+.stat-choc {
+  background: var(--cyan-light); border-left: 4px solid var(--cyan);
+  border-radius: 0 12px 12px 0; padding: 40px 48px;
+  display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+}
+.stat-choc-nb { font-size: 64px; font-weight: 700; color: var(--navy); line-height: 1; flex-shrink: 0; }
+.stat-choc-nb span { color: var(--cyan); }
+.stat-choc-text h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.stat-choc-text p { font-size: 15px; color: var(--gray-text); max-width: 520px; line-height: 1.65; }
+
+/* ── MOMENTS ── */
+.moments-section { background: var(--navy); position: relative; overflow: hidden; }
+.moments-photo {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=80');
+  background-size: cover; background-position: center top;
+  opacity: 0.07;
+}
+.moments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
+.moment-card {
+  border: 1px solid rgba(0,212,170,0.18); border-radius: var(--radius);
+  padding: 40px 32px; transition: all 0.3s;
+  background: rgba(255,255,255,0.03);
+}
+.moment-card:hover { border-color: rgba(0,212,170,0.5); transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); }
+.moment-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--cyan); transform:scaleX(0); transform-origin:left; transition:transform 0.3s; border-radius:var(--radius) var(--radius) 0 0; }
+.moment-card { position: relative; }
+.moment-card:hover::after { transform: scaleX(1); }
+.moment-icon { font-size: 36px; margin-bottom: 20px; display: block; }
+.moment-card h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.moment-valeur { font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 16px; line-height: 1.45; }
+.moment-cas { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.65; }
+.moment-cas strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+
+/* ── DIFF ── */
+.diff-section { background: var(--white); }
+.diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.diff-card {
+  background: var(--gray-bg); border: 1px solid var(--gray-border);
+  border-radius: var(--radius); padding: 36px 28px;
+  position: relative; transition: all 0.25s; overflow: hidden;
+}
+.diff-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.diff-nb { position: absolute; top: 20px; right: 22px; font-size: 52px; font-weight: 700; color: rgba(0,212,170,0.09); line-height: 1; }
+.diff-icon { font-size: 30px; margin-bottom: 16px; }
+.diff-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+.diff-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
+.diff-tag { display: inline-block; background: var(--cyan-light); border-radius: 100px; padding: 4px 14px; font-size: 12px; font-weight: 700; color: var(--cyan); margin-top: 14px; }
+
+/* ── OFFRES ── */
+.offres-section { background: var(--gray-bg); }
+.offres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.offre-card { background: var(--white); border: 1.5px solid var(--gray-border); border-radius: var(--radius); padding: 32px 26px; transition: all 0.25s; position: relative; }
+.offre-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.offre-card.featured { border-color: var(--cyan); background: linear-gradient(135deg, var(--white) 0%, var(--cyan-light) 100%); }
+.offre-badge { position: absolute; top: 16px; right: 16px; background: var(--cyan); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
+.offre-icon { font-size: 28px; margin-bottom: 14px; }
+.offre-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+.offre-bullets { list-style: none; }
+.offre-bullets li { font-size: 13px; color: var(--gray-text); line-height: 1.55; padding: 4px 0; display: flex; align-items: flex-start; gap: 8px; }
+.offre-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
+.offre-lien { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--cyan); transition: gap 0.2s; }
+.offre-lien:hover { gap: 10px; }
+
+/* ── TÉMOIGNAGES ── */
+.temoignages-section { background: var(--white); }
+.temos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.temo-card { background: var(--navy); border-radius: var(--radius); padding: 40px 36px; position: relative; overflow: hidden; }
+.temo-card::before { content:'\201C'; position:absolute; top:-12px; left:18px; font-size:110px; color:rgba(0,212,170,0.12); line-height:1; }
+.temo-stars { display:flex; gap:3px; margin-bottom:16px; }
+.temo-stars span { color:var(--cyan); font-size:13px; }
+.temo-quote { font-size: 16px; color: var(--white); line-height: 1.65; font-style: italic; margin-bottom: 24px; position: relative; z-index: 1; }
+.temo-bar { width: 32px; height: 2px; background: var(--cyan); border-radius: 2px; margin-bottom: 12px; }
+.temo-author { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; text-transform: uppercase; }
+.temo-entreprise { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+
+/* ── PHOTO TERRAIN ── */
+.terrain-section { background: var(--navy); padding: 0; position: relative; height: 420px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.terrain-photo { position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1400&q=80'); background-size: cover; background-position: center; }
+.terrain-overlay { position: absolute; inset: 0; background: rgba(26,35,50,0.72); }
+.terrain-content { position: relative; z-index: 2; text-align: center; padding: 0 48px; }
+.terrain-content p { font-size: clamp(20px, 3vw, 30px); font-weight: 300; color: var(--white); line-height: 1.5; max-width: 760px; font-style: italic; }
+.terrain-content p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
+
+/* ── VALEURS FIT ── */
+.fit-section { background: var(--cyan-light); padding: 80px 48px; }
+.fit-header { text-align: center; margin-bottom: 56px; }
+.fit-title { font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--navy); letter-spacing: -0.02em; }
+.fit-title span { color: var(--cyan); }
+.fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+.fit-card { background: var(--white); border-radius: 14px; padding: 40px 32px; text-align: center; border: 1px solid rgba(0,212,170,0.2); transition: all 0.25s; }
+.fit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.fit-letter { font-size: 64px; font-weight: 700; color: var(--cyan); line-height: 1; margin-bottom: 6px; }
+.fit-card h3 { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.fit-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
+
+/* ── ÉQUIPE ── */
+.equipe-section { background: var(--navy); }
+.equipe-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 48px; }
+.equipe-card { border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 32px 24px; text-align: center; transition: all 0.25s; }
+.equipe-card:hover { border-color: rgba(0,212,170,0.4); transform: translateY(-4px); background: rgba(0,212,170,0.04); }
+.equipe-photo { width: 88px; height: 88px; border-radius: 50%; margin: 0 auto 18px; border: 2.5px solid rgba(0,212,170,0.35); object-fit: cover; }
+.equipe-card h3 { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.equipe-titre { font-size: 13px; color: var(--cyan); font-weight: 600; margin-bottom: 10px; }
+.equipe-expertise { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+.equipe-phrase { background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); border-radius: 12px; padding: 36px 48px; text-align: center; }
+.equipe-phrase p { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.8); line-height: 1.65; max-width: 760px; margin: 0 auto; font-style: italic; }
+.equipe-phrase p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
+
+/* ── CTA FINAL ── */
+.cta-final { background: var(--navy); padding: 96px 48px; position: relative; overflow: hidden; }
+.cta-final::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 70% at 75% 50%, rgba(0,212,170,0.07) 0%, transparent 70%); pointer-events:none; }
+.cta-inner { text-align: center; position: relative; z-index: 1; }
+.cta-inner h2 { font-size: clamp(30px, 4.5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
+.cta-inner h2 span { color: var(--cyan); }
+.cta-inner p { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 540px; margin: 0 auto 48px; line-height: 1.65; }
+.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+.cta-contacts { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
+.cta-contact { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.6); font-size: 15px; transition: color 0.2s; }
+.cta-contact:hover { color: var(--cyan); }
+.cta-contact-icon { width: 38px; height: 38px; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .diff-grid, .offres-grid { grid-template-columns: repeat(2, 1fr); }
+  .equipe-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .hero { padding: 90px 24px 64px; }
+  .moments-grid, .diff-grid, .offres-grid, .temos-grid, .fit-grid, .equipe-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 28px; }
+  .stat-choc-wrap { padding: 0 24px; }
+  .stat-choc { padding: 32px 24px; flex-direction: column; text-align: center; }
+  .terrain-section { height: 300px; }
+  .equipe-phrase { padding: 28px 24px; }
+  .cta-contacts { flex-direction: column; align-items: center; }
+  .fit-section { padding: 64px 24px; }
+  .cta-final { padding: 64px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-photo"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Operating Partners 360 — Pairs &amp; Partenaires</div>
+    <h1>
+      Vous portez la Vision,<br>la Stratégie et le Risque.
+      <span class="accent">Nous accélérons et sécurisons l'Exécution.</span>
+    </h1>
+    <p class="hero-sub">
+      Dirigeants de PME, ETI, investisseurs…<br>
+      <strong>OP360, des pairs à vos côtés</strong>, pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions.
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">🏭 Dirigeants de PME</span>
+      <span class="hero-tag">🏢 Dirigeants d'ETI</span>
+      <span class="hero-tag">📈 Investisseurs &amp; Fonds</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="diagnostic.html" class="btn-primary">Diagnostic Flash — 5 jours</a>
+      <a href="offres.html" class="btn-secondary">Découvrir nos offres</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-nb">5</div><div class="hero-stat-label">jours pour<br>voir clair</div></div>
+      <div class="hero-stat"><div class="hero-stat-nb">12</div><div class="hero-stat-label">domaines<br>d'analyse</div></div>
+      <div class="hero-stat"><div class="hero-stat-nb">360°</div><div class="hero-stat-label">vision<br>systémique</div></div>
+      <div class="hero-stat"><div class="hero-stat-nb">4</div><div class="hero-stat-label">anciens<br>dirigeants</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-bar"></div>Découvrir</div>
+</section>
+
+<!-- STAT CHOC -->
+<div class="stat-choc-wrap">
+  <div class="container" style="padding:64px 0;">
+    <div class="stat-choc reveal">
+      <div class="stat-choc-nb">10–<span>20%</span></div>
+      <div class="stat-choc-text">
+        <h3>Seulement 10–20 % des stratégies aboutissent.</h3>
+        <p>OP360 renforce votre exécution grâce à un diagnostic rapide, un parcours structuré et un monitoring SaaS. De la vision à la valeur, en évitant les échecs classiques.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 MOMENTS CLÉS -->
+<section class="moments-section" id="moments">
+  <div class="moments-photo"></div>
+  <div class="container">
+    <div class="section-label section-label-white reveal">Quand intervenir</div>
+    <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
+    <p class="section-intro section-intro-white reveal">3 moments clés où notre expertise opérationnelle change la trajectoire.</p>
+    <div class="moments-grid" id="moments-grid"></div>
+  </div>
+</section>
+
+<!-- 6 DIFFÉRENCIATEURS -->
+<section class="diff-section" id="diff">
+  <div class="container">
+    <div class="section-label reveal">Notre approche</div>
+    <h2 class="section-title reveal">Quand OP360 fait la différence</h2>
+    <p class="section-intro reveal">Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et outils digitaux centrés sur les enjeux du dirigeant.</p>
+    <div class="diff-grid" id="diff-grid"></div>
+  </div>
+</section>
+
+<!-- 6 OFFRES -->
+<section class="offres-section" id="offres">
+  <div class="container">
+    <div class="section-label reveal">Nos leviers d'intervention</div>
+    <h2 class="section-title reveal">6 offres modulables et combinables</h2>
+    <p class="section-intro reveal">De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources.</p>
+    <div class="offres-grid" id="offres-grid"></div>
+  </div>
+</section>
+
+<!-- PHOTO TERRAIN -->
+<div class="terrain-section">
+  <div class="terrain-photo"></div>
+  <div class="terrain-overlay"></div>
+  <div class="terrain-content">
+    <p>« Nous apportons <strong>ce que nous n'avons pas trouvé</strong> lorsque nous-mêmes nous étions dirigeants. Nous combinons tous une double compétence : celle de la vision et celle de <strong>son exécution concrète.</strong> »</p>
+  </div>
+</div>
+
+<!-- TÉMOIGNAGES -->
+<section class="temoignages-section" id="temoignages">
+  <div class="container">
+    <div class="section-label reveal">Ils nous ont fait confiance</div>
+    <h2 class="section-title reveal">Ce que disent nos clients</h2>
+    <div class="temos-grid" id="temos-grid"></div>
+  </div>
+</section>
+
+<!-- VALEURS FIT -->
+<section class="fit-section">
+  <div class="fit-header reveal">
+    <div class="section-label" style="text-align:center">Nos valeurs</div>
+    <h2 class="fit-title">We <span>FIT</span> You !</h2>
+  </div>
+  <div class="fit-grid">
+    <div class="fit-card reveal"><div class="fit-letter">F</div><h3>Fiabilité</h3><p>Être le partenaire de confiance, expérimenté et structuré, sur lequel dirigeants et investisseurs peuvent compter en toutes circonstances.</p></div>
+    <div class="fit-card reveal"><div class="fit-letter">I</div><h3>Impact</h3><p>Rechercher le concret, la performance mesurable et la création de valeur durable. Moins de slides, plus d'exécution terrain.</p></div>
+    <div class="fit-card reveal"><div class="fit-letter">T</div><h3>Transmission</h3><p>Partager l'expertise, renforcer l'autonomie des équipes et pérenniser les transformations. Éviter la dépendance à un prestataire.</p></div>
+  </div>
+</section>
+
+<!-- ÉQUIPE -->
+<section class="equipe-section" id="equipe-home">
+  <div class="container">
+    <div class="section-label section-label-white reveal">Les fondateurs</div>
+    <h2 class="section-title section-title-white reveal">4 anciens dirigeants à vos côtés</h2>
+    <p class="section-intro section-intro-white reveal">Nous sommes des pairs qui ont déjà traversé vos défis. Pas des consultants — des opérationnels.</p>
+    <div class="equipe-grid" id="equipe-grid"></div>
+    <div class="equipe-phrase reveal">
+      <p>« Nous sommes un groupe de pairs et de partenaires qui ont déjà traversé vos défis. <strong>Nous sommes au service de vos équipes.</strong> »</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="contact">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-label section-label-white" style="text-align:center;margin-bottom:16px">Passons à l'action</div>
+      <h2>Parlons de <span>vos enjeux</span></h2>
+      <p>Un Diagnostic vous apportera certainement la visibilité que vous attendez. Nous vous répondons sous 24h.</p>
+      <div class="cta-btns">
+        <a href="diagnostic.html" class="btn-primary">Demander un Diagnostic Flash</a>
+        <a href="contact.html" class="btn-secondary">Nous contacter</a>
+      </div>
+      <div class="cta-contacts">
+        <a href="mailto:richard.paquette@operating360.com" class="cta-contact">
+          <div class="cta-contact-icon">✉</div>
+          richard.paquette@operating360.com
+        </a>
+        <a href="tel:+33651721524" class="cta-contact">
+          <div class="cta-contact-icon">📞</div>
+          06 51 72 15 24 — Richard Paquette
+        </a>
+        <a href="https://www.linkedin.com/company/operating-partners-360" target="_blank" class="cta-contact">
+          <div class="cta-contact-icon">in</div>
+          LinkedIn OP360
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="contenu.js"></script>
+<script src="scripts.js"></script>
+<script>
+buildNav('index.html');
+buildFooter();
+
+// Moments
+document.getElementById('moments-grid').innerHTML = OP360.moments.map(m => `
+  <div class="moment-card reveal">
+    <span class="moment-icon">${m.icone}</span>
+    <h3>${m.titre}</h3>
+    <p class="moment-valeur">${m.valeur}</p>
+    <p class="moment-cas"><strong>Cas :</strong> ${m.cas}</p>
+  </div>`).join('');
+
+// Différenciateurs
+document.getElementById('diff-grid').innerHTML = OP360.differenciateurs.map(d => `
+  <div class="diff-card reveal">
+    <div class="diff-nb">${d.nb}</div>
+    <div class="diff-icon">${d.icone}</div>
+    <h3>${d.titre}</h3>
+    <p>${d.desc}</p>
+    <span class="diff-tag">${d.tag}</span>
+  </div>`).join('');
+
+// Offres
+document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
+  <div class="offre-card ${o.featured ? 'featured' : ''} reveal">
+    ${o.badge ? `<div class="offre-badge">${o.badge}</div>` : ''}
+    <div class="offre-icon">${o.icone}</div>
+    <h3>${o.titre}</h3>
+    <ul class="offre-bullets">${o.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+    <a href="offres.html" class="offre-lien">En savoir plus →</a>
+  </div>`).join('');
+
+// Témoignages
+document.getElementById('temos-grid').innerHTML = OP360.temoignages.map(t => `
+  <div class="temo-card reveal">
+    <div class="temo-stars">${'<span>★</span>'.repeat(5)}</div>
+    <p class="temo-quote">${t.quote}</p>
+    <div class="temo-bar"></div>
+    <div class="temo-author">${t.auteur}</div>
+    <div class="temo-entreprise">${t.entreprise}</div>
+  </div>`).join('');
+
+// Équipe
+document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => `
+  <div class="equipe-card reveal">
+    <img class="equipe-photo" src="${OP360.photos[e.photo]}" alt="${e.prenom} ${e.nom}" onerror="this.style.display='none'">
+    <h3>${e.prenom} ${e.nom}</h3>
+    <div class="equipe-titre">${e.titre}</div>
+    <div class="equipe-expertise">${e.expertise}</div>
+  </div>`).join('');
+
+initReveal();
+</script>
+</body>
+</html>

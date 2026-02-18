@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Offres — 6 leviers d'intervention | OP360</title>
+<meta name="description" content="Diagnostic Flash, Shadow Codir, Accompagnement Terrain, Due Diligence, Formations et Plateforme SaaS : 6 offres modulables et combinables selon vos besoins.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.hero-offres {
+  min-height: 55vh; background: var(--navy); position: relative; overflow: hidden;
+  display: flex; align-items: center; padding: 110px 48px 80px; justify-content: center; text-align: center;
+}
+.hero-offres-photo {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1400&q=80');
+  background-size: cover; background-position: center; opacity: 0.1;
+}
+.hero-offres-overlay { position: absolute; inset: 0; background: rgba(26,35,50,0.88); }
+.hero-offres-content { position: relative; z-index: 2; max-width: 720px; }
+.hero-offres h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 16px; }
+.hero-offres h1 span { color: var(--cyan); }
+.hero-offres-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 580px; margin: 0 auto 36px; }
+.hero-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.hero-pill { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 8px 18px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.8); }
+
+/* ── OFFRE DETAIL ── */
+.offre-detail {
+  padding: 96px 48px;
+  border-bottom: 1px solid var(--gray-border);
+}
+.offre-detail:nth-child(even) { background: var(--gray-bg); }
+.offre-detail-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;
+  max-width: 1120px; margin: 0 auto;
+}
+.offre-detail:nth-child(even) .offre-detail-inner { direction: rtl; }
+.offre-detail:nth-child(even) .offre-detail-inner > * { direction: ltr; }
+
+.offre-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.offre-icon-lg { width: 58px; height: 58px; background: var(--cyan-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; }
+.offre-num { font-size: 12px; font-weight: 700; color: rgba(0,212,170,0.6); letter-spacing: 0.1em; text-transform: uppercase; }
+.offre-detail h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 10px; letter-spacing: -0.02em; }
+.offre-detail-sub { font-size: 16px; font-weight: 600; color: var(--cyan); margin-bottom: 20px; line-height: 1.5; font-style: italic; }
+.offre-detail p { font-size: 15px; color: var(--gray-text); line-height: 1.75; margin-bottom: 16px; }
+.offre-bullets-detail { list-style: none; margin: 20px 0; }
+.offre-bullets-detail li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--gray-border); font-size: 14px; color: var(--navy); line-height: 1.55; }
+.offre-bullets-detail li:last-child { border: none; }
+.offre-bullets-detail li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+.offre-visual { background: var(--navy); border-radius: 16px; padding: 40px 36px; }
+.offre-visual-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.offre-visual-icon { font-size: 32px; }
+.offre-visual-title { font-size: 16px; font-weight: 700; color: var(--white); }
+.offre-visual-badge { font-size: 11px; font-weight: 700; color: var(--cyan); background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 100px; padding: 3px 10px; margin-top: 4px; display: inline-block; }
+.offre-kpi { background: rgba(0,212,170,0.06); border: 1px solid rgba(0,212,170,0.15); border-radius: 10px; padding: 18px 20px; margin-bottom: 12px; }
+.offre-kpi:last-child { margin-bottom: 0; }
+.offre-kpi h4 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.offre-kpi p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5; margin: 0; }
+.offre-cta-row { margin-top: 28px; }
+
+/* ── COMBO ── */
+.combo-section { background: var(--cyan-light); padding: 80px 48px; }
+.combo-content { max-width: 760px; margin: 0 auto; text-align: center; }
+.combo-content h2 { font-size: clamp(26px, 3.5vw, 38px); font-weight: 700; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em; }
+.combo-content p { font-size: 17px; font-weight: 300; color: var(--gray-text); line-height: 1.7; margin-bottom: 32px; }
+.combo-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
+.combo-tag { background: var(--white); border: 1.5px solid rgba(0,212,170,0.3); border-radius: 8px; padding: 10px 20px; font-size: 14px; font-weight: 600; color: var(--navy); }
+.combo-tag span { color: var(--cyan); margin-right: 6px; }
+
+@media (max-width: 1024px) {
+  .offre-detail-inner, .offre-detail:nth-child(even) .offre-detail-inner { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
+}
+@media (max-width: 768px) {
+  .hero-offres { padding: 90px 24px 64px; }
+  .offre-detail { padding: 64px 24px; }
+  .combo-section { padding: 64px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero-offres">
+  <div class="hero-offres-photo"></div>
+  <div class="hero-offres-overlay"></div>
+  <div class="hero-offres-content">
+    <div class="section-label section-label-white" style="text-align:center;margin-bottom:16px">Nos leviers d'intervention</div>
+    <h1>6 offres <span>modulables</span><br>et combinables</h1>
+    <p class="hero-offres-sub">De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources. Chacune peut être utilisée seule ou combinée.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">⚡ Diagnostic Flash</span>
+      <span class="hero-pill">👥 Shadow Codir</span>
+      <span class="hero-pill">🤝 Terrain</span>
+      <span class="hero-pill">🔬 Due Diligence</span>
+      <span class="hero-pill">🎓 Formations</span>
+      <span class="hero-pill">💻 SaaS</span>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE 1 — DIAGNOSTIC FLASH -->
+<section class="offre-detail" id="diagnostic">
+  <div class="offre-detail-inner">
+    <div>
+      <div class="offre-header">
+        <div class="offre-icon-lg">⚡</div>
+        <div><div class="offre-num">Offre 01 — Recommandée</div></div>
+      </div>
+      <h2>Diagnostic Flash</h2>
+      <p class="offre-detail-sub">5 jours pour voir clair et agir juste</p>
+      <p>Évaluation rapide et ciblée des enjeux prioritaires. Le point de départ idéal pour tout dirigeant souhaitant passer un cap, sécuriser une décision ou accélérer son exécution.</p>
+      <ul class="offre-bullets-detail">
+        <li>État des lieux de la maturité d'exécution sur 12 domaines</li>
+        <li>Identification des enjeux prioritaires et des leviers de valeur</li>
+        <li>Recommandations priorisées et quick wins immédiatement actionnables</li>
+        <li>Parcours d'exécution complet adapté à votre dimension</li>
+        <li>Executive Pack visuel : heatmaps, radar, matrice impact/priorité</li>
+        <li>Durée terrain : 1 à 3 jours — Restitution : sous 5 jours</li>
+      </ul>
+      <a href="diagnostic.html" class="btn-primary" style="display:inline-block">Découvrir le Diagnostic Flash →</a>
+    </div>
+    <div class="offre-visual">
+      <div class="offre-visual-header">
+        <div class="offre-visual-icon">⚡</div>
+        <div><div class="offre-visual-title">Diagnostic Flash</div><div class="offre-visual-badge">Offre phare OP360</div></div>
+      </div>
+      <div class="offre-kpi"><h4>ROI immédiat</h4><p>Clarification des priorités et quick wins dès la restitution</p></div>
+      <div class="offre-kpi"><h4>12 domaines analysés</h4><p>Vision systémique complète, aucun angle mort</p></div>
+      <div class="offre-kpi"><h4>5 livrables concrets</h4><p>Rapport, Executive Pack, Top domaines, Plan d'action, Parcours d'exécution</p></div>
+      <div class="offre-kpi"><h4>« Il y a un avant et un après »</h4><p>Dirigeant PME Industrielle — client OP360</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE 2 — SHADOW CODIR -->
+<section class="offre-detail" id="shadow">
+  <div class="offre-detail-inner">
+    <div>
+      <div class="offre-header">
+        <div class="offre-icon-lg">👥</div>
+        <div><div class="offre-num">Offre 02</div></div>
+      </div>
+      <h2>Shadow Codir</h2>
+      <p class="offre-detail-sub">L'appui d'un collectif de pairs qui ont vécu vos défis</p>
+      <p>Un collectif ad hoc multisectoriel et multifonctionnel, constituable à la demande pour répondre aux enjeux spécifiques du dirigeant. Nativement intégré aux diagnostics OP360.</p>
+      <ul class="offre-bullets-detail">
+        <li>Collectif structuré et pluridisciplinaire : stratégie, finance, digital, RSE</li>
+        <li>Dirigeants expérimentés apportant des expertises complémentaires et coordonnées</li>
+        <li>Mobilisable ad hoc et à la demande, ponctuellement ou dans la durée</li>
+        <li>Nativement intégré aux diagnostics et parcours d'exécution</li>
+        <li>Un interlocuteur central malgré la complexité collective</li>
+      </ul>
+      <a href="contact.html" class="btn-outline" style="display:inline-block;border-color:var(--navy);color:var(--navy)">Constituer mon Shadow Codir →</a>
+    </div>
+    <div class="offre-visual">
+      <div class="offre-visual-header">
+        <div class="offre-visual-icon">👥</div>
+        <div><div class="offre-visual-title">Shadow Codir</div><div class="offre-visual-badge">Collectif ad hoc</div></div>
+      </div>
+      <div class="offre-kpi"><h4>Multisectoriel</h4><p>Des pairs issus de secteurs et fonctions complémentaires aux vôtres</p></div>
+      <div class="offre-kpi"><h4>Mobilisable en 24/48h</h4><p>Constituable rapidement pour répondre à l'urgence opérationnelle</p></div>
+      <div class="offre-kpi"><h4>Sans changer d'interlocuteur</h4><p>Un OP360 central coordonne l'ensemble du collectif pour vous</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE 3 — ACCOMPAGNEMENT TERRAIN -->
+<section class="offre-detail" id="terrain">
+  <div class="offre-detail-inner">
+    <div>
+      <div class="offre-header">
+        <div class="offre-icon-lg">🤝</div>
+        <div><div class="offre-num">Offre 03</div></div>
+      </div>
+      <h2>Accompagnement Terrain</h2>
+      <p class="offre-detail-sub">Au cœur de l'exécution, à vos côtés ou au sein de vos équipes</p>
+      <p>Support opérationnel direct, dimensionné à l'entreprise. Nous sommes présents sur le terrain, en immersion ou en appui, pour piloter les projets structurants avec vos équipes.</p>
+      <ul class="offre-bullets-detail">
+        <li>À la dimension de l'entreprise — PME, ETI, startup</li>
+        <li>En immersion (temps plein ou partiel) ou en appui externe régulier</li>
+        <li>Individuel (Operating Partner dédié) ou par équipe</li>
+        <li>Formats hybrides adaptés à vos contraintes et vos ressources</li>
+        <li>Plans 100 jours / 1 an / 3 ans, KPIs, pilotage terrain</li>
+        <li>Posture de pair, jamais de conseil top-down</li>
+      </ul>
+      <a href="contact.html" class="btn-outline" style="display:inline-block;border-color:var(--navy);color:var(--navy)">Discuter de votre besoin →</a>
+    </div>
+    <div class="offre-visual">
+      <div class="offre-visual-header">
+        <div class="offre-visual-icon">🤝</div>
+        <div><div class="offre-visual-title">Accompagnement Terrain</div><div class="offre-visual-badge">Hybride & flexible</div></div>
+      </div>
+      <div class="offre-kpi"><h4>Immersion possible</h4><p>Temps plein, partiel ou en appui : adapté à votre organisation</p></div>
+      <div class="offre-kpi"><h4>Pilotage de projets</h4><p>Plans structurants, KPIs, suivi régulier avec la direction</p></div>
+      <div class="offre-kpi"><h4>Posture de pair</h4><p>Nous sommes au service de vos équipes, pas au-dessus d'elles</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE 4 — DUE DILIGENCE -->
+<section class="offre-detail" id="duediligence">
+  <div class="offre-detail-inner">
+    <div>
+      <div class="offre-header">
+        <div class="offre-icon-lg">🔬</div>
+        <div><div class="offre-num">Offre 04</div></div>
+      </div>
+      <h2>Due Diligence Opérationnelle</h2>
+      <p class="offre-detail-sub">Analyse approfondie incluant RSE pour une évaluation complète</p>
+      <p>Analyse pré/post-investissement, cession, acquisition ou transmission. Un volet RSE systématiquement intégré, en cohérence avec les attentes ESG/CSRD.</p>
+      <ul class="offre-bullets-detail">
+        <li>Analyse approfondie de la maturité opérationnelle sur 12 domaines</li>
+        <li>Pré-investissement, post-investissement, cession/acquisition, transmission</li>
+        <li>Volet RSE intégré — conformité CSRD, attentes ESG des LPs</li>
+        <li>Traduction de l'investment case en plan d'action chiffré et pilotable</li>
+        <li>Identification des risques d'exécution et leviers de valeur cachés</li>
+        <li>Rapport structuré avec scoring, priorités et recommandations</li>
+      </ul>
+      <a href="contact.html" class="btn-outline" style="display:inline-block;border-color:var(--navy);color:var(--navy)">Parler de votre dossier →</a>
+    </div>
+    <div class="offre-visual">
+      <div class="offre-visual-header">
+        <div class="offre-visual-icon">🔬</div>
+        <div><div class="offre-visual-title">Due Diligence Opérationnelle</div><div class="offre-visual-badge">RSE incluse</div></div>
+      </div>
+      <div class="offre-kpi"><h4>Vision 360° de la cible</h4><p>Opérationnel + RSE/ESG dans un diagnostic intégré</p></div>
+      <div class="offre-kpi"><h4>Investment case traduit</h4><p>En plan d'action chiffré, pilotable dès la prise de participation</p></div>
+      <div class="offre-kpi"><h4>Décision sécurisée</h4><p>« En apportant méthode, lucidité et sérénité » — Investisseur client</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE 5 — FORMATIONS -->
+<section class="offre-detail" id="formations">
+  <div class="offre-detail-inner">
+    <div>
+      <div class="offre-header">
+        <div class="offre-icon-lg">🎓</div>
+        <div><div class="offre-num">Offre 05</div></div>
+      </div>
+      <h2>Formations & Workshops</h2>
+      <p class="offre-detail-sub">Formations généralistes et techniques, ateliers contextualisés sur vos enjeux</p>
+      <p>Des formations conçues par et pour des dirigeants et opérationnels, ancrées dans la réalité du terrain. Pas de théorie abstraite : des méthodes immédiatement applicables.</p>
+      <ul class="offre-bullets-detail">
+        <li><strong>Stratégiques & managériales :</strong> Résolution de problèmes complexes, Management de l'innovation, Conduite du changement, Leadership & management</li>
+        <li><strong>Techniques :</strong> Finance haut de bilan, Fondamentaux du dirigeant, Lean Management</li>
+        <li><strong>Partenaires :</strong> Négociation (Negos Consulting), IA pour dirigeants (Signature DRH+/Artemia)</li>
+        <li>Ateliers contextualisés sur vos enjeux spécifiques</li>
+        <li>Formats adaptés : présentiel, hybride, intra ou inter-entreprises</li>
+      </ul>
+      <a href="contact.html" class="btn-outline" style="display:inline-block;border-color:var(--navy);color:var(--navy)">Voir le catalogue formations →</a>
+    </div>
+    <div class="offre-visual">
+      <div class="offre-visual-header">
+        <div class="offre-visual-icon">🎓</div>
+        <div><div class="offre-visual-title">Formations & Workshops</div><div class="offre-visual-badge">Terrain & pratique</div></div>
+      </div>
+      <div class="offre-kpi"><h4>Stratégiques</h4><p>Résolution problèmes · Innovation · Changement · Leadership</p></div>
+      <div class="offre-kpi"><h4>Techniques</h4><p>Finance · Lean · Négociation · IA dirigeants</p></div>
+      <div class="offre-kpi"><h4>Contextualisées</h4><p>Ateliers sur mesure ancrés dans vos enjeux réels</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFRE 6 — SAAS -->
+<section class="offre-detail" id="saas">
+  <div class="offre-detail-inner">
+    <div>
+      <div class="offre-header">
+        <div class="offre-icon-lg">💻</div>
+        <div><div class="offre-num">Offre 06</div></div>
+      </div>
+      <h2>Plateforme SaaS OP360</h2>
+      <p class="offre-detail-sub">Outils numériques dédiés au dirigeant</p>
+      <p>Une plateforme conçue pour réduire la charge mentale du dirigeant et piloter l'exécution de la stratégie en temps réel. Incluse dans toutes les interventions OP360.</p>
+      <ul class="offre-bullets-detail">
+        <li>Pilotage de la performance et des projets stratégiques</li>
+        <li>Idea Vault augmentée — capture et structuration des idées avec IA</li>
+        <li>Monitoring de l'exécution en temps réel, alertes et tableaux de bord</li>
+        <li>Accessible à tous les intervenants OP360 sans coût supplémentaire</li>
+        <li>Réduction de la charge mentale du dirigeant</li>
+        <li>Intégration native avec les diagnostics et parcours d'exécution</li>
+      </ul>
+      <a href="contact.html" class="btn-outline" style="display:inline-block;border-color:var(--navy);color:var(--navy)">Demander une démo →</a>
+    </div>
+    <div class="offre-visual">
+      <div class="offre-visual-header">
+        <div class="offre-visual-icon">💻</div>
+        <div><div class="offre-visual-title">Plateforme SaaS OP360</div><div class="offre-visual-badge">Incluse dans toutes les offres</div></div>
+      </div>
+      <div class="offre-kpi"><h4>Pilotage en temps réel</h4><p>Performance, projets, KPIs — tout centralisé</p></div>
+      <div class="offre-kpi"><h4>Idea Vault augmentée</h4><p>Vos idées capturées, structurées et priorisées par l'IA</p></div>
+      <div class="offre-kpi"><h4>Incluse sans surcoût</h4><p>Accessible à tous les intervenants OP360 sur votre dossier</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMBO -->
+<section class="combo-section">
+  <div class="combo-content">
+    <div class="section-label reveal">Modularité</div>
+    <h2 class="reveal">Des offres qui se combinent</h2>
+    <p class="reveal">Nos offres sont conçues pour fonctionner ensemble. Un Diagnostic Flash ouvre naturellement vers un Accompagnement Terrain, un Shadow Codir ou la Plateforme SaaS selon vos besoins.</p>
+    <div class="combo-tags reveal">
+      <span class="combo-tag"><span>⚡</span>Diagnostic Flash</span>
+      <span class="combo-tag" style="background:var(--navy);color:rgba(255,255,255,0.9);border-color:var(--navy)">+</span>
+      <span class="combo-tag"><span>🤝</span>Accompagnement Terrain</span>
+      <span class="combo-tag" style="background:var(--navy);color:rgba(255,255,255,0.9);border-color:var(--navy)">+</span>
+      <span class="combo-tag"><span>💻</span>Plateforme SaaS</span>
+    </div>
+    <a href="contact.html" class="btn-primary reveal">Construire mon dispositif sur mesure →</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="contenu.js"></script>
+<script src="scripts.js"></script>
+<script>
+buildNav('offres.html');
+buildFooter();
+initReveal();
+</script>
+</body>
+</html>
