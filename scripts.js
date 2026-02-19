@@ -3,26 +3,10 @@
    Navigation, scroll, animations
    ============================================ */
 
-// ── Logo SVG ──────────────────────────────────
-const LOGO_SVG = `<svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="20" cy="5" r="4" fill="#00d4aa"/>
-  <circle cx="33" cy="12" r="3.5" fill="#4ecdc4"/>
-  <circle cx="37" cy="26" r="3" fill="#7b68ee"/>
-  <circle cx="28" cy="36" r="3" fill="#9b59b6"/>
-  <circle cx="12" cy="36" r="3" fill="#e74c3c"/>
-  <circle cx="3" cy="26" r="3" fill="#f39c12"/>
-  <circle cx="7" cy="12" r="3.5" fill="#27ae60"/>
-</svg>`;
+// ── Logo ──────────────────────────────────────
+const LOGO_SVG = `<img class="logo-svg" src="logo-op360-inverted.png" alt="OP360">`;
 
-const LOGO_SVG_SM = `<svg class="logo-svg-sm" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="20" cy="5" r="4" fill="#00d4aa"/>
-  <circle cx="33" cy="12" r="3.5" fill="#4ecdc4"/>
-  <circle cx="37" cy="26" r="3" fill="#7b68ee"/>
-  <circle cx="28" cy="36" r="3" fill="#9b59b6"/>
-  <circle cx="12" cy="36" r="3" fill="#e74c3c"/>
-  <circle cx="3" cy="26" r="3" fill="#f39c12"/>
-  <circle cx="7" cy="12" r="3.5" fill="#27ae60"/>
-</svg>`;
+const LOGO_SVG_SM = `<img class="logo-svg-sm" src="logo-op360-inverted.png" alt="OP360">`;
 
 // ── Navigation ────────────────────────────────
 function buildNav(activePage) {
