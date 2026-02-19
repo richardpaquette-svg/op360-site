@@ -1,22 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-    <rect width="64" height="64" rx="12" fill="#1a2332"/>
-    <!-- Cercle de points colorés du logo OP360 -->
-    <!-- Point haut teal -->
-    <circle cx="32" cy="8" r="4.5" fill="#00d4aa"/>
-    <!-- Point haut-droite teal clair -->
-    <circle cx="47" cy="14" r="4" fill="#00b89a"/>
-    <!-- Point droite bleu-teal -->
-    <circle cx="55" cy="28" r="3.5" fill="#4a90a4"/>
-    <!-- Point bas-droite violet -->
-    <circle cx="52" cy="44" r="3.5" fill="#6b4fa0"/>
-    <!-- Point bas violet foncé -->
-    <circle cx="40" cy="54" r="4" fill="#5a3d8a"/>
-    <!-- Point bas-gauche violet -->
-    <circle cx="24" cy="54" r="4" fill="#7b5bb5"/>
-    <!-- Point gauche orange -->
-    <circle cx="12" cy="44" r="3.5" fill="#e8823a"/>
-    <!-- Point haut-gauche orange-rouge -->
-    <circle cx="9" cy="28" r="3.5" fill="#d4602a"/>
-    <!-- Point haut-gauche orange clair -->
-    <circle cx="17" cy="14" r="4" fill="#f0a050"/>
+  <!-- Anneau de points colorés — logo réel Operating Partners 360 -->
+  <!-- Haut : teal vif -->
+  <circle cx="32" cy="8"  r="5.5" fill="#00C5AE"/>
+  <!-- Haut-droite : teal foncé -->
+  <circle cx="47" cy="14" r="4.5" fill="#009688"/>
+  <!-- Droite : teal-ardoise -->
+  <circle cx="56" cy="28" r="4"   fill="#00796B"/>
+  <!-- Bas-droite : bleu -->
+  <circle cx="53" cy="44" r="4"   fill="#1976D2"/>
+  <!-- Bas : indigo foncé -->
+  <circle cx="40" cy="55" r="4.5" fill="#283593"/>
+  <!-- Bas-gauche : violet -->
+  <circle cx="24" cy="55" r="4.5" fill="#6A1B9A"/>
+  <!-- Gauche : rouge-orange -->
+  <circle cx="11" cy="44" r="4"   fill="#E53935"/>
+  <!-- Haut-gauche : orange -->
+  <circle cx="8"  cy="28" r="4"   fill="#EF6C00"/>
+  <!-- Haut-gauche : vert-lime -->
+  <circle cx="17" cy="14" r="4.5" fill="#8BC34A"/>
 </svg>

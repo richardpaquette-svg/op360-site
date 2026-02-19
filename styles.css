@@ -115,9 +115,9 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: rgba(255,255,255,0.3); }
 .footer-bottom a { color: var(--cyan); }
 
-/* ── LOGO SVG ── */
-.logo-svg { width: 32px; height: 32px; flex-shrink: 0; }
-.logo-svg-sm { width: 26px; height: 26px; flex-shrink: 0; }
+/* ── LOGO PNG ── */
+.logo-img    { height: 40px; width: auto; flex-shrink: 0; }
+.logo-img-sm { height: 32px; width: auto; flex-shrink: 0; }
 
 /* ── REVEAL AU SCROLL ── */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
