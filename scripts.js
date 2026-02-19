@@ -51,6 +51,7 @@ function buildNav(activePage) {
       </button>
     </nav>`;
 
+  // Scroll effect
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
@@ -114,7 +115,7 @@ function buildFooter() {
         </div>
         <div class="footer-bottom">
           <span>© 2026 Operating Partners 360 — Tous droits réservés</span>
-          <span>Valeurs <strong style="color:var(--cyan)">FMT</strong> — Fiabilité · Impact · Transmission</span>
+          <span>Valeurs <strong style="color:var(--cyan)">FIT</strong> — Fiabilité · Impact · Transmission</span>
           <span><a href="mentions.html">Mentions légales</a></span>
         </div>
       </div>
@@ -135,6 +136,7 @@ function initReveal() {
   });
 }
 
+// ── Init page ─────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
 });
