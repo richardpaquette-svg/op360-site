@@ -3,26 +3,9 @@
    Navigation, scroll, animations
    ============================================ */
 
-// ── Logo SVG ──────────────────────────────────
-const LOGO_SVG = `<svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="20" cy="5" r="4" fill="#00d4aa"/>
-  <circle cx="33" cy="12" r="3.5" fill="#4ecdc4"/>
-  <circle cx="37" cy="26" r="3" fill="#7b68ee"/>
-  <circle cx="28" cy="36" r="3" fill="#9b59b6"/>
-  <circle cx="12" cy="36" r="3" fill="#e74c3c"/>
-  <circle cx="3" cy="26" r="3" fill="#f39c12"/>
-  <circle cx="7" cy="12" r="3.5" fill="#27ae60"/>
-</svg>`;
-
-const LOGO_SVG_SM = `<svg class="logo-svg-sm" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="20" cy="5" r="4" fill="#00d4aa"/>
-  <circle cx="33" cy="12" r="3.5" fill="#4ecdc4"/>
-  <circle cx="37" cy="26" r="3" fill="#7b68ee"/>
-  <circle cx="28" cy="36" r="3" fill="#9b59b6"/>
-  <circle cx="12" cy="36" r="3" fill="#e74c3c"/>
-  <circle cx="3" cy="26" r="3" fill="#f39c12"/>
-  <circle cx="7" cy="12" r="3.5" fill="#27ae60"/>
-</svg>`;
+// ── Logo PNG ──────────────────────────────────
+const LOGO_SVG    = `<img src="logo-white.png" alt="Operating Partners 360" class="logo-img">`;
+const LOGO_SVG_SM = `<img src="logo-white.png" alt="Operating Partners 360" class="logo-img-sm">`;
 
 // ── Navigation ────────────────────────────────
 function buildNav(activePage) {
@@ -42,7 +25,6 @@ function buildNav(activePage) {
     <nav id="navbar">
       <a href="index.html" class="nav-logo">
         ${LOGO_SVG}
-        <span class="nav-logo-text">Operating Partners <em>360</em></span>
       </a>
       <div class="nav-links" id="nav-links">${links}</div>
       <a href="${OP360.entreprise.rdv}" class="nav-cta" target="_blank">Diagnostic Flash</a>
@@ -70,7 +52,6 @@ function buildFooter() {
           <div class="footer-brand">
             <a href="index.html" class="footer-logo">
               ${LOGO_SVG_SM}
-              <span>Operating Partners <em>360</em></span>
             </a>
             <p class="footer-brand-tagline">
               Vous portez la Vision, la Stratégie et le Risque.<br>
