@@ -331,8 +331,8 @@
       <p>4 associés fondateurs, un collectif de pairs, une approche 360 de l'exécution : cette vidéo présente comment nous travaillons avec les dirigeants et les investisseurs, et dans quels moments nous sommes à leurs côtés.</p>
       <p class="video-differenciateur">Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et plateforme SaaS, centré sur vos enjeux de dirigeant.</p>
     </div>
-    <video class="video-player" controls playsinline>
-      <source src="public/videos/hero-op360.mp4" type="video/mp4">
+    <video class="video-player" controls playsinline preload="auto"
+           src="public/videos/hero-op360.mp4">
     </video>
   </div>
 </section>
@@ -593,26 +593,6 @@ document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => `
   </div>`).join('');
 
 initReveal();
-
-// Charge la vidéo en blob pour contourner l'absence de range requests sur GitHub Pages
-(function() {
-  var video = document.querySelector('.video-player');
-  if (!video) return;
-  var source = video.querySelector('source');
-  if (!source) return;
-  fetch(source.src)
-    .then(function(r) {
-      if (!r.ok) throw new Error(r.status);
-      return r.blob();
-    })
-    .then(function(blob) {
-      video.src = URL.createObjectURL(blob);
-      video.load();
-    })
-    .catch(function() {
-      // fallback : le navigateur tente de lire directement la source originale
-    });
-})();
 </script>
 </body>
 </html>
