@@ -21,12 +21,6 @@
   background-size: cover; background-position: center;
   opacity: 0.32;
 }
-.hero-video {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.45;
-}
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,35,50,0.38) 0%, rgba(26,35,50,0.58) 100%); }
 .hero-grid { display: none; }
 .hero-content { position: relative; z-index: 2; max-width: 900px; }
@@ -91,14 +85,11 @@
 .video-text h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 700; color: var(--navy); margin: 12px 0 18px; line-height: 1.2; }
 .video-text p { font-size: 16px; color: var(--gray-text); line-height: 1.75; }
 .video-differenciateur { margin-top: 20px; padding: 14px 16px; border-left: 3px solid var(--cyan); background: rgba(0,212,170,0.06); border-radius: 0 8px 8px 0; font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.55; }
-.video-placeholder {
-  background: var(--navy); border-radius: 14px; aspect-ratio: 16/9;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 14px; border: 2px dashed rgba(0,212,170,0.3);
+.video-player {
+  width: 100%; border-radius: 14px; aspect-ratio: 16/9;
+  display: block; object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
-.video-play-btn { width: 64px; height: 64px; background: rgba(0,212,170,0.12); border: 2px solid rgba(0,212,170,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.video-play-btn::after { content:'▶'; font-size: 22px; color: var(--cyan); margin-left: 5px; }
-.video-soon { font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; text-transform: uppercase; }
 
 /* ── STAT CHOC ── */
 .stat-choc-wrap { background: var(--white); padding: 0 48px; }
@@ -290,9 +281,6 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-photo"></div>
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="/videos/hero-op360.mp4" type="video/mp4">
-  </video>
   <div class="hero-overlay"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
@@ -343,10 +331,9 @@
       <p>4 associés fondateurs, un collectif de pairs, une approche 360 de l'exécution : cette vidéo présente comment nous travaillons avec les dirigeants et les investisseurs, et dans quels moments nous sommes à leurs côtés.</p>
       <p class="video-differenciateur">Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et plateforme SaaS, centré sur vos enjeux de dirigeant.</p>
     </div>
-    <div class="video-placeholder">
-      <div class="video-play-btn"></div>
-      <span class="video-soon">Vidéo à venir</span>
-    </div>
+    <video class="video-player" controls playsinline>
+      <source src="/public/videos/hero-op360.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
