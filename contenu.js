@@ -51,7 +51,7 @@ const OP360 = {
     stat1_nb: "5", stat1_label: "jours Diagnostic Flash",
     stat2_nb: "12", stat2_label: "domaines d'analyse",
     stat3_nb: "360°", stat3_label: "vision systémique",
-    stat4_nb: "4", stat4_label: "anciens dirigeants",
+    stat4_nb: "4", stat4_label: "pairs dirigeants",
   },
 
   // ── 3 MOMENTS CLÉS ───────────────────────────────
