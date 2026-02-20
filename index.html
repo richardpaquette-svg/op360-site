@@ -47,6 +47,9 @@
   animation: fadeUp 0.7s 0.2s ease both;
 }
 .hero-sub strong { color: rgba(255,255,255,0.95); font-weight: 600; }
+.hero-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0 auto 36px; text-align: left; max-width: 680px; }
+.hero-bullets li { font-size: clamp(14px, 1.8vw, 16px); color: rgba(255,255,255,0.85); line-height: 1.6; display: flex; align-items: flex-start; gap: 12px; }
+.hero-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
 .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 48px; animation: fadeUp 0.7s 0.3s ease both; }
 .hero-tag {
   background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18);
@@ -251,21 +254,25 @@
   <div class="hero-content">
     <div class="hero-eyebrow">Operating Partners 360 — Pairs &amp; Partenaires</div>
     <h1>
-      Vous portez la Vision,<br>la Stratégie et le Risque.
-      <span class="accent">Nous accélérons et sécurisons l'Exécution.</span>
+      Vous portez la vision, la stratégie et le risque.
+      <span class="accent">Nous accélérons et sécurisons l'exécution.</span>
     </h1>
     <p class="hero-sub">
-      Dirigeants de PME, ETI, investisseurs…<br>
-      <strong>OP360, des pairs à vos côtés</strong>, pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions.
+      Dirigeants de PME, ETI, investisseurs… <strong>OP360, des pairs à vos côtés</strong> pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions.
     </p>
+    <ul class="hero-bullets">
+      <li>Diagnostic Flash sur 12 domaines, en 5 jours, pour voir clair sur vos priorités.</li>
+      <li>Parcours d'exécution structuré, du plan 100 jours au plan 3 ans.</li>
+      <li>Accompagnement terrain par des anciens dirigeants, en Operating Partner ou Shadow Codir.</li>
+    </ul>
     <div class="hero-tags">
       <span class="hero-tag">🏭 Dirigeants de PME</span>
       <span class="hero-tag">🏢 Dirigeants d'ETI</span>
       <span class="hero-tag">📈 Investisseurs &amp; Fonds</span>
     </div>
     <div class="hero-ctas">
-      <a href="diagnostic.html" class="btn-primary">Diagnostic Flash – 5 jours pour voir clair</a>
-      <a href="offres.html" class="btn-secondary">Découvrir nos offres</a>
+      <a href="contact.html" class="btn-primary">Planifier un échange de 30 min</a>
+      <a href="#diagnostic-flash" class="btn-secondary">Comprendre le Diagnostic Flash</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="hero-stat-nb">5</div><div class="hero-stat-label">jours pour<br>voir clair</div></div>
@@ -306,7 +313,7 @@
 </div>
 
 <!-- APPROCHE 360 -->
-<section class="approche-section">
+<section class="approche-section" id="diagnostic-flash">
   <div class="approche-inner">
     <div class="section-label reveal">Notre méthode</div>
     <h2 class="section-title reveal">Notre approche 360 de l'exécution</h2>
