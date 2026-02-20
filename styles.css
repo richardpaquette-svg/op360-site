@@ -116,8 +116,8 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 .footer-bottom a { color: var(--cyan); }
 
 /* ── LOGO PNG ── */
-.logo-img    { height: 40px; width: auto; flex-shrink: 0; }
-.logo-img-sm { height: 32px; width: auto; flex-shrink: 0; }
+.logo-img    { height: 40px; width: auto; flex-shrink: 0; max-width: none; }
+.logo-img-sm { height: 32px; width: auto; flex-shrink: 0; max-width: none; }
 
 /* ── REVEAL AU SCROLL ── */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -133,6 +133,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .nav-burger { display: flex; }
+  .nav-cta { display: none; }
   section { padding: 64px 24px; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
   footer { padding: 48px 24px 24px; }
