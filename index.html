@@ -120,6 +120,25 @@
 .pilier-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .pilier-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
 
+/* ── DIAGNOSTIC FLASH ── */
+.diag-section { background: var(--white); padding: 80px 48px; }
+.diag-inner { max-width: 960px; margin: 0 auto; }
+.diag-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+.diag-card { background: var(--gray-bg); border: 1px solid var(--gray-border); border-radius: var(--radius); padding: 36px 28px; border-top: 3px solid var(--cyan); transition: all 0.25s; }
+.diag-card:hover { border-top-width: 4px; box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.diag-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 0 0 14px; line-height: 1.3; }
+.diag-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; margin: 0; }
+.diag-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.diag-card ul li { font-size: 14px; color: var(--gray-text); line-height: 1.55; display: flex; align-items: flex-start; gap: 8px; }
+.diag-card ul li::before { content: '→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
+.diag-bandeau { background: var(--navy); border-radius: var(--radius); padding: 28px 36px; margin-bottom: 36px; text-align: center; }
+.diag-bandeau-main { font-size: clamp(16px, 2vw, 20px); font-weight: 700; color: var(--white); margin-bottom: 10px; line-height: 1.4; }
+.diag-bandeau-main em { color: var(--cyan); font-style: normal; }
+.diag-bandeau-quote { font-size: 14px; color: rgba(255,255,255,0.5); font-style: italic; }
+.diag-cta { display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.diag-link { font-size: 14px; font-weight: 600; color: var(--navy); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
+.diag-link:hover { color: var(--cyan); }
+
 /* ── MOMENTS ── */
 .moments-section { background: var(--navy); position: relative; overflow: hidden; }
 .moments-photo { display: none; }
@@ -228,13 +247,15 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .diff-grid, .offres-grid, .piliers-grid { grid-template-columns: repeat(2, 1fr); }
+  .diff-grid, .offres-grid, .piliers-grid, .diag-grid { grid-template-columns: repeat(2, 1fr); }
   .equipe-grid { grid-template-columns: repeat(2, 1fr); }
   .video-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
   .hero { padding: 90px 24px 64px; }
-  .moments-grid, .diff-grid, .offres-grid, .temos-grid, .fit-grid, .equipe-grid, .piliers-grid, .hero-pillars { grid-template-columns: 1fr; }
+  .moments-grid, .diff-grid, .offres-grid, .temos-grid, .fit-grid, .equipe-grid, .piliers-grid, .hero-pillars, .diag-grid { grid-template-columns: 1fr; }
+  .diag-section { padding: 56px 24px; }
+  .diag-bandeau { padding: 24px 20px; }
   .hero-stats { gap: 28px; }
   .stat-choc-wrap { padding: 0 24px; }
   .stat-choc { padding: 32px 24px; flex-direction: column; text-align: center; }
@@ -353,6 +374,47 @@
         <h4>Exécuter et transmettre</h4>
         <p>Shadow Codir et accompagnement terrain, avec plateforme SaaS pour suivre la progression et ancrer les transformations.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSTIC FLASH -->
+<section class="diag-section" id="diagnostic-flash-detail">
+  <div class="diag-inner">
+    <div class="section-label reveal">Notre offre phare</div>
+    <h2 class="section-title reveal">Diagnostic Flash OP360 : 5 jours pour voir clair et agir juste</h2>
+    <p class="section-intro reveal">Un diagnostic 360° qui transforme vos enjeux en plan d'action opérationnel.</p>
+    <div class="diag-grid">
+      <div class="diag-card reveal">
+        <h3>Quand l'exécution devient le sujet</h3>
+        <p>Croissance, transition, retournement : vous devez décider vite, avec une vision claire des risques et des leviers de valeur, sans lancer un audit lourd.</p>
+      </div>
+      <div class="diag-card reveal">
+        <h3>Ce que vous recevez</h3>
+        <ul>
+          <li>Diagnostic détaillé sur 12 domaines clés.</li>
+          <li>Executive Pack visuel (15–20 slides) : synthèse, heatmaps, radars.</li>
+          <li>Top 3–5–7 priorités alignées sur vos enjeux.</li>
+          <li>Plan d'action priorisé avec quick wins actionnables immédiatement.</li>
+        </ul>
+      </div>
+      <div class="diag-card reveal">
+        <h3>Une méthode structurée, orientée action</h3>
+        <ul>
+          <li>Cadrage et compréhension de vos enjeux de dirigeant.</li>
+          <li>Entretiens dirigeants et terrain, analyse sur 12 domaines.</li>
+          <li>Lecture systémique, scoring, priorisation des leviers de valeur.</li>
+          <li>Restitution en Executive Pack, utilisable en Codir ou avec vos actionnaires.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="diag-bandeau reveal">
+      <div class="diag-bandeau-main"><em>1 à 3 jours de terrain,</em> restitution complète en moins de 10 jours.</div>
+      <div class="diag-bandeau-quote">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</div>
+    </div>
+    <div class="diag-cta">
+      <a href="contact.html" class="btn-primary">Parler d'un Diagnostic Flash</a>
+      <a href="#contact" class="diag-link">Recevoir un exemple de livrable →</a>
     </div>
   </div>
 </section>
