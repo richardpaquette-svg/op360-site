@@ -3,110 +3,377 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnostic Flash — 5 jours pour voir clair | OP360</title>
+<title>Diagnostic Flash OP360 — 5 jours pour voir clair et agir juste</title>
 <meta name="description" content="Le Diagnostic Flash OP360 : 5 jours pour évaluer votre maturité d'exécution sur 12 domaines et obtenir un plan d'action opérationnel immédiatement actionnable.">
 <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
+
 /* ── HERO DIAGNOSTIC ── */
 .hero-diag {
-  min-height: 70vh; background: var(--navy); position: relative; overflow: hidden;
-  display: flex; align-items: center; padding: 110px 48px 80px;
+  min-height: 80vh;
+  background: var(--navy);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+  padding: 120px 48px 80px;
 }
 .hero-diag-photo {
   position: absolute; inset: 0;
   background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1400&q=80');
   background-size: cover; background-position: center;
-  opacity: 0.12;
+  opacity: 0.10;
 }
-.hero-diag-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(26,35,50,0.92) 55%, rgba(26,35,50,0.5) 100%); }
-.hero-diag-content { position: relative; z-index: 2; max-width: 640px; }
+.hero-diag-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(110deg, rgba(26,35,50,0.95) 55%, rgba(26,35,50,0.6) 100%);
+}
+.hero-diag-content { position: relative; z-index: 2; max-width: 680px; }
 .hero-diag-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
   border-radius: 100px; padding: 7px 18px; margin-bottom: 28px;
-  font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.1em; text-transform: uppercase;
+  font-size: 12px; font-weight: 700; color: var(--cyan);
+  letter-spacing: 0.1em; text-transform: uppercase;
 }
-.hero-diag h1 { font-size: clamp(34px, 5vw, 56px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 12px; }
+.hero-diag h1 {
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 700; color: var(--white);
+  line-height: 1.08; letter-spacing: -0.025em;
+  margin-bottom: 20px;
+}
 .hero-diag h1 span { color: var(--cyan); }
-.hero-diag-sub { font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.55; margin-bottom: 36px; max-width: 520px; }
-.hero-diag-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
-.pill { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 20px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
-.pill.pill-accent { border-color: rgba(0,212,170,0.4); color: var(--cyan); background: rgba(0,212,170,0.08); }
+.hero-diag-sub {
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 300; color: rgba(255,255,255,0.72);
+  line-height: 1.55; margin-bottom: 40px; max-width: 560px;
+}
+.hero-triggers {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 10px; margin-bottom: 44px; max-width: 560px;
+}
+.hero-trigger {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(0,212,170,0.35);
+  border-radius: 10px; padding: 13px 18px;
+  font-size: 14px; font-weight: 600; color: var(--cyan);
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-trigger::before {
+  content: '→'; font-size: 13px; opacity: 0.7; flex-shrink: 0;
+}
 
-/* ── 5 PHASES ── */
-.phases-section { background: var(--white); }
-.phases-flow { display: flex; align-items: flex-start; gap: 0; position: relative; }
-.phases-flow::before { content:''; position:absolute; top:36px; left:36px; right:36px; height:2px; background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.2)); }
-.phase-step { flex: 1; text-align: center; position: relative; padding: 0 16px; }
-.phase-circle {
-  width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 20px;
+/* ── SECTION PROBLÈME ── */
+.probleme-section { background: var(--white); padding: 96px 48px; }
+.probleme-inner { max-width: 820px; margin: 0 auto; }
+.probleme-stat {
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 700; color: var(--navy);
+  letter-spacing: -0.03em; line-height: 1;
+  margin-bottom: 8px;
+}
+.probleme-stat span { color: var(--cyan); }
+.probleme-titre-h2 {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700; color: var(--navy);
+  letter-spacing: -0.02em; margin-bottom: 24px;
+}
+.probleme-texte {
+  font-size: 18px; font-weight: 300; color: var(--gray-text);
+  line-height: 1.75; margin-bottom: 40px; max-width: 740px;
+}
+.probleme-citation {
+  background: var(--cyan-light);
+  border-left: 4px solid var(--cyan);
+  border-radius: 0 12px 12px 0;
+  padding: 32px 36px;
+}
+.probleme-citation blockquote {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 300; font-style: italic;
+  color: var(--navy); line-height: 1.55;
+  margin-bottom: 14px;
+}
+.probleme-citation cite {
+  font-size: 13px; font-weight: 700;
+  color: var(--cyan); font-style: normal;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+
+/* ── SECTION CE QUE VOUS RECEVEZ ── */
+.recevez-section { background: var(--gray-bg); padding: 96px 48px; }
+
+/* Timeline 5 étapes */
+.timeline-wrap { position: relative; margin-bottom: 64px; }
+.timeline-line {
+  position: absolute; top: 36px; left: 36px; right: 36px; height: 2px;
+  background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.2));
+}
+.timeline-steps {
+  display: flex; align-items: flex-start; gap: 0;
+  position: relative;
+}
+.timeline-step {
+  flex: 1; text-align: center; padding: 0 14px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.timeline-circle {
+  width: 72px; height: 72px; border-radius: 50%;
   background: var(--navy); border: 3px solid var(--cyan);
   display: flex; align-items: center; justify-content: center;
   font-size: 22px; font-weight: 700; color: var(--cyan);
-  position: relative; z-index: 1; transition: all 0.3s;
+  position: relative; z-index: 1;
+  transition: all 0.3s; margin-bottom: 18px;
 }
-.phase-step:hover .phase-circle { background: var(--cyan); color: var(--navy); transform: scale(1.08); }
-.phase-label { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-.phase-desc { font-size: 13px; color: var(--gray-text); line-height: 1.55; }
-
-/* ── 12 DOMAINES ── */
-.domaines-section { background: var(--navy); }
-.domaines-intro { max-width: 640px; margin-bottom: 48px; }
-.domaines-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.domaine-card {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(0,212,170,0.15);
-  border-radius: 10px; padding: 20px 18px; transition: all 0.2s; cursor: default;
+.timeline-step:hover .timeline-circle {
+  background: var(--cyan); color: var(--navy); transform: scale(1.08);
 }
-.domaine-card:hover { border-color: rgba(0,212,170,0.5); background: rgba(0,212,170,0.06); transform: translateY(-2px); }
-.domaine-nb { font-size: 11px; font-weight: 700; color: rgba(0,212,170,0.5); letter-spacing: 0.08em; margin-bottom: 8px; }
-.domaine-card h4 { font-size: 14px; font-weight: 700; color: var(--white); line-height: 1.35; }
-.domaine-icon { font-size: 22px; margin-bottom: 10px; }
+.timeline-label {
+  font-size: 14px; font-weight: 700; color: var(--navy);
+  margin-bottom: 8px;
+}
+.timeline-desc {
+  font-size: 13px; color: var(--gray-text); line-height: 1.55;
+}
 
-/* ── LIVRABLES ── */
-.livrables-section { background: var(--gray-bg); }
-.livrables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+/* Livrables */
+.livrables-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 18px; margin-bottom: 36px;
+}
 .livrable-card {
-  background: var(--white); border: 1.5px solid var(--gray-border);
-  border-radius: var(--radius); padding: 36px 28px; transition: all 0.25s;
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-left: 4px solid var(--cyan);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: all 0.25s;
 }
-.livrable-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
-.livrable-card.featured { border-color: var(--cyan); background: linear-gradient(135deg, var(--white) 0%, var(--cyan-light) 100%); }
-.livrable-icon { font-size: 36px; margin-bottom: 18px; }
-.livrable-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-.livrable-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
+.livrable-card:hover {
+  border-color: var(--cyan);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+.livrable-icon { font-size: 30px; margin-bottom: 14px; }
+.livrable-card h3 {
+  font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px;
+}
+.livrable-card p {
+  font-size: 13px; color: var(--gray-text); line-height: 1.65;
+}
+.recevez-duree {
+  text-align: center; padding: 20px 32px;
+  background: var(--navy); border-radius: 10px;
+  color: rgba(255,255,255,0.8); font-size: 15px; font-weight: 600;
+  display: inline-block;
+}
+.recevez-duree strong { color: var(--cyan); }
 
-/* ── TÉMOIGNAGE SOLO ── */
-.temo-solo { background: var(--cyan-light); padding: 80px 48px; text-align: center; }
-.temo-solo blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; color: var(--navy); font-style: italic; line-height: 1.5; max-width: 700px; margin: 0 auto 24px; }
-.temo-solo cite { font-size: 15px; font-weight: 700; color: var(--cyan); font-style: normal; letter-spacing: 0.06em; text-transform: uppercase; }
+/* ── SECTION POURQUOI OP360 ── */
+.pourquoi-section { background: var(--white); padding: 96px 48px; }
+.pourquoi-inner { max-width: 900px; margin: 0 auto; }
+.pourquoi-texte {
+  font-size: 17px; font-weight: 300; color: var(--gray-text);
+  line-height: 1.75; margin-bottom: 56px;
+}
+.differenciateurs-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.diff-card {
+  padding: 32px 28px;
+  border-top: 3px solid var(--cyan);
+  background: var(--gray-bg);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.diff-card h3 {
+  font-size: 18px; font-weight: 700; color: var(--navy);
+  margin-bottom: 12px;
+}
+.diff-card p {
+  font-size: 14px; color: var(--gray-text); line-height: 1.7;
+}
 
-/* ── CTA DIAG ── */
-.cta-diag { background: var(--navy); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
-.cta-diag::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,212,170,0.07) 0%, transparent 70%); }
-.cta-diag h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: -0.02em; position: relative; z-index: 1; }
-.cta-diag h2 span { color: var(--cyan); }
-.cta-diag p { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 500px; margin: 0 auto 40px; line-height: 1.65; position: relative; z-index: 1; }
-.cta-diag-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
-.cta-contact-row { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 1; }
-.cta-contact-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.6); font-size: 15px; transition: color 0.2s; }
-.cta-contact-item:hover { color: var(--cyan); }
-.cta-icon { width: 36px; height: 36px; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+/* ── SECTION 12 DOMAINES ── */
+.domaines-section { background: var(--gray-bg); padding: 96px 48px; }
+.domaines-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.domaine-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-left: 4px solid var(--cyan);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  transition: all 0.2s;
+}
+.domaine-card:hover {
+  border-color: var(--cyan);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+.domaine-nb {
+  font-size: 11px; font-weight: 700;
+  color: var(--cyan); letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.domaine-card h4 {
+  font-size: 14px; font-weight: 700; color: var(--navy); line-height: 1.35;
+}
+
+/* ── SECTION TÉMOIGNAGES ── */
+.temoignages-section { background: var(--cyan-light); padding: 96px 48px; }
+.temoignages-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 28px; margin-top: 48px;
+}
+.temo-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.temo-card::before {
+  content: '\201C';
+  font-size: 80px; line-height: 1;
+  color: var(--cyan); opacity: 0.25;
+  position: absolute; top: 16px; left: 28px;
+  font-family: Georgia, serif;
+}
+.temo-card blockquote {
+  font-size: 18px; font-weight: 300; font-style: italic;
+  color: var(--navy); line-height: 1.6;
+  padding-top: 32px; margin-bottom: 20px;
+}
+.temo-card cite {
+  font-size: 13px; font-weight: 700; color: var(--cyan);
+  font-style: normal; letter-spacing: 0.06em; text-transform: uppercase;
+}
+
+/* ── SECTION FORMULAIRE ── */
+.formulaire-section { background: var(--white); padding: 96px 48px; }
+.formulaire-grid {
+  display: grid; grid-template-columns: 3fr 2fr;
+  gap: 64px; align-items: start;
+}
+.form-diag-wrap {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: 16px; padding: 48px 40px;
+  box-shadow: var(--shadow);
+}
+.form-diag-wrap h3 {
+  font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 8px;
+}
+.form-diag-sub {
+  font-size: 14px; color: var(--gray-text); margin-bottom: 32px; line-height: 1.55;
+}
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block; font-size: 13px; font-weight: 700; color: var(--navy);
+  margin-bottom: 7px; letter-spacing: 0.02em;
+}
+.form-group label span { color: var(--cyan); }
+.form-group input,
+.form-group textarea {
+  width: 100%; font-family: var(--font); font-size: 14px; color: var(--navy);
+  background: var(--gray-bg); border: 1.5px solid var(--gray-border);
+  border-radius: 8px; padding: 12px 16px;
+  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(0,212,170,0.12);
+  background: var(--white);
+}
+.form-group textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
+.form-diag-submit {
+  width: 100%; padding: 15px 32px;
+  background: #00d4aa; color: #ffffff;
+  font-family: var(--font); font-size: 16px; font-weight: 700;
+  border: none; border-radius: 8px; cursor: pointer;
+  transition: all 0.2s; margin-top: 8px; display: block;
+}
+.form-diag-submit:hover {
+  background: var(--cyan-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,212,170,0.3);
+}
+.form-diag-note {
+  font-size: 13px; color: var(--gray-text);
+  text-align: center; margin-top: 10px;
+}
+.form-diag-success { display: none; text-align: center; padding: 48px 24px; }
+.form-diag-success-icon { font-size: 52px; margin-bottom: 16px; }
+.form-diag-success h3 { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.form-diag-success p { font-size: 15px; color: var(--gray-text); line-height: 1.65; }
+
+/* Bloc réassurance */
+.reass-diag {
+  background: var(--gray-bg);
+  border-radius: 16px; padding: 40px 32px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.reass-diag-titre {
+  font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 4px;
+}
+.reass-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 18px;
+  background: var(--white); border: 1px solid var(--gray-border);
+  border-radius: 10px; transition: border-color 0.2s;
+}
+.reass-item:hover { border-color: var(--cyan); }
+.reass-icon {
+  width: 36px; height: 36px; background: var(--cyan-light);
+  border-radius: 8px; display: flex; align-items: center;
+  justify-content: center; font-size: 16px; flex-shrink: 0;
+}
+.reass-label {
+  font-size: 11px; font-weight: 700; color: var(--gray-text);
+  letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3px;
+}
+.reass-value { font-size: 14px; font-weight: 600; color: var(--navy); }
+.reass-contact { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.reass-contact a {
+  display: flex; align-items: center; gap: 12px;
+  color: var(--navy); font-size: 14px; font-weight: 600;
+  padding: 13px 16px; background: var(--white);
+  border: 1px solid var(--gray-border); border-radius: 10px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.reass-contact a:hover { border-color: var(--cyan); color: var(--cyan); }
+.reass-contact-icon {
+  width: 34px; height: 34px; background: var(--cyan-light);
+  border-radius: 8px; display: flex; align-items: center;
+  justify-content: center; font-size: 15px; flex-shrink: 0;
+}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .domaines-grid { grid-template-columns: repeat(3, 1fr); }
-  .livrables-grid { grid-template-columns: repeat(2, 1fr); }
+  .differenciateurs-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 @media (max-width: 768px) {
-  .hero-diag { padding: 90px 24px 64px; min-height: auto; }
-  .phases-flow { flex-direction: column; gap: 32px; }
-  .phases-flow::before { display: none; }
-  .domaines-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-diag { padding: 90px 20px 64px; min-height: auto; }
+  .hero-triggers { grid-template-columns: 1fr; }
+  .probleme-section,
+  .recevez-section,
+  .pourquoi-section,
+  .domaines-section,
+  .temoignages-section,
+  .formulaire-section { padding: 56px 20px; }
+  .timeline-line { display: none; }
+  .timeline-steps { flex-direction: column; gap: 28px; }
+  .timeline-step { align-items: flex-start; text-align: left; flex-direction: row; gap: 18px; }
+  .timeline-circle { margin-bottom: 0; flex-shrink: 0; width: 54px; height: 54px; font-size: 18px; }
   .livrables-grid { grid-template-columns: 1fr; }
-  .temo-solo { padding: 56px 24px; }
-  .cta-diag { padding: 64px 24px; }
-  .cta-contact-row { flex-direction: column; align-items: center; }
+  .domaines-grid { grid-template-columns: repeat(2, 1fr); }
+  .temoignages-grid { grid-template-columns: 1fr; }
+  .formulaire-grid { grid-template-columns: 1fr; gap: 40px; }
+  .form-diag-wrap { padding: 28px 20px; }
+  .reass-diag { padding: 28px 20px; }
 }
 </style>
 </head>
@@ -114,120 +381,269 @@
 
 <div id="nav-placeholder"></div>
 
-<!-- HERO -->
+<!-- ═══ SECTION 1 — HERO ═══ -->
 <section class="hero-diag">
   <div class="hero-diag-photo"></div>
   <div class="hero-diag-overlay"></div>
   <div class="hero-diag-content">
     <div class="hero-diag-badge">⚡ Diagnostic Flash OP360</div>
     <h1>5 jours pour<br><span>voir clair et agir juste</span></h1>
-    <p class="hero-diag-sub">Vous maîtrisez la vision et la stratégie. Et l'exécution ?</p>
-    <div class="hero-diag-pills">
-      <span class="pill pill-accent">Accélérer l'exécution ?</span>
-      <span class="pill pill-accent">Sécuriser des décisions ?</span>
-      <span class="pill pill-accent">Passer un cap ?</span>
-      <span class="pill pill-accent">Assurer une transition ?</span>
+    <p class="hero-diag-sub">Vous maîtrisez la vision et la stratégie. Mais l'exécution suit-elle ?</p>
+
+    <div class="hero-triggers">
+      <div class="hero-trigger">Accélérer l'exécution ?</div>
+      <div class="hero-trigger">Sécuriser une décision ?</div>
+      <div class="hero-trigger">Passer un cap rapidement ?</div>
+      <div class="hero-trigger">Préparer une transition ?</div>
     </div>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;">
-      <a href="#contact-diag" class="btn-primary">Demander mon Diagnostic</a>
-      <a href="#livrables" class="btn-secondary">Ce que vous recevez</a>
+
+    <a href="#formulaire" class="btn-primary">Demander un Diagnostic Flash →</a>
+  </div>
+</section>
+
+<!-- ═══ SECTION 2 — LE PROBLÈME ═══ -->
+<section class="probleme-section">
+  <div class="container">
+    <div class="probleme-inner">
+      <div class="section-label reveal">Le constat</div>
+      <div class="probleme-stat reveal"><span>10–20 %</span></div>
+      <h2 class="probleme-titre-h2 reveal">Seulement 10–20 % des stratégies aboutissent.</h2>
+      <p class="probleme-texte reveal">
+        Pas parce que la stratégie est mauvaise. Parce que l'exécution déraille.<br>
+        Les équipes sont saturées, les priorités floues, les blocages invisibles depuis le haut.<br><br>
+        Vous avez besoin d'une lecture claire, rapide et opérationnelle — pas d'un audit de 3 mois.
+      </p>
+      <div class="probleme-citation reveal">
+        <blockquote>« Avec le seul diagnostic, il y a un avant et un après. »</blockquote>
+        <cite>— Directeur Général, PME industrielle</cite>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 5 PHASES -->
-<section class="phases-section">
+<!-- ═══ SECTION 3 — CE QUE VOUS RECEVEZ ═══ -->
+<section class="recevez-section">
   <div class="container">
     <div class="section-label reveal">Méthodologie</div>
-    <h2 class="section-title reveal">Votre parcours en 5 phases</h2>
-    <p class="section-intro reveal">Un parcours structuré qui transforme l'analyse en action. Chaque phase génère des livrables concrets.</p>
-    <div class="phases-flow">
-      <div class="phase-step reveal">
-        <div class="phase-circle">1</div>
-        <div class="phase-label">Diagnostic</div>
-        <p class="phase-desc">Étude personnalisée sur 12 domaines, entretien dirigeant, analyse documentaire, benchmark</p>
-      </div>
-      <div class="phase-step reveal">
-        <div class="phase-circle">2</div>
-        <div class="phase-label">Analyse</div>
-        <p class="phase-desc">Lecture systémique, visite terrain, entretiens intervenants clés, avis croisés</p>
-      </div>
-      <div class="phase-step reveal">
-        <div class="phase-circle">3</div>
-        <div class="phase-label">Maturité</div>
-        <p class="phase-desc">Scoring par domaine, identification des blocages, matrice impact/priorité</p>
-      </div>
-      <div class="phase-step reveal">
-        <div class="phase-circle">4</div>
-        <div class="phase-label">Plan d'action</div>
-        <p class="phase-desc">Priorisation, quick wins actionnables immédiatement pour des résultats mesurables</p>
-      </div>
-      <div class="phase-step reveal">
-        <div class="phase-circle">5</div>
-        <div class="phase-label">Exécution</div>
-        <p class="phase-desc">Parcours adapté à votre dimension et vos ressources, avec suivi monitoring SaaS</p>
+    <h2 class="section-title reveal">Ce que vous recevez en 5 jours</h2>
+    <p class="section-intro reveal">Un parcours structuré en 5 phases qui transforme l'analyse en plan d'action immédiatement actionnable.</p>
+
+    <!-- Timeline 5 phases -->
+    <div class="timeline-wrap">
+      <div class="timeline-line"></div>
+      <div class="timeline-steps">
+        <div class="timeline-step reveal">
+          <div class="timeline-circle">1</div>
+          <div>
+            <div class="timeline-label">Diagnostic</div>
+            <p class="timeline-desc">Étude personnalisée sur 12 domaines, centrée sur vos enjeux et objectifs</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="timeline-circle">2</div>
+          <div>
+            <div class="timeline-label">Analyse</div>
+            <p class="timeline-desc">Lecture systémique, avis croisés, identification des angles morts</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="timeline-circle">3</div>
+          <div>
+            <div class="timeline-label">Maturité</div>
+            <p class="timeline-desc">Scoring par domaine, forces et points de progrès</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="timeline-circle">4</div>
+          <div>
+            <div class="timeline-label">Plan d'action</div>
+            <p class="timeline-desc">Priorisation, quick wins actionnables immédiatement</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="timeline-circle">5</div>
+          <div>
+            <div class="timeline-label">Exécution</div>
+            <p class="timeline-desc">Parcours d'exécution adapté à votre dimension et vos ressources</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div style="margin-top:40px;text-align:center;color:var(--gray-text);font-size:14px;font-weight:600;">
-      ⏱ Durée terrain : 1 à 3 jours &nbsp;|&nbsp; Restitution : sous 5 jours
+
+    <!-- 4 livrables -->
+    <div class="section-label reveal" style="margin-top:0">Livrables</div>
+    <h3 class="section-title reveal" style="font-size:clamp(22px,2.8vw,32px)">4 livrables concrets et actionnables</h3>
+    <div class="livrables-grid" style="margin-top:32px">
+      <div class="livrable-card reveal">
+        <div class="livrable-icon">📄</div>
+        <h3>Rapport de diagnostic détaillé</h3>
+        <p>12 domaines analysés et scorés</p>
+      </div>
+      <div class="livrable-card reveal">
+        <div class="livrable-icon">🎨</div>
+        <h3>Executive Pack visuel</h3>
+        <p>Synthèse 15–20 slides, heatmaps, radars, priorisation</p>
+      </div>
+      <div class="livrable-card reveal">
+        <div class="livrable-icon">🏆</div>
+        <h3>Top 3–5–7 priorités</h3>
+        <p>Alignées sur vos enjeux critiques</p>
+      </div>
+      <div class="livrable-card reveal">
+        <div class="livrable-icon">⚡</div>
+        <h3>Plan d'action priorisé</h3>
+        <p>Avec quick wins actionnables immédiatement</p>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;text-align:center">
+      <div class="recevez-duree reveal">
+        <strong>1 à 3 jours</strong> d'intervention terrain &nbsp;·&nbsp; restitution complète <strong>sous 10 jours</strong>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 12 DOMAINES -->
+<!-- ═══ SECTION 4 — POURQUOI OP360 ═══ -->
+<section class="pourquoi-section">
+  <div class="container">
+    <div class="pourquoi-inner">
+      <div class="section-label reveal">Notre différence</div>
+      <h2 class="section-title reveal">Une méthodologie unique, portée par des pairs</h2>
+      <p class="pourquoi-texte reveal">
+        Le Diagnostic Flash OP360 n'est pas un audit classique. C'est une analyse systémique menée par des dirigeants qui ont déjà traversé vos défis — pas par des consultants juniors.<br><br>
+        Chaque domaine est scoré, analysé et croisé avec vos enjeux stratégiques pour identifier les vrais leviers de création de valeur. Aucun angle mort. Toutes les interdépendances critiques sont identifiées et exploitées.
+      </p>
+      <div class="differenciateurs-grid">
+        <div class="diff-card reveal">
+          <h3>Systémique</h3>
+          <p>12 domaines analysés en vision globale, pas en silos. On traite les causes, pas les symptômes.</p>
+        </div>
+        <div class="diff-card reveal">
+          <h3>Actionnable</h3>
+          <p>Pas de rapport qui dort dans un tiroir. Un plan d'action priorisé, utilisable en Codir dès la restitution.</p>
+        </div>
+        <div class="diff-card reveal">
+          <h3>Porté par des pairs</h3>
+          <p>Des dirigeants qui ont vécu vos défis de l'intérieur. Pas de posture de juge — une posture de pair.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 5 — LES 12 DOMAINES ═══ -->
 <section class="domaines-section">
   <div class="container">
-    <div class="section-label section-label-white reveal">Notre méthodologie</div>
-    <h2 class="section-title section-title-white reveal">12 domaines, 1 vision systémique</h2>
-    <p class="section-intro section-intro-white reveal">Chaque domaine est scoré, analysé et croisé avec vos enjeux stratégiques pour identifier les vrais leviers de création de valeur.</p>
+    <div class="section-label reveal">Notre méthodologie</div>
+    <h2 class="section-title reveal">12 domaines, 1 vision systémique</h2>
+    <p class="section-intro reveal">Notre méthodologie couvre l'intégralité des dimensions de votre entreprise pour garantir qu'aucun levier de valeur ne soit manqué.</p>
     <div class="domaines-grid">
-      <div class="domaine-card reveal"><div class="domaine-icon">🎯</div><div class="domaine-nb">01</div><h4>Stratégie & Vision</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🏗</div><div class="domaine-nb">02</div><h4>Organisation & Gouvernance</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">👥</div><div class="domaine-nb">03</div><h4>Ressources Humaines & Leadership</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">📈</div><div class="domaine-nb">04</div><h4>Performance Commerciale</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">⚙️</div><div class="domaine-nb">05</div><h4>Opérations & Production</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">💰</div><div class="domaine-nb">06</div><h4>Finance & Trésorerie</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">💻</div><div class="domaine-nb">07</div><h4>Transformation Digitale</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🔗</div><div class="domaine-nb">08</div><h4>Chaîne de Valeur & Supply Chain</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🌱</div><div class="domaine-nb">09</div><h4>RSE & Développement Durable</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🚀</div><div class="domaine-nb">10</div><h4>Innovation & R&D</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🤝</div><div class="domaine-nb">11</div><h4>Écosystème & Partenariats</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">📊</div><div class="domaine-nb">12</div><h4>Pilotage & Monitoring</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">01</div><h4>Stratégie &amp; Vision</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">02</div><h4>Organisation &amp; Gouvernance</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">03</div><h4>Finance &amp; Performance</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">04</div><h4>Commercial &amp; Marketing</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">05</div><h4>Opérations &amp; Production</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">06</div><h4>Ressources Humaines</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">07</div><h4>Systèmes d'information</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">08</div><h4>Innovation &amp; R&amp;D</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">09</div><h4>Achats &amp; Supply Chain</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">10</div><h4>RSE &amp; Conformité</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">11</div><h4>Pilotage &amp; Reporting</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-nb">12</div><h4>Transformation &amp; Conduite du changement</h4></div>
     </div>
   </div>
 </section>
 
-<!-- LIVRABLES -->
-<section class="livrables-section" id="livrables">
+<!-- ═══ SECTION 6 — TÉMOIGNAGES ═══ -->
+<section class="temoignages-section">
   <div class="container">
-    <div class="section-label reveal">Ce que vous recevez</div>
-    <h2 class="section-title reveal">5 livrables concrets et actionnables</h2>
-    <p class="section-intro reveal">Pas un rapport de plus. Un plan d'action opérationnel immédiatement utilisable.</p>
-    <div class="livrables-grid" id="livrables-grid"></div>
+    <div class="section-label reveal" style="text-align:center">Ils nous font confiance</div>
+    <h2 class="section-title reveal" style="text-align:center">Ils nous ont fait confiance</h2>
+    <div class="temoignages-grid">
+      <div class="temo-card reveal">
+        <blockquote>« Avec le seul diagnostic, il y a un avant et un après. »</blockquote>
+        <cite>— Directeur Général, PME industrielle</cite>
+      </div>
+      <div class="temo-card reveal">
+        <blockquote>« Cet accompagnement a sécurisé la décision, y compris lorsqu'elle a conduit à un non investissement, en apportant méthode, lucidité et sérénité. »</blockquote>
+        <cite>— Investisseur</cite>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- TÉMOIGNAGE -->
-<div class="temo-solo">
-  <blockquote class="reveal">« Avec le seul diagnostic, il y a un avant et un après. »</blockquote>
-  <cite>Dirigeant PME Industrielle</cite>
-</div>
+<!-- ═══ SECTION 7 — FORMULAIRE ═══ -->
+<section class="formulaire-section" id="formulaire">
+  <div class="container">
+    <div class="section-label reveal">Passons à l'action</div>
+    <h2 class="section-title reveal">Parlons de vos enjeux</h2>
+    <p class="section-intro reveal">En 30 minutes, nous faisons le point sur votre situation et évaluons ensemble si un Diagnostic Flash est adapté à vos enjeux actuels.</p>
 
-<!-- CTA -->
-<section class="cta-diag" id="contact-diag">
-  <h2>Parlons de <span>vos enjeux</span></h2>
-  <p>Un Diagnostic vous apportera la visibilité que vous attendez. Réponse sous 24h.</p>
-  <div class="cta-diag-btns">
-    <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" class="btn-primary">Prendre rendez-vous</a>
-    <a href="contact.html" class="btn-secondary">Nous écrire</a>
-  </div>
-  <div class="cta-contact-row">
-    <a href="mailto:richard.paquette@operating360.com" class="cta-contact-item">
-      <div class="cta-icon">✉</div> richard.paquette@operating360.com
-    </a>
-    <a href="tel:+33651721524" class="cta-contact-item">
-      <div class="cta-icon">📞</div> 06 51 72 15 24 — Richard Paquette
-    </a>
+    <div class="formulaire-grid" style="margin-top:48px">
+      <!-- Formulaire -->
+      <div>
+        <div id="diag-form-content">
+          <div class="form-diag-wrap">
+            <h3>Demander un Diagnostic Flash</h3>
+            <p class="form-diag-sub">Partagez vos enjeux en quelques mots. Nous vous répondons sous 24h, sans engagement.</p>
+            <form id="diag-form" onsubmit="submitDiagForm(event)">
+              <div class="form-group">
+                <label for="diag-nom">Nom <span>*</span></label>
+                <input type="text" id="diag-nom" name="nom" placeholder="Votre nom complet" required>
+              </div>
+              <div class="form-group">
+                <label for="diag-societe">Société <span>*</span></label>
+                <input type="text" id="diag-societe" name="societe" placeholder="Votre entreprise" required>
+              </div>
+              <div class="form-group">
+                <label for="diag-email">Email <span>*</span></label>
+                <input type="email" id="diag-email" name="email" placeholder="votre@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="diag-enjeu">Votre principal enjeu en ce moment</label>
+                <textarea id="diag-enjeu" name="enjeu" rows="4" placeholder="En quelques mots, quel est votre principal défi ?"></textarea>
+              </div>
+              <button type="submit" class="form-diag-submit">Demander un Diagnostic Flash →</button>
+              <p class="form-diag-note">Nous vous répondons sous 24h. Aucun engagement.</p>
+            </form>
+          </div>
+        </div>
+        <div class="form-diag-success" id="diag-form-success">
+          <div class="form-diag-success-icon">✅</div>
+          <h3>Message envoyé !</h3>
+          <p>Merci pour votre message. L'un des fondateurs OP360 vous répondra sous 24h pour un premier échange entre pairs.</p>
+        </div>
+      </div>
+
+      <!-- Bloc réassurance -->
+      <div class="reass-diag reveal">
+        <div class="reass-item">
+          <div class="reass-icon">⏱</div>
+          <div>
+            <div class="reass-label">Durée</div>
+            <div class="reass-value">1 à 3 jours terrain, restitution sous 10 jours</div>
+          </div>
+        </div>
+        <div class="reass-item">
+          <div class="reass-icon">📊</div>
+          <div>
+            <div class="reass-label">Livrable</div>
+            <div class="reass-value">Executive Pack visuel utilisable en Codir</div>
+          </div>
+        </div>
+        <div class="reass-contact">
+          <a href="tel:+33651721524">
+            <div class="reass-contact-icon">📞</div>
+            06 51 72 15 24
+          </a>
+          <a href="mailto:contact@operating360.com">
+            <div class="reass-contact-icon">✉</div>
+            contact@operating360.com
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -239,12 +655,11 @@
 buildNav('diagnostic.html');
 buildFooter();
 
-document.getElementById('livrables-grid').innerHTML = OP360.diagnostic.livrables.map((l,i) => `
-  <div class="livrable-card ${i===0?'featured':''} reveal">
-    <div class="livrable-icon">${l.icone}</div>
-    <h3>${l.titre}</h3>
-    <p>${l.desc}</p>
-  </div>`).join('');
+function submitDiagForm(e) {
+  e.preventDefault();
+  document.getElementById('diag-form-content').style.display = 'none';
+  document.getElementById('diag-form-success').style.display = 'block';
+}
 
 initReveal();
 </script>
