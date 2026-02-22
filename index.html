@@ -551,7 +551,24 @@
   <div class="container">
     <div class="section-label reveal">Ils nous ont fait confiance</div>
     <h2 class="section-title reveal">Ce que disent nos clients</h2>
-    <div class="temos-grid" id="temos-grid"></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Avec le seul diagnostic, il y a un avant et un après."</div>
+        <div class="testimonial-author">Directeur Général — PME industrielle</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Un accompagnement bienveillant et une exécution terrain efficace, unanimement salués. Par ces quelques mots, merci."</div>
+        <div class="testimonial-author">Directeur Général — ETI agro-alimentaire</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"En quelques mois à nos côtés leurs interventions nous ont fait grandir et passer à une nouvelle étape."</div>
+        <div class="testimonial-author">Président — Coopérative mobilités</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"Cet accompagnement a sécurisé la décision, y compris lorsqu'elle a conduit à un non investissement, en apportant méthode, lucidité et sérénité."</div>
+        <div class="testimonial-author">Investisseur</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -656,14 +673,6 @@ document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
     <a href="offres.html" class="offre-lien">En savoir plus →</a>
   </div>`).join('');
 
-document.getElementById('temos-grid').innerHTML = OP360.temoignages.map(t => `
-  <div class="temo-card reveal">
-    <div class="temo-stars">${'<span>★</span>'.repeat(5)}</div>
-    <p class="temo-quote">${t.quote}</p>
-    <div class="temo-bar"></div>
-    <div class="temo-author">${t.auteur}</div>
-    <div class="temo-entreprise">${t.entreprise}</div>
-  </div>`).join('');
 
 document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => `
   <div class="equipe-card reveal">
