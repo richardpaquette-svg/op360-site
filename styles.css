@@ -135,7 +135,13 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .nav-links a { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .nav-burger { display: flex; }
   .nav-cta { display: none; }
-  section { padding: 64px 24px; }
+  section { padding: 56px 20px; }
+  /* Typographie */
+  .section-intro { font-size: 16px; margin-bottom: 32px; }
+  h2.section-title { font-size: clamp(22px, 6vw, 32px); margin-bottom: 10px; }
+  /* Boutons plus compacts */
+  .btn-primary, .btn-secondary { padding: 14px 28px; font-size: 14px; }
+  /* Footer */
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
-  footer { padding: 48px 24px 24px; }
+  footer { padding: 48px 20px 24px; }
 }
