@@ -259,8 +259,18 @@
   .video-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  .hero { padding: 90px 24px 64px; }
-  .moments-grid, .diff-grid, .offres-grid, .temos-grid, .fit-grid, .equipe-grid, .piliers-grid, .hero-pillars, .diag-grid { grid-template-columns: 1fr; }
+  /* Hero mobile : compact pour tenir en ~1 écran */
+  .hero { min-height: auto; padding: 80px 20px 40px; }
+  .hero-eyebrow { margin-bottom: 14px; font-size: 11px; padding: 5px 14px; }
+  .hero h1 { font-size: clamp(26px, 7.5vw, 36px); margin-bottom: 10px; }
+  .hero-sub { font-size: 15px; line-height: 1.5; margin-bottom: 18px; }
+  .hero-pillars { display: none; }
+  .hero-tags { gap: 8px; margin-bottom: 18px; }
+  .hero-tag { padding: 7px 12px; font-size: 13px; }
+  .hero-ctas { flex-direction: column; gap: 10px; }
+  .hero-scroll { display: none; }
+  /* Autres sections */
+  .moments-grid, .diff-grid, .offres-grid, .temos-grid, .fit-grid, .equipe-grid, .piliers-grid, .diag-grid { grid-template-columns: 1fr; }
   .diag-section { padding: 56px 24px; }
   .diag-bandeau { padding: 24px 20px; }
   .hero-stats { gap: 28px; }
