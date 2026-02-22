@@ -73,9 +73,24 @@
   .offre-detail-inner, .offre-detail:nth-child(even) .offre-detail-inner { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
 }
 @media (max-width: 768px) {
-  .hero-offres { padding: 90px 24px 64px; }
-  .offre-detail { padding: 64px 24px; }
-  .combo-section { padding: 64px 24px; }
+  /* Hero compact */
+  .hero-offres { min-height: auto; padding: 80px 20px 40px; }
+  .hero-offres h1 { font-size: clamp(28px, 8vw, 38px); margin-bottom: 12px; }
+  .hero-offres-sub { font-size: 16px; margin-bottom: 20px; }
+  /* Pills : défilement horizontal sans retour à la ligne */
+  .hero-pills { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; -webkit-overflow-scrolling: touch; padding-bottom: 4px; gap: 8px; }
+  .hero-pill { flex-shrink: 0; }
+  /* Sections offres */
+  .offre-detail { padding: 48px 20px; }
+  .offre-detail-inner { gap: 24px; }
+  .offre-icon-lg { width: 48px; height: 48px; font-size: 22px; border-radius: 10px; }
+  .offre-visual { padding: 24px 18px; }
+  .offre-visual-header { margin-bottom: 16px; padding-bottom: 14px; }
+  .offre-kpi { padding: 12px 14px; margin-bottom: 8px; }
+  .offre-kpi h4 { font-size: 13px; }
+  .offre-cta-row { margin-top: 20px; }
+  /* Combo */
+  .combo-section { padding: 48px 20px; }
 }
 </style>
 </head>

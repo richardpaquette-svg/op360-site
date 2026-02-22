@@ -100,9 +100,27 @@
   .fit-grid-equipe { grid-template-columns: 1fr; max-width: 480px; }
 }
 @media (max-width: 768px) {
-  .hero-equipe { padding: 90px 24px 64px; }
-  .phrase-section, .cta-equipe { padding: 56px 24px; }
-  .fondateur-photo { width: 160px; height: 160px; }
+  /* Hero compact */
+  .hero-equipe { min-height: auto; padding: 80px 20px 40px; }
+  .hero-equipe h1 { font-size: clamp(28px, 8vw, 38px); margin-bottom: 12px; }
+  .hero-equipe-sub { font-size: 16px; }
+  /* Phrase fondatrice */
+  .phrase-section { padding: 44px 20px; }
+  .phrase-section blockquote { font-size: clamp(16px, 4.5vw, 22px); }
+  /* Fondateurs : photo plus petite, padding réduit */
+  .fondateur-card { padding: 32px 0; gap: 20px; }
+  .fondateur-photo { width: 140px; height: 140px; }
+  .fondateur-content p { font-size: 15px; line-height: 1.65; }
+  /* Valeurs FIT */
+  .fit-section { padding: 48px 20px; }
+  .fit-grid-equipe { max-width: unset; }
+  .fit-card-dark { padding: 28px 18px; }
+  .fit-letter-dark { font-size: 48px; }
+  /* Mission */
+  .mission-visual { padding: 24px 20px; }
+  .mission-kpi { padding: 14px 16px; }
+  /* CTA */
+  .cta-equipe { padding: 48px 20px; }
 }
 </style>
 </head>

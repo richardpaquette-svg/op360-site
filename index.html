@@ -259,7 +259,7 @@
   .video-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  /* Hero mobile : compact pour tenir en ~1 écran */
+  /* ── HERO (1 écran) ── */
   .hero { min-height: auto; padding: 80px 20px 40px; }
   .hero-eyebrow { margin-bottom: 14px; font-size: 11px; padding: 5px 14px; }
   .hero h1 { font-size: clamp(26px, 7.5vw, 36px); margin-bottom: 10px; }
@@ -269,18 +269,77 @@
   .hero-tag { padding: 7px 12px; font-size: 13px; }
   .hero-ctas { flex-direction: column; gap: 10px; }
   .hero-scroll { display: none; }
-  /* Autres sections */
-  .moments-grid, .diff-grid, .offres-grid, .temos-grid, .fit-grid, .equipe-grid, .piliers-grid, .diag-grid { grid-template-columns: 1fr; }
-  .diag-section { padding: 56px 24px; }
-  .diag-bandeau { padding: 24px 20px; }
-  .hero-stats { gap: 28px; }
-  .stat-choc-wrap { padding: 0 24px; }
-  .stat-choc { padding: 32px 24px; flex-direction: column; text-align: center; }
-  .terrain-section { height: 300px; }
-  .equipe-phrase { padding: 28px 24px; }
+
+  /* ── VIDEO ── */
+  .video-section { padding: 48px 20px; }
+  .video-inner { gap: 28px; }
+
+  /* ── STAT CHOC ── */
+  .hero-stats { gap: 24px; }
+  .stat-choc-wrap { padding: 0 20px; }
+  .stat-choc { padding: 24px 20px; flex-direction: column; text-align: center; gap: 16px; }
+  .stat-choc-nb { font-size: 48px; }
+
+  /* ── APPROCHE ── */
+  .approche-section { padding: 48px 20px; }
+  .piliers-grid { grid-template-columns: 1fr; }
+  .pilier-card { padding: 20px 16px; }
+
+  /* ── DIAGNOSTIC ── */
+  .diag-section { padding: 48px 20px; }
+  .diag-grid { grid-template-columns: 1fr; }
+  .diag-card { padding: 24px 20px; }
+  .diag-bandeau { padding: 20px 16px; }
+
+  /* ── MOMENTS (3 cartes, stacked compact) ── */
+  .moments-grid { grid-template-columns: 1fr; }
+  .moment-card { padding: 24px 18px; }
+  .moment-icon { font-size: 28px; margin-bottom: 12px; }
+  .moment-card h3 { font-size: 17px; }
+
+  /* ── DIFFÉRENCIATEURS (6 cartes → carrousel horizontal) ── */
+  .diff-grid {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; gap: 14px; padding-bottom: 16px;
+  }
+  .diff-grid .diff-card { flex: 0 0 80%; scroll-snap-align: start; padding: 24px 18px; }
+  .diff-nb { font-size: 40px; }
+
+  /* ── OFFRES (6 cartes → carrousel horizontal) ── */
+  .offres-grid {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; gap: 14px; padding-bottom: 16px;
+  }
+  .offres-grid .offre-card { flex: 0 0 80%; scroll-snap-align: start; padding: 22px 18px; }
+
+  /* ── TERRAIN ── */
+  .terrain-section { height: 260px; }
+
+  /* ── TÉMOIGNAGES ── */
+  .temos-grid { grid-template-columns: 1fr; }
+  .temo-card { padding: 28px 22px; }
+
+  /* ── VALEURS FIT (2 colonnes) ── */
+  .fit-section { padding: 48px 20px; }
+  .fit-header { margin-bottom: 28px; }
+  .fit-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .fit-card { padding: 24px 16px; }
+  .fit-letter { font-size: 46px; }
+  .fit-card h3 { font-size: 17px; }
+
+  /* ── ÉQUIPE (grille 2×2) ── */
+  .equipe-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .equipe-card { padding: 20px 14px; }
+  .equipe-photo { width: 72px; height: 72px; }
+  .equipe-phrase { padding: 24px 18px; }
+
+  /* ── LINKEDIN ── */
+  .linkedin-section { padding: 48px 20px; }
+
+  /* ── CTA FINAL ── */
+  .cta-final { padding: 56px 20px; }
+  .cta-btns { flex-direction: column; align-items: center; gap: 10px; }
   .cta-contacts { flex-direction: column; align-items: center; }
-  .fit-section, .cta-final { padding: 64px 24px; }
-  .video-section, .approche-section, .linkedin-section { padding: 56px 24px; }
 }
 </style>
 </head>
