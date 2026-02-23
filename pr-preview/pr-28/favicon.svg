@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Anneau de points colorés — logo réel Operating Partners 360 -->
+  <!-- Haut : teal vif -->
+  <circle cx="32" cy="8"  r="5.5" fill="#00C5AE"/>
+  <!-- Haut-droite : teal foncé -->
+  <circle cx="47" cy="14" r="4.5" fill="#009688"/>
+  <!-- Droite : teal-ardoise -->
+  <circle cx="56" cy="28" r="4"   fill="#00796B"/>
+  <!-- Bas-droite : bleu -->
+  <circle cx="53" cy="44" r="4"   fill="#1976D2"/>
+  <!-- Bas : indigo foncé -->
+  <circle cx="40" cy="55" r="4.5" fill="#283593"/>
+  <!-- Bas-gauche : violet -->
+  <circle cx="24" cy="55" r="4.5" fill="#6A1B9A"/>
+  <!-- Gauche : rouge-orange -->
+  <circle cx="11" cy="44" r="4"   fill="#E53935"/>
+  <!-- Haut-gauche : orange -->
+  <circle cx="8"  cy="28" r="4"   fill="#EF6C00"/>
+  <!-- Haut-gauche : vert-lime -->
+  <circle cx="17" cy="14" r="4.5" fill="#8BC34A"/>
+</svg>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qui sommes-nous — Les fondateurs | OP360</title>
+<meta name="description" content="4 pairs dirigeants, entrepreneurs et opérationnels qui ont décidé de mettre leur expérience au service des dirigeants de PME, ETI et investisseurs.">
+<link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+.hero-equipe {
+  min-height: 60vh; background: var(--navy); position: relative; overflow: hidden;
+  display: flex; align-items: center; padding: 110px 48px 80px;
+}
+.hero-equipe-photo {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=80');
+  background-size: cover; background-position: center;
+  opacity: 0.13;
+}
+.hero-equipe-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(26,35,50,0.94) 50%, rgba(26,35,50,0.6) 100%); }
+.hero-equipe-content { position: relative; z-index: 2; max-width: 680px; }
+.hero-equipe h1 { font-size: clamp(34px, 5vw, 54px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 16px; }
+.hero-equipe h1 span { color: var(--cyan); }
+.hero-equipe-sub { font-size: 20px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 540px; }
+
+/* ── PHRASE FONDATRICE ── */
+.phrase-section { background: var(--cyan-light); padding: 72px 48px; text-align: center; }
+.phrase-section blockquote { font-size: clamp(20px, 2.8vw, 28px); font-weight: 300; color: var(--navy); font-style: italic; line-height: 1.55; max-width: 820px; margin: 0 auto 20px; }
+.phrase-section blockquote strong { color: var(--cyan); font-weight: 600; font-style: normal; }
+.phrase-source { font-size: 14px; font-weight: 700; color: var(--gray-text); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ── FONDATEURS DÉTAILLÉS ── */
+.fondateurs-section { background: var(--white); }
+.fondateur-card {
+  display: grid; grid-template-columns: 280px 1fr; gap: 64px;
+  align-items: start; padding: 56px 0;
+  border-bottom: 1px solid var(--gray-border);
+}
+.fondateur-card:last-child { border-bottom: none; }
+.fondateur-card:nth-child(even) { grid-template-columns: 1fr 280px; }
+.fondateur-card:nth-child(even) .fondateur-visual { order: 2; }
+.fondateur-card:nth-child(even) .fondateur-content { order: 1; }
+
+.fondateur-visual { text-align: center; }
+.fondateur-photo {
+  width: 200px; height: 200px; border-radius: 50%; object-fit: cover;
+  margin: 0 auto 20px; border: 3px solid rgba(0,212,170,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+.fondateur-nom { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.fondateur-titre { font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 16px; }
+.fondateur-linkedin {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--gray-text); border: 1px solid var(--gray-border);
+  border-radius: 6px; padding: 8px 16px; transition: all 0.2s;
+}
+.fondateur-linkedin:hover { border-color: var(--cyan); color: var(--cyan); }
+
+.fondateur-content h3 { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.fondateur-content .fondateur-role { font-size: 15px; font-weight: 600; color: var(--cyan); margin-bottom: 20px; }
+.fondateur-content p { font-size: 16px; color: var(--gray-text); line-height: 1.75; margin-bottom: 16px; }
+.fondateur-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.fondateur-tag { background: var(--gray-bg); border: 1px solid var(--gray-border); border-radius: 6px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: var(--navy); }
+
+/* ── VALEURS FIT ── */
+.fit-section { background: var(--navy); padding: 96px 48px; }
+.fit-grid-equipe { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+.fit-card-dark { border: 1px solid rgba(0,212,170,0.2); border-radius: 14px; padding: 40px 32px; text-align: center; transition: all 0.25s; }
+.fit-card-dark:hover { border-color: rgba(0,212,170,0.5); transform: translateY(-4px); background: rgba(0,212,170,0.04); }
+.fit-letter-dark { font-size: 64px; font-weight: 700; color: var(--cyan); line-height: 1; margin-bottom: 6px; }
+.fit-card-dark h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.fit-card-dark p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+
+/* ── MISSION ── */
+.mission-section { background: var(--gray-bg); }
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.mission-content h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.02em; }
+.mission-content p { font-size: 16px; color: var(--gray-text); line-height: 1.75; margin-bottom: 16px; }
+.mission-points { list-style: none; margin-top: 24px; }
+.mission-points li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--gray-border); font-size: 15px; color: var(--navy); line-height: 1.5; }
+.mission-points li:last-child { border: none; }
+.mission-points li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.mission-visual { background: var(--navy); border-radius: 16px; padding: 48px 40px; }
+.mission-kpi { background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); border-radius: 10px; padding: 20px 24px; margin-bottom: 16px; }
+.mission-kpi:last-child { margin-bottom: 0; }
+.mission-kpi-label { font-size: 12px; font-weight: 700; color: rgba(0,212,170,0.7); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+.mission-kpi-value { font-size: 22px; font-weight: 700; color: var(--white); }
+.mission-kpi-sub { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 4px; }
+
+/* ── CTA ── */
+.cta-equipe { background: var(--cyan-light); padding: 80px 48px; text-align: center; }
+.cta-equipe h2 { font-size: clamp(26px, 3.5vw, 40px); font-weight: 700; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em; }
+.cta-equipe p { font-size: 18px; font-weight: 300; color: var(--gray-text); max-width: 520px; margin: 0 auto 36px; line-height: 1.65; }
+
+@media (max-width: 1024px) {
+  .fondateur-card, .fondateur-card:nth-child(even) { grid-template-columns: 1fr; gap: 32px; }
+  .fondateur-card:nth-child(even) .fondateur-visual, .fondateur-card:nth-child(even) .fondateur-content { order: unset; }
+  .mission-grid { grid-template-columns: 1fr; }
+  .fit-grid-equipe { grid-template-columns: 1fr; max-width: 480px; }
+}
+@media (max-width: 768px) {
+  /* Hero compact */
+  .hero-equipe { min-height: auto; padding: 80px 20px 40px; }
+  .hero-equipe h1 { font-size: clamp(28px, 8vw, 38px); margin-bottom: 12px; }
+  .hero-equipe-sub { font-size: 16px; }
+  /* Phrase fondatrice */
+  .phrase-section { padding: 44px 20px; }
+  .phrase-section blockquote { font-size: clamp(16px, 4.5vw, 22px); }
+  /* Fondateurs : photo plus petite, padding réduit */
+  .fondateur-card { padding: 32px 0; gap: 20px; }
+  .fondateur-photo { width: 140px; height: 140px; }
+  .fondateur-content p { font-size: 15px; line-height: 1.65; }
+  /* Valeurs FIT */
+  .fit-section { padding: 48px 20px; }
+  .fit-grid-equipe { max-width: unset; }
+  .fit-card-dark { padding: 28px 18px; }
+  .fit-letter-dark { font-size: 48px; }
+  /* Mission */
+  .mission-visual { padding: 24px 20px; }
+  .mission-kpi { padding: 14px 16px; }
+  /* CTA */
+  .cta-equipe { padding: 48px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero-equipe">
+  <div class="hero-equipe-photo"></div>
+  <div class="hero-equipe-overlay"></div>
+  <div class="hero-equipe-content">
+    <div class="section-label section-label-white" style="margin-bottom:16px">Qui sommes-nous</div>
+    <h1>4 pairs dirigeants.<br><span>À vos côtés.</span></h1>
+    <p class="hero-equipe-sub">Pas des consultants. Des opérationnels qui ont porté la vision, assumé le risque et exécuté la stratégie. Exactement comme vous.</p>
+  </div>
+</section>
+
+<!-- PHRASE FONDATRICE -->
+<div class="phrase-section">
+  <blockquote class="reveal">
+    « Nous sommes des pairs dirigeants, entrepreneurs et start-upers, au plus près de vos réalités, qui avons décidé de nous associer pour une mission simple : <strong>aider les entreprises à passer un cap</strong> et à exécuter leur stratégie tels des partenaires opérationnels qui ont déjà traversé leurs défis. »
+  </blockquote>
+  <div class="phrase-source">Les fondateurs d'Operating Partners 360</div>
+</div>
+
+<!-- FONDATEURS DÉTAILLÉS -->
+<section class="fondateurs-section">
+  <div class="container">
+    <div class="section-label reveal">L'équipe fondatrice</div>
+    <h2 class="section-title reveal">Des pairs qui ont vécu vos défis</h2>
+
+    <!-- Annie -->
+    <div class="fondateur-card reveal">
+      <div class="fondateur-visual">
+        <img class="fondateur-photo" src="https://operating360.com/_assets/v11/fc62ef918429c6b134bc819dcd0ab5300a56aff7.png" alt="Annie Belquin">
+        <div class="fondateur-nom">Annie Belquin</div>
+        <div class="fondateur-titre">Présidente</div>
+        <a href="https://www.linkedin.com/company/operating-partners-360" target="_blank" class="fondateur-linkedin">in LinkedIn</a>
+      </div>
+      <div class="fondateur-content">
+        <h3>Annie Belquin</h3>
+        <div class="fondateur-role">Présidente — Vision stratégique & Gouvernance</div>
+        <p>Pair dirigeante avec une expérience approfondie de la direction générale, Annie apporte une vision stratégique claire et une capacité à structurer les organisations pour les préparer à leurs prochaines étapes de développement.</p>
+        <p>Elle a traversé les trois moments clés que vivent nos clients : ambition de croissance, transitions critiques et retournement. Cette double expérience — vision et exécution — est au cœur de la posture OP360.</p>
+        <div class="fondateur-tags">
+          <span class="fondateur-tag">Vision stratégique</span>
+          <span class="fondateur-tag">Gouvernance</span>
+          <span class="fondateur-tag">Transformation</span>
+          <span class="fondateur-tag">PME & ETI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Richard -->
+    <div class="fondateur-card reveal">
+      <div class="fondateur-visual">
+        <img class="fondateur-photo" src="https://operating360.com/_assets/v11/2f8733a0399f8085163edaa1a7d0725dc2b2f4f4.png" alt="Richard Paquette">
+        <div class="fondateur-nom">Richard Paquette</div>
+        <div class="fondateur-titre">Directeur Général</div>
+        <a href="mailto:richard.paquette@operating360.com" class="fondateur-linkedin">✉ richard.paquette@operating360.com</a>
+      </div>
+      <div class="fondateur-content">
+        <h3>Richard Paquette</h3>
+        <div class="fondateur-role">Directeur Général — Exécution opérationnelle & Développement</div>
+        <p>Entrepreneur et pair dirigeant, Richard pilote le développement d'OP360 avec une conviction profonde : ce que les dirigeants cherchent, c'est un pair qui a déjà traversé leurs défis, pas un consultant supplémentaire.</p>
+        <p>Son approche est résolument opérationnelle — il se positionne toujours dans l'exécution concrète, au service des équipes, avec la rigueur d'un pilote de performance et l'humilité d'un pair.</p>
+        <div class="fondateur-tags">
+          <span class="fondateur-tag">Exécution opérationnelle</span>
+          <span class="fondateur-tag">Développement commercial</span>
+          <span class="fondateur-tag">Entrepreneuriat</span>
+          <span class="fondateur-tag">Pilotage performance</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suzanne -->
+    <div class="fondateur-card reveal">
+      <div class="fondateur-visual">
+        <img class="fondateur-photo" src="https://operating360.com/_assets/v11/65a4c6227ef12db51910bb9cb6ab8dee23fa0891.png" alt="Suzanne Grimal">
+        <div class="fondateur-nom">Suzanne Grimal</div>
+        <div class="fondateur-titre">Directrice de la Valeur</div>
+        <a href="https://www.linkedin.com/company/operating-partners-360" target="_blank" class="fondateur-linkedin">in LinkedIn</a>
+      </div>
+      <div class="fondateur-content">
+        <h3>Suzanne Grimal</h3>
+        <div class="fondateur-role">Directrice de la Valeur — Création de valeur & Transformation</div>
+        <p>Suzanne a développé une expertise unique dans l'identification et l'activation des leviers de création de valeur au sein des organisations. Elle accompagne les dirigeants dans les moments de transformation avec méthode, lucidité et pragmatisme.</p>
+        <p>Sa vision systémique des organisations lui permet d'identifier rapidement les interdépendances critiques et les vrais leviers de performance, souvent invisibles dans une analyse sectorielle classique.</p>
+        <div class="fondateur-tags">
+          <span class="fondateur-tag">Création de valeur</span>
+          <span class="fondateur-tag">Transformation</span>
+          <span class="fondateur-tag">Analyse systémique</span>
+          <span class="fondateur-tag">Due Diligence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Christophe -->
+    <div class="fondateur-card reveal">
+      <div class="fondateur-visual">
+        <img class="fondateur-photo" src="https://operating360.com/_assets/v11/0d2a1023ad5820c69a65779194a7ffa09d1867a6.png" alt="Christophe Raix">
+        <div class="fondateur-nom">Christophe Raix</div>
+        <div class="fondateur-titre">Directeur de l'Innovation</div>
+        <a href="https://www.linkedin.com/company/operating-partners-360" target="_blank" class="fondateur-linkedin">in LinkedIn</a>
+      </div>
+      <div class="fondateur-content">
+        <h3>Christophe Raix</h3>
+        <div class="fondateur-role">Directeur de l'Innovation — Innovation & Outils numériques</div>
+        <p>Christophe pilote le développement des outils numériques OP360 et l'intégration de l'intelligence artificielle au service des dirigeants. Sa conviction : la technologie doit réduire la charge mentale du dirigeant, pas l'augmenter.</p>
+        <p>Il orchestre la plateforme SaaS OP360, l'Idea Vault augmentée et les formations IA pour dirigeants — avec toujours la même obsession : que les outils servent l'exécution, pas l'inverse.</p>
+        <div class="fondateur-tags">
+          <span class="fondateur-tag">Innovation</span>
+          <span class="fondateur-tag">IA & Digital</span>
+          <span class="fondateur-tag">Plateforme SaaS</span>
+          <span class="fondateur-tag">Entrepreneuriat</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALEURS FIT -->
+<section class="fit-section">
+  <div class="container">
+    <div class="section-label section-label-white reveal" style="text-align:center">Nos valeurs</div>
+    <h2 class="section-title section-title-white reveal" style="text-align:center;margin-bottom:14px">We <span style="color:var(--cyan)">FIT</span> You !</h2>
+    <p class="section-intro section-intro-white reveal" style="margin:0 auto 56px;text-align:center;">Trois valeurs fondatrices qui guident chacune de nos interventions.</p>
+    <div class="fit-grid-equipe">
+      <div class="fit-card-dark reveal"><div class="fit-letter-dark">F</div><h3>Fiabilité</h3><p>Être le partenaire de confiance, expérimenté et structuré, sur lequel dirigeants et investisseurs peuvent compter en toutes circonstances.</p></div>
+      <div class="fit-card-dark reveal"><div class="fit-letter-dark">I</div><h3>Impact</h3><p>Rechercher le concret, la performance mesurable et la création de valeur durable. Moins de slides, plus d'exécution terrain.</p></div>
+      <div class="fit-card-dark reveal"><div class="fit-letter-dark">T</div><h3>Transmission</h3><p>Partager l'expertise, renforcer l'autonomie des équipes et pérenniser les transformations. Éviter la dépendance à un prestataire.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission-section">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-content reveal">
+        <div class="section-label">Notre mission</div>
+        <h2>Être le partenaire de confiance pour l'exécution de votre stratégie</h2>
+        <p>Notre raison d'être : accompagner les enjeux stratégiques et opérationnels des dirigeants en conjuguant expertise individuelle, puissance de la technologie et force d'un collectif structuré.</p>
+        <ul class="mission-points">
+          <li>Accélérer l'exécution de la stratégie</li>
+          <li>Sécuriser les décisions clés</li>
+          <li>Assurer une création de valeur pérenne</li>
+          <li>Rompre l'isolement des décideurs</li>
+          <li>Ouvrir la voie à une création de valeur durable</li>
+        </ul>
+      </div>
+      <div class="mission-visual reveal">
+        <div class="mission-kpi"><div class="mission-kpi-label">Notre positionnement</div><div class="mission-kpi-value">Le seul partenaire 360°</div><div class="mission-kpi-sub">Systémique · Shadow Codir · Exécution · Digital</div></div>
+        <div class="mission-kpi"><div class="mission-kpi-label">Notre ambition</div><div class="mission-kpi-value">Référence PME & ETI</div><div class="mission-kpi-sub">Pour sécuriser les dirigeants et maximiser la valeur</div></div>
+        <div class="mission-kpi"><div class="mission-kpi-label">Notre différence</div><div class="mission-kpi-value">Pairs, pas consultants</div><div class="mission-kpi-sub">Nous avons vécu vos défis de l'intérieur</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-equipe">
+  <h2 class="reveal">Travaillons ensemble</h2>
+  <p class="reveal">Échangeons sur vos enjeux. Sans engagement, entre pairs.</p>
+  <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" class="btn-outline reveal" style="border-color:var(--navy)">Prendre rendez-vous →</a>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="contenu.js"></script>
+<script src="scripts.js"></script>
+<script>
+buildNav('equipe.html');
+buildFooter();
+initReveal();
+</script>
+</body>
+</html>

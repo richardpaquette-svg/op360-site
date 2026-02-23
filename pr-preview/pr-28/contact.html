@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Parlons de vos enjeux | OP360</title>
+<meta name="description" content="Prenez rendez-vous avec Richard Paquette ou contactez OP360 pour discuter de vos enjeux stratégiques et opérationnels. Réponse sous 24h.">
+<link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+.hero-contact {
+  min-height: 50vh; background: var(--navy); position: relative; overflow: hidden;
+  display: flex; align-items: center; padding: 110px 48px 80px; justify-content: center; text-align: center;
+}
+.hero-contact-photo {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=80');
+  background-size: cover; background-position: center top; opacity: 0.1;
+}
+.hero-contact-overlay { position: absolute; inset: 0; background: rgba(26,35,50,0.9); }
+.hero-contact-content { position: relative; z-index: 2; max-width: 680px; }
+.hero-contact h1 { font-size: clamp(30px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 14px; }
+.hero-contact h1 span { color: var(--cyan); }
+.hero-contact-sub { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; }
+
+/* ── MAIN CONTACT ── */
+.contact-main { padding: 96px 48px; background: var(--white); }
+.contact-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 64px; align-items: start; }
+
+/* ── FORMULAIRE SIMPLIFIÉ ── */
+.form-submit-simple {
+  width: 100%; padding: 14px 32px; background: #00d4aa; color: #ffffff;
+  font-family: var(--font); font-size: 15px; font-weight: 600;
+  border: none; border-radius: 6px; cursor: pointer;
+  transition: all 0.2s; margin-top: 12px; display: block;
+}
+.form-submit-simple:hover { background: var(--cyan-mid); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,212,170,0.3); }
+.form-note-submit { font-size: 13px; color: #4a5568; text-align: center; margin-top: 10px; }
+
+/* ── BLOC RÉASSURANCE ── */
+.contact-reassurance { background: var(--gray-bg); border-radius: 16px; padding: 48px 36px; display: flex; flex-direction: column; gap: 28px; }
+.reassurance-quote { padding: 28px 28px; background: var(--navy); border-radius: 12px; border-left: 3px solid var(--cyan); }
+.reassurance-quote blockquote { font-size: 18px; font-weight: 300; color: var(--white); font-style: italic; line-height: 1.6; margin-bottom: 14px; }
+.reassurance-quote cite { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.45); font-style: normal; letter-spacing: 0.04em; }
+.reassurance-coords { display: flex; flex-direction: column; gap: 12px; }
+.reassurance-coord { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--white); border: 1px solid var(--gray-border); border-radius: 10px; transition: border-color 0.2s; color: var(--navy); }
+.reassurance-coord:hover { border-color: var(--cyan); }
+.reassurance-coord-icon { width: 36px; height: 36px; background: var(--cyan-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.reassurance-coord-value { font-size: 14px; font-weight: 600; color: var(--navy); }
+
+/* ── INFO SIDE ── */
+.contact-info h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 700; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.02em; }
+.contact-info-sub { font-size: 16px; font-weight: 300; color: var(--gray-text); line-height: 1.7; margin-bottom: 36px; }
+
+.contact-richard { background: var(--navy); border-radius: 14px; padding: 36px 32px; margin-bottom: 28px; position: relative; overflow: hidden; }
+.contact-richard::before { content:''; position:absolute; right:-30px; top:-30px; width:140px; height:140px; background: radial-gradient(circle, rgba(0,212,170,0.1) 0%, transparent 70%); }
+.contact-richard-photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 2.5px solid rgba(0,212,170,0.4); margin-bottom: 16px; }
+.contact-richard h3 { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.contact-richard-titre { font-size: 13px; color: var(--cyan); font-weight: 600; margin-bottom: 20px; }
+.contact-richard-links { display: flex; flex-direction: column; gap: 12px; }
+.contact-link { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.7); font-size: 14px; transition: color 0.2s; }
+.contact-link:hover { color: var(--cyan); }
+.contact-link-icon { width: 34px; height: 34px; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+
+.contact-channels { display: flex; flex-direction: column; gap: 14px; }
+.contact-channel { display: flex; align-items: center; gap: 16px; padding: 18px 20px; background: var(--gray-bg); border: 1px solid var(--gray-border); border-radius: 12px; transition: all 0.2s; }
+.contact-channel:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateX(4px); }
+.contact-channel-icon { width: 44px; height: 44px; background: var(--white); border: 1px solid var(--gray-border); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+.contact-channel-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-text); margin-bottom: 3px; }
+.contact-channel-value { font-size: 14px; font-weight: 600; color: var(--navy); }
+.contact-channel-sub { font-size: 12px; color: var(--gray-text); margin-top: 2px; }
+
+/* ── FORM ── */
+#contact-form .form-group label {
+  display: block; font-size: 13px; font-weight: 700; color: var(--navy);
+  margin-bottom: 7px; letter-spacing: 0.02em;
+}
+#contact-form .form-group input,
+#contact-form .form-group textarea {
+  width: 100%; font-family: var(--font); font-size: 14px; color: var(--navy);
+  background: var(--gray-bg); border: 1.5px solid var(--gray-border);
+  border-radius: 8px; padding: 12px 16px;
+  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+}
+#contact-form .form-group input:focus,
+#contact-form .form-group textarea:focus {
+  border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(0,212,170,0.12); background: var(--white);
+}
+#contact-form .form-group textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
+@media (max-width: 768px) {
+  #contact-form .form-group input,
+  #contact-form .form-group textarea { width: 100%; }
+}
+.contact-form-wrap { background: var(--white); border: 1.5px solid var(--gray-border); border-radius: 16px; padding: 48px 40px; box-shadow: var(--shadow); }
+.contact-form-wrap h3 { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.contact-form-sub { font-size: 14px; color: var(--gray-text); margin-bottom: 32px; line-height: 1.55; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 7px; letter-spacing: 0.02em; }
+.form-label span { color: var(--cyan); }
+.form-input, .form-select, .form-textarea {
+  width: 100%; font-family: var(--font); font-size: 14px; color: var(--navy);
+  background: var(--gray-bg); border: 1.5px solid var(--gray-border);
+  border-radius: 8px; padding: 12px 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(0,212,170,0.12); background: var(--white); }
+.form-textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
+.form-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a5568' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+.form-note { font-size: 12px; color: var(--gray-text); margin-top: 6px; line-height: 1.5; }
+.form-submit { width: 100%; padding: 16px; background: var(--cyan); color: var(--navy); font-family: var(--font); font-size: 16px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; border: none; border-radius: 8px; cursor: pointer; transition: all 0.2s; margin-top: 8px; }
+.form-submit:hover { background: var(--cyan-mid); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,212,170,0.3); }
+.form-success { display: none; text-align: center; padding: 40px; }
+.form-success h3 { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.form-success p { font-size: 15px; color: var(--gray-text); line-height: 1.65; }
+.form-success-icon { font-size: 52px; margin-bottom: 16px; }
+
+/* ── RDV ── */
+.rdv-section { background: var(--navy); padding: 80px 48px; }
+.rdv-inner { text-align: center; max-width: 640px; margin: 0 auto; }
+.rdv-inner h2 { font-size: clamp(26px, 3.5vw, 40px); font-weight: 700; color: var(--white); margin-bottom: 14px; letter-spacing: -0.02em; }
+.rdv-inner h2 span { color: var(--cyan); }
+.rdv-inner p { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.65; margin-bottom: 36px; }
+.rdv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+.rdv-card { background: rgba(0,212,170,0.06); border: 1px solid rgba(0,212,170,0.18); border-radius: 12px; padding: 24px 20px; text-align: center; }
+.rdv-card-icon { font-size: 28px; margin-bottom: 12px; }
+.rdv-card h4 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.rdv-card p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.55; }
+
+/* ── ADRESSE ── */
+.adresse-section { background: var(--gray-bg); padding: 80px 48px; }
+.adresse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.adresse-content h2 { font-size: 28px; font-weight: 700; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em; }
+.adresse-infos { display: flex; flex-direction: column; gap: 14px; }
+.adresse-info { display: flex; align-items: center; gap: 14px; }
+.adresse-icon { width: 40px; height: 40px; background: var(--cyan-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.adresse-info-label { font-size: 11px; font-weight: 700; color: var(--gray-text); letter-spacing: 0.08em; text-transform: uppercase; }
+.adresse-info-value { font-size: 14px; font-weight: 600; color: var(--navy); }
+.adresse-map { background: var(--navy); border-radius: 14px; height: 280px; display: flex; align-items: center; justify-content: center; }
+.adresse-map p { color: rgba(255,255,255,0.4); font-size: 14px; text-align: center; padding: 24px; line-height: 1.65; }
+.adresse-map a { color: var(--cyan); font-weight: 600; }
+
+@media (max-width: 1024px) {
+  .rdv-grid { grid-template-columns: 1fr; max-width: 380px; margin: 48px auto 0; }
+  .adresse-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-contact { min-height: auto; padding: 80px 20px 40px; }
+  .contact-main { padding: 48px 20px; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form-wrap { padding: 28px 20px; }
+  .contact-reassurance { padding: 28px 20px; }
+  .rdv-section, .adresse-section { padding: 56px 20px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero-contact">
+  <div class="hero-contact-photo"></div>
+  <div class="hero-contact-overlay"></div>
+  <div class="hero-contact-content">
+    <div class="section-label section-label-white" style="text-align:center;margin-bottom:14px">Passons à l'action</div>
+    <h1>Parlons de <span>vos enjeux</span></h1>
+    <p class="hero-contact-sub">Un Diagnostic vous apportera certainement la visibilité que vous attendez. Nous vous répondons sous 24h.</p>
+  </div>
+</section>
+
+<!-- MAIN CONTACT -->
+<section class="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Formulaire simplifié -->
+      <div>
+        <div id="form-content">
+          <div class="contact-form-wrap">
+            <h3>Planifier un échange</h3>
+            <p class="contact-form-sub">Partagez vos enjeux en quelques mots. Nous vous répondons sous 24h, sans engagement.</p>
+            <form id="contact-form" onsubmit="submitForm(event)">
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom complet" required>
+              </div>
+              <div class="form-group">
+                <label for="societe">Société</label>
+                <input type="text" id="societe" name="societe" placeholder="Votre entreprise" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="enjeu">Votre principal enjeu en ce moment</label>
+                <textarea id="enjeu" name="enjeu" rows="4" placeholder="En quelques mots, quel est votre principal défi opérationnel ?"></textarea>
+              </div>
+              <button type="submit" class="form-submit-simple">Planifier un échange de 30 min →</button>
+              <p class="form-note-submit">Nous vous répondons sous 24h. Aucun engagement.</p>
+            </form>
+          </div>
+        </div>
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">✅</div>
+          <h3>Message envoyé !</h3>
+          <p>Merci pour votre message. Richard Paquette ou l'un des fondateurs OP360 vous répondra sous 24h pour un premier échange entre pairs.</p>
+        </div>
+      </div>
+
+      <!-- Bloc réassurance -->
+      <div class="contact-reassurance reveal">
+        <div class="reassurance-quote">
+          <blockquote>« Avec le seul diagnostic, il y a un avant et un après. »</blockquote>
+          <cite>— Dirigeant PME industrielle</cite>
+        </div>
+        <div class="reassurance-coords">
+          <a href="mailto:contact@operating360.com" class="reassurance-coord">
+            <div class="reassurance-coord-icon">✉</div>
+            <div class="reassurance-coord-value">contact@operating360.com</div>
+          </a>
+          <a href="tel:+33651721524" class="reassurance-coord">
+            <div class="reassurance-coord-icon">📞</div>
+            <div class="reassurance-coord-value">06 51 72 15 24</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RDV -->
+<section class="rdv-section">
+  <div class="rdv-inner">
+    <div class="section-label section-label-white reveal" style="text-align:center;margin-bottom:14px">Rendez-vous</div>
+    <h2 class="reveal">Préférez un <span>rendez-vous direct</span> ?</h2>
+    <p class="reveal">Réservez un créneau directement dans l'agenda de Richard Paquette. Un échange de 30 minutes pour explorer vos enjeux et voir si OP360 peut vous aider.</p>
+    <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" class="btn-primary reveal">Réserver mon créneau →</a>
+    <div class="rdv-grid">
+      <div class="rdv-card reveal"><div class="rdv-card-icon">⏱</div><h4>30 minutes</h4><p>Un échange ciblé sur vos enjeux, sans engagement</p></div>
+      <div class="rdv-card reveal"><div class="rdv-card-icon">👤</div><h4>Avec Richard</h4><p>Directeur Général OP360, votre interlocuteur dédié</p></div>
+      <div class="rdv-card reveal"><div class="rdv-card-icon">💡</div><h4>Premier diagnostic</h4><p>Identification des enjeux et pistes d'accompagnement</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADRESSE -->
+<section class="adresse-section">
+  <div class="container">
+    <div class="adresse-grid">
+      <div class="adresse-content reveal">
+        <div class="section-label">Notre adresse</div>
+        <h2>Operating Partners 360</h2>
+        <div class="adresse-infos">
+          <div class="adresse-info">
+            <div class="adresse-icon">📍</div>
+            <div>
+              <div class="adresse-info-label">Adresse</div>
+              <div class="adresse-info-value">99 avenue Achille Peretti<br>92200 Neuilly-sur-Seine</div>
+            </div>
+          </div>
+          <div class="adresse-info">
+            <div class="adresse-icon">🌐</div>
+            <div>
+              <div class="adresse-info-label">Site web</div>
+              <div class="adresse-info-value">operating360.com</div>
+            </div>
+          </div>
+          <div class="adresse-info">
+            <div class="adresse-icon">✉</div>
+            <div>
+              <div class="adresse-info-label">Email</div>
+              <div class="adresse-info-value">contact@operating360.com</div>
+            </div>
+          </div>
+          <div class="adresse-info">
+            <div class="adresse-icon">in</div>
+            <div>
+              <div class="adresse-info-label">LinkedIn</div>
+              <div class="adresse-info-value">Operating Partners 360</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="adresse-map reveal">
+        <p>
+          99 avenue Achille Peretti<br>92200 Neuilly-sur-Seine<br><br>
+          <a href="https://maps.google.com/?q=99+avenue+Achille+Peretti+92200+Neuilly-sur-Seine" target="_blank">Ouvrir dans Google Maps →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="contenu.js"></script>
+<script src="scripts.js"></script>
+<script>
+buildNav('contact.html');
+buildFooter();
+
+function submitForm(e) {
+  e.preventDefault();
+  document.getElementById('form-content').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+}
+
+initReveal();
+</script>
+</body>
+</html>
