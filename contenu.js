@@ -78,12 +78,42 @@ const OP360 = {
 
   // ── 6 DIFFÉRENCIATEURS ───────────────────────────
   differenciateurs: [
-    { nb:"1", icone:"👥", titre:"Shadow Codir", desc:"L'appui d'un collectif de pairs, dirigeants, proches du terrain qui ont déjà vécu vos défis de l'intérieur. Mobilisable ad hoc, à tout moment.", tag:"Collectif structuré" },
-    { nb:"2", icone:"🔍", titre:"Approche 360° systémique", desc:"Pragmatique et systémique, pour une action sur les causes profondes. Méthodologie sur 12 domaines d'analyse avec vision globale ancrée dans la réalité.", tag:"12 domaines" },
-    { nb:"3", icone:"🗺", titre:"Parcours d'exécution", desc:"Adapté à votre dimension et vos ressources, en immersion ou en appui, individuel ou en équipe. Du diagnostic au déploiement terrain.", tag:"Sur mesure" },
-    { nb:"4", icone:"🧭", titre:"Intelligence de situation", desc:"Évolution et adaptation des méthodes & objectifs avec les dynamiques du terrain. Flexibilité et ajustement fin plutôt que déploiement rigide.", tag:"Agilité terrain" },
-    { nb:"5", icone:"💻", titre:"Outils numériques dédiés", desc:"Plateforme SaaS dédiée : pilotage de la performance, des projets stratégiques et Idea Vault augmentée. Monitoring en temps réel.", tag:"SaaS OP360" },
-    { nb:"6", icone:"🎓", titre:"Formation & Transmission", desc:"Montée en compétence visant l'autonomie des équipes, accompagnement dans la durée. Limite le risque de dépendance à un prestataire externe.", tag:"Autonomie durable" },
+    {
+      nb:"1",
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a5 5 0 0 1 5-5h2"/><circle cx="17" cy="9" r="3"/><path d="M21 21v-2a5 5 0 0 0-5-5h-1"/></svg>`,
+      titre:"Shadow Codir",
+      desc:"Un collectif de pairs dirigeants, mobilisable ad hoc, qui ont déjà vécu vos défis"
+    },
+    {
+      nb:"2",
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>`,
+      titre:"Approche 360° systémique",
+      desc:"12 domaines d'analyse pour agir sur les causes profondes"
+    },
+    {
+      nb:"3",
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+      titre:"Parcours d'exécution",
+      desc:"Adapté à votre dimension, en immersion ou en appui"
+    },
+    {
+      nb:"4",
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>`,
+      titre:"Intelligence de situation",
+      desc:"Adaptation continue des méthodes aux dynamiques du terrain"
+    },
+    {
+      nb:"5",
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+      titre:"Outils numériques dédiés",
+      desc:"Plateforme SaaS pour piloter la performance et les projets stratégiques"
+    },
+    {
+      nb:"6",
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
+      titre:"Formation & transmission",
+      desc:"Montée en compétence visant l'autonomie durable des équipes"
+    },
   ],
 
   // ── 6 OFFRES ──────────────────────────────────────
