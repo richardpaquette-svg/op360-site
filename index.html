@@ -106,6 +106,7 @@
 /* ── SÉPARATEURS — sections blanches adjacentes ── */
 .approche-section,
 .diag-section,
+.diff-section,
 .offres-section,
 .equipe-section,
 .linkedin-section {
@@ -160,15 +161,14 @@
 .moment-cas strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 
 /* ── DIFF ── */
-.diff-section { background: var(--navy); }
-.diff-grid { display: grid; grid-template-columns: repeat(6, 1fr); }
-.diff-step { padding: 36px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.07); }
-.diff-step:last-child { border-right: none; }
-.diff-step-nb { font-size: 44px; font-weight: 700; color: var(--cyan); line-height: 1; margin-bottom: 18px; }
-.diff-step-icon { width: 40px; height: 40px; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; }
+.diff-section { background: #f8f9fa; }
+.diff-section .section-intro { max-width: 100%; color: var(--navy); }
+.diff-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 32px; }
+.diff-step { padding: 24px 12px; text-align: center; }
+.diff-step-icon { width: 40px; height: 40px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; }
 .diff-step-icon svg { width: 40px; height: 40px; }
-.diff-step h3 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 10px; line-height: 1.35; }
-.diff-step p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.65; }
+.diff-step h3 { font-size: 1rem; font-weight: 700; font-style: normal; color: #1a2332; margin-bottom: 8px; line-height: 1.35; }
+.diff-step p { font-size: 0.95rem; color: #4a5568; line-height: 1.6; }
 
 /* ── OFFRES ── */
 .offres-section { background: var(--white); }
@@ -255,10 +255,6 @@
 @media (max-width: 1024px) {
   .offres-grid, .piliers-grid, .diag-grid { grid-template-columns: repeat(2, 1fr); }
   .diff-grid { grid-template-columns: repeat(3, 1fr); }
-  .diff-step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .diff-step:nth-child(3n) { border-right: none; }
-  .diff-step:nth-child(3n+1):not(:nth-child(3n)), .diff-step:nth-child(3n+2) { border-right: 1px solid rgba(255,255,255,0.07); }
-  .diff-step:nth-last-child(-n+3) { border-bottom: none; }
   .equipe-grid { grid-template-columns: repeat(2, 1fr); }
   .video-inner { grid-template-columns: 1fr; }
 }
@@ -302,15 +298,10 @@
   .moment-card h3 { font-size: 17px; }
 
   /* ── DIFFÉRENCIATEURS (2 colonnes × 3 lignes) ── */
-  .diff-grid { grid-template-columns: repeat(2, 1fr); }
-  .diff-step { padding: 28px 16px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .diff-step:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.07); }
-  .diff-step:nth-last-child(-n+2) { border-bottom: none; }
-  .diff-step-nb { font-size: 36px; margin-bottom: 12px; }
+  .diff-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .diff-step { padding: 20px 12px; }
   .diff-step-icon { width: 32px; height: 32px; margin-bottom: 12px; }
   .diff-step-icon svg { width: 32px; height: 32px; }
-  .diff-step h3 { font-size: 13px; }
-  .diff-step p { font-size: 12px; }
 
   /* ── OFFRES (6 cartes → carrousel horizontal) ── */
   .offres-grid {
@@ -532,9 +523,9 @@
 <!-- 6 DIFFÉRENCIATEURS -->
 <section class="diff-section" id="diff">
   <div class="container">
-    <div class="section-label section-label-white reveal">Notre approche</div>
-    <h2 class="section-title section-title-white reveal">Quand OP360 fait la différence</h2>
-    <p class="section-intro section-intro-white reveal">Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et outils digitaux centrés sur les enjeux du dirigeant.</p>
+    <div class="section-label reveal">Notre approche</div>
+    <h2 class="section-title reveal">Quand OP360 fait la différence</h2>
+    <p class="section-intro reveal">Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et outils digitaux centrés sur les enjeux du dirigeant.</p>
     <div class="diff-grid" id="diff-grid"></div>
   </div>
 </section>
@@ -669,7 +660,6 @@ document.getElementById('moments-grid').innerHTML = OP360.moments.map(m => `
 
 document.getElementById('diff-grid').innerHTML = OP360.differenciateurs.map(d => `
   <article class="diff-step reveal">
-    <div class="diff-step-nb">${d.nb}</div>
     <div class="diff-step-icon">${d.icone}</div>
     <h3>${d.titre}</h3>
     <p>${d.desc}</p>
