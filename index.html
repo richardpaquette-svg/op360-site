@@ -81,8 +81,8 @@
 
 /* ── VIDEO ── */
 .video-section { background: var(--white); padding: 80px 48px 0; }
-.video-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 3fr minmax(400px, 2fr); gap: 64px; align-items: center; }
-.video-text h2 { font-size: clamp(18px, 2.2vw, 28px); font-weight: 700; color: var(--navy); margin: 12px 0 18px; line-height: 1.2; white-space: nowrap; }
+.video-outer { max-width: 900px; margin: 0 auto; }
+.video-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 32px; }
 .video-text p { font-size: 16px; color: var(--gray-text); line-height: 1.75; }
 .video-differenciateur { margin-top: 20px; padding: 14px 16px; border-left: 3px solid var(--cyan); background: rgba(0,212,170,0.06); border-radius: 0 8px 8px 0; font-size: 15px; font-weight: 600; color: var(--navy); line-height: 1.55; }
 .video-player {
@@ -273,7 +273,7 @@
 
   /* ── VIDEO ── */
   .video-section { padding: 48px 20px 0; }
-  .video-inner { gap: 28px; }
+  .video-inner { margin-top: 20px; gap: 24px; }
   .video-player { min-width: 0; }
 
   /* ── STAT CHOC ── */
@@ -405,16 +405,18 @@
 
 <!-- BLOC VIDÉO -->
 <section class="video-section">
-  <div class="video-inner reveal">
-    <div class="video-text">
-      <div class="section-label">En 90 secondes</div>
-      <h2>Une équipe de pairs‑dirigeants qui exécute avec vous.</h2>
-      <p>4 associés fondateurs, un collectif C‑Level, une méthode 360° sur 12 domaines. Découvrez comment nous travaillons aux côtés des dirigeants et des investisseurs — et dans quels moments nous faisons la différence.</p>
-      <p class="video-differenciateur">90 secondes pour comprendre ce qui nous différencie : approche systémique, Shadow Codir, parcours d'exécution et plateforme SaaS.</p>
+  <div class="video-outer reveal">
+    <div class="section-label">En 90 secondes</div>
+    <h2 class="section-title">Une équipe de pairs‑dirigeants qui exécute avec vous.</h2>
+    <div class="video-inner">
+      <div class="video-text">
+        <p>4 associés fondateurs, un collectif C‑Level, une méthode 360° sur 12 domaines. Découvrez comment nous travaillons aux côtés des dirigeants et des investisseurs — et dans quels moments nous faisons la différence.</p>
+        <p class="video-differenciateur">90 secondes pour comprendre ce qui nous différencie : approche systémique, Shadow Codir, parcours d'exécution et plateforme SaaS.</p>
+      </div>
+      <video class="video-player" controls playsinline preload="auto"
+             src="public/videos/hero-op360.mp4">
+      </video>
     </div>
-    <video class="video-player" controls playsinline preload="auto"
-           src="public/videos/hero-op360.mp4">
-    </video>
   </div>
 </section>
 
