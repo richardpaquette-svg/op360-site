@@ -14,7 +14,7 @@ function buildNav(activePage) {
     { href: "equipe.html", label: "Qui sommes-nous" },
     { href: "offres.html", label: "Notre approche" },
     { href: "offres.html", label: "Nos offres" },
-    { href: "contact.html", label: "Nous contacter" },
+    { href: "contact.html", label: "Parlons de vos enjeux" },
   ];
 
   const links = pages.map(p =>
