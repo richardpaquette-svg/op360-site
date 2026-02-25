@@ -118,7 +118,7 @@ const OP360 = {
 
   // ── 6 OFFRES ──────────────────────────────────────
   offres: [
-    { icone:"⚡", titre:"Diagnostic Flash", featured:true, badge:"Recommandé", bullets:["Évaluation maturité d'exécution de la stratégie","12 domaines analysés et scorés","Identification des priorités & leviers de valeur","Quick wins + parcours d'exécution complet","5 jours pour voir clair et agir juste"] },
+    { icone:"⚡", titre:"Diagnostic Flash", featured:true, badge:"Recommandé", bullets:["Évaluation maturité d'exécution de la stratégie","12 domaines analysés et scorés","Identification des priorités & leviers de valeur","Plan d'action + parcours d'exécution complet","5 jours pour voir clair et agir juste"] },
     { icone:"👥", titre:"Shadow Codir", featured:false, badge:"", bullets:["Collectif ad hoc multisectoriel et multifonctionnel","Mobilisable ponctuellement ou récurrent","Nativement intégré aux diagnostics"] },
     { icone:"🤝", titre:"Accompagnement Terrain", featured:false, badge:"", bullets:["À la dimension de l'entreprise","En immersion ou en appui","Individuel ou par une équipe","Formats hybrides et flexibles"] },
     { icone:"🔬", titre:"Due Diligence Opérationnelle", featured:false, badge:"", bullets:["Analyse approfondie pré/post investissement","Cession, acquisition, transmission","Volet RSE intégré (CSRD/ESG)"] },
@@ -150,7 +150,7 @@ const OP360 = {
       { icone:"📄", titre:"Rapport de diagnostic détaillé", desc:"12 domaines analysés, scorés et commentés avec lecture croisée de vos enjeux stratégiques." },
       { icone:"🎨", titre:"Executive Pack visuel", desc:"Synthèse avec heatmaps, radar de maturité et matrice impact/priorité pour décider en un coup d'œil." },
       { icone:"🏆", titre:"Top 3-5-7 domaines prioritaires", desc:"Les domaines critiques alignés sur vos enjeux, ordonnés par impact et faisabilité." },
-      { icone:"⚡", titre:"Plan d'action + Quick wins", desc:"Actions concrètes actionnables immédiatement pour des résultats mesurables dès les premières semaines." },
+      { icone:"⚡", titre:"Plan d'action priorisé", desc:"Actions concrètes actionnables immédiatement pour des résultats mesurables dès les premières semaines." },
       { icone:"🗺", titre:"Parcours d'exécution complet", desc:"Plan intégral adapté à votre dimension et vos ressources, global et par domaine." },
     ],
   },
