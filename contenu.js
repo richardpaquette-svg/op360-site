@@ -48,7 +48,7 @@ const OP360 = {
     hero_titre2:  "la Stratégie et le Risque.",
     hero_accent:  "Nous accélérons et sécurisons l'Exécution.",
     hero_sous_titre: "Dirigeants de PME, ETI, investisseurs… OP360, des pairs à vos côtés, pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions.",
-    stat1_nb: "5", stat1_label: "jours Diagnostic Flash",
+    stat1_nb: "8", stat1_label: "jours Diagnostic Flash",
     stat2_nb: "12", stat2_label: "domaines d'analyse",
     stat3_nb: "360°", stat3_label: "vision systémique",
     stat4_nb: "4", stat4_label: "pairs dirigeants",
@@ -118,7 +118,7 @@ const OP360 = {
 
   // ── 6 OFFRES ──────────────────────────────────────
   offres: [
-    { icone:"⚡", titre:"Diagnostic Flash", featured:true, badge:"Recommandé", bullets:["Évaluation maturité d'exécution de la stratégie","12 domaines analysés et scorés","Identification des priorités & leviers de valeur","Plan d'action + parcours d'exécution complet","5 jours pour voir clair et agir juste"] },
+    { icone:"⚡", titre:"Diagnostic Flash", featured:true, badge:"Recommandé", bullets:["Évaluation maturité d'exécution de la stratégie","12 domaines analysés et scorés","Identification des priorités & leviers de valeur","Plan d'action + parcours d'exécution complet","8 jours pour voir clair et agir juste"] },
     { icone:"👥", titre:"Shadow Codir", featured:false, badge:"", bullets:["Collectif ad hoc multisectoriel et multifonctionnel","Mobilisable ponctuellement ou récurrent","Nativement intégré aux diagnostics"] },
     { icone:"🤝", titre:"Accompagnement Terrain", featured:false, badge:"", bullets:["À la dimension de l'entreprise","En immersion ou en appui","Individuel ou par une équipe","Formats hybrides et flexibles"] },
     { icone:"🔬", titre:"Due Diligence Opérationnelle", featured:false, badge:"", bullets:["Analyse approfondie pré/post investissement","Cession, acquisition, transmission","Volet RSE intégré (CSRD/ESG)"] },
@@ -144,7 +144,7 @@ const OP360 = {
 
   // ── PAGE DIAGNOSTIC FLASH ─────────────────────────
   diagnostic: {
-    titre: "5 jours pour voir clair et agir juste",
+    titre: "8 jours pour voir clair et agir juste",
     sous_titre: "Vous maîtrisez la vision et la stratégie. Et l'exécution ?",
     livrables: [
       { icone:"📄", titre:"Rapport de diagnostic détaillé", desc:"12 domaines analysés, scorés et commentés avec lecture croisée de vos enjeux stratégiques." },
