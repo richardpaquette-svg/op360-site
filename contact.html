@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Parlons de vos enjeux | OP360</title>
-<meta name="description" content="Prenez rendez-vous avec Richard Paquette ou contactez OP360 pour discuter de vos enjeux stratégiques et opérationnels. Réponse sous 24h.">
+<title>Contact — Contact &amp; prise de rendez-vous | OP360</title>
+<meta name="description" content="Prenez rendez-vous avec un Operating Partner OP360 ou écrivez-nous directement pour discuter de vos enjeux stratégiques et opérationnels.">
 <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
+/* ── HERO ── */
 .hero-contact {
   min-height: 50vh; background: var(--navy); position: relative; overflow: hidden;
   display: flex; align-items: center; padding: 110px 48px 80px; justify-content: center; text-align: center;
@@ -19,23 +20,22 @@
 }
 .hero-contact-overlay { position: absolute; inset: 0; background: rgba(26,35,50,0.9); }
 .hero-contact-content { position: relative; z-index: 2; max-width: 680px; }
-.hero-contact h1 { font-size: clamp(30px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 14px; }
-.hero-contact h1 span { color: var(--cyan); }
-.hero-contact-sub { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; }
+.hero-contact h1 {
+  font-size: clamp(30px, 5vw, 52px); font-weight: 700; color: var(--white);
+  line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 14px;
+}
+.hero-contact-sub {
+  font-size: clamp(20px, 2.5vw, 26px); font-weight: 300;
+  color: rgba(255,255,255,0.85); line-height: 1.4; margin-bottom: 10px;
+}
+.hero-contact-intro {
+  font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.6;
+}
 
 /* ── CONTACT OPTIONS ── */
 .contact-section { background: var(--white); padding: 96px 48px; }
-.contact-section > .container > .section-label { margin-bottom: 10px; }
-.contact-section > .container > h1 {
-  font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--navy);
-  line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 14px;
-}
-.contact-section > .container > p {
-  font-size: 18px; font-weight: 300; color: var(--gray-text);
-  max-width: 560px; line-height: 1.65; margin-bottom: 56px;
-}
 .contact-options {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 56px;
 }
 .contact-card {
   background: var(--card-bg); border: 1.5px solid var(--gray-border);
@@ -52,30 +52,27 @@
   font-size: 16px; color: var(--gray-text); line-height: 1.75; margin: 0; flex-grow: 1;
 }
 .contact-card .btn-primary,
-.contact-card .btn-secondary { margin-top: 8px; text-align: center; }
+.contact-card .btn-navy { margin-top: 8px; text-align: center; }
 
-/* ── ADRESSE ── */
-.adresse-section { background: var(--gray-bg); padding: 80px 48px; }
-.adresse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-.adresse-content h2 { font-size: 28px; font-weight: 700; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em; }
-.adresse-infos { display: flex; flex-direction: column; gap: 14px; }
-.adresse-info { display: flex; align-items: center; gap: 14px; }
-.adresse-icon { width: 40px; height: 40px; background: var(--cyan-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-.adresse-info-label { font-size: 11px; font-weight: 700; color: var(--gray-text); letter-spacing: 0.08em; text-transform: uppercase; }
-.adresse-info-value { font-size: 14px; font-weight: 600; color: var(--navy); }
-.adresse-map { background: var(--navy); border-radius: 14px; height: 280px; display: flex; align-items: center; justify-content: center; }
-.adresse-map p { color: rgba(255,255,255,0.4); font-size: 14px; text-align: center; padding: 24px; line-height: 1.65; }
-.adresse-map a { color: var(--cyan); font-weight: 600; }
+/* ── COORDONNÉES ── */
+.coords-section { background: var(--gray-bg); padding: 80px 48px; }
+.coords-inner { max-width: 640px; }
+.coords-title { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 32px; letter-spacing: -0.02em; }
+.coords-list { display: flex; flex-direction: column; gap: 14px; }
+.coord-item { display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: var(--white); border: 1px solid var(--gray-border); border-radius: 10px; transition: border-color 0.2s; }
+.coord-item:hover { border-color: var(--cyan); }
+.coord-icon { width: 40px; height: 40px; background: var(--cyan-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+.coord-label { font-size: 11px; font-weight: 700; color: var(--gray-text); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px; }
+.coord-value { font-size: 14px; font-weight: 600; color: var(--navy); }
+.coord-value a { color: var(--navy); transition: color 0.2s; }
+.coord-value a:hover { color: var(--cyan); }
 
-@media (max-width: 1024px) {
-  .adresse-grid { grid-template-columns: 1fr; }
-}
 @media (max-width: 768px) {
-  .hero-contact { min-height: auto; padding: 80px 20px 40px; }
+  .hero-contact { min-height: auto; padding: 80px 20px 48px; }
   .contact-section { padding: 56px 20px; }
-  .contact-options { grid-template-columns: 1fr; gap: 24px; }
+  .contact-options { grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
   .contact-card { padding: 32px 24px; }
-  .adresse-section { padding: 56px 20px; }
+  .coords-section { padding: 56px 20px; }
 }
 </style>
 </head>
@@ -88,76 +85,68 @@
   <div class="hero-contact-photo"></div>
   <div class="hero-contact-overlay"></div>
   <div class="hero-contact-content">
-    <div class="section-label section-label-white" style="text-align:center;margin-bottom:14px">Contact &amp; prise de rendez-vous</div>
-    <h1>Parlons de <span>vos enjeux</span></h1>
-    <p class="hero-contact-sub">Deux options simples pour échanger avec un Operating Partner, selon ce qui vous convient le mieux.</p>
+    <h1>Contact &amp; prise de rendez‑vous</h1>
+    <p class="hero-contact-sub">Parler de vos enjeux avec un Operating Partner</p>
+    <p class="hero-contact-intro">Deux options simples pour échanger avec nous, selon ce qui est le plus pratique pour vous.</p>
   </div>
 </section>
 
 <!-- CONTACT OPTIONS -->
 <section class="contact-section">
   <div class="container">
-    <div class="section-label">Contact &amp; prise de rendez-vous</div>
-    <h1>Parler de vos enjeux avec un Operating Partner</h1>
-    <p>Deux options simples pour échanger avec nous, selon ce qui est le plus pratique pour vous.</p>
     <div class="contact-options">
+
       <div class="contact-card reveal">
         <h2>Écrire à un Operating Partner</h2>
         <p>Expliquez brièvement votre contexte, vos enjeux et vos disponibilités. Un Operating Partner vous répondra rapidement.</p>
         <a class="btn-primary" href="mailto:contact@operating360.com?subject=Contact%20OP360%20-%20Prise%20de%20contact&body=Bonjour%20OP360%2C%0A%0AJe%20souhaite%20%C3%A9changer%20%C3%A0%20propos%20de%20...">Écrire un email</a>
       </div>
+
       <div class="contact-card reveal">
-        <h2>Choisir un créneau de rendez-vous</h2>
+        <h2>Choisir un créneau de rendez‑vous</h2>
         <p>Réservez directement un créneau de 30 minutes pour faire le point sur votre situation et voir si un Diagnostic Flash, un Shadow Codir ou un accompagnement d'exécution a du sens.</p>
-        <a class="btn-secondary" href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener">Voir les créneaux disponibles</a>
+        <a class="btn-navy" href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener">Voir les créneaux disponibles</a>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ADRESSE -->
-<section class="adresse-section">
+<!-- COORDONNÉES -->
+<section class="coords-section">
   <div class="container">
-    <div class="adresse-grid">
-      <div class="adresse-content reveal">
-        <div class="section-label">Notre adresse</div>
-        <h2>Operating Partners 360</h2>
-        <div class="adresse-infos">
-          <div class="adresse-info">
-            <div class="adresse-icon">📍</div>
-            <div>
-              <div class="adresse-info-label">Adresse</div>
-              <div class="adresse-info-value">99 avenue Achille Peretti<br>92200 Neuilly-sur-Seine</div>
-            </div>
-          </div>
-          <div class="adresse-info">
-            <div class="adresse-icon">🌐</div>
-            <div>
-              <div class="adresse-info-label">Site web</div>
-              <div class="adresse-info-value">operating360.com</div>
-            </div>
-          </div>
-          <div class="adresse-info">
-            <div class="adresse-icon">✉</div>
-            <div>
-              <div class="adresse-info-label">Email</div>
-              <div class="adresse-info-value">contact@operating360.com</div>
-            </div>
-          </div>
-          <div class="adresse-info">
-            <div class="adresse-icon">in</div>
-            <div>
-              <div class="adresse-info-label">LinkedIn</div>
-              <div class="adresse-info-value">Operating Partners 360</div>
-            </div>
+    <div class="coords-inner reveal">
+      <div class="section-label">Nos coordonnées</div>
+      <p class="coords-title">Operating Partners 360</p>
+      <div class="coords-list">
+        <div class="coord-item">
+          <div class="coord-icon">📍</div>
+          <div>
+            <div class="coord-label">Adresse</div>
+            <div class="coord-value">99 avenue Achille Peretti — 92200 Neuilly‑sur‑Seine</div>
           </div>
         </div>
-      </div>
-      <div class="adresse-map reveal">
-        <p>
-          99 avenue Achille Peretti<br>92200 Neuilly-sur-Seine<br><br>
-          <a href="https://maps.google.com/?q=99+avenue+Achille+Peretti+92200+Neuilly-sur-Seine" target="_blank">Ouvrir dans Google Maps →</a>
-        </p>
+        <a class="coord-item" href="https://operating360.com" target="_blank" rel="noopener">
+          <div class="coord-icon">🌐</div>
+          <div>
+            <div class="coord-label">Site web</div>
+            <div class="coord-value"><span>operating360.com</span></div>
+          </div>
+        </a>
+        <a class="coord-item" href="mailto:contact@operating360.com">
+          <div class="coord-icon">✉</div>
+          <div>
+            <div class="coord-label">Email</div>
+            <div class="coord-value"><span>contact@operating360.com</span></div>
+          </div>
+        </a>
+        <a class="coord-item" href="https://www.linkedin.com/company/operating-partners-360" target="_blank" rel="noopener">
+          <div class="coord-icon">in</div>
+          <div>
+            <div class="coord-label">LinkedIn</div>
+            <div class="coord-value"><span>Operating Partners 360</span></div>
+          </div>
+        </a>
       </div>
     </div>
   </div>

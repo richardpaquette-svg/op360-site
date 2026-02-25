@@ -87,6 +87,14 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 }
 .btn-outline:hover { border-color: var(--cyan); color: var(--cyan); }
 
+.btn-navy {
+  display: inline-block; background: var(--navy); color: var(--white);
+  font-family: var(--font); font-weight: 700; font-size: 15px;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 16px 40px; border: none; border-radius: 6px; cursor: pointer; transition: all 0.2s;
+}
+.btn-navy:hover { background: var(--navy-mid); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(26,35,50,0.2); color: var(--white); }
+
 /* ── SECTIONS ── */
 section { padding: 96px 48px; }
 .container { max-width: 1120px; margin: 0 auto; }
@@ -178,7 +186,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .section-intro { font-size: 16px; margin-bottom: 32px; }
   h2.section-title { font-size: clamp(22px, 6vw, 32px); margin-bottom: 10px; }
   /* Boutons plus compacts */
-  .btn-primary, .btn-secondary { padding: 14px 28px; font-size: 14px; }
+  .btn-primary, .btn-secondary, .btn-navy { padding: 14px 28px; font-size: 14px; }
   /* Footer */
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
   footer { padding: 48px 20px 24px; }
