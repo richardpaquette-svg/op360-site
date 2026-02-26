@@ -73,7 +73,7 @@ function buildFooter() {
           <div class="footer-col">
             <h4>Pour qui</h4>
             <ul>
-              <li><a href="pourqui.html#pme">Dirigeants de PME</a></li>
+              <li><a href="pme.html">Dirigeants de PME</a></li>
               <li><a href="pourqui.html#eti">Dirigeants d'ETI</a></li>
               <li><a href="pourqui.html#invest">Investisseurs & Fonds</a></li>
             </ul>
