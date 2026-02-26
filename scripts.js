@@ -63,11 +63,11 @@ function buildFooter() {
             <h4>Nos Offres</h4>
             <ul>
               <li><a href="diagnostic.html">Diagnostic Flash</a></li>
-              <li><a href="offres.html">Shadow Codir</a></li>
-              <li><a href="offres.html">Accompagnement Terrain</a></li>
-              <li><a href="offres.html">Due Diligence Opérationnelle</a></li>
-              <li><a href="offres.html">Formations & Workshops</a></li>
-              <li><a href="offres.html">Plateforme SaaS</a></li>
+              <li><a href="shadow-codir.html">Shadow Codir</a></li>
+              <li><a href="accompagnement.html">Accompagnement Terrain</a></li>
+              <li><a href="due-diligence.html">Due Diligence Opérationnelle</a></li>
+              <li><a href="formations.html">Formations &amp; Workshops</a></li>
+              <li><a href="saas.html">Plateforme SaaS</a></li>
             </ul>
           </div>
           <div class="footer-col">

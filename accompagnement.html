@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accompagnement Terrain — Au cœur de l'exécution | OP360</title>
+<meta name="description" content="L'Accompagnement Terrain OP360 : support opérationnel direct, en immersion ou en appui, pour piloter les projets structurants avec vos équipes.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+/* ── HERO ── */
+.hero-offer {
+  min-height: 55vh; background: var(--navy); position: relative; overflow: hidden;
+  display: flex; align-items: center; padding: 110px 48px 80px;
+}
+.hero-offer-photo {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1400&q=80');
+  background-size: cover; background-position: center; opacity: 0.1;
+}
+.hero-offer-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(26,35,50,0.92) 55%, rgba(26,35,50,0.5) 100%); }
+.hero-offer-content { position: relative; z-index: 2; max-width: 640px; }
+.hero-offer-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
+  border-radius: 100px; padding: 7px 18px; margin-bottom: 28px;
+  font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.1em; text-transform: uppercase;
+}
+.hero-offer h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 12px; }
+.hero-offer h1 span { color: var(--cyan); }
+.hero-offer-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.55; margin-bottom: 36px; max-width: 520px; }
+/* ── CONTENT ── */
+.offer-split { padding: 80px 48px; background: var(--white); }
+.offer-split-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; max-width: 1120px; margin: 0 auto; }
+.offer-intro { font-size: 16px; color: var(--gray-text); line-height: 1.75; margin-bottom: 8px; }
+.offer-bullets { list-style: none; margin: 24px 0 32px; }
+.offer-bullets li { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--gray-border); font-size: 15px; color: var(--navy); line-height: 1.55; }
+.offer-bullets li:last-child { border: none; }
+.offer-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+/* ── VISUAL BOX ── */
+.offer-visual { background: var(--navy); border-radius: 16px; padding: 40px 36px; }
+.offer-visual-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.offer-visual-icon { font-size: 36px; }
+.offer-visual-title { font-size: 16px; font-weight: 700; color: var(--white); }
+.offer-visual-badge { font-size: 11px; font-weight: 700; color: var(--cyan); background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 100px; padding: 3px 10px; margin-top: 4px; display: inline-block; }
+.offer-kpi { background: rgba(0,212,170,0.06); border: 1px solid rgba(0,212,170,0.15); border-radius: 10px; padding: 18px 20px; margin-bottom: 12px; }
+.offer-kpi:last-child { margin-bottom: 0; }
+.offer-kpi h4 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.offer-kpi p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.5; margin: 0; }
+/* ── CTA ── */
+.cta-offer { background: var(--navy); padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
+.cta-offer::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,212,170,0.07) 0%, transparent 70%); }
+.cta-offer h2 { font-size: clamp(26px, 4vw, 42px); font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: -0.02em; position: relative; z-index: 1; }
+.cta-offer h2 span { color: var(--cyan); }
+.cta-offer p { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 480px; margin: 0 auto 36px; line-height: 1.65; position: relative; z-index: 1; }
+.cta-offer-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) { .offer-split-inner { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 768px) {
+  .hero-offer { padding: 90px 24px 64px; min-height: auto; }
+  .offer-split { padding: 48px 20px; }
+  .offer-visual { padding: 24px 18px; }
+  .cta-offer { padding: 56px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero-offer">
+  <div class="hero-offer-photo"></div>
+  <div class="hero-offer-overlay"></div>
+  <div class="hero-offer-content">
+    <div class="hero-offer-badge">🤝 Offre 03 — Accompagnement Terrain</div>
+    <h1>Au cœur de l'exécution,<br><span>à vos côtés ou au sein de vos équipes</span></h1>
+    <p class="hero-offer-sub">Support opérationnel direct, dimensionné à l'entreprise. Nous pilotions les projets structurants avec vos équipes, en immersion ou en appui.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" rel="noopener" class="btn-primary">Discuter de votre besoin</a>
+      <a href="offres.html" class="btn-secondary">Toutes les offres</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="offer-split">
+  <div class="offer-split-inner">
+    <div>
+      <div class="section-label">Notre approche</div>
+      <h2 class="section-title">Opérationnel, flexible<br>et à votre dimension</h2>
+      <p class="offer-intro">Nous intervenons là où les décisions se traduisent en actes — dans l'entreprise, avec les équipes, sur la durée. Posture de pair, jamais de conseil top-down.</p>
+      <ul class="offer-bullets">
+        <li>À la dimension de l'entreprise — PME, ETI, startup</li>
+        <li>En immersion (temps plein ou partiel) ou en appui externe régulier</li>
+        <li>Individuel (Operating Partner dédié) ou par équipe</li>
+        <li>Formats hybrides adaptés à vos contraintes et vos ressources</li>
+        <li>Plans 100 jours / 1 an / 3 ans, KPIs, pilotage terrain</li>
+        <li>Posture de pair, jamais de conseil top-down</li>
+      </ul>
+      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" rel="noopener" class="btn-primary">Discuter de votre besoin →</a>
+    </div>
+    <div class="offer-visual">
+      <div class="offer-visual-header">
+        <div class="offer-visual-icon">🤝</div>
+        <div>
+          <div class="offer-visual-title">Accompagnement Terrain</div>
+          <div class="offer-visual-badge">Hybride &amp; flexible</div>
+        </div>
+      </div>
+      <div class="offer-kpi">
+        <h4>Immersion possible</h4>
+        <p>Temps plein, partiel ou en appui : adapté à votre organisation</p>
+      </div>
+      <div class="offer-kpi">
+        <h4>Pilotage de projets</h4>
+        <p>Plans structurants, KPIs, suivi régulier avec la direction</p>
+      </div>
+      <div class="offer-kpi">
+        <h4>Posture de pair</h4>
+        <p>Nous sommes au service de vos équipes, pas au-dessus d'elles</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-offer">
+  <h2>Parlons de <span>votre terrain</span></h2>
+  <p>Chaque engagement est dimensionné à votre réalité. Échangeons sur vos priorités.</p>
+  <div class="cta-offer-btns">
+    <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" rel="noopener" class="btn-primary">Prendre rendez-vous</a>
+    <a href="mailto:contact@operating360.com?subject=Accompagnement%20Terrain%20OP360&body=Bonjour%20OP360%2C%0A%0AJe%20souhaite%20en%20savoir%20plus%20sur%20l'Accompagnement%20Terrain." class="btn-secondary">Nous écrire</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="contenu.js"></script>
+<script src="scripts.js"></script>
+<script>
+buildNav('offres.html');
+buildFooter();
+initReveal();
+</script>
+</body>
+</html>
