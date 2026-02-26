@@ -22,7 +22,7 @@ const OP360 = {
     emailRichard: "richard.paquette@operating360.com",
     tel: "06 51 72 15 24",
     adresse: "99 avenue Achille Peretti, 92200 Neuilly-sur-Seine",
-    linkedin: "https://www.linkedin.com/company/operating-partners-360",
+    linkedin: "https://www.linkedin.com/company/operating360",
     rdv: "https://eu.bigin.online/org20111341014/bookings/contact-op360",
   },
 
