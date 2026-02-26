@@ -12,8 +12,8 @@ function buildNav(activePage) {
   const pages = [
     { href: "index.html", label: "Accueil" },
     { href: "equipe.html", label: "Qui sommes-nous" },
-    { href: "offres.html", label: "Notre approche" },
     { href: "offres.html", label: "Nos offres" },
+    { href: "pme.html", label: "Dirigeants de PME" },
     { href: "contact.html", label: "Parlons de vos enjeux" },
   ];
 
