@@ -693,7 +693,7 @@ document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
     <div class="offre-icon">${o.icone}</div>
     <h3>${o.titre}</h3>
     <ul class="offre-bullets">${o.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-    <a href="offres.html" class="offre-lien">En savoir plus →</a>
+    <a href="${o.href || 'offres.html'}" class="offre-lien">En savoir plus →</a>
   </div>`).join('');
 
 
