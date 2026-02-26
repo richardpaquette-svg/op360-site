@@ -81,7 +81,7 @@ function buildFooter() {
             <ul>
               <li><a href="equipe.html">Qui sommes-nous</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li><a href="${OP360.entreprise.linkedin}" target="_blank">LinkedIn</a></li>
+              <li><a href="${OP360.entreprise.linkedin}" target="_blank" rel="noopener">LinkedIn</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -89,8 +89,7 @@ function buildFooter() {
             <ul>
               <li><a href="mailto:${OP360.entreprise.email}">${OP360.entreprise.email}</a></li>
               <li><a href="tel:+33651721524">${OP360.entreprise.tel}</a></li>
-              <li><a href="https://operating360.com">operating360.com</a></li>
-              <li><a href="${OP360.entreprise.rdv}" target="_blank">Prendre RDV</a></li>
+              <li><a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener">Prendre RDV</a></li>
             </ul>
           </div>
         </div>
