@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dirigeant de PME — Operating Partners 360</title>
+<meta name="description" content="OP360, votre partenaire opérationnel pour aider les dirigeants de PME à passer un cap sans épuiser leurs équipes. Diagnostic Flash 12 domaines, parcours d'exécution structuré, accompagnement terrain.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+/* ── HERO PERSONA ── */
+.hero-persona {
+  min-height: 62vh; background: var(--navy); position: relative; overflow: hidden;
+  display: flex; align-items: center; padding: 110px 48px 80px;
+}
+.hero-persona-photo {
+  position: absolute; inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1400&q=80');
+  background-size: cover; background-position: center; opacity: 0.1;
+}
+.hero-persona-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(26,35,50,0.93) 60%, rgba(26,35,50,0.55) 100%); }
+.hero-persona-content { position: relative; z-index: 2; max-width: 660px; }
+.hero-persona-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
+  border-radius: 100px; padding: 7px 18px; margin-bottom: 28px;
+  font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.1em; text-transform: uppercase;
+}
+.hero-persona h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 16px; }
+.hero-persona h1 span { color: var(--cyan); }
+.hero-persona-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.72); line-height: 1.6; margin-bottom: 40px; max-width: 520px; }
+.hero-persona-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ── SECTIONS COMMUNES ── */
+.persona-section { padding: 80px 48px; }
+.persona-section.bg-gray { background: var(--gray-bg); }
+.persona-section.bg-navy { background: var(--navy); }
+.persona-section.bg-cyan { background: var(--cyan-light); }
+.persona-section-inner { max-width: 1120px; margin: 0 auto; }
+
+/* ── INTRO CONTEXTE ── */
+.persona-intro-box {
+  font-size: 17px; color: var(--gray-text); line-height: 1.75;
+  padding: 24px 28px; background: var(--cyan-light);
+  border-left: 4px solid var(--cyan); border-radius: 0 10px 10px 0;
+  margin-bottom: 32px; max-width: 760px;
+}
+.persona-situations { list-style: none; margin: 0; padding: 0; }
+.persona-situations li {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 12px 0; border-bottom: 1px solid var(--gray-border);
+  font-size: 15px; color: var(--navy); line-height: 1.55;
+}
+.persona-situations li:last-child { border: none; }
+.persona-situations li::before { content: '→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+/* ── BENEFITS GRID ── */
+.benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.benefit {
+  background: var(--white); border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius); padding: 36px 28px; transition: all 0.25s;
+}
+.benefit:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.benefit-icon { font-size: 32px; margin-bottom: 16px; }
+.benefit h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.01em; }
+.benefit p { font-size: 14px; color: var(--gray-text); line-height: 1.7; margin: 0; }
+
+/* ── ÉTAPES ── */
+.steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+.steps li {
+  counter-increment: step;
+  display: grid; grid-template-columns: 72px 1fr; gap: 28px; align-items: start;
+  padding: 36px 0; border-bottom: 1px solid var(--gray-border);
+}
+.steps li:last-child { border: none; }
+.steps li::before {
+  content: counter(step);
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--navy); border: 3px solid var(--cyan);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 700; color: var(--cyan);
+  flex-shrink: 0; justify-self: center; margin-top: 4px;
+}
+.steps li h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.steps li p { font-size: 15px; color: var(--gray-text); line-height: 1.7; margin: 0; }
+.steps li .step-badge {
+  display: inline-block; font-size: 11px; font-weight: 700; color: var(--cyan);
+  background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.25);
+  border-radius: 100px; padding: 3px 10px; margin-bottom: 8px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+
+/* ── CAS CONCRET ── */
+.case-intro { font-size: 17px; color: var(--gray-text); line-height: 1.7; margin-bottom: 40px; max-width: 680px; }
+.case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.case-card {
+  background: var(--white); border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius); padding: 28px 24px;
+}
+.case-card-label { font-size: 11px; font-weight: 700; color: rgba(0,212,170,0.7); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+.case-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.case-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; margin: 0; }
+
+/* ── ÉQUIPE / COLLECTIF ── */
+.team-intro { max-width: 760px; }
+.team-intro p { font-size: 16px; color: rgba(255,255,255,0.72); line-height: 1.75; margin-bottom: 16px; }
+.team-intro p:last-child { margin-bottom: 0; }
+.team-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.team-kpi {
+  background: rgba(0,212,170,0.06); border: 1px solid rgba(0,212,170,0.18);
+  border-radius: 10px; padding: 24px 20px;
+}
+.team-kpi-icon { font-size: 28px; margin-bottom: 10px; }
+.team-kpi h4 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.team-kpi p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; margin: 0; }
+
+/* ── FAQ ── */
+.faq-list { max-width: 760px; }
+.faq-item { padding: 28px 0; border-bottom: 1px solid var(--gray-border); }
+.faq-item:last-child { border: none; }
+.faq-item h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; }
+.faq-item h3::before { content: '?'; display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: rgba(0,212,170,0.12); color: var(--cyan); font-size: 13px; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+.faq-item p { font-size: 15px; color: var(--gray-text); line-height: 1.7; margin: 0 0 0 34px; }
+
+/* ── CTA FINAL ── */
+.cta-persona { background: var(--navy); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
+.cta-persona::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,212,170,0.07) 0%, transparent 70%); }
+.cta-persona-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+.cta-persona h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: -0.02em; }
+.cta-persona h2 span { color: var(--cyan); }
+.cta-persona p { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.65; margin-bottom: 40px; }
+.cta-persona-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.cta-contact-row { display: flex; justify-content: center; gap: 36px; margin-top: 36px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); }
+.cta-contact-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.55); font-size: 14px; text-decoration: none; transition: color 0.2s; }
+.cta-contact-item:hover { color: var(--cyan); }
+.cta-icon { width: 34px; height: 34px; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-kpis { grid-template-columns: repeat(2, 1fr); }
+  .case-grid { grid-template-columns: 1fr; max-width: 540px; }
+}
+@media (max-width: 768px) {
+  .hero-persona { padding: 90px 24px 64px; min-height: auto; }
+  .persona-section { padding: 48px 20px; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .steps li { grid-template-columns: 48px 1fr; gap: 18px; }
+  .steps li::before { width: 44px; height: 44px; font-size: 18px; }
+  .team-kpis { grid-template-columns: 1fr; max-width: 400px; }
+  .cta-persona { padding: 64px 24px; }
+  .cta-contact-row { flex-direction: column; align-items: center; gap: 18px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero-persona">
+  <div class="hero-persona-photo"></div>
+  <div class="hero-persona-overlay"></div>
+  <div class="hero-persona-content">
+    <div class="hero-persona-badge">🏭 Profil — Dirigeant de PME</div>
+    <h1>Vous êtes dirigeant de PME<br><span>en phase de virage.</span></h1>
+    <p class="hero-persona-sub">OP360, votre partenaire opérationnel pour passer un cap sans épuiser vos équipes — en mode pair, pas en mode cabinet.</p>
+    <div class="hero-persona-ctas">
+      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Parler de votre situation</a>
+      <a href="diagnostic.html" class="btn-secondary">Découvrir le Diagnostic Flash</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 — VOUS ÊTES… -->
+<section class="persona-section bg-gray">
+  <div class="persona-section-inner">
+    <div class="section-label reveal">Votre profil</div>
+    <h2 class="section-title reveal">Vous êtes…</h2>
+    <p class="persona-intro-box reveal">
+      Dirigeant de PME industrielle ou de services, entre 10 et 50 M€ de chiffre d'affaires,
+      vous devez passer un cap sans épuiser vos équipes.
+    </p>
+    <ul class="persona-situations">
+      <li class="reveal">Croissance forte, organisation qui commence à saturer — vous sentez que votre modèle ne tiendra pas la cadence.</li>
+      <li class="reveal">Transition clé à gérer : transmission, rachat, changement de modèle économique.</li>
+      <li class="reveal">Tensions de rentabilité ou de trésorerie qui nécessitent des décisions rapides et des priorités claires.</li>
+      <li class="reveal">Envie de structurer sans basculer dans un « gros cabinet de conseil » déconnecté de la réalité terrain.</li>
+      <li class="reveal">Vous portez trop de sujets en première ligne et avez besoin d'un pair pour partager la charge et prendre du recul.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SECTION 2 — CE QUE OP360 CHANGE -->
+<section class="persona-section">
+  <div class="persona-section-inner">
+    <div class="section-label reveal">Nos apports concrets</div>
+    <h2 class="section-title reveal">Ce que OP360 change pour vous</h2>
+    <p class="section-intro reveal">Pas de rapport de plus. Des résultats opérationnels, une clarté immédiate et un pair à vos côtés.</p>
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <div class="benefit-icon">⚡</div>
+        <h3>Voir clair en quelques jours</h3>
+        <p>Un Diagnostic Flash sur 12 domaines qui vous donne un état des lieux de votre capacité d'exécution et identifie les vrais leviers de valeur — actionnables dès la restitution.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon">🗺</div>
+        <h3>Un parcours d'exécution réaliste</h3>
+        <p>Une feuille de route priorisée, adaptée à vos ressources et à votre tempo, pas un plan théorique impossible à dérouler avec une équipe déjà saturée.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit-icon">🤝</div>
+        <h3>Un pair à vos côtés</h3>
+        <p>Un Operating Partner qui a déjà tenu votre rôle — en soutien du quotidien, ancré dans l'exécution, adossé à un Shadow Codir mobilisable si la situation se complexifie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — DÉROULÉ -->
+<section class="persona-section bg-gray">
+  <div class="persona-section-inner">
+    <div class="section-label reveal">Méthodologie</div>
+    <h2 class="section-title reveal">Comment se déroule l'accompagnement</h2>
+    <p class="section-intro reveal">Un parcours structuré en 3 grandes étapes, chacune générant des livrables concrets.</p>
+    <ol class="steps">
+      <li class="reveal">
+        <div class="step-content">
+          <div class="step-badge">Étape 01 — 8 jours</div>
+          <h3>Diagnostic Flash</h3>
+          <p>Un diagnostic structuré sur 12 domaines opérationnels, avec état des lieux de votre maturité d'exécution, identification des enjeux prioritaires et plan d'action immédiatement actionnable. Durée terrain : 1 à 3 jours. Restitution : sous 5 jours.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="step-content">
+          <div class="step-badge">Étape 02</div>
+          <h3>Feuille de route d'exécution</h3>
+          <p>Co-construction d'un parcours d'exécution pragmatique : chantiers prioritaires, horizons de temps, ressources nécessaires, impacts attendus et KPIs de suivi. Adapté à votre dimension, vos contraintes et vos ressources réelles.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <div class="step-content">
+          <div class="step-badge">Étape 03</div>
+          <h3>Accompagnement terrain</h3>
+          <p>Un Operating Partner ou un Shadow Codir à vos côtés pour piloter les chantiers structurants, sécuriser les décisions clés et monter vos équipes en compétence — en immersion, en appui régulier, ou en mode hybride selon vos besoins.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 4 — CAS CONCRET -->
+<section class="persona-section bg-cyan">
+  <div class="persona-section-inner">
+    <div class="section-label reveal">Exemple terrain</div>
+    <h2 class="section-title reveal">Exemple concret</h2>
+    <p class="case-intro reveal">
+      Une PME industrielle de 30 M€ de chiffre d'affaires veut doubler en 5 ans, avec des équipes déjà très sollicitées.
+    </p>
+    <div class="case-grid">
+      <div class="case-card reveal">
+        <div class="case-card-label">Situation de départ</div>
+        <h3>Organisation sous tension</h3>
+        <p>Organisation peu structurée, peu de pilotage consolidé, projets multiples en parallèle — le dirigeant en première ligne sur tout, sans capacité à prendre du recul.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-card-label">Intervention OP360</div>
+        <h3>Diagnostic + Operating Partner</h3>
+        <p>Diagnostic Flash 12 domaines, priorisation de quelques chantiers structurants (gouvernance, pilotage, commercial), mise en place d'un Operating Partner à temps partiel pour piloter l'exécution avec la plateforme SaaS OP360.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-card-label">Résultats</div>
+        <h3>Clarté et trajectoire retrouvées</h3>
+        <p>Visibilité retrouvée sur les priorités, trajectoire de croissance sécurisée, équipes recentrées sur les bons sujets — et dirigeant dégagé des urgences non stratégiques.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — ÉQUIPE / COLLECTIF -->
+<section class="persona-section bg-navy">
+  <div class="persona-section-inner">
+    <div class="section-label section-label-white reveal">Qui intervient</div>
+    <h2 class="section-title section-title-white reveal">Des pairs-dirigeants à vos côtés</h2>
+    <div class="team-intro reveal">
+      <p>OP360, c'est un collectif de dirigeants expérimentés — ex-DG, ex-DAF, ex-DRH, directeurs opérationnels — qui ont déjà traversé les mêmes défis que vous. Pas des consultants, des pairs.</p>
+      <p>Vous avez un interlocuteur principal dédié, adossé à un Shadow Codir mobilisable à la demande, sans multiplier les prestataires ni les réunions.</p>
+    </div>
+    <div class="team-kpis">
+      <div class="team-kpi reveal">
+        <div class="team-kpi-icon">💡</div>
+        <h4>1 interlocuteur principal</h4>
+        <p>Operating Partner dédié, vous connaissant et connaissant votre entreprise</p>
+      </div>
+      <div class="team-kpi reveal">
+        <div class="team-kpi-icon">👥</div>
+        <h4>Collectif Shadow Codir</h4>
+        <p>Experts pluridisciplinaires mobilisables en 24/48h si la situation évolue</p>
+      </div>
+      <div class="team-kpi reveal">
+        <div class="team-kpi-icon">💻</div>
+        <h4>Plateforme SaaS incluse</h4>
+        <p>Pilotage de la performance et des projets, inclus sans surcoût</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — FAQ -->
+<section class="persona-section bg-gray">
+  <div class="persona-section-inner">
+    <div class="section-label reveal">Questions fréquentes</div>
+    <h2 class="section-title reveal">Ce que vous nous demandez souvent</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <h3>En combien de temps voit-on des effets ?</h3>
+        <p>Le Diagnostic Flash apporte déjà un changement de clarté en 8 jours. Les premiers impacts opérationnels se voient généralement en quelques semaines. Les résultats structurants, eux, s'inscrivent dans un horizon de 3 à 12 mois selon les chantiers.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Quelle charge pour mes équipes ?</h3>
+        <p>Nous limitons les sollicitations au strict nécessaire et nous intégrons à votre rythme existant. Le but est de vous soulager, pas d'ajouter une couche de complexité. Le diagnostic nécessite 1 à 3 jours de présence terrain, coordonnés avec vous.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Est-ce adapté à la taille de ma PME ?</h3>
+        <p>Oui, l'accompagnement est entièrement dimensionné en fonction de votre taille, de vos ressources et de vos enjeux spécifiques. Un Operating Partner dédié, un format hybride et une tarification adaptée à une PME — pas à un grand groupe.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>En quoi OP360 diffère d'un consultant classique ?</h3>
+        <p>Nos Operating Partners ont eux-mêmes dirigé des entreprises dans des situations similaires aux vôtres. Ils interviennent dans l'exécution, pas seulement dans les recommandations — et la transmission d'autonomie à vos équipes est intégrée dès le départ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 — CTA FINAL -->
+<section class="cta-persona">
+  <div class="cta-persona-inner">
+    <h2>Parlons de <span>votre situation</span></h2>
+    <p>30 minutes pour clarifier vos enjeux et voir si OP360 peut vous aider à passer un cap.</p>
+    <div class="cta-persona-btns">
+      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Planifier un échange de 30 min</a>
+      <a href="mailto:contact@operating360.com?subject=Dirigeant%20PME%20-%20Prise%20de%20contact&body=Bonjour%20OP360%2C%0A%0AJe%20dirige%20une%20PME%20et%20souhaite%20%C3%A9changer%20avec%20vous." class="btn-secondary">Nous écrire directement</a>
+    </div>
+    <div class="cta-contact-row">
+      <a href="mailto:contact@operating360.com" class="cta-contact-item">
+        <div class="cta-icon">✉</div> contact@operating360.com
+      </a>
+      <a href="tel:+33651721524" class="cta-contact-item">
+        <div class="cta-icon">📞</div> 06 51 72 15 24
+      </a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="contenu.js"></script>
+<script src="scripts.js"></script>
+<script>
+buildNav('pourqui.html');
+buildFooter();
+initReveal();
+</script>
+</body>
+</html>
