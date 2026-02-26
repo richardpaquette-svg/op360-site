@@ -6,11 +6,12 @@
 <title>Pour qui — Dirigeants PME, ETI, Investisseurs | OP360</title>
 <meta name="description" content="OP360 s'adapte à votre profil : partenaire opérationnel pour les dirigeants de PME, Shadow Codir pour les ETI, levier de TRI pour les investisseurs.">
 <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
+/* ── HERO ── */
 .hero-pourqui {
-  min-height: 55vh; background: var(--navy); position: relative; overflow: hidden;
-  display: flex; align-items: center; padding: 110px 48px 80px; text-align: center; justify-content: center;
+  min-height: 38vh; background: var(--navy); position: relative; overflow: hidden;
+  display: flex; align-items: center; padding: 80px 48px 56px; text-align: center; justify-content: center;
 }
 .hero-pourqui-photo {
   position: absolute; inset: 0;
@@ -20,25 +21,44 @@
 }
 .hero-pourqui-overlay { position: absolute; inset: 0; background: rgba(26,35,50,0.88); }
 .hero-pourqui-content { position: relative; z-index: 2; max-width: 720px; }
-.hero-pourqui h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 16px; }
+.hero-pourqui h1 { font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 14px; }
 .hero-pourqui h1 span { color: var(--cyan); }
-.hero-pourqui-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 580px; margin: 0 auto; }
+.hero-pourqui-sub { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 560px; margin: 0 auto; }
 
-/* ── TABS ── */
-.tabs-section { background: var(--white); }
-.tabs-nav { display: flex; background: var(--gray-bg); border-radius: 12px; padding: 5px; max-width: 560px; margin-bottom: 56px; gap: 4px; }
-.tab-btn {
-  flex: 1; padding: 14px 20px; font-family: var(--font); font-size: 14px; font-weight: 600;
-  color: var(--gray-text); background: transparent; border: none; border-radius: 9px;
-  cursor: pointer; transition: all 0.2s; white-space: nowrap;
+/* ── PROFILES NAV ── */
+.profiles-nav {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  padding: 20px 48px; background: var(--white);
+  border-bottom: 1px solid var(--gray-border);
+  position: sticky; top: 64px; z-index: 20;
 }
-.tab-btn.active { background: var(--navy); color: var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-.tab-btn:hover:not(.active) { color: var(--navy); }
+.profiles-nav a {
+  background: var(--gray-bg); border: 1.5px solid var(--gray-border);
+  border-radius: 8px; padding: 10px 22px; font-size: 14px; font-weight: 600;
+  color: var(--navy); text-decoration: none; transition: all 0.2s;
+}
+.profiles-nav a:hover,
+.profiles-nav a.active { border-color: var(--cyan); color: var(--cyan); background: rgba(0,212,170,0.06); }
 
-.tab-panel { display: none; }
-.tab-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+/* ── PROFILE SECTIONS ── */
+.profile-section { padding: 72px 48px; border-bottom: 1px solid var(--gray-border); }
+.profile-section:nth-child(even) { background: var(--gray-bg); }
+.profile-section-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+  max-width: 1120px; margin: 0 auto;
+}
+.profile-eyebrow { font-size: 11px; font-weight: 700; color: rgba(0,212,170,0.7); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
 
-.panel-content h2 { font-size: 28px; font-weight: 700; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.02em; }
+/* ── PERSONA INTRO ── */
+.persona-intro {
+  font-size: 15px; color: var(--gray-text); line-height: 1.7;
+  margin-bottom: 18px; padding: 14px 18px;
+  background: var(--cyan-light); border-left: 3px solid var(--cyan);
+  border-radius: 0 8px 8px 0;
+}
+
+/* ── PANEL CONTENT (réutilisé) ── */
+.panel-content h2 { font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.02em; }
 .panel-pitch { font-size: 16px; font-weight: 600; color: var(--cyan); margin-bottom: 20px; line-height: 1.5; }
 .panel-content p { font-size: 15px; color: var(--gray-text); line-height: 1.75; margin-bottom: 20px; }
 .panel-points { list-style: none; margin-bottom: 28px; }
@@ -48,15 +68,16 @@
 .panel-example { background: var(--cyan-light); border-left: 3px solid var(--cyan); border-radius: 0 10px 10px 0; padding: 20px 24px; margin-top: 8px; }
 .panel-example h4 { font-size: 13px; font-weight: 700; color: var(--navy); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
 .panel-example p { font-size: 13px; color: var(--gray-text); line-height: 1.65; margin: 0; }
+.panel-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; background: var(--cyan); color: var(--navy); font-family: var(--font); font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; padding: 14px 28px; border-radius: 6px; transition: all 0.2s; }
+.panel-cta:hover { background: var(--cyan-mid); transform: translateY(-1px); }
 
+/* ── PANEL VISUAL (réutilisé) ── */
 .panel-visual { background: var(--navy); border-radius: 16px; padding: 40px 36px; }
 .panel-kpi { background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); border-radius: 10px; padding: 20px 22px; margin-bottom: 14px; }
 .panel-kpi:last-child { margin-bottom: 0; }
 .panel-kpi-icon { font-size: 22px; margin-bottom: 8px; }
 .panel-kpi h4 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
 .panel-kpi p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; margin: 0; }
-.panel-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; background: var(--cyan); color: var(--navy); font-family: var(--font); font-weight: 700; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; padding: 14px 28px; border-radius: 6px; transition: all 0.2s; }
-.panel-cta:hover { background: var(--cyan-mid); transform: translateY(-1px); }
 
 /* ── COMPARAISON ── */
 .compa-section { background: var(--gray-bg); }
@@ -78,13 +99,17 @@
 .synthese-card h3 { font-size: 16px; font-weight: 700; color: var(--cyan); margin-bottom: 12px; }
 .synthese-card p { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.65; font-style: italic; }
 
+/* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .tab-panel.active { grid-template-columns: 1fr; }
+  .profile-section-inner { grid-template-columns: 1fr; gap: 40px; }
   .synthese-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
 }
 @media (max-width: 768px) {
-  .hero-pourqui { padding: 90px 24px 64px; }
-  .tabs-nav { flex-direction: column; max-width: 100%; }
+  .hero-pourqui { padding: 72px 24px 48px; min-height: auto; }
+  .profiles-nav { padding: 14px 20px; top: 56px; gap: 8px; }
+  .profiles-nav a { padding: 8px 14px; font-size: 13px; }
+  .profile-section { padding: 48px 20px; }
+  .panel-visual { padding: 24px 18px; }
   .compa-section { overflow-x: auto; }
   .compa-table { min-width: 600px; }
   .synthese-section { padding: 64px 24px; }
@@ -100,105 +125,117 @@
   <div class="hero-pourqui-photo"></div>
   <div class="hero-pourqui-overlay"></div>
   <div class="hero-pourqui-content">
-    <div class="section-label section-label-white" style="text-align:center;margin-bottom:16px">Pour qui</div>
+    <div class="section-label section-label-white" style="text-align:center;margin-bottom:14px">Pour qui</div>
     <h1>OP360 <span>s'adapte</span><br>à votre profil</h1>
     <p class="hero-pourqui-sub">D'un Operating Partner dédié pour les PME en virage rapide, jusqu'à un Shadow Codir collectif pour les ETI complexes et les fonds d'investissement.</p>
   </div>
 </section>
 
-<!-- TABS -->
-<section class="tabs-section" id="tabs">
-  <div class="container">
-    <div class="section-label reveal">Votre profil</div>
-    <h2 class="section-title reveal">Trouvez votre dispositif OP360</h2>
-    <div class="tabs-nav reveal">
-      <button class="tab-btn active" onclick="showTab('pme',this)">🏭 Dirigeant PME</button>
-      <button class="tab-btn" onclick="showTab('eti',this)">🏢 Dirigeant ETI</button>
-      <button class="tab-btn" onclick="showTab('invest',this)">📈 Investisseur</button>
-    </div>
+<!-- NAVIGATION PROFILS -->
+<nav class="profiles-nav" id="profiles-nav">
+  <a href="#pme">🏭 Dirigeant PME</a>
+  <a href="#eti">🏢 Dirigeant ETI</a>
+  <a href="#invest">📈 Investisseur</a>
+</nav>
 
-    <!-- PME -->
-    <div class="tab-panel active" id="tab-pme">
-      <div class="panel-content">
-        <h2>Dirigeant de PME</h2>
-        <p class="panel-pitch">OP360, votre sparring-partner opérationnel modulable.</p>
-        <p>Un interlocuteur unique, mais adossé à un collectif mobilisable sans changer de prestataire. Souplesse budgétaire et culture de transmission, pas de dépendance à un cabinet externe.</p>
-        <ul class="panel-points">
-          <li>Diagnostic Flash en 5 jours — état des lieux concret et actionnable</li>
-          <li>Operating Partners pairs dirigeants, positionnés sur la mise en œuvre</li>
-          <li>Accès au collectif Shadow Codir si la situation se complexifie</li>
-          <li>Souplesse budgétaire — outils digitaux et collectif inclus</li>
-          <li>Présence dans les moments clés : croissance, transitions, retournement</li>
-          <li>Culture de transmission, évitant la dépendance à un cabinet externe</li>
-        </ul>
-        <div class="panel-example">
-          <h4>Exemple concret</h4>
-          <p>Une PME industrielle voulant doubler son CA en 5 ans, avec des équipes saturées. OP360 réalise un Diagnostic Flash, puis déploie un Operating Partner en immersion partielle pour piloter les projets structurants avec suivi SaaS.</p>
-        </div>
-        <a href="diagnostic.html" class="panel-cta">Démarrer avec un Diagnostic Flash →</a>
+<!-- PME -->
+<section class="profile-section" id="pme">
+  <div class="profile-section-inner">
+    <div class="panel-content">
+      <div class="profile-eyebrow">Profil 01 — Dirigeant de PME</div>
+      <h2>Dirigeant de PME</h2>
+      <p class="persona-intro">
+        Vous êtes dirigeant de PME industrielle ou de services, entre 10 et 50 M€ de chiffre d'affaires, et vous devez passer un cap sans épuiser vos équipes.
+      </p>
+      <p class="panel-pitch">OP360, votre sparring-partner opérationnel modulable.</p>
+      <p>Un interlocuteur unique, mais adossé à un collectif mobilisable sans changer de prestataire. Souplesse budgétaire et culture de transmission, pas de dépendance à un cabinet externe.</p>
+      <ul class="panel-points">
+        <li>Diagnostic Flash en 8 jours — état des lieux concret et actionnable</li>
+        <li>Operating Partners pairs dirigeants, positionnés sur la mise en œuvre</li>
+        <li>Accès au collectif Shadow Codir si la situation se complexifie</li>
+        <li>Souplesse budgétaire — outils digitaux et collectif inclus</li>
+        <li>Présence dans les moments clés : croissance, transitions, retournement</li>
+        <li>Culture de transmission, évitant la dépendance à un cabinet externe</li>
+      </ul>
+      <div class="panel-example">
+        <h4>Exemple concret</h4>
+        <p>Une PME industrielle voulant doubler son CA en 5 ans, avec des équipes saturées. OP360 réalise un Diagnostic Flash, puis déploie un Operating Partner en immersion partielle pour piloter les projets structurants avec suivi SaaS.</p>
       </div>
-      <div class="panel-visual">
-        <div class="panel-kpi"><div class="panel-kpi-icon">⚡</div><h4>5 jours</h4><p>Pour un Diagnostic Flash complet, concret et immédiatement actionnable</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">🎯</div><h4>Actions prioritaires</h4><p>Actions concrètes avec résultats mesurables dès les premières semaines</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">💡</div><h4>1 interlocuteur</h4><p>Un Operating Partner dédié, avec accès au collectif sans changer d'interlocuteur</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">🔄</div><h4>Transmission</h4><p>Montée en compétence des équipes intégrée dès le départ</p></div>
-      </div>
+      <a href="diagnostic.html" class="panel-cta">Démarrer avec un Diagnostic Flash →</a>
     </div>
-
-    <!-- ETI -->
-    <div class="tab-panel" id="tab-eti">
-      <div class="panel-content">
-        <h2>Dirigeant d'ETI</h2>
-        <p class="panel-pitch">OP360, votre Shadow Codir élargi pour des enjeux complexes.</p>
-        <p>Accès à un Shadow Codir pluridisciplinaire pour des situations complexes et multi-dimensionnelles. Coordination de plusieurs expertises dans un même dispositif intégré.</p>
-        <ul class="panel-points">
-          <li>Shadow Codir pluridisciplinaire : stratégie, finance, digital, RSE</li>
-          <li>Coordination intégrée — pas une juxtaposition d'experts indépendants</li>
-          <li>Gestion de transformations complexes et multi-sites</li>
-          <li>Ancrage terrain avec pilotage régulier et points d'arbitrage direction</li>
-          <li>Approche 360° sur 12 domaines avec plateforme SaaS de monitoring</li>
-          <li>Un interlocuteur central pour le dirigeant, quelle que soit la complexité</li>
-        </ul>
-        <div class="panel-example">
-          <h4>Exemple concret</h4>
-          <p>Une ETI en transformation post-acquisition : OP360 déploie un Shadow Codir pluridisciplinaire pour coordonner l'intégration opérationnelle, les enjeux RH, la transformation digitale et l'alignement RSE dans un dispositif unique.</p>
-        </div>
-        <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="panel-cta">Parler de votre projet →</a>
-      </div>
-      <div class="panel-visual">
-        <div class="panel-kpi"><div class="panel-kpi-icon">👥</div><h4>Shadow Codir</h4><p>Collectif pluridisciplinaire coordonné, mobilisable ad hoc</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">🔄</div><h4>Transformation complexe</h4><p>Multi-sites, multi-expertises, toujours coordonnées</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">📊</div><h4>Monitoring SaaS</h4><p>Pilotage en temps réel de la performance et des projets</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">🌱</div><h4>RSE intégrée</h4><p>Volet RSE/ESG systématiquement inclus dans la démarche</p></div>
-      </div>
+    <div class="panel-visual">
+      <div class="panel-kpi"><div class="panel-kpi-icon">⚡</div><h4>8 jours</h4><p>Pour un Diagnostic Flash complet, concret et immédiatement actionnable</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">🎯</div><h4>Actions prioritaires</h4><p>Actions concrètes avec résultats mesurables dès les premières semaines</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">💡</div><h4>1 interlocuteur</h4><p>Un Operating Partner dédié, avec accès au collectif sans changer d'interlocuteur</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">🔄</div><h4>Transmission</h4><p>Montée en compétence des équipes intégrée dès le départ</p></div>
     </div>
+  </div>
+</section>
 
-    <!-- INVEST -->
-    <div class="tab-panel" id="tab-invest">
-      <div class="panel-content">
-        <h2>Investisseur / Fonds</h2>
-        <p class="panel-pitch">OP360, levier d'amplification du TRI et réduction du risque d'exécution.</p>
-        <p>Accélération et sécurisation de la thèse d'investissement. Traduction de l'investment case en plan d'action chiffré et pilotable, avec création de valeur mesurable.</p>
-        <ul class="panel-points">
-          <li>Due diligences opérationnelles incluant RSE/ESG/CSRD</li>
-          <li>Création de valeur mesurable — sur-performance EBITDA/TRI historique</li>
-          <li>Modèle hybride OP/Shadow Codir limitant le recours à plusieurs prestataires</li>
-          <li>Scalabilité sur portefeuille, y compris petites participations PME</li>
-          <li>Couverture cycle complet : avant, pendant, préparation de sortie</li>
-          <li>Alignement ESG/RSE et professionnalisation de la gouvernance</li>
-        </ul>
-        <div class="panel-example">
-          <h4>Exemple concret</h4>
-          <p>Pour une participation PME de taille intermédiaire : OP360 déploie un Operating Partner dédié avec accès à la toolbox complète (méthodologie 12 domaines, SaaS, pool d'experts). Sécurisation de la thèse dès la phase de due diligence.</p>
-        </div>
-        <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="panel-cta">Discuter de votre portefeuille →</a>
+<!-- ETI -->
+<section class="profile-section" id="eti">
+  <div class="profile-section-inner">
+    <div class="panel-content">
+      <div class="profile-eyebrow">Profil 02 — Dirigeant d'ETI</div>
+      <h2>Dirigeant d'ETI</h2>
+      <p class="persona-intro">
+        Vous êtes dirigeant d'ETI, avec des enjeux de transformation multi-sites ou de forte croissance à piloter dans la durée.
+      </p>
+      <p class="panel-pitch">OP360, votre Shadow Codir élargi pour des enjeux complexes.</p>
+      <p>Accès à un Shadow Codir pluridisciplinaire pour des situations complexes et multi-dimensionnelles. Coordination de plusieurs expertises dans un même dispositif intégré.</p>
+      <ul class="panel-points">
+        <li>Shadow Codir pluridisciplinaire : stratégie, finance, digital, RSE</li>
+        <li>Coordination intégrée — pas une juxtaposition d'experts indépendants</li>
+        <li>Gestion de transformations complexes et multi-sites</li>
+        <li>Ancrage terrain avec pilotage régulier et points d'arbitrage direction</li>
+        <li>Approche 360° sur 12 domaines avec plateforme SaaS de monitoring</li>
+        <li>Un interlocuteur central pour le dirigeant, quelle que soit la complexité</li>
+      </ul>
+      <div class="panel-example">
+        <h4>Exemple concret</h4>
+        <p>Une ETI en transformation post-acquisition : OP360 déploie un Shadow Codir pluridisciplinaire pour coordonner l'intégration opérationnelle, les enjeux RH, la transformation digitale et l'alignement RSE dans un dispositif unique.</p>
       </div>
-      <div class="panel-visual">
-        <div class="panel-kpi"><div class="panel-kpi-icon">📈</div><h4>Sur-performance TRI</h4><p>Associée historiquement aux deals avec équipe opérationnelle dédiée</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">🔬</div><h4>Due Diligence complète</h4><p>Opérationnelle + RSE pour évaluation 360°</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">🎯</div><h4>Cycle complet</h4><p>Avant investissement → Création de valeur → Préparation sortie</p></div>
-        <div class="panel-kpi"><div class="panel-kpi-icon">🔗</div><h4>Scalable portefeuille</h4><p>Déployable sur plusieurs participations sans multiplication des prestataires</p></div>
+      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="panel-cta">Parler de votre projet →</a>
+    </div>
+    <div class="panel-visual">
+      <div class="panel-kpi"><div class="panel-kpi-icon">👥</div><h4>Shadow Codir</h4><p>Collectif pluridisciplinaire coordonné, mobilisable ad hoc</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">🔄</div><h4>Transformation complexe</h4><p>Multi-sites, multi-expertises, toujours coordonnées</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">📊</div><h4>Monitoring SaaS</h4><p>Pilotage en temps réel de la performance et des projets</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">🌱</div><h4>RSE intégrée</h4><p>Volet RSE/ESG systématiquement inclus dans la démarche</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTISSEURS -->
+<section class="profile-section" id="invest">
+  <div class="profile-section-inner">
+    <div class="panel-content">
+      <div class="profile-eyebrow">Profil 03 — Investisseur / Fonds</div>
+      <h2>Investisseur / Fonds</h2>
+      <p class="persona-intro">
+        Vous êtes investisseur (fonds, family office, corporate) et vous cherchez à sécuriser l'exécution et la création de valeur sur vos participations.
+      </p>
+      <p class="panel-pitch">OP360, levier d'amplification du TRI et réduction du risque d'exécution.</p>
+      <p>Accélération et sécurisation de la thèse d'investissement. Traduction de l'investment case en plan d'action chiffré et pilotable, avec création de valeur mesurable.</p>
+      <ul class="panel-points">
+        <li>Due diligences opérationnelles incluant RSE/ESG/CSRD</li>
+        <li>Création de valeur mesurable — sur-performance EBITDA/TRI historique</li>
+        <li>Modèle hybride OP/Shadow Codir limitant le recours à plusieurs prestataires</li>
+        <li>Scalabilité sur portefeuille, y compris petites participations PME</li>
+        <li>Couverture cycle complet : avant, pendant, préparation de sortie</li>
+        <li>Alignement ESG/RSE et professionnalisation de la gouvernance</li>
+      </ul>
+      <div class="panel-example">
+        <h4>Exemple concret</h4>
+        <p>Pour une participation PME de taille intermédiaire : OP360 déploie un Operating Partner dédié avec accès à la toolbox complète (méthodologie 12 domaines, SaaS, pool d'experts). Sécurisation de la thèse dès la phase de due diligence.</p>
       </div>
+      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="panel-cta">Discuter de votre portefeuille →</a>
+    </div>
+    <div class="panel-visual">
+      <div class="panel-kpi"><div class="panel-kpi-icon">📈</div><h4>Sur-performance TRI</h4><p>Associée historiquement aux deals avec équipe opérationnelle dédiée</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">🔬</div><h4>Due Diligence complète</h4><p>Opérationnelle + RSE pour évaluation 360°</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">🎯</div><h4>Cycle complet</h4><p>Avant investissement → Création de valeur → Préparation sortie</p></div>
+      <div class="panel-kpi"><div class="panel-kpi-icon">🔗</div><h4>Scalable portefeuille</h4><p>Déployable sur plusieurs participations sans multiplication des prestataires</p></div>
     </div>
   </div>
 </section>
@@ -224,7 +261,7 @@
         <tr><td class="label">Exécution terrain</td><td class="highlight"><span class="check">✓</span> Immersion possible</td><td><span class="check">✓</span> Selon profil</td><td><span class="cross">✗</span> Recommandations</td></tr>
         <tr><td class="label">Outils numériques</td><td class="highlight"><span class="check">✓</span> SaaS OP360 inclus</td><td><span class="cross">✗</span></td><td>Parfois, payant</td></tr>
         <tr><td class="label">Transmission autonomie</td><td class="highlight"><span class="check">✓</span> Intégrée au départ</td><td>Variable</td><td><span class="cross">✗</span> Dépendance</td></tr>
-        <tr><td class="label">Diagnostic 12 domaines</td><td class="highlight"><span class="check">✓</span> 5 jours</td><td>Variable</td><td>Longs, peu actionnables</td></tr>
+        <tr><td class="label">Diagnostic 12 domaines</td><td class="highlight"><span class="check">✓</span> 8 jours</td><td>Variable</td><td>Longs, peu actionnables</td></tr>
         <tr><td class="label">RSE/ESG intégré</td><td class="highlight"><span class="check">✓</span> Systématique</td><td>Rare</td><td>Option payante</td></tr>
       </tbody>
     </table>
@@ -252,16 +289,23 @@
 buildNav('pourqui.html');
 buildFooter();
 
-function showTab(id, btn) {
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  btn.classList.add('active');
-}
+// Mise en évidence du lien de navigation actif selon la section visible
+(function() {
+  const navLinks = document.querySelectorAll('.profiles-nav a');
+  const sections = ['pme','eti','invest'].map(id => document.getElementById(id));
 
-// Handle URL hash
-if (location.hash === '#eti') showTab('eti', document.querySelectorAll('.tab-btn')[1]);
-if (location.hash === '#invest') showTab('invest', document.querySelectorAll('.tab-btn')[2]);
+  function setActive() {
+    let current = 'pme';
+    sections.forEach(s => {
+      if (s && s.getBoundingClientRect().top <= 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+})();
 
 initReveal();
 </script>
