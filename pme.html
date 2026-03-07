@@ -58,10 +58,12 @@
 .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
 .benefit {
   background: var(--white); border: 1.5px solid var(--gray-border);
-  border-radius: var(--radius); padding: 36px 28px; transition: all 0.25s;
+  border-radius: var(--radius); padding: 28px 24px; transition: all 0.25s;
+  display: flex; align-items: flex-start; gap: 16px;
 }
 .benefit:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
-.benefit-icon { font-size: 32px; margin-bottom: 16px; }
+.benefit-icon { font-size: 28px; flex-shrink: 0; line-height: 1.5; }
+.benefit-body { flex: 1; }
 .benefit h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; letter-spacing: -0.01em; }
 .benefit p { font-size: 14px; color: var(--gray-text); line-height: 1.7; margin: 0; }
 
@@ -107,9 +109,11 @@
 .team-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
 .team-kpi {
   background: rgba(0,212,170,0.06); border: 1px solid rgba(0,212,170,0.18);
-  border-radius: 10px; padding: 24px 20px;
+  border-radius: 10px; padding: 20px;
+  display: flex; align-items: flex-start; gap: 14px;
 }
-.team-kpi-icon { font-size: 28px; margin-bottom: 10px; }
+.team-kpi-icon { font-size: 24px; flex-shrink: 0; line-height: 1.4; }
+.team-kpi-body { flex: 1; }
 .team-kpi h4 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
 .team-kpi p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; margin: 0; }
 
@@ -183,23 +187,31 @@
     <div class="benefits-grid" style="margin-top:32px">
       <div class="benefit reveal">
         <div class="benefit-icon">🚀</div>
-        <h3>Ambition de croissance</h3>
-        <p>Vous voulez passer un cap — doubler le CA, ouvrir un nouveau marché, accélérer à l'international. Mais l'organisation existante commence à saturer et vous sentez que le modèle ne tiendra pas la cadence seul.</p>
+        <div class="benefit-body">
+          <h3>Ambition de croissance</h3>
+          <p>Vous voulez passer un cap — doubler le CA, ouvrir un nouveau marché, accélérer à l'international. Mais l'organisation existante commence à saturer et vous sentez que le modèle ne tiendra pas la cadence seul.</p>
+        </div>
       </div>
       <div class="benefit reveal">
         <div class="benefit-icon">🔄</div>
-        <h3>Transitions critiques</h3>
-        <p>Transmission, rachat, changement de modèle économique ou restructuration : ces moments exigent des décisions rapides, des arbitrages clairs et une capacité d'exécution renforcée — sans filet.</p>
+        <div class="benefit-body">
+          <h3>Transitions critiques</h3>
+          <p>Transmission, rachat, changement de modèle économique ou restructuration : ces moments exigent des décisions rapides, des arbitrages clairs et une capacité d'exécution renforcée — sans filet.</p>
+        </div>
       </div>
       <div class="benefit reveal">
         <div class="benefit-icon">📊</div>
-        <h3>Retournement de rentabilité / trésorerie</h3>
-        <p>Tensions sur les marges, trésorerie sous pression, besoin de retrouver rapidement de la visibilité sur les leviers d'action. Chaque semaine compte et les priorités doivent être claires.</p>
+        <div class="benefit-body">
+          <h3>Retournement de rentabilité / trésorerie</h3>
+          <p>Tensions sur les marges, trésorerie sous pression, besoin de retrouver rapidement de la visibilité sur les leviers d'action. Chaque semaine compte et les priorités doivent être claires.</p>
+        </div>
       </div>
       <div class="benefit reveal">
         <div class="benefit-icon">🧭</div>
-        <h3>Structurer le pilotage</h3>
-        <p>Vous portez trop de sujets en première ligne. Vous avez besoin de structurer le pilotage, de déléguer sur des bases solides et d'avoir un pair à vos côtés pour prendre du recul sans perdre en exécution.</p>
+        <div class="benefit-body">
+          <h3>Structurer le pilotage</h3>
+          <p>Vous portez trop de sujets en première ligne. Vous avez besoin de structurer le pilotage, de déléguer sur des bases solides et d'avoir un pair à vos côtés pour prendre du recul sans perdre en exécution.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -214,18 +226,24 @@
     <div class="benefits-grid">
       <div class="benefit reveal">
         <div class="benefit-icon">⚡</div>
-        <h3>Voir clair en quelques jours</h3>
-        <p>Un Diagnostic OP360 sur 12 domaines qui vous donne un état des lieux de votre capacité d'exécution et identifie les vrais leviers de valeur — actionnables dès la restitution.</p>
+        <div class="benefit-body">
+          <h3>Voir clair en quelques jours</h3>
+          <p>Un Diagnostic OP360 sur 12 domaines qui vous donne un état des lieux de votre capacité d'exécution et identifie les vrais leviers de valeur — actionnables dès la restitution.</p>
+        </div>
       </div>
       <div class="benefit reveal">
         <div class="benefit-icon">🗺</div>
-        <h3>Un parcours d'exécution réaliste</h3>
-        <p>Une feuille de route priorisée, adaptée à vos ressources et à votre tempo, pas un plan théorique impossible à dérouler avec une équipe déjà saturée.</p>
+        <div class="benefit-body">
+          <h3>Un parcours d'exécution réaliste</h3>
+          <p>Une feuille de route priorisée, adaptée à vos ressources et à votre tempo, pas un plan théorique impossible à dérouler avec une équipe déjà saturée.</p>
+        </div>
       </div>
       <div class="benefit reveal">
         <div class="benefit-icon">🤝</div>
-        <h3>Un pair à vos côtés</h3>
-        <p>Un Operating Partner qui a déjà tenu votre rôle — en soutien du quotidien, ancré dans l'exécution, adossé à un Shadow Codir mobilisable si la situation se complexifie.</p>
+        <div class="benefit-body">
+          <h3>Un pair à vos côtés</h3>
+          <p>Un Operating Partner qui a déjà tenu votre rôle — en soutien du quotidien, ancré dans l'exécution, adossé à un Shadow Codir mobilisable si la situation se complexifie.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -303,18 +321,24 @@
     <div class="team-kpis">
       <div class="team-kpi reveal">
         <div class="team-kpi-icon">💡</div>
-        <h4>1 interlocuteur principal</h4>
-        <p>Operating Partner dédié, vous connaissant et connaissant votre entreprise</p>
+        <div class="team-kpi-body">
+          <h4>1 interlocuteur principal</h4>
+          <p>Operating Partner dédié, vous connaissant et connaissant votre entreprise</p>
+        </div>
       </div>
       <div class="team-kpi reveal">
         <div class="team-kpi-icon">👥</div>
-        <h4>Collectif Shadow Codir</h4>
-        <p>Experts pluridisciplinaires mobilisables en 24/48h si la situation évolue</p>
+        <div class="team-kpi-body">
+          <h4>Collectif Shadow Codir</h4>
+          <p>Experts pluridisciplinaires mobilisables en 24/48h si la situation évolue</p>
+        </div>
       </div>
       <div class="team-kpi reveal">
         <div class="team-kpi-icon">💻</div>
-        <h4>Plateforme SaaS incluse</h4>
-        <p>Pilotage de la performance et des projets, inclus sans surcoût</p>
+        <div class="team-kpi-body">
+          <h4>Plateforme SaaS incluse</h4>
+          <p>Pilotage de la performance et des projets, inclus sans surcoût</p>
+        </div>
       </div>
     </div>
   </div>
