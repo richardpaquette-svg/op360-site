@@ -184,7 +184,7 @@
 /* ── OFFRES ── */
 .offres-section { background: var(--gray-bg); }
 .offres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.offre-card { background: var(--card-bg); border: 1.5px solid #e2e8f0; border-radius: var(--radius); padding: 24px 20px; transition: all 0.25s; position: relative; box-shadow: 0 1px 3px rgba(15,23,42,0.06); display: flex; align-items: flex-start; gap: 14px; }
+.offre-card { background: var(--card-bg); border: 1.5px solid #e2e8f0; border-radius: var(--radius); padding: 24px 20px; transition: all 0.25s; position: relative; box-shadow: 0 1px 3px rgba(15,23,42,0.06); display: flex; align-items: flex-start; gap: 14px; text-decoration: none; color: inherit; cursor: pointer; }
 .offre-card:hover { border-color: var(--cyan); box-shadow: 0 8px 28px rgba(0, 212, 170, 0.18); transform: translateY(-3px); }
 .offre-card.featured { border-color: var(--cyan); background: linear-gradient(135deg, var(--white) 0%, var(--cyan-light) 100%); }
 .offre-badge { position: absolute; top: 14px; right: 14px; background: var(--cyan); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
@@ -734,15 +734,15 @@ document.getElementById('diff-grid').innerHTML = OP360.differenciateurs.map(d =>
   </article>`).join('');
 
 document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
-  <div class="offre-card ${o.featured ? 'featured' : ''} reveal">
+  <a class="offre-card ${o.featured ? 'featured' : ''} reveal" href="${o.href || 'offres.html'}">
     ${o.badge ? `<div class="offre-badge">${o.badge}</div>` : ''}
     <div class="offre-icon-wrap">${o.icone}</div>
     <div class="offre-body">
       <h3>${o.titre}</h3>
       <ul class="offre-bullets">${o.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-      <a href="${o.href || 'offres.html'}" class="offre-lien">En savoir plus →</a>
+      <span class="offre-lien">En savoir plus →</span>
     </div>
-  </div>`).join('');
+  </a>`).join('');
 
 
 document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => `
