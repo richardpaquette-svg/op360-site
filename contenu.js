@@ -149,7 +149,6 @@ const OP360 = {
     livrables: [
       { icone:"📄", titre:"Rapport de diagnostic détaillé", desc:"12 domaines analysés, scorés et commentés avec lecture croisée de vos enjeux stratégiques." },
       { icone:"🎨", titre:"Executive Pack visuel", desc:"Synthèse avec heatmaps, radar de maturité et matrice impact/priorité pour décider en un coup d'œil." },
-      { icone:"🏆", titre:"Top 3-5-7 domaines prioritaires", desc:"Les domaines critiques alignés sur vos enjeux, ordonnés par impact et faisabilité." },
       { icone:"⚡", titre:"Plan d'action priorisé", desc:"Actions concrètes actionnables immédiatement pour des résultats mesurables dès les premières semaines." },
       { icone:"🗺", titre:"Parcours d'exécution complet", desc:"Plan intégral adapté à votre dimension et vos ressources, global et par domaine." },
     ],
