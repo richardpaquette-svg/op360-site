@@ -56,23 +56,27 @@
 .domaines-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .domaine-card {
   background: rgba(255,255,255,0.04); border: 1px solid rgba(0,212,170,0.15);
-  border-radius: 10px; padding: 20px 18px; transition: all 0.2s; cursor: default;
+  border-radius: 10px; padding: 16px 14px; transition: all 0.2s; cursor: default;
+  display: flex; align-items: flex-start; gap: 10px;
 }
 .domaine-card:hover { border-color: rgba(0,212,170,0.5); background: rgba(0,212,170,0.06); transform: translateY(-2px); }
-.domaine-nb { font-size: 11px; font-weight: 700; color: rgba(0,212,170,0.5); letter-spacing: 0.08em; margin-bottom: 8px; }
-.domaine-card h4 { font-size: 14px; font-weight: 700; color: var(--white); line-height: 1.35; }
-.domaine-icon { font-size: 22px; margin-bottom: 10px; }
+.domaine-icon { font-size: 18px; flex-shrink: 0; padding-top: 2px; }
+.domaine-body { flex: 1; }
+.domaine-nb { font-size: 11px; font-weight: 700; color: rgba(0,212,170,0.5); letter-spacing: 0.08em; margin-bottom: 4px; }
+.domaine-card h4 { font-size: 13px; font-weight: 700; color: var(--white); line-height: 1.35; }
 
 /* ── LIVRABLES ── */
 .livrables-section { background: var(--gray-bg); }
 .livrables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.livrable-body { flex: 1; }
 .livrable-card {
   background: var(--white); border: 1.5px solid var(--gray-border);
-  border-radius: var(--radius); padding: 36px 28px; transition: all 0.25s;
+  border-radius: var(--radius); padding: 28px 24px; transition: all 0.25s;
+  display: flex; align-items: flex-start; gap: 16px;
 }
 .livrable-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
 .livrable-card.featured { border-color: var(--cyan); background: linear-gradient(135deg, var(--white) 0%, var(--cyan-light) 100%); }
-.livrable-icon { font-size: 36px; margin-bottom: 18px; }
+.livrable-icon { font-size: 28px; flex-shrink: 0; line-height: 1.3; }
 .livrable-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .livrable-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
 
@@ -181,18 +185,18 @@
     <h2 class="section-title section-title-white reveal">12 domaines, 1 vision systémique</h2>
     <p class="section-intro section-intro-white reveal">Chaque domaine est scoré, analysé et croisé avec vos enjeux stratégiques pour identifier les vrais leviers de création de valeur.</p>
     <div class="domaines-grid">
-      <div class="domaine-card reveal"><div class="domaine-icon">🎯</div><div class="domaine-nb">01</div><h4>Stratégie & Business Model</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🏆</div><div class="domaine-nb">02</div><h4>Spécialisation et Positionnement</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🏗</div><div class="domaine-nb">03</div><h4>Gouvernance, Organisation & Management</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">👥</div><div class="domaine-nb">04</div><h4>Ressources Humaines, Talents & Culture</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">💰</div><div class="domaine-nb">05</div><h4>Pilotage Économique, Finance & Reporting</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">📈</div><div class="domaine-nb">06</div><h4>Marché, Clients, Partenariats & Export</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">⚙️</div><div class="domaine-nb">07</div><h4>Performance Opérationnelle & Excellence Process</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🔗</div><div class="domaine-nb">08</div><h4>Cartographie des Processus & Exploitation opérationnelle</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">💻</div><div class="domaine-nb">09</div><h4>Maturité numérique</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🚀</div><div class="domaine-nb">10</div><h4>Innovation, R&D, Laboratoire & Propriété Intellectuelle</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🌱</div><div class="domaine-nb">11</div><h4>Environnement, Qualité, Sécurité & RSE</h4></div>
-      <div class="domaine-card reveal"><div class="domaine-icon">🤝</div><div class="domaine-nb">12</div><h4>Relations Groupe, Intégration & Reporting Post-Acquisition</h4></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">🎯</div><div class="domaine-body"><div class="domaine-nb">01</div><h4>Stratégie & Business Model</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">🏆</div><div class="domaine-body"><div class="domaine-nb">02</div><h4>Spécialisation et Positionnement</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">🏗</div><div class="domaine-body"><div class="domaine-nb">03</div><h4>Gouvernance, Organisation & Management</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">👥</div><div class="domaine-body"><div class="domaine-nb">04</div><h4>Ressources Humaines, Talents & Culture</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">💰</div><div class="domaine-body"><div class="domaine-nb">05</div><h4>Pilotage Économique, Finance & Reporting</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">📈</div><div class="domaine-body"><div class="domaine-nb">06</div><h4>Marché, Clients, Partenariats & Export</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">⚙️</div><div class="domaine-body"><div class="domaine-nb">07</div><h4>Performance Opérationnelle & Excellence Process</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">🔗</div><div class="domaine-body"><div class="domaine-nb">08</div><h4>Cartographie des Processus & Exploitation opérationnelle</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">💻</div><div class="domaine-body"><div class="domaine-nb">09</div><h4>Maturité numérique</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">🚀</div><div class="domaine-body"><div class="domaine-nb">10</div><h4>Innovation, R&D, Laboratoire & Propriété Intellectuelle</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">🌱</div><div class="domaine-body"><div class="domaine-nb">11</div><h4>Environnement, Qualité, Sécurité & RSE</h4></div></div>
+      <div class="domaine-card reveal"><div class="domaine-icon">🤝</div><div class="domaine-body"><div class="domaine-nb">12</div><h4>Relations Groupe, Intégration & Reporting Post-Acquisition</h4></div></div>
     </div>
   </div>
 </section>
@@ -242,8 +246,7 @@ buildFooter();
 document.getElementById('livrables-grid').innerHTML = OP360.diagnostic.livrables.map((l,i) => `
   <div class="livrable-card ${i===0?'featured':''} reveal">
     <div class="livrable-icon">${l.icone}</div>
-    <h3>${l.titre}</h3>
-    <p>${l.desc}</p>
+    <div class="livrable-body"><h3>${l.titre}</h3><p>${l.desc}</p></div>
   </div>`).join('');
 
 initReveal();
