@@ -118,7 +118,7 @@ const OP360 = {
 
   // ── 6 OFFRES ──────────────────────────────────────
   offres: [
-    { icone:"⚡", titre:"Diagnostic Flash", href:"diagnostic.html", featured:true, badge:"Recommandé", bullets:["Évaluation maturité d'exécution de la stratégie","12 domaines analysés et scorés","Identification des priorités & leviers de valeur","Plan d'action + parcours d'exécution complet","8 jours pour voir clair et agir juste"] },
+    { icone:"⚡", titre:"Diagnostic OP360", href:"diagnostic.html", featured:true, badge:"Recommandé", bullets:["Évaluation maturité d'exécution de la stratégie","12 domaines analysés et scorés","Identification des priorités & leviers de valeur","Plan d'action + parcours d'exécution complet","8 jours pour voir clair et agir juste"] },
     { icone:"👥", titre:"Shadow Codir", href:"shadow-codir.html", featured:false, badge:"", bullets:["Collectif ad hoc multisectoriel et multifonctionnel","Mobilisable ponctuellement ou récurrent","Nativement intégré aux diagnostics"] },
     { icone:"🤝", titre:"Accompagnement Terrain", href:"accompagnement.html", featured:false, badge:"", bullets:["À la dimension de l'entreprise","En immersion ou en appui","Individuel ou par une équipe","Formats hybrides et flexibles"] },
     { icone:"🔬", titre:"Due Diligence Opérationnelle", href:"due-diligence.html", featured:false, badge:"", bullets:["Analyse approfondie pré/post investissement","Cession, acquisition, transmission","Volet RSE intégré (CSRD/ESG)"] },
