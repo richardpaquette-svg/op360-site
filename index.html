@@ -160,11 +160,12 @@
 .moments-section { background: var(--navy); position: relative; overflow: hidden; }
 .moments-photo { display: none; }
 .moments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
-.moment-card { border: 1px solid rgba(0,212,170,0.18); border-radius: var(--radius); padding: 40px 32px; transition: all 0.3s; background: rgba(255,255,255,0.03); position: relative; }
+.moment-card { border: 1px solid rgba(0,212,170,0.18); border-radius: var(--radius); padding: 28px 24px; transition: all 0.3s; background: rgba(255,255,255,0.03); position: relative; display: flex; align-items: flex-start; gap: 16px; }
 .moment-card:hover { border-color: rgba(0,212,170,0.5); transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); }
 .moment-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--cyan); transform:scaleX(0); transform-origin:left; transition:transform 0.3s; border-radius:var(--radius) var(--radius) 0 0; }
 .moment-card:hover::after { transform: scaleX(1); }
-.moment-icon { font-size: 36px; margin-bottom: 20px; display: block; }
+.moment-icon-wrap { font-size: 32px; flex-shrink: 0; line-height: 1.2; }
+.moment-body { flex: 1; }
 .moment-card h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
 .moment-valeur { font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 16px; line-height: 1.45; }
 .moment-cas { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.65; }
@@ -183,12 +184,13 @@
 /* ── OFFRES ── */
 .offres-section { background: var(--gray-bg); }
 .offres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.offre-card { background: var(--card-bg); border: 1.5px solid #e2e8f0; border-radius: var(--radius); padding: 32px 26px; transition: all 0.25s; position: relative; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
+.offre-card { background: var(--card-bg); border: 1.5px solid #e2e8f0; border-radius: var(--radius); padding: 24px 20px; transition: all 0.25s; position: relative; box-shadow: 0 1px 3px rgba(15,23,42,0.06); display: flex; align-items: flex-start; gap: 14px; }
 .offre-card:hover { border-color: var(--cyan); box-shadow: 0 8px 28px rgba(0, 212, 170, 0.18); transform: translateY(-3px); }
 .offre-card.featured { border-color: var(--cyan); background: linear-gradient(135deg, var(--white) 0%, var(--cyan-light) 100%); }
-.offre-badge { position: absolute; top: 16px; right: 16px; background: var(--cyan); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
-.offre-icon { font-size: 28px; margin-bottom: 14px; }
-.offre-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+.offre-badge { position: absolute; top: 14px; right: 14px; background: var(--cyan); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
+.offre-icon-wrap { font-size: 26px; flex-shrink: 0; line-height: 1.2; }
+.offre-body { flex: 1; }
+.offre-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .offre-bullets { list-style: none; }
 .offre-bullets li { font-size: 13px; color: var(--gray-text); line-height: 1.55; padding: 4px 0; display: flex; align-items: flex-start; gap: 8px; }
 .offre-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
@@ -318,8 +320,8 @@
 
   /* ── MOMENTS (3 cartes, stacked compact) ── */
   .moments-grid { grid-template-columns: 1fr; }
-  .moment-card { padding: 24px 18px; }
-  .moment-icon { font-size: 28px; margin-bottom: 12px; }
+  .moment-card { padding: 20px 16px; }
+  .moment-icon-wrap { font-size: 24px; }
   .moment-card h3 { font-size: 17px; }
 
   /* ── DIFFÉRENCIATEURS (2 colonnes × 3 lignes) ── */
@@ -716,10 +718,12 @@ buildFooter();
 
 document.getElementById('moments-grid').innerHTML = OP360.moments.map(m => `
   <div class="moment-card reveal">
-    <span class="moment-icon">${m.icone}</span>
-    <h3>${m.titre}</h3>
-    <p class="moment-valeur">${m.valeur}</p>
-    <p class="moment-cas"><strong>Cas :</strong> ${m.cas}</p>
+    <div class="moment-icon-wrap">${m.icone}</div>
+    <div class="moment-body">
+      <h3>${m.titre}</h3>
+      <p class="moment-valeur">${m.valeur}</p>
+      <p class="moment-cas"><strong>Cas :</strong> ${m.cas}</p>
+    </div>
   </div>`).join('');
 
 document.getElementById('diff-grid').innerHTML = OP360.differenciateurs.map(d => `
@@ -732,10 +736,12 @@ document.getElementById('diff-grid').innerHTML = OP360.differenciateurs.map(d =>
 document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
   <div class="offre-card ${o.featured ? 'featured' : ''} reveal">
     ${o.badge ? `<div class="offre-badge">${o.badge}</div>` : ''}
-    <div class="offre-icon">${o.icone}</div>
-    <h3>${o.titre}</h3>
-    <ul class="offre-bullets">${o.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-    <a href="${o.href || 'offres.html'}" class="offre-lien">En savoir plus →</a>
+    <div class="offre-icon-wrap">${o.icone}</div>
+    <div class="offre-body">
+      <h3>${o.titre}</h3>
+      <ul class="offre-bullets">${o.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+      <a href="${o.href || 'offres.html'}" class="offre-lien">En savoir plus →</a>
+    </div>
   </div>`).join('');
 
 
