@@ -14,6 +14,7 @@ function buildNav(activePage) {
     { href: "equipe.html", label: "Qui sommes-nous" },
     { href: "offres.html", label: "Nos offres" },
     { href: "pme.html", label: "Dirigeants de PME" },
+    { href: "eti.html", label: "Dirigeants d'ETI" },
     { href: "contact.html", label: "Parlons de vos enjeux" },
   ];
 
@@ -74,7 +75,7 @@ function buildFooter() {
             <h4>Pour qui</h4>
             <ul>
               <li><a href="pme.html">Dirigeants de PME</a></li>
-              <li><a href="pourqui.html#eti">Dirigeants d'ETI</a></li>
+              <li><a href="eti.html">Dirigeants d'ETI</a></li>
               <li><a href="pourqui.html#invest">Investisseurs & Fonds</a></li>
             </ul>
             <h4 style="margin-top:24px">OP360</h4>
