@@ -148,6 +148,14 @@
 .diag-link { font-size: 14px; font-weight: 600; color: var(--navy); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
 .diag-link:hover { color: var(--cyan); }
 
+/* ── DIAG SUMMARY ── */
+.diag-summary { display: flex; align-items: stretch; gap: 0; margin-bottom: 36px; }
+.diag-summary-item { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 14px; background: var(--white); border: 1px solid #e2e8f0; border-radius: 10px; flex: 1; }
+.diag-summary-step { font-size: 10px; font-weight: 700; color: var(--cyan); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px; }
+.diag-summary-label { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 5px; line-height: 1.3; }
+.diag-summary-desc { font-size: 12px; color: var(--gray-text); line-height: 1.5; }
+.diag-summary-arrow { display: flex; align-items: center; color: var(--cyan); font-size: 16px; padding: 0 6px; flex-shrink: 0; }
+
 /* ── MOMENTS ── */
 .moments-section { background: var(--navy); position: relative; overflow: hidden; }
 .moments-photo { display: none; }
@@ -304,6 +312,9 @@
   .diag-grid { grid-template-columns: 1fr; }
   .diag-card { padding: 24px 20px; }
   .diag-bandeau { padding: 20px 16px; }
+  .diag-summary { flex-direction: column; gap: 8px; }
+  .diag-summary-arrow { display: none; }
+  .diag-summary-item { flex-direction: row; text-align: left; gap: 14px; padding: 14px 16px; align-items: center; }
 
   /* ── MOMENTS (3 cartes, stacked compact) ── */
   .moments-grid { grid-template-columns: 1fr; }
@@ -512,6 +523,37 @@
           <li>Lecture systémique, scoring, priorisation des leviers de valeur.</li>
 
         </ul>
+      </div>
+    </div>
+    <div class="diag-summary reveal">
+      <div class="diag-summary-item">
+        <div class="diag-summary-step">01</div>
+        <div class="diag-summary-label">Diagnostic</div>
+        <div class="diag-summary-desc">Étude personnalisée 12 domaines</div>
+      </div>
+      <div class="diag-summary-arrow">→</div>
+      <div class="diag-summary-item">
+        <div class="diag-summary-step">02</div>
+        <div class="diag-summary-label">Analyse</div>
+        <div class="diag-summary-desc">Lecture systémique et avis croisés</div>
+      </div>
+      <div class="diag-summary-arrow">→</div>
+      <div class="diag-summary-item">
+        <div class="diag-summary-step">03</div>
+        <div class="diag-summary-label">Maturité</div>
+        <div class="diag-summary-desc">Forces / points de progrès par domaine</div>
+      </div>
+      <div class="diag-summary-arrow">→</div>
+      <div class="diag-summary-item">
+        <div class="diag-summary-step">04</div>
+        <div class="diag-summary-label">Plan d'action</div>
+        <div class="diag-summary-desc">Priorisation et actions immédiates</div>
+      </div>
+      <div class="diag-summary-arrow">→</div>
+      <div class="diag-summary-item">
+        <div class="diag-summary-step">05</div>
+        <div class="diag-summary-label">Exécution</div>
+        <div class="diag-summary-desc">Parcours adapté et suivi</div>
       </div>
     </div>
     <div class="diag-bandeau reveal">
