@@ -112,8 +112,8 @@
   - Titre : "Ce que vous recevez"
   - Liste :
     - "Diagnostic détaillé sur 12 domaines clés."
-    - "Executive pack et rapport d'analyse synthétique."
-    - "Plan d'action priorisé avec des premières actions immédiatement activables."
+    - "Executive pack et rapport d'analyse."
+    - "Parcours d'exécution et plan d'action priorisé."
 
 - **Card 3 — Méthode :**
   - Titre : "Une méthode structurée, orientée action"
