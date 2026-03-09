@@ -255,7 +255,7 @@
 ## [Section] Terrain (photo + citation)
 
 - **Citation :**
-  "« Nous apportons ce que nous n'avons pas trouvé lorsque nous avons dû faire face aux mêmes défis que vous. Nous combinons tous une double compétence : celle de la vision stratégique et celle de son exécution concrète. »"
+  "« Nous partageons avec vous ce que notre propre expérience face à des défis similaires nous a permis de construire. Nous réunissons tous une double compétence : la vision stratégique et sa mise en œuvre concrète. »"
 
 ---
 
