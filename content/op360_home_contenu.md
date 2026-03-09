@@ -83,7 +83,7 @@
   - "Parcours d'exécution structuré, du diagnostic rapide à l'accompagnement terrain, avec un suivi outillé."
 
 - **Label piliers :**
-  "Un parcours d'exécution en 4 piliers"
+  "Un parcours d'exécution en 4 axes"
 
 - **Piliers :**
   - Pilier 1 : "Voir clair" / "Diagnostic OP360 sur 12 domaines pour évaluer la capacité d'exécution et les leviers de valeur."
