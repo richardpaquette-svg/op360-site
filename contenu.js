@@ -57,19 +57,19 @@ const OP360 = {
   // ── 3 MOMENTS CLÉS ───────────────────────────────
   moments: [
     {
-      icone: "🚀",
+      icone: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 1 18"/><polyline points="15 7 22 7 22 14"/></svg>`,
       titre: "Ambition de Croissance",
       valeur: "Organisation adaptée, Croissance sécurisée.",
       cas: "PME visant à doubler son CA en 5 ans. Organisation saturée, besoin de structurer sans freiner la dynamique commerciale et innovation.",
     },
     {
-      icone: "🔄",
+      icone: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>`,
       titre: "Transitions Critiques",
       valeur: "Sécurisation de la transition et maintien de la performance.",
       cas: "Moments de vulnérabilité où continuité opérationnelle et Valeurs sont en jeu : acquisition, transmission, fusion, changement organisationnel ou de stratégie.",
     },
     {
-      icone: "⚡",
+      icone: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
       titre: "Retournement",
       valeur: "Contribution à la stabilisation et au redressement de la performance.",
       cas: "Rentabilité en chute, trésorerie tendue, nécessitant un diagnostic rapide et des actions ciblées immédiatement actionnables.",
@@ -118,12 +118,12 @@ const OP360 = {
 
   // ── 6 OFFRES ──────────────────────────────────────
   offres: [
-    { icone:"⚡", titre:"Diagnostic OP360", href:"diagnostic.html", featured:true, badge:"Recommandé", bullets:["Évaluation maturité d'exécution de la stratégie","12 domaines analysés et scorés","Identification des priorités & leviers de valeur","Plan d'action + parcours d'exécution complet","8 jours pour voir clair et agir juste"] },
-    { icone:"👥", titre:"Shadow Codir", href:"shadow-codir.html", featured:false, badge:"", bullets:["Collectif ad hoc multisectoriel et multifonctionnel","Mobilisable ponctuellement ou récurrent","Nativement intégré aux diagnostics"] },
-    { icone:"🤝", titre:"Accompagnement Terrain", href:"accompagnement.html", featured:false, badge:"", bullets:["À la dimension de l'entreprise","En immersion ou en appui","Individuel ou par une équipe","Formats hybrides et flexibles"] },
-    { icone:"🔬", titre:"Due Diligence Opérationnelle", href:"due-diligence.html", featured:false, badge:"", bullets:["Analyse approfondie pré/post investissement","Cession, acquisition, transmission","Volet RSE intégré (CSRD/ESG)"] },
-    { icone:"🎓", titre:"Formations & Workshops", href:"formations.html", featured:false, badge:"", bullets:["Résolution de problèmes complexes","Leadership, management, innovation","Finance, Lean, Négociation, IA dirigeants"] },
-    { icone:"💻", titre:"Plateforme SaaS OP360", href:"saas.html", featured:false, badge:"", bullets:["Pilotage performance et projets stratégiques","Idea Vault augmentée","Réduction de la charge mentale du dirigeant"] },
+    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`, titre:"Diagnostic OP360", href:"diagnostic.html", featured:true, badge:"Recommandé", bullets:["Évaluation maturité d'exécution de la stratégie","12 domaines analysés et scorés","Identification des priorités & leviers de valeur","Plan d'action + parcours d'exécution complet","8 jours pour voir clair et agir juste"] },
+    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`, titre:"Shadow Codir", href:"shadow-codir.html", featured:false, badge:"", bullets:["Collectif ad hoc multisectoriel et multifonctionnel","Mobilisable ponctuellement ou récurrent","Nativement intégré aux diagnostics"] },
+    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`, titre:"Accompagnement Terrain", href:"accompagnement.html", featured:false, badge:"", bullets:["À la dimension de l'entreprise","En immersion ou en appui","Individuel ou par une équipe","Formats hybrides et flexibles"] },
+    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`, titre:"Due Diligence Opérationnelle", href:"due-diligence.html", featured:false, badge:"", bullets:["Analyse approfondie pré/post investissement","Cession, acquisition, transmission","Volet RSE intégré (CSRD/ESG)"] },
+    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`, titre:"Formations & Workshops", href:"formations.html", featured:false, badge:"", bullets:["Résolution de problèmes complexes","Leadership, management, innovation","Finance, Lean, Négociation, IA dirigeants"] },
+    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="6 8 9 12 12 8 15 12 18 8"/></svg>`, titre:"Plateforme SaaS OP360", href:"saas.html", featured:false, badge:"", bullets:["Pilotage performance et projets stratégiques","Idea Vault augmentée","Réduction de la charge mentale du dirigeant"] },
   ],
 
   // ── TÉMOIGNAGES ───────────────────────────────────
@@ -147,10 +147,10 @@ const OP360 = {
     titre: "8 jours pour voir clair et agir juste",
     sous_titre: "Vous maîtrisez la vision et la stratégie. Et l'exécution ?",
     livrables: [
-      { icone:"📄", titre:"Rapport de diagnostic détaillé", desc:"12 domaines analysés, scorés et commentés avec lecture croisée de vos enjeux stratégiques." },
-      { icone:"🎨", titre:"Executive Pack visuel", desc:"Synthèse avec heatmaps, radar de maturité et matrice impact/priorité pour décider en un coup d'œil." },
-      { icone:"⚡", titre:"Plan d'action priorisé", desc:"Actions concrètes actionnables immédiatement pour des résultats mesurables dès les premières semaines." },
-      { icone:"🗺", titre:"Parcours d'exécution complet", desc:"Plan intégral adapté à votre dimension et vos ressources, global et par domaine." },
+      { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`, titre:"Rapport de diagnostic détaillé", desc:"12 domaines analysés, scorés et commentés avec lecture croisée de vos enjeux stratégiques." },
+      { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>`, titre:"Executive Pack visuel", desc:"Synthèse avec heatmaps, radar de maturité et matrice impact/priorité pour décider en un coup d'œil." },
+      { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2"/><path d="M9 12l2 2 4-4"/><line x1="9" y1="17" x2="15" y2="17"/></svg>`, titre:"Plan d'action priorisé", desc:"Actions concrètes actionnables immédiatement pour des résultats mesurables dès les premières semaines." },
+      { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>`, titre:"Parcours d'exécution complet", desc:"Plan intégral adapté à votre dimension et vos ressources, global et par domaine." },
     ],
   },
 
