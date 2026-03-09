@@ -182,27 +182,27 @@
 
 - **Différenciateur 1 :**
   - Titre : "Shadow Codir"
-  - Description : "Collectif de pairs dirigeants, mobilisable ad hoc"
+  - Description : "Collectif de pairs dirigeants, mobilisable ad hoc."
 
 - **Différenciateur 2 :**
   - Titre : "Approche 360° systémique"
-  - Description : "12 domaines pour agir sur les causes profondes"
+  - Description : "12 domaines pour agir sur les causes profondes."
 
 - **Différenciateur 3 :**
   - Titre : "Parcours d'exécution"
-  - Description : "Adapté à votre dimension, immersion ou appui"
+  - Description : "Adapté à votre dimension, en immersion ou en appui."
 
 - **Différenciateur 4 :**
   - Titre : "Intelligence de situation"
-  - Description : "Méthodes adaptées aux dynamiques du terrain"
+  - Description : "Méthodes adaptées aux dynamiques du terrain."
 
 - **Différenciateur 5 :**
   - Titre : "Outils numériques dédiés"
-  - Description : "Plateforme SaaS pour piloter vos projets stratégiques"
+  - Description : "Plateforme SaaS pour piloter vos projets stratégiques."
 
 - **Différenciateur 6 :**
   - Titre : "Formation & transmission"
-  - Description : "Vers l'autonomie durable de vos équipes"
+  - Description : "Vers une autonomie durable de vos équipes."
 
 ---
 
