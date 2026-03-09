@@ -1,0 +1,410 @@
+# Contenu texte — Page Home (index.html)
+> Extraction verbatim du contenu visible. Sources : `index.html` + `contenu.js`.
+> Aucune modification du site. Usage : base de travail pour audit éditorial.
+
+---
+
+## [Section] Hero
+
+- **Eyebrow :**
+  "Operating Partners 360 — Pairs & Partenaires"
+
+- **Titre (H1) :**
+  "Vous portez la vision, la stratégie et le risque.
+  Nous accélérons et sécurisons l'exécution."
+
+- **Sous-titre :**
+  "Dirigeants de PME, ETI, investisseurs… OP360, des pairs à vos côtés pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions."
+
+- **Tags de segmentation (liens visibles) :**
+  - "🏭 Dirigeants de PME"
+  - "🏢 Dirigeants d'ETI"
+  - "📈 Investisseurs & Fonds"
+
+- **Piliers Hero :**
+  - Pilier 1 : "Diagnostic OP360 12 domaines" / "En 8 jours, voir clair sur vos priorités."
+  - Pilier 2 : "Parcours d'exécution structuré" / "Un plan adapté à vos enjeux et à vos ressources."
+  - Pilier 3 : "Pairs dirigeants à vos côtés" / "Accompagnement terrain en Operating Partner ou Shadow Codir."
+
+- **CTA principal :**
+  "Planifier un échange de 30 min"
+
+- **Stats (bas de Hero) :**
+  - "8" / "jours Diagnostic Flash"
+  - "12" / "domaines d'analyse"
+  - "360°" / "vision systémique"
+  - "4" / "pairs dirigeants"
+
+---
+
+## [Section] Vidéo
+
+- **Label :**
+  "En 90 secondes"
+
+- **Titre (H2) :**
+  "Une équipe de pairs‑dirigeants qui exécute avec vous."
+
+- **Paragraphe 1 :**
+  "4 associés fondateurs, un collectif C‑Level, une méthode 360° sur 12 domaines. Découvrez comment nous travaillons aux côtés des dirigeants et des investisseurs — et dans quels moments nous faisons la différence."
+
+- **Paragraphe 2 :**
+  "90 secondes pour comprendre ce qui nous différencie : approche systémique, Shadow Codir, parcours d'exécution et plateforme SaaS."
+
+---
+
+## [Section] Stat choc
+
+- **Chiffre :**
+  "10–20%"
+
+- **Titre :**
+  "Seulement 10–20 % des stratégies aboutissent."
+
+- **Texte :**
+  "OP360 renforce votre exécution grâce à un diagnostic rapide, un parcours structuré et un monitoring SaaS. De la vision à la valeur, en évitant les échecs classiques."
+
+---
+
+## [Section] Approche 360
+
+- **Label :**
+  "Notre méthode"
+
+- **Titre (H2) :**
+  "Notre approche 360 de l'exécution"
+
+- **Paragraphe :**
+  "OP360 est le partenaire de confiance des dirigeants et des investisseurs pour l'exécution de leur stratégie et la création de valeur durable. Nous combinons l'expertise de dirigeants expérimentés, une méthodologie 360 sur 12 domaines et une plateforme SaaS dédiée au pilotage de l'exécution."
+
+- **Bullets :**
+  - "Vision systémique de l'entreprise, pour traiter les causes profondes, pas seulement les symptômes."
+  - "Collectif de pairs en Shadow Codir, capable de couvrir stratégie, finance, organisation, opérations, digital et RSE."
+  - "Parcours d'exécution structuré, du diagnostic rapide à l'accompagnement terrain, avec un suivi outillé."
+
+- **Label piliers :**
+  "Un parcours d'exécution en 4 piliers"
+
+- **Piliers :**
+  - Pilier 1 : "Voir clair" / "Diagnostic OP360 sur 12 domaines pour évaluer la capacité d'exécution et les leviers de valeur."
+  - Pilier 2 : "Décider et prioriser" / "Feuille de route pragmatique, priorisation des chantiers, scénarios d'exécution et options d'accompagnement."
+  - Pilier 3 : "Exécuter et transmettre" / "Shadow Codir et accompagnement terrain, avec plateforme SaaS pour suivre la progression et ancrer les transformations."
+  - Pilier 4 : "Suivre et monitorer" / "Grâce à une plateforme SaaS dédiée, suivre en continu la progression de vos projets stratégiques, visualiser les impacts et garder une vision claire des priorités."
+
+---
+
+## [Section] Diagnostic OP360 (bloc sur la Home)
+
+- **Label :**
+  "Notre offre phare"
+
+- **Titre (H2) :**
+  "Diagnostic OP360 : 8 jours pour voir clair et agir juste"
+
+- **Intro :**
+  "Un diagnostic 360° qui transforme vos enjeux en plan d'action opérationnel."
+
+- **Card 1 — Quand l'exécution devient le sujet :**
+  - Titre : "Quand l'exécution devient le sujet"
+  - Texte : "Croissance, transition, retournement : vous devez décider vite, avec une vision claire des risques et des leviers de valeur, sans lancer un audit lourd."
+
+- **Card 2 — Ce que vous recevez :**
+  - Titre : "Ce que vous recevez"
+  - Liste :
+    - "Diagnostic détaillé sur 12 domaines clés."
+    - "Executive pack et rapport d'analyse."
+    - "Plan d'action priorisé avec les premières actions actionnables immédiatement."
+
+- **Card 3 — Méthode :**
+  - Titre : "Une méthode structurée, orientée action"
+  - Liste :
+    - "Cadrage et compréhension de vos enjeux de dirigeant."
+    - "Entretiens dirigeants et terrain, analyse sur 12 domaines."
+    - "Lecture systémique, scoring, priorisation des leviers de valeur."
+
+- **Résumé des 5 étapes (bandeau) :**
+  - 01 / Diagnostic / "Étude personnalisée 12 domaines"
+  - 02 / Analyse / "Lecture systémique et avis croisés"
+  - 03 / Maturité / "Forces / points de progrès par domaine"
+  - 04 / Plan d'action / "Priorisation et actions immédiates"
+  - 05 / Exécution / "Parcours adapté et suivi"
+
+- **Bandeau timing :**
+  "2 à 3 jours de terrain, restitution complète en moins de 10 jours."
+
+- **Citation bandeau :**
+  "« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle"
+
+- **CTAs :**
+  - "Parler d'un Diagnostic OP360"
+  - "Recevoir un exemple de livrable →"
+
+---
+
+## [Section] 3 moments clés
+
+- **Label :**
+  "Quand intervenir"
+
+- **Titre (H2) :**
+  "Passer un cap : quand la stratégie devient action"
+
+- **Intro :**
+  "3 moments clés où notre expertise opérationnelle change la trajectoire."
+
+- **Carte 1 — Ambition de Croissance :**
+  - Titre : "Ambition de Croissance"
+  - Valeur : "Organisation adaptée, Croissance sécurisée."
+  - Cas : "PME visant à doubler son CA en 5 ans. Organisation saturée, besoin de structurer sans freiner la dynamique commerciale et innovation."
+
+- **Carte 2 — Transitions Critiques :**
+  - Titre : "Transitions Critiques"
+  - Valeur : "Sécurisation de la transition et maintien de la performance."
+  - Cas : "Moments de vulnérabilité où continuité opérationnelle et Valeurs sont en jeu : acquisition, transmission, fusion, changement organisationnel ou de stratégie."
+
+- **Carte 3 — Retournement :**
+  - Titre : "Retournement"
+  - Valeur : "Contribution à la stabilisation et au redressement de la performance."
+  - Cas : "Rentabilité en chute, trésorerie tendue, nécessitant un diagnostic rapide et des actions ciblées immédiatement actionnables."
+
+---
+
+## [Section] 6 différenciateurs
+
+- **Label :**
+  "Notre approche"
+
+- **Titre (H2) :**
+  "Quand OP360 fait la différence"
+
+- **Intro :**
+  "Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et outils digitaux centrés sur les enjeux du dirigeant."
+
+- **Différenciateur 1 :**
+  - Titre : "Shadow Codir"
+  - Description : "Collectif de pairs dirigeants, mobilisable ad hoc"
+
+- **Différenciateur 2 :**
+  - Titre : "Approche 360° systémique"
+  - Description : "12 domaines pour agir sur les causes profondes"
+
+- **Différenciateur 3 :**
+  - Titre : "Parcours d'exécution"
+  - Description : "Adapté à votre dimension, immersion ou appui"
+
+- **Différenciateur 4 :**
+  - Titre : "Intelligence de situation"
+  - Description : "Méthodes adaptées aux dynamiques du terrain"
+
+- **Différenciateur 5 :**
+  - Titre : "Outils numériques dédiés"
+  - Description : "Plateforme SaaS pour piloter vos projets stratégiques"
+
+- **Différenciateur 6 :**
+  - Titre : "Formation & transmission"
+  - Description : "Vers l'autonomie durable de vos équipes"
+
+---
+
+## [Section] 6 offres
+
+- **Label :**
+  "Nos leviers d'intervention"
+
+- **Titre (H2) :**
+  "6 offres modulables et combinables"
+
+- **Intro :**
+  "De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources."
+
+- **Offre 1 — Diagnostic OP360** *(badge : "Recommandé")*
+  - "Évaluation maturité d'exécution de la stratégie"
+  - "12 domaines analysés et scorés"
+  - "Identification des priorités & leviers de valeur"
+  - "Plan d'action + parcours d'exécution complet"
+  - "8 jours pour voir clair et agir juste"
+
+- **Offre 2 — Shadow Codir**
+  - "Collectif ad hoc multisectoriel et multifonctionnel"
+  - "Mobilisable ponctuellement ou récurrent"
+  - "Nativement intégré aux diagnostics"
+
+- **Offre 3 — Accompagnement Terrain**
+  - "À la dimension de l'entreprise"
+  - "En immersion ou en appui"
+  - "Individuel ou par une équipe"
+  - "Formats hybrides et flexibles"
+
+- **Offre 4 — Due Diligence Opérationnelle**
+  - "Analyse approfondie pré/post investissement"
+  - "Cession, acquisition, transmission"
+  - "Volet RSE intégré (CSRD/ESG)"
+
+- **Offre 5 — Formations & Workshops**
+  - "Résolution de problèmes complexes"
+  - "Leadership, management, innovation"
+  - "Finance, Lean, Négociation, IA dirigeants"
+
+- **Offre 6 — Plateforme SaaS OP360**
+  - "Pilotage performance et projets stratégiques"
+  - "Idea Vault augmentée"
+  - "Réduction de la charge mentale du dirigeant"
+
+---
+
+## [Section] Terrain (photo + citation)
+
+- **Citation :**
+  "« Nous apportons ce que nous n'avons pas trouvé lorsque nous avons dû faire face aux mêmes défis que vous. Nous combinons tous une double compétence : celle de la vision stratégique et celle de son exécution concrète. »"
+
+---
+
+## [Section] Témoignages
+
+- **Label :**
+  "Ils nous ont fait confiance"
+
+- **Titre (H2) :**
+  "Ce que disent nos clients"
+
+- **Témoignage 1 :**
+  - Citation : "Avec le seul diagnostic, il y a un avant et un après."
+  - Auteur : Directeur Général — PME industrielle
+
+- **Témoignage 2 :**
+  - Citation : "Un accompagnement bienveillant et une exécution terrain efficace, unanimement salués. Par ces quelques mots, merci."
+  - Auteur : Directeur Général — ETI agro-alimentaire
+
+- **Témoignage 3 :**
+  - Citation : "En quelques mois à nos côtés leurs interventions nous ont fait grandir et passer à une nouvelle étape."
+  - Auteur : Président — Coopérative mobilités
+
+- **Témoignage 4 :**
+  - Citation : "Cet accompagnement a sécurisé la décision, y compris lorsqu'elle a conduit à un non investissement, en apportant méthode, lucidité et sérénité."
+  - Auteur : Investisseur
+
+---
+
+## [Section] FIT (valeurs)
+
+- **Label :**
+  "Nos valeurs"
+
+- **Titre (H2) :**
+  "We FIT You !"
+
+- **F — Fiabilité :**
+  "Être le partenaire de confiance, expérimenté et structuré, sur lequel dirigeants et investisseurs peuvent compter en toutes circonstances."
+
+- **I — Impact :**
+  "Rechercher le concret, la performance mesurable et la création de valeur durable. Moins de slides, plus d'exécution terrain."
+
+- **T — Transmission :**
+  "Partager l'expertise, renforcer l'autonomie des équipes et pérenniser les transformations. Éviter la dépendance à un prestataire."
+
+---
+
+## [Section] Équipe
+
+- **Label :**
+  "Les fondateurs"
+
+- **Titre (H2) :**
+  "Des dirigeants à vos côtés"
+
+- **Intro :**
+  "Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout."
+
+- **Membres :**
+  - Annie Belquin — Présidente — "Vision stratégique & gouvernance"
+  - Richard Paquette — Directeur Général — "Exécution opérationnelle & développement"
+  - Suzanne Grimal — Directrice de la Valeur — "Création de valeur & transformation"
+  - Christophe Raix — Directeur de l'Innovation — "Innovation & outils numériques"
+
+- **Citation de fin :**
+  "« Nous sommes un groupe de pairs et de partenaires qui ont déjà traversé vos défis. Nous sommes au service de vos équipes. »"
+
+---
+
+## [Section] LinkedIn / Regard de terrain
+
+- **Label :**
+  "Ressources"
+
+- **Titre (H2) :**
+  "Notre regard de terrain"
+
+- **Intro :**
+  "Au-delà des missions, nous partageons régulièrement des retours d'expérience, des cas concrets et des points de vue de dirigeants sur LinkedIn. C'est le meilleur moyen de sentir notre culture, notre manière de travailler et les sujets qui nous mobilisent sur le terrain."
+
+- **Sub-label :**
+  "Sélection de publications LinkedIn"
+
+- **Bullets :**
+  - "Retours d'expérience sur des programmes de croissance, de transformation ou de retournement."
+  - "Points de vue de dirigeants sur l'exécution, la gouvernance, la relation avec les investisseurs."
+  - "Exemples d'outils, de bonnes pratiques et de rituels de pilotage que nous utilisons avec nos clients."
+
+- **Phrase de lien :**
+  "Suivre nos analyses et retours de terrain sur LinkedIn : Operating Partners 360 sur LinkedIn"
+
+- **CTA :**
+  "Voir nos publications LinkedIn →"
+
+---
+
+## [Section] CTA final
+
+- **Label :**
+  "Passons à l'action"
+
+- **Titre (H2) :**
+  "Parlons de vos enjeux"
+
+- **Paragraphe :**
+  "Chaque contexte est spécifique. En 30 minutes, nous pouvons faire le point sur vos enjeux, vos priorités et voir si un Diagnostic OP360, un Shadow Codir ou un accompagnement d'exécution a du sens pour vous."
+
+- **Card 1 — Écrire :**
+  - Titre : "Écrire à un Operating Partner"
+  - Texte : "Expliquez brièvement votre contexte, vos enjeux et vos disponibilités. Un Operating Partner vous répondra rapidement."
+  - CTA : "Nous contacter par email"
+
+- **Card 2 — RDV :**
+  - Titre : "Choisir un créneau de rendez‑vous"
+  - Texte : "Choisissez un créneau de 30 minutes dans notre agenda pour échanger directement avec un Operating Partner."
+  - CTA : "Voir les créneaux disponibles"
+
+- **Coordonnées :**
+  - Email : contact@operating360.com
+  - LinkedIn : LinkedIn OP360
+
+---
+
+## Navigation (commune à toutes les pages)
+
+- Liens nav : "Accueil" / "Qui sommes-nous" / "Nos offres" / "Dirigeants de PME" / "Dirigeants d'ETI" / "Investisseurs & fonds" / "Parlons de vos enjeux"
+- CTA nav : "Diagnostic Flash"
+
+## Footer (commun à toutes les pages)
+
+- **Tagline :**
+  "Vous portez la Vision, la Stratégie et le Risque.
+  Nous accélérons et sécurisons l'Exécution."
+
+- **Adresse :** 99 avenue Achille Peretti, 92200 Neuilly-sur-Seine
+
+- **Colonne Nos Offres :**
+  "Diagnostic Flash" / "Shadow Codir" / "Accompagnement Terrain" / "Due Diligence Opérationnelle" / "Formations & Workshops" / "Plateforme SaaS"
+
+- **Colonne Pour qui :**
+  "Dirigeants de PME" / "Dirigeants d'ETI" / "Investisseurs & Fonds"
+
+- **Colonne OP360 :**
+  "Qui sommes-nous" / "Contact" / "LinkedIn"
+
+- **Colonne Contact :**
+  contact@operating360.com / 06 51 72 15 24 / "Prendre RDV"
+
+- **Footer bottom :**
+  "© 2026 Operating Partners 360 — Tous droits réservés"
+  "Valeurs FIT — Fiabilité · Impact · Transmission"
