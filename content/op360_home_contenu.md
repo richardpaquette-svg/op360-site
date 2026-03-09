@@ -155,17 +155,17 @@
 - **Carte 1 — Ambition de Croissance :**
   - Titre : "Ambition de Croissance"
   - Valeur : "Organisation adaptée, Croissance sécurisée."
-  - Cas : "PME visant à doubler son CA en 5 ans. Organisation saturée, besoin de structurer sans freiner la dynamique commerciale et innovation."
+  - Cas : "PME qui vise à doubler son CA en 5 ans : organisation saturée, besoin de structurer sans freiner la dynamique commerciale et l'innovation."
 
 - **Carte 2 — Transitions Critiques :**
   - Titre : "Transitions Critiques"
   - Valeur : "Sécurisation de la transition et maintien de la performance."
-  - Cas : "Moments de vulnérabilité où continuité opérationnelle et Valeurs sont en jeu : acquisition, transmission, fusion, changement organisationnel ou de stratégie."
+  - Cas : "Moments de vulnérabilité où continuité opérationnelle et valeurs sont en jeu : acquisition, transmission, fusion, réorganisation ou changement de stratégie."
 
 - **Carte 3 — Retournement :**
   - Titre : "Retournement"
   - Valeur : "Contribution à la stabilisation et au redressement de la performance."
-  - Cas : "Rentabilité en chute, trésorerie tendue, nécessitant un diagnostic rapide et des actions ciblées immédiatement actionnables."
+  - Cas : "Rentabilité en chute et trésorerie tendue : besoin d'un diagnostic rapide et d'actions ciblées immédiatement activables."
 
 ---
 

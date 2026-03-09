@@ -60,19 +60,19 @@ const OP360 = {
       icone: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 1 18"/><polyline points="15 7 22 7 22 14"/></svg>`,
       titre: "Ambition de Croissance",
       valeur: "Organisation adaptée, Croissance sécurisée.",
-      cas: "PME visant à doubler son CA en 5 ans. Organisation saturée, besoin de structurer sans freiner la dynamique commerciale et innovation.",
+      cas: "PME qui vise à doubler son CA en 5 ans : organisation saturée, besoin de structurer sans freiner la dynamique commerciale et l'innovation.",
     },
     {
       icone: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>`,
       titre: "Transitions Critiques",
       valeur: "Sécurisation de la transition et maintien de la performance.",
-      cas: "Moments de vulnérabilité où continuité opérationnelle et Valeurs sont en jeu : acquisition, transmission, fusion, changement organisationnel ou de stratégie.",
+      cas: "Moments de vulnérabilité où continuité opérationnelle et valeurs sont en jeu : acquisition, transmission, fusion, réorganisation ou changement de stratégie.",
     },
     {
       icone: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
       titre: "Retournement",
       valeur: "Contribution à la stabilisation et au redressement de la performance.",
-      cas: "Rentabilité en chute, trésorerie tendue, nécessitant un diagnostic rapide et des actions ciblées immédiatement actionnables.",
+      cas: "Rentabilité en chute et trésorerie tendue : besoin d'un diagnostic rapide et d'actions ciblées immédiatement activables.",
     },
   ],
 
