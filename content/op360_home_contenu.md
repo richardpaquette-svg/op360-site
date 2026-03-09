@@ -119,7 +119,7 @@
   - Titre : "Une méthode structurée, orientée action"
   - Liste :
     - "Cadrage et compréhension de vos enjeux de dirigeant."
-    - "Visite et entretiens sur le terrain, analyse sur 12 domaines."
+    - "Visites et entretiens sur le terrain."
     - "Lecture systémique, scoring et priorisation des leviers de valeur."
 
 - **Résumé des 5 étapes (bandeau) :**
