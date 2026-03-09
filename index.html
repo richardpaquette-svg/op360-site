@@ -134,7 +134,7 @@
 .diag-card:hover { border-top-width: 4px; box-shadow: var(--shadow-hover); transform: translateY(-3px); }
 .diag-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin: 0 0 14px; line-height: 1.3; }
 .diag-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; margin: 0; }
-.diag-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.diag-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
 .diag-card ul li { font-size: 14px; color: var(--gray-text); line-height: 1.55; display: flex; align-items: flex-start; gap: 8px; }
 .diag-card ul li::before { content: '→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
 .diag-bandeau { background: var(--navy); border-radius: var(--radius); padding: 28px 36px; margin-bottom: 36px; text-align: center; }
@@ -161,7 +161,7 @@
 .moment-card:hover { border-color: rgba(0,212,170,0.5); transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); }
 .moment-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--cyan); transform:scaleX(0); transform-origin:left; transition:transform 0.3s; border-radius:var(--radius) var(--radius) 0 0; }
 .moment-card:hover::after { transform: scaleX(1); }
-.moment-icon-wrap { font-size: 32px; flex-shrink: 0; line-height: 1.2; }
+.moment-icon-wrap { font-size: 36px; flex-shrink: 0; line-height: 1.2; background: rgba(0,212,170,0.06); border-radius: 999px; padding: 6px; }
 .moment-body { flex: 1; }
 .moment-card h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
 .moment-valeur { font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 16px; line-height: 1.45; }
@@ -181,11 +181,11 @@
 /* ── OFFRES ── */
 .offres-section { background: var(--gray-bg); }
 .offres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.offre-card { background: var(--card-bg); border: 1.5px solid #e2e8f0; border-radius: var(--radius); padding: 24px 20px; transition: all 0.25s; position: relative; box-shadow: 0 1px 3px rgba(15,23,42,0.06); display: flex; align-items: flex-start; gap: 14px; text-decoration: none; color: inherit; cursor: pointer; }
-.offre-card:hover { border-color: var(--cyan); box-shadow: 0 8px 28px rgba(0, 212, 170, 0.18); transform: translateY(-3px); }
+.offre-card { background: var(--card-bg); border: 1.5px solid #e2e8f0; border-radius: var(--radius); padding: 24px 20px; transition: all 0.25s; position: relative; box-shadow: 0 1px 3px rgba(15,23,42,0.06); display: flex; flex-direction: column; align-items: flex-start; gap: 14px; text-decoration: none; color: inherit; cursor: pointer; }
+.offre-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
 .offre-card.featured { border-color: var(--cyan); background: linear-gradient(135deg, var(--white) 0%, var(--cyan-light) 100%); }
 .offre-badge { position: absolute; top: 14px; right: 14px; background: var(--cyan); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
-.offre-icon-wrap { font-size: 26px; flex-shrink: 0; line-height: 1.2; }
+.offre-icon-wrap { font-size: 30px; flex-shrink: 0; line-height: 1.2; }
 .offre-body { flex: 1; }
 .offre-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .offre-bullets { list-style: none; }
@@ -317,7 +317,7 @@
   /* ── MOMENTS (3 cartes, stacked compact) ── */
   .moments-grid { grid-template-columns: 1fr; }
   .moment-card { padding: 20px 16px; }
-  .moment-icon-wrap { font-size: 24px; }
+  .moment-icon-wrap { font-size: 26px; padding: 4px; }
   .moment-card h3 { font-size: 17px; }
 
   /* ── DIFFÉRENCIATEURS (2 colonnes × 3 lignes) ── */
