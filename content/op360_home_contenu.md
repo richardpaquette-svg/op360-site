@@ -14,7 +14,7 @@
   Nous accélérons et sécurisons l'exécution."
 
 - **Sous-titre :**
-  "Dirigeants de PME, ETI, investisseurs… OP360, des pairs à vos côtés pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions."
+  "Dirigeants de PME, ETI, investisseurs : des pairs à vos côtés pour traduire vos ambitions en résultats opérationnels, créer de la valeur et sécuriser vos décisions."
 
 - **Tags de segmentation (liens visibles) :**
   - "🏭 Dirigeants de PME"
@@ -45,11 +45,8 @@
 - **Titre (H2) :**
   "Une équipe de pairs‑dirigeants qui exécute avec vous."
 
-- **Paragraphe 1 :**
-  "4 associés fondateurs, un collectif C‑Level, une méthode 360° sur 12 domaines. Découvrez comment nous travaillons aux côtés des dirigeants et des investisseurs — et dans quels moments nous faisons la différence."
-
-- **Paragraphe 2 :**
-  "90 secondes pour comprendre ce qui nous différencie : approche systémique, Shadow Codir, parcours d'exécution et plateforme SaaS."
+- **Paragraphe :**
+  "4 associés fondateurs, un collectif C‑Level et une méthode 360° sur 12 domaines : en 90 secondes, découvrez comment nous travaillons avec dirigeants et investisseurs, et ce qui nous différencie (approche systémique, Shadow Codir, parcours d'exécution, plateforme SaaS)."
 
 ---
 
@@ -62,7 +59,7 @@
   "Seulement 10–20 % des stratégies aboutissent."
 
 - **Texte :**
-  "OP360 renforce votre exécution grâce à un diagnostic rapide, un parcours structuré et un monitoring SaaS. De la vision à la valeur, en évitant les échecs classiques."
+  "OP360 renforce l'exécution grâce à un diagnostic rapide, un parcours structuré et un monitoring SaaS, pour passer de la vision à la valeur en évitant les échecs classiques."
 
 ---
 
@@ -75,11 +72,11 @@
   "Notre approche 360 de l'exécution"
 
 - **Paragraphe :**
-  "OP360 est le partenaire de confiance des dirigeants et des investisseurs pour l'exécution de leur stratégie et la création de valeur durable. Nous combinons l'expertise de dirigeants expérimentés, une méthodologie 360 sur 12 domaines et une plateforme SaaS dédiée au pilotage de l'exécution."
+  "OP360 est le partenaire de confiance des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable, en combinant l'expertise de dirigeants expérimentés, une méthodologie 360 sur 12 domaines et une plateforme SaaS dédiée au pilotage de l'exécution."
 
 - **Bullets :**
-  - "Vision systémique de l'entreprise, pour traiter les causes profondes, pas seulement les symptômes."
-  - "Collectif de pairs en Shadow Codir, capable de couvrir stratégie, finance, organisation, opérations, digital et RSE."
+  - "Vision systémique de l'entreprise, pour traiter les causes profondes plutôt que les symptômes."
+  - "Collectif de pairs en Shadow Codir, couvrant stratégie, finance, organisation, opérations, digital et RSE."
   - "Parcours d'exécution structuré, du diagnostic rapide à l'accompagnement terrain, avec un suivi outillé."
 
 - **Label piliers :**
@@ -102,7 +99,7 @@
   "Diagnostic OP360 : 8 jours pour voir clair et agir juste"
 
 - **Intro :**
-  "Un diagnostic 360° qui transforme vos enjeux en plan d'action opérationnel."
+  "Un diagnostic 360° qui transforme vos enjeux en plan d'action opérationnel priorisé."
 
 - **Card 1 — Quand l'exécution devient le sujet :**
   - Titre : "Quand l'exécution devient le sujet"
@@ -112,22 +109,22 @@
   - Titre : "Ce que vous recevez"
   - Liste :
     - "Diagnostic détaillé sur 12 domaines clés."
-    - "Executive pack et rapport d'analyse."
-    - "Plan d'action priorisé avec les premières actions actionnables immédiatement."
+    - "Executive pack et rapport d'analyse synthétique."
+    - "Plan d'action priorisé avec des premières actions immédiatement activables."
 
 - **Card 3 — Méthode :**
   - Titre : "Une méthode structurée, orientée action"
   - Liste :
     - "Cadrage et compréhension de vos enjeux de dirigeant."
-    - "Entretiens dirigeants et terrain, analyse sur 12 domaines."
-    - "Lecture systémique, scoring, priorisation des leviers de valeur."
+    - "Visite et entretiens sur le terrain, analyse sur 12 domaines."
+    - "Lecture systémique, scoring et priorisation des leviers de valeur."
 
 - **Résumé des 5 étapes (bandeau) :**
-  - 01 / Diagnostic / "Étude personnalisée 12 domaines"
-  - 02 / Analyse / "Lecture systémique et avis croisés"
-  - 03 / Maturité / "Forces / points de progrès par domaine"
-  - 04 / Plan d'action / "Priorisation et actions immédiates"
-  - 05 / Exécution / "Parcours adapté et suivi"
+  - 01 / Diagnostic / "Étude personnalisée sur 12 domaines."
+  - 02 / Analyse / "Lecture systémique et avis croisés."
+  - 03 / Maturité / "Forces et points de progrès par domaine."
+  - 04 / Plan d'action / "Priorisation et actions immédiates."
+  - 05 / Exécution / "Parcours adapté et suivi."
 
 - **Bandeau timing :**
   "2 à 3 jours de terrain, restitution complète en moins de 10 jours."
