@@ -14,7 +14,7 @@
   Nous accélérons et sécurisons l'exécution."
 
 - **Sous-titre :**
-  "Dirigeants de PME, ETI, investisseurs : des pairs à vos côtés pour traduire vos ambitions en résultats opérationnels, créer de la valeur et sécuriser vos décisions."
+  "Dirigeants de PME, ETI, investisseurs… OP360, des pairs à vos côtés, pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions."
 
 - **Tags de segmentation (liens visibles) :**
   - "🏭 Dirigeants de PME"
@@ -280,7 +280,7 @@
   - Auteur : Président — Coopérative mobilités
 
 - **Témoignage 4 :**
-  - Citation : "Cet accompagnement a sécurisé la décision, y compris lorsqu'elle a conduit à un non investissement, en apportant méthode, lucidité et sérénité."
+  - Citation : "Cet accompagnement a sécurisé la décision, y compris lorsqu'elle a conduit à un non-investissement, en apportant méthode, lucidité et sérénité."
   - Auteur : Investisseur
 
 ---
