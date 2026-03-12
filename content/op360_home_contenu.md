@@ -218,37 +218,34 @@
   "De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources."
 
 - **Offre 1 — Diagnostic OP360** *(badge : "Recommandé")*
-  - "Évaluation maturité d'exécution de la stratégie"
-  - "12 domaines analysés et scorés"
-  - "Identification des priorités & leviers de valeur"
-  - "Plan d'action + parcours d'exécution complet"
-  - "8 jours pour voir clair et agir juste"
+  - "En 8 jours, voir clair sur votre capacité d'exécution."
+  - "Diagnostic 360° sur 12 domaines clés."
+  - "Plan d'action priorisé, prêt à être exécuté."
 
 - **Offre 2 — Shadow Codir**
-  - "Collectif ad hoc multisectoriel et multifonctionnel"
-  - "Mobilisable ponctuellement ou récurrent"
-  - "Nativement intégré aux diagnostics"
+  - "Un Shadow Codir de pairs pour éclairer vos décisions clés."
+  - "Regards croisés stratégiques, opérationnels et financiers."
+  - "Mobilisable ponctuellement ou dans la durée."
 
 - **Offre 3 — Accompagnement Terrain**
-  - "À la dimension de l'entreprise"
-  - "En immersion ou en appui"
-  - "Individuel ou par une équipe"
-  - "Formats hybrides et flexibles"
+  - "Des Operating Partners qui exécutent avec vous, sur le terrain."
+  - "Interventions en immersion ou en appui, à la bonne intensité."
+  - "Pilotage des chantiers jusqu'aux premiers résultats visibles."
 
 - **Offre 4 — Due Diligence Opérationnelle**
-  - "Analyse approfondie pré/post investissement"
-  - "Cession, acquisition, transmission"
-  - "Volet RSE intégré (CSRD/ESG)"
+  - "Un regard opérationnel pour sécuriser vos deals."
+  - "Analyse des risques et leviers de valeur pré/post investissement."
+  - "Intégration des enjeux RSE/ESG dans la lecture de la cible."
 
 - **Offre 5 — Formations & Workshops**
-  - "Résolution de problèmes complexes"
-  - "Leadership, management, innovation"
-  - "Finance, Lean, Négociation, IA dirigeants"
+  - "Des formats orientés terrain pour faire grandir vos équipes."
+  - "Ateliers de résolution de problèmes et de pilotage de l'exécution."
+  - "Modules sur-mesure (leadership, finance, Lean, négociation, IA, etc.)."
 
 - **Offre 6 — Plateforme SaaS OP360**
-  - "Pilotage performance et projets stratégiques"
-  - "Idea Vault augmentée"
-  - "Réduction de la charge mentale du dirigeant"
+  - "Un cockpit digital pour piloter vos projets stratégiques."
+  - "Suivi structuré des chantiers, décisions et engagements."
+  - "Idea Vault et indicateurs pour réduire la charge mentale du dirigeant."
 
 ---
 
