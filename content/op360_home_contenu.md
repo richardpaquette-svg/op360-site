@@ -217,38 +217,35 @@
 - **Intro :**
   "De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources."
 
-- **Offre 1 — Diagnostic OP360** *(badge : "Recommandé")*
-  - "Évaluation maturité d'exécution de la stratégie"
-  - "12 domaines analysés et scorés"
-  - "Identification des priorités & leviers de valeur"
-  - "Plan d'action + parcours d'exécution complet"
-  - "8 jours pour voir clair et agir juste"
+- **Offre 1 --- Diagnostic OP360** *(badge : "Recommandé")*
+  - Accroche : "Voir clair avant de décider."
+  - "Diagnostic opérationnel 360 sur 12 domaines clés avec scoring."
+  - "Plan d'action priorisé et parcours d'exécution recommandés."
 
-- **Offre 2 — Shadow Codir**
-  - "Collectif ad hoc multisectoriel et multifonctionnel"
-  - "Mobilisable ponctuellement ou récurrent"
-  - "Nativement intégré aux diagnostics"
+- **Offre 2 --- Shadow Codir**
+  - Accroche : "Ne plus décider seul."
+  - "Collectif de pairs-dirigeants mobilisable à la demande sur vos enjeux clés."
+  - "Regards croisés pour sécuriser vos choix."
 
-- **Offre 3 — Accompagnement Terrain**
-  - "À la dimension de l'entreprise"
-  - "En immersion ou en appui"
-  - "Individuel ou par une équipe"
-  - "Formats hybrides et flexibles"
+- **Offre 3 --- Accompagnement Terrain**
+  - Accroche : "De la feuille de route aux résultats."
+  - "Intervention opérationnelle en immersion ou en appui auprès de vos équipes."
+  - "Animation et pilotage des chantiers jusqu'aux premiers résultats."
 
-- **Offre 4 — Due Diligence Opérationnelle**
-  - "Analyse approfondie pré/post investissement"
-  - "Cession, acquisition, transmission"
-  - "Volet RSE intégré (CSRD/ESG)"
+- **Offre 4 --- Due Diligence Opérationnelle**
+  - Accroche : "Sécuriser un deal avant et après signature."
+  - "Analyse opérationnelle des risques et leviers de valeur pré/post deal."
+  - "Recommandations concrètes pour traduire la thèse en plan d'action pilotable."
 
-- **Offre 5 — Formations & Workshops**
-  - "Résolution de problèmes complexes"
-  - "Leadership, management, innovation"
-  - "Finance, Lean, Négociation, IA dirigeants"
+- **Offre 5 --- Formations & Workshops**
+  - Accroche : "Faire grandir vos équipes."
+  - "Ateliers pratiques sur l'exécution, le leadership, le pilotage et l'innovation."
+  - "Modules sur-mesure pour renforcer l'autonomie et le passage à l'action."
 
-- **Offre 6 — Plateforme SaaS OP360**
-  - "Pilotage performance et projets stratégiques"
-  - "Idea Vault augmentée"
-  - "Réduction de la charge mentale du dirigeant"
+- **Offre 6 --- Plateforme SaaS OP360**
+  - Accroche : "Garder une vue claire sur l'exécution."
+  - "Pilotage des projets stratégiques et des indicateurs clés en un seul endroit."
+  - "Idea Vault et indicateurs de progression."
 
 ---
 
