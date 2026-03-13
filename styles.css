@@ -107,6 +107,7 @@ h2.section-title-white { color: var(--white); }
 
 .section-intro { font-size: 18px; font-weight: 300; color: var(--gray-text); max-width: 600px; line-height: 1.65; margin-bottom: 56px; }
 .section-intro-white { color: rgba(255,255,255,0.6); }
+.section-subtitle { font-size: 1.05rem; font-weight: 500; color: var(--navy); line-height: 1.5; max-width: 100%; }
 
 /* ── FOOTER ── */
 footer { background: var(--navy-dark); padding: 64px 48px 32px; }
