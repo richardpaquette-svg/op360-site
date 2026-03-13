@@ -188,7 +188,8 @@
 .offre-badge { position: absolute; top: 14px; right: 14px; background: var(--cyan); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
 .offre-icon-wrap { font-size: 30px; flex-shrink: 0; line-height: 1.2; }
 .offre-body { flex: 1; }
-.offre-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.offre-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.offre-accroche { font-size: 13px; font-weight: 600; color: var(--cyan); margin-bottom: 10px; line-height: 1.4; }
 .offre-bullets { list-style: none; }
 .offre-bullets li { font-size: 13px; color: var(--gray-text); line-height: 1.55; padding: 4px 0; display: flex; align-items: flex-start; gap: 8px; }
 .offre-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
@@ -737,6 +738,7 @@ document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
     <div class="offre-icon-wrap">${o.icone}</div>
     <div class="offre-body">
       <h3>${o.titre}</h3>
+      ${o.accroche ? `<p class="offre-accroche">${o.accroche}</p>` : ''}
       <ul class="offre-bullets">${o.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
       <span class="offre-lien">En savoir plus →</span>
     </div>
