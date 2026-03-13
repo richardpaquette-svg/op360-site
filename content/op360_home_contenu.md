@@ -249,13 +249,6 @@
 
 ---
 
-## [Section] Terrain (photo + citation)
-
-- **Citation :**
-  "« Nous partageons avec vous ce que notre propre expérience face à des défis similaires nous a permis de construire. Nous réunissons tous une double compétence : la vision stratégique et sa mise en œuvre concrète. »"
-
----
-
 ## [Section] Témoignages
 
 - **Label :**
