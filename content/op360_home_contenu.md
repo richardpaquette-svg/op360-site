@@ -326,21 +326,21 @@
 ## [Section] LinkedIn / Regard de terrain
 
 - **Label :**
-  "Ressources"
+  "Aller plus loin"
 
 - **Titre (H2) :**
   "Notre regard de terrain"
 
 - **Intro :**
-  "Au-delà des missions, nous partageons régulièrement des retours d'expérience, des cas concrets et des points de vue de dirigeants sur LinkedIn. C'est le meilleur moyen de sentir notre culture, notre manière de travailler et les sujets qui nous mobilisent sur le terrain."
+  "Au‑delà des missions, nous partageons des retours d'expérience de dirigeants, des cas concrets et nos analyses de terrain sur LinkedIn. C'est le meilleur moyen de voir comment nous aidons PME, ETI et investisseurs à exécuter leur stratégie."
 
 - **Sub-label :**
   "Sélection de publications LinkedIn"
 
 - **Bullets :**
-  - "Retours d'expérience sur des programmes de croissance, de transformation ou de retournement."
-  - "Points de vue de dirigeants sur l'exécution, la gouvernance, la relation avec les investisseurs."
-  - "Exemples d'outils, de bonnes pratiques et de rituels de pilotage que nous utilisons avec nos clients."
+  - "Récits de programmes de croissance, de transformation ou de retournement menés avec des dirigeants."
+  - "Points de vue de dirigeants sur l'exécution, la gouvernance et la relation avec les investisseurs."
+  - "Outils, rituels de pilotage et bonnes pratiques que nous utilisons sur le terrain."
 
 - **Phrase de lien :**
   "Suivre nos analyses et retours de terrain sur LinkedIn : Operating Partners 360 sur LinkedIn"
