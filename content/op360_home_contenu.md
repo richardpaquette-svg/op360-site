@@ -108,19 +108,19 @@
   - Titre : "Quand l'exécution devient le sujet"
   - Texte : "Croissance, transition, retournement : vous devez décider vite, avec une vision claire des risques et des leviers de valeur, sans lancer un audit lourd."
 
-- **Card 2 — Ce que vous recevez :**
+- **Card 2 — Méthode :**
+  - Titre : "Une méthode orientée action"
+  - Liste :
+    - "Cadrage et compréhension de vos enjeux de dirigeant."
+    - "Visites et entretiens sur le terrain."
+    - "Lecture systémique, scoring et priorisation des leviers de valeur."
+
+- **Card 3 — Ce que vous recevez :**
   - Titre : "Ce que vous recevez"
   - Liste :
     - "Diagnostic détaillé sur 12 domaines clés."
     - "Executive pack et rapport d'analyse."
     - "Parcours d'exécution et plan d'action priorisé."
-
-- **Card 3 — Méthode :**
-  - Titre : "Une méthode structurée, orientée action"
-  - Liste :
-    - "Cadrage et compréhension de vos enjeux de dirigeant."
-    - "Visites et entretiens sur le terrain."
-    - "Lecture systémique, scoring et priorisation des leviers de valeur."
 
 - **Résumé des 5 étapes (bandeau) :**
   - 01 / Diagnostic / "Étude personnalisée sur 12 domaines."
