@@ -181,7 +181,7 @@
 .diff-step p { font-size: 0.95rem; color: #4a5568; line-height: 1.6; }
 
 /* ── OFFRES ── */
-.offres-section { background: var(--gray-bg); }
+.offres-section { background: var(--navy); }
 .offres-section .section-intro,
 .equipe-section .section-intro,
 .linkedin-section .section-intro { max-width: 100%; }
@@ -199,6 +199,12 @@
 .offre-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
 .offre-lien { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--cyan); transition: gap 0.2s; }
 .offre-lien:hover { gap: 10px; }
+/* ── OFFRES — variante navy ── */
+.offres-section .offre-card { background: rgba(255,255,255,0.05); border-color: rgba(0,212,170,0.18); box-shadow: none; }
+.offres-section .offre-card:hover { border-color: var(--cyan); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+.offres-section .offre-card.featured { background: rgba(0,212,170,0.08); border-color: var(--cyan); }
+.offres-section .offre-card h3 { color: var(--white); }
+.offres-section .offre-bullets li { color: rgba(255,255,255,0.65); }
 
 /* ── TÉMOIGNAGES ── */
 .temoignages-section { background: var(--white); }
@@ -594,9 +600,9 @@
 <!-- 6 OFFRES -->
 <section class="offres-section" id="offres">
   <div class="container">
-    <div class="section-label reveal">Nos leviers d'intervention</div>
-    <h2 class="section-title reveal">6 offres modulables et combinables</h2>
-    <p class="section-intro section-subtitle reveal">De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources.</p>
+    <div class="section-label section-label-white reveal">Nos leviers d'intervention</div>
+    <h2 class="section-title section-title-white reveal">6 offres modulables et combinables</h2>
+    <p class="section-intro section-subtitle--inverse reveal">De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources.</p>
     <div class="offres-grid" id="offres-grid"></div>
   </div>
 </section>
