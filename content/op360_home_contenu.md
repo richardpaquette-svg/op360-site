@@ -75,7 +75,7 @@
   "Notre approche 360 de l'exécution"
 
 - **Paragraphe :**
-  "OP360 est le partenaire de confiance des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable, en combinant l'expertise de dirigeants expérimentés, une méthodologie 360 sur 12 domaines et une plateforme SaaS dédiée au pilotage de l'exécution."
+  "OP360 est le partenaire de confiance des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable. Nous combinons l'expertise de dirigeants expérimentés, une méthodologie 360 sur 12 domaines et une plateforme SaaS dédiée au pilotage de l'exécution."
 
 - **Bullets :**
   - "Vision systémique de l'entreprise, pour traiter les causes profondes plutôt que les symptômes."
@@ -108,19 +108,19 @@
   - Titre : "Quand l'exécution devient le sujet"
   - Texte : "Croissance, transition, retournement : vous devez décider vite, avec une vision claire des risques et des leviers de valeur, sans lancer un audit lourd."
 
-- **Card 2 — Ce que vous recevez :**
+- **Card 2 — Méthode :**
+  - Titre : "Une méthode orientée action"
+  - Liste :
+    - "Cadrage et compréhension de vos enjeux de dirigeant."
+    - "Visites et entretiens sur le terrain."
+    - "Lecture systémique, scoring et priorisation des leviers de valeur."
+
+- **Card 3 — Ce que vous recevez :**
   - Titre : "Ce que vous recevez"
   - Liste :
     - "Diagnostic détaillé sur 12 domaines clés."
     - "Executive pack et rapport d'analyse."
     - "Parcours d'exécution et plan d'action priorisé."
-
-- **Card 3 — Méthode :**
-  - Titre : "Une méthode structurée, orientée action"
-  - Liste :
-    - "Cadrage et compréhension de vos enjeux de dirigeant."
-    - "Visites et entretiens sur le terrain."
-    - "Lecture systémique, scoring et priorisation des leviers de valeur."
 
 - **Bandeau timing :**
   "2 à 3 jours de terrain, restitution complète en moins de 10 jours."
@@ -239,13 +239,6 @@
   Garder une vue claire sur l'exécution.
   - "Pilotage des projets stratégiques et des indicateurs clés en un seul endroit."
   - "Idea Vault et indicateurs de progression."
-
----
-
-## [Section] Terrain (photo + citation)
-
-- **Citation :**
-  "« Nous partageons avec vous ce que notre propre expérience face à des défis similaires nous a permis de construire. Nous réunissons tous une double compétence : la vision stratégique et sa mise en œuvre concrète. »"
 
 ---
 
@@ -373,7 +366,7 @@
 ## Navigation (commune à toutes les pages)
 
 - Liens nav : "Accueil" / "Qui sommes-nous" / "Nos offres" / "Dirigeants de PME" / "Dirigeants d'ETI" / "Investisseurs & fonds" / "Parlons de vos enjeux"
-- CTA nav : "Diagnostic Flash"
+- CTA nav : "Diagnostic OP360" — lien : diagnostic.html
 
 ## Footer (commun à toutes les pages)
 
