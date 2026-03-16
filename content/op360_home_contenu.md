@@ -122,13 +122,6 @@
     - "Executive pack et rapport d'analyse."
     - "Parcours d'exécution et plan d'action priorisé."
 
-- **Résumé des 5 étapes (bandeau) :**
-  - 01 / Diagnostic / "Étude personnalisée sur 12 domaines."
-  - 02 / Analyse / "Lecture systémique et avis croisés."
-  - 03 / Maturité / "Forces et points de progrès par domaine."
-  - 04 / Plan d'action / "Priorisation et actions immédiates."
-  - 05 / Exécution / "Parcours adapté et suivi."
-
 - **Bandeau timing :**
   "2 à 3 jours de terrain, restitution complète en moins de 10 jours."
 
