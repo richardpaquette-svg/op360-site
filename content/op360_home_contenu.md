@@ -380,7 +380,7 @@
 ## Navigation (commune à toutes les pages)
 
 - Liens nav : "Accueil" / "Qui sommes-nous" / "Nos offres" / "Dirigeants de PME" / "Dirigeants d'ETI" / "Investisseurs & fonds" / "Parlons de vos enjeux"
-- CTA nav : "Diagnostic Flash"
+- CTA nav : "Diagnostic OP360" — lien : diagnostic.html
 
 ## Footer (commun à toutes les pages)
 
