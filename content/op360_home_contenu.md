@@ -34,10 +34,10 @@
   "Une équipe de pairs‑dirigeants qui exécute avec vous."
 
 - **Paragraphe 1 :**
-  "4 associés fondateurs, un collectif C‑Level et une méthode 360° sur 12 domaines : nous travaillons aux côtés des dirigeants et des investisseurs dans les moments clés où l'exécution devient décisive (croissance, transition, retournement)."
+  "Nous travaillons aux côtés des dirigeants et des investisseurs dans les moments clés où l'exécution devient décisive (croissance, transition, retournement)."
 
 - **Paragraphe 2 :**
-  "En 90 secondes, cette vidéo présente ce qui nous différencie — approche systémique, Shadow Codir, parcours d'exécution et plateforme SaaS — et comment nous intervenons concrètement à vos côtés."
+  "En 90 secondes, découvrez comment des pairs-dirigeants vous aident à exécuter votre stratégie et ce qui nous différencie."
 
 ---
 
