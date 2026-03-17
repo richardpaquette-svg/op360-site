@@ -49,8 +49,8 @@
 - **Titre :**
   "Seulement 10–20 % des stratégies aboutissent."
 
-- **Texte :**
-  "OP360 renforce l'exécution grâce à un diagnostic rapide, un parcours structuré et un monitoring SaaS, pour passer de la vision à la valeur en évitant les échecs classiques."
+- **Texte :** *(affiché sur 2 lignes via `<br>` dans le front)*
+  "OP360 renforce l'exécution grâce un diagnostic rapide, un parcours structuré et un monitoring SaaS pour passer de la vision à l'exécution en évitant les échecs classiques."
 
 ---
 
