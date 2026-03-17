@@ -22,9 +22,9 @@
   - "📈 Investisseurs & Fonds"
 
 - **Piliers Hero :**
-  - Pilier 1 : "Diagnostic OP360 12 domaines" / "En 8 jours, voir clair sur vos priorités."
-  - Pilier 2 : "Parcours d'exécution structuré" / "Un plan adapté à vos enjeux et à vos ressources."
-  - Pilier 3 : "Pairs dirigeants à vos côtés" / "Accompagnement terrain en Operating Partner ou Shadow Codir."
+  - Pilier 1 : "Diagnostic OP360 – 12 domaines" / "8 jours pour voir clair et décider."
+  - Pilier 2 : "Parcours d'exécution structuré" / "Un plan réaliste, adapté à vos ressources."
+  - Pilier 3 : "Pairs dirigeants & Shadow Codir" / "Des Operating Partners en Shadow Codir à vos côtés."
 
 - **CTA principal :**
   "Planifier un échange de 30 min"
