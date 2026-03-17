@@ -74,10 +74,10 @@
   "Un parcours d'exécution en 4 axes"
 
 - **Piliers :**
-  - Pilier 1 : "Voir clair" / "Diagnostic OP360 sur 12 domaines pour évaluer la capacité d'exécution et les leviers de valeur."
-  - Pilier 2 : "Décider et prioriser" / "Feuille de route pragmatique, priorisation des chantiers, scénarios d'exécution et options d'accompagnement."
-  - Pilier 3 : "Exécuter et transmettre" / "Shadow Codir et accompagnement terrain, avec plateforme SaaS pour suivre la progression et ancrer les transformations."
-  - Pilier 4 : "Suivre et monitorer" / "Grâce à une plateforme SaaS dédiée, suivre en continu la progression de vos projets stratégiques, visualiser les impacts et garder une vision claire des priorités."
+  - Pilier 1 : "Voir clair" / "Diagnostic 360° pour évaluer votre capacité d'exécution et identifier les principaux leviers de valeur."
+  - Pilier 2 : "Décider et prioriser" / "Feuille de route pragmatique, priorisation des chantiers et scénarios d'exécution adaptés à vos ressources."
+  - Pilier 3 : "Exécuter et transmettre" / "Shadow Codir et accompagnement terrain pour ancrer les transformations et transmettre."
+  - Pilier 4 : "Suivre et monitorer" / "Plateforme SaaS pour piloter vos projets stratégiques, visualiser les impacts et garder une vision claire des priorités."
 
 ---
 
