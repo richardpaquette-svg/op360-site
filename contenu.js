@@ -48,10 +48,6 @@ const OP360 = {
     hero_titre2:  "la Stratégie et le Risque.",
     hero_accent:  "Nous accélérons et sécurisons l'Exécution.",
     hero_sous_titre: "Dirigeants de PME, ETI, investisseurs… OP360, des pairs à vos côtés, pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions.",
-    stat1_nb: "8", stat1_label: "jours Diagnostic Flash",
-    stat2_nb: "12", stat2_label: "domaines d'analyse",
-    stat3_nb: "360°", stat3_label: "vision systémique",
-    stat4_nb: "4", stat4_label: "pairs dirigeants",
   },
 
   // ── 3 MOMENTS CLÉS ───────────────────────────────
