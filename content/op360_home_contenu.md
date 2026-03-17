@@ -36,7 +36,7 @@
 - **Paragraphe 1 :**
   "Nous travaillons aux côtés des dirigeants et des investisseurs dans les moments clés où l'exécution devient décisive (croissance, transition, retournement)."
 
-- **Paragraphe 2 :**
+- **Bloc gris (card-bg) :** *(remplace le paragraphe 2 ; fond gris var(--card-bg), bordure #e2e8f0, border-radius 12px)*
   "En 90 secondes, découvrez comment des pairs-dirigeants vous aident à exécuter votre stratégie et ce qui nous différencie."
 
 ---
