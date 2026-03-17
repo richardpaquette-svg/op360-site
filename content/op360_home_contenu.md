@@ -21,7 +21,7 @@
   - Pilier 3 : "Pairs dirigeants & Shadow Codir" / "Des Operating Partners en Shadow Codir à vos côtés."
 
 - **CTA principal :**
-  "Planifier un échange de 30 min"
+  "Planifier un échange"
 
 ---
 
