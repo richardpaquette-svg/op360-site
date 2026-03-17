@@ -6,9 +6,6 @@
 
 ## [Section] Hero
 
-- **Eyebrow :**
-  "Operating Partners 360 — Pairs & Partenaires"
-
 - **Titre (H1) :**
   "Vous portez la vision, la stratégie et le risque.
   Nous accélérons et sécurisons l'exécution."
