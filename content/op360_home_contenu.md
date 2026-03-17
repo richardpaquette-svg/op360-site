@@ -63,11 +63,11 @@
   "Notre approche 360 de l'exécution"
 
 - **Paragraphe :**
-  "OP360 est le partenaire de confiance des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable. Nous combinons l'expertise de dirigeants expérimentés, une méthodologie 360 sur 12 domaines et une plateforme SaaS dédiée au pilotage de l'exécution."
+  "OP360 est le partenaire des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable. Nous combinons l'expertise de dirigeants expérimentés, une méthodologie 360 et une plateforme SaaS dédiée au pilotage."
 
 - **Bullets :**
   - "Vision systémique de l'entreprise, pour traiter les causes profondes plutôt que les symptômes."
-  - "Collectif de pairs en Shadow Codir, couvrant stratégie, finance, organisation, opérations, digital et RSE."
+  - "Collectif de pairs en Shadow Codir, couvrant stratégie, finance, organisation, opérations, digital, RSE…"
   - "Parcours d'exécution structuré, du diagnostic rapide à l'accompagnement terrain, avec un suivi outillé."
 
 - **Label piliers :**
