@@ -109,9 +109,9 @@
 /* ── APPROCHE 360 ── */
 .approche-section { background: var(--white); padding: 80px 48px; }
 .approche-intro p { margin-bottom: 24px; }
-.approche-bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 48px; }
-.approche-bullets li { font-size: 15px; color: var(--navy); line-height: 1.6; display: flex; align-items: flex-start; gap: 12px; }
-.approche-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.approche-bullets { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+.approche-bullets li { font-size: 15px; color: var(--navy); line-height: 1.6; display: flex; align-items: flex-start; gap: 14px; }
+.approche-bullets li svg { flex-shrink: 0; margin-top: 2px; }
 .piliers-sub { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 24px; }
 .piliers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .pilier-card { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px 24px; border-top: 3px solid var(--cyan); box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
@@ -463,9 +463,18 @@
     <div class="approche-intro">
       <p class="section-subtitle reveal">OP360 est le partenaire des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable.<br>Nous combinons l'expertise de dirigeants expérimentés, une méthodologie 360 et une plateforme SaaS dédiée au pilotage.</p>
       <ul class="approche-bullets">
-        <li class="reveal">Vision systémique de l'entreprise, pour traiter les causes profondes plutôt que les symptômes.</li>
-        <li class="reveal">Collectif de pairs en Shadow Codir, couvrant stratégie, finance, organisation, opérations, digital, RSE…</li>
-        <li class="reveal">Parcours d'exécution structuré, du diagnostic rapide à l'accompagnement terrain, avec un suivi outillé.</li>
+        <li class="reveal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span><strong>Vision systémique de l'entreprise</strong>, pour traiter les causes profondes plutôt que les symptômes.</span>
+        </li>
+        <li class="reveal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span><strong>Collectif de pairs en Shadow Codir</strong>, couvrant stratégie, finance, organisation, opérations, digital, RSE…</span>
+        </li>
+        <li class="reveal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span><strong>Parcours d'exécution structuré</strong>, du diagnostic rapide à l'accompagnement terrain, avec un suivi outillé.</span>
+        </li>
       </ul>
     </div>
     <p class="piliers-sub reveal">Un parcours d'exécution en 4 axes</p>
