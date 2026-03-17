@@ -16,10 +16,6 @@
 - **Sous-titre :**
   "Dirigeants de PME, ETI et investisseurs : des pairs à vos côtés pour exécuter votre stratégie et sécuriser vos décisions clés."
 
-- **Tags de segmentation (liens visibles) :**
-  - "🏭 Dirigeants de PME"
-  - "🏢 Dirigeants d'ETI"
-  - "📈 Investisseurs & Fonds"
 
 - **Piliers Hero :**
   - Pilier 1 : "Diagnostic OP360 – 12 domaines" / "8 jours pour voir clair et décider."
@@ -153,6 +149,11 @@
   - Titre : "Retournement"
   - Valeur : "Contribution à la stabilisation et au redressement de la performance."
   - Cas : "Rentabilité en chute et trésorerie tendue : besoin d'un diagnostic rapide et d'actions ciblées immédiatement activables."
+
+- **Bandeau segments (sous les 3 moments) :**
+  - 🏭 Dirigeants de PME (lien vers pme.html)
+  - 🏢 Dirigeants d'ETI (lien vers eti.html)
+  - 📈 Investisseurs & Fonds (lien vers investisseurs.html)
 
 ---
 
