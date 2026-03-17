@@ -98,17 +98,11 @@
 
 - **Card 2 — Méthode :**
   - Titre : "Une méthode orientée action"
-  - Liste :
-    - "Cadrage et compréhension de vos enjeux de dirigeant."
-    - "Visites et entretiens sur le terrain."
-    - "Lecture systémique, scoring et priorisation des leviers de valeur."
+  - Texte : "Cadrage de vos enjeux de dirigeant, visites et entretiens sur le terrain, lecture systémique, scoring et priorisation des leviers de valeur."
 
 - **Card 3 — Ce que vous recevez :**
   - Titre : "Ce que vous recevez"
-  - Liste :
-    - "Diagnostic détaillé sur 12 domaines clés."
-    - "Executive pack et rapport d'analyse."
-    - "Parcours d'exécution et plan d'action priorisé."
+  - Texte : "Diagnostic détaillé sur 12 domaines clés, executive pack et rapport d'analyse, parcours d'exécution et plan d'action priorisé."
 
 - **Bandeau timing :**
   "2 à 3 jours de terrain, restitution complète en moins de 10 jours."
