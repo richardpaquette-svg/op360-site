@@ -13,8 +13,9 @@
   "Vous portez la vision, la stratégie et le risque.
   Nous accélérons et sécurisons l'exécution."
 
-- **Sous-titre :**
-  "Dirigeants de PME, ETI et investisseurs : des pairs à vos côtés pour exécuter votre stratégie et sécuriser vos décisions clés."
+- **Sous-titre :** *(affiché sur 2 lignes dans le front via `<br>` après le « : »)*
+  Ligne 1 : "Dirigeants de PME, ETI et investisseurs :"
+  Ligne 2 : "des pairs à vos côtés pour exécuter votre stratégie et sécuriser vos décisions clés."
 
 
 - **Piliers Hero :**
