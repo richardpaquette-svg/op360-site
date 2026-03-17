@@ -67,7 +67,7 @@
 
 - **Bullets :**
   - "Vision systémique de l'entreprise, pour traiter les causes profondes plutôt que les symptômes."
-  - "Collectif de pairs en Shadow Codir, couvrant stratégie, finance, organisation, opérations, digital et RSE."
+  - "Collectif de pairs en Shadow Codir, couvrant stratégie, finance, organisation, opérations, digital, RSE…"
   - "Parcours d'exécution structuré, du diagnostic rapide à l'accompagnement terrain, avec un suivi outillé."
 
 - **Label piliers :**
