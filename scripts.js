@@ -29,7 +29,7 @@ function buildNav(activePage) {
         ${LOGO_SVG}
       </a>
       <div class="nav-links" id="nav-links">${links}</div>
-      <a href="${OP360.entreprise.rdv}" class="nav-cta" target="_blank">Diagnostic Flash</a>
+      <a href="diagnostic.html" class="nav-cta">Diagnostic OP360</a>
       <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>

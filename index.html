@@ -61,14 +61,6 @@
 }
 .hero-tag:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(0,212,170,0.08); }
 .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.7s 0.4s ease both; }
-.hero-stats {
-  display: flex; justify-content: center; gap: 56px; flex-wrap: wrap;
-  margin-top: 72px; padding-top: 48px; border-top: 1px solid rgba(255,255,255,0.08);
-  animation: fadeUp 0.7s 0.55s ease both;
-}
-.hero-stat { text-align: center; }
-.hero-stat-nb { font-size: 38px; font-weight: 700; color: var(--cyan); line-height: 1; }
-.hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 6px; line-height: 1.4; }
 .hero-scroll {
   position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 8px;
@@ -116,7 +108,7 @@
 
 /* ── APPROCHE 360 ── */
 .approche-section { background: var(--white); padding: 80px 48px; }
-.approche-intro p { font-size: 16px; color: var(--gray-text); line-height: 1.75; margin-bottom: 24px; }
+.approche-intro p { margin-bottom: 24px; }
 .approche-bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 48px; }
 .approche-bullets li { font-size: 15px; color: var(--navy); line-height: 1.6; display: flex; align-items: flex-start; gap: 12px; }
 .approche-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
@@ -130,6 +122,7 @@
 
 /* ── DIAGNOSTIC FLASH ── */
 .diag-section { background: var(--gray-bg); padding: 80px 48px; }
+.diag-section .section-intro { max-width: 100%; }
 .diag-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
 .diag-card { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 36px 28px; border-top: 3px solid var(--cyan); box-shadow: 0 1px 3px rgba(15,23,42,0.06); transition: all 0.25s; }
 .diag-card:hover { border-top-width: 4px; box-shadow: var(--shadow-hover); transform: translateY(-3px); }
@@ -180,7 +173,10 @@
 .diff-step p { font-size: 0.95rem; color: #4a5568; line-height: 1.6; }
 
 /* ── OFFRES ── */
-.offres-section { background: var(--gray-bg); }
+.offres-section { background: var(--navy); }
+.offres-section .section-intro,
+.equipe-section .section-intro,
+.linkedin-section .section-intro { max-width: 100%; }
 .offres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .offre-card { background: var(--card-bg); border: 1.5px solid #e2e8f0; border-radius: var(--radius); padding: 24px 20px; transition: all 0.25s; position: relative; box-shadow: 0 1px 3px rgba(15,23,42,0.06); display: flex; flex-direction: column; align-items: flex-start; gap: 14px; text-decoration: none; color: inherit; cursor: pointer; }
 .offre-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
@@ -188,12 +184,19 @@
 .offre-badge { position: absolute; top: 14px; right: 14px; background: var(--cyan); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; }
 .offre-icon-wrap { font-size: 30px; flex-shrink: 0; line-height: 1.2; }
 .offre-body { flex: 1; }
-.offre-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.offre-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.offre-accroche { font-size: 13px; font-weight: 600; color: var(--cyan); margin-bottom: 10px; line-height: 1.4; }
 .offre-bullets { list-style: none; }
 .offre-bullets li { font-size: 13px; color: var(--gray-text); line-height: 1.55; padding: 4px 0; display: flex; align-items: flex-start; gap: 8px; }
 .offre-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
 .offre-lien { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--cyan); transition: gap 0.2s; }
 .offre-lien:hover { gap: 10px; }
+/* ── OFFRES — variante navy ── */
+.offres-section .offre-card { background: rgba(255,255,255,0.05); border-color: rgba(0,212,170,0.18); box-shadow: none; }
+.offres-section .offre-card:hover { border-color: var(--cyan); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+.offres-section .offre-card.featured { background: rgba(0,212,170,0.08); border-color: var(--cyan); }
+.offres-section .offre-card h3 { color: var(--white); }
+.offres-section .offre-bullets li { color: rgba(255,255,255,0.65); }
 
 /* ── TÉMOIGNAGES ── */
 .temoignages-section { background: var(--white); }
@@ -296,7 +299,6 @@
   .video-player { min-width: 0; }
 
   /* ── STAT CHOC ── */
-  .hero-stats { gap: 24px; }
   .stat-choc-wrap { padding: 0 20px; }
   .stat-choc { padding: 24px 20px; flex-direction: column; text-align: center; gap: 16px; }
   .stat-choc-nb { font-size: 48px; }
@@ -461,7 +463,7 @@
     <div class="section-label reveal">Notre méthode</div>
     <h2 class="section-title reveal">Notre approche 360 de l'exécution</h2>
     <div class="approche-intro">
-      <p class="reveal">OP360 est le partenaire de confiance des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable, en combinant l'expertise de dirigeants expérimentés, une méthodologie 360 sur 12 domaines et une plateforme SaaS dédiée au pilotage de l'exécution.</p>
+      <p class="section-subtitle reveal">OP360 est le partenaire de confiance des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable. Nous combinons l'expertise de dirigeants expérimentés, une méthodologie 360 sur 12 domaines et une plateforme SaaS dédiée au pilotage de l'exécution.</p>
       <ul class="approche-bullets">
         <li class="reveal">Vision systémique de l'entreprise, pour traiter les causes profondes plutôt que les symptômes.</li>
         <li class="reveal">Collectif de pairs en Shadow Codir, couvrant stratégie, finance, organisation, opérations, digital et RSE.</li>
@@ -499,11 +501,20 @@
   <div class="container">
     <div class="section-label reveal">Notre offre phare</div>
     <h2 class="section-title reveal">Diagnostic OP360 : 8 jours pour voir clair et agir juste</h2>
-    <p class="section-intro reveal">Un diagnostic 360° qui transforme vos enjeux en plan d'action opérationnel priorisé.</p>
+    <p class="section-intro section-subtitle reveal">Un diagnostic 360° qui transforme vos enjeux en plan d'action opérationnel priorisé.</p>
     <div class="diag-grid">
       <div class="diag-card reveal">
         <h3>Quand l'exécution devient le sujet</h3>
         <p>Croissance, transition, retournement : vous devez décider vite, avec une vision claire des risques et des leviers de valeur, sans lancer un audit lourd.</p>
+      </div>
+      <div class="diag-card reveal">
+        <h3>Une méthode orientée action</h3>
+        <ul>
+          <li>Cadrage et compréhension de vos enjeux de dirigeant.</li>
+          <li>Visites et entretiens sur le terrain.</li>
+          <li>Lecture systémique, scoring et priorisation des leviers de valeur.</li>
+
+        </ul>
       </div>
       <div class="diag-card reveal">
         <h3>Ce que vous recevez</h3>
@@ -512,46 +523,6 @@
           <li>Executive pack et rapport d'analyse.</li>
           <li>Parcours d'exécution et plan d'action priorisé.</li>
         </ul>
-      </div>
-      <div class="diag-card reveal">
-        <h3>Une méthode structurée, orientée action</h3>
-        <ul>
-          <li>Cadrage et compréhension de vos enjeux de dirigeant.</li>
-          <li>Visites et entretiens sur le terrain.</li>
-          <li>Lecture systémique, scoring et priorisation des leviers de valeur.</li>
-
-        </ul>
-      </div>
-    </div>
-    <div class="diag-summary reveal">
-      <div class="diag-summary-item">
-        <div class="diag-summary-step">01</div>
-        <div class="diag-summary-label">Diagnostic</div>
-        <div class="diag-summary-desc">Étude personnalisée sur 12 domaines.</div>
-      </div>
-      <div class="diag-summary-arrow">→</div>
-      <div class="diag-summary-item">
-        <div class="diag-summary-step">02</div>
-        <div class="diag-summary-label">Analyse</div>
-        <div class="diag-summary-desc">Lecture systémique et avis croisés.</div>
-      </div>
-      <div class="diag-summary-arrow">→</div>
-      <div class="diag-summary-item">
-        <div class="diag-summary-step">03</div>
-        <div class="diag-summary-label">Maturité</div>
-        <div class="diag-summary-desc">Forces et points de progrès par domaine.</div>
-      </div>
-      <div class="diag-summary-arrow">→</div>
-      <div class="diag-summary-item">
-        <div class="diag-summary-step">04</div>
-        <div class="diag-summary-label">Plan d'action</div>
-        <div class="diag-summary-desc">Priorisation et actions immédiates.</div>
-      </div>
-      <div class="diag-summary-arrow">→</div>
-      <div class="diag-summary-item">
-        <div class="diag-summary-step">05</div>
-        <div class="diag-summary-label">Exécution</div>
-        <div class="diag-summary-desc">Parcours adapté et suivi.</div>
       </div>
     </div>
     <div class="diag-bandeau reveal">
@@ -571,7 +542,7 @@
   <div class="container">
     <div class="section-label section-label-white reveal">Quand intervenir</div>
     <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
-    <p class="section-intro section-intro-white reveal">3 moments clés où notre expertise opérationnelle change la trajectoire.</p>
+    <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire.</p>
     <div class="moments-grid" id="moments-grid"></div>
   </div>
 </section>
@@ -581,7 +552,7 @@
   <div class="container">
     <div class="section-label reveal">Notre approche</div>
     <h2 class="section-title reveal">Quand OP360 fait la différence</h2>
-    <p class="section-intro reveal">Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et outils digitaux centrés sur les enjeux du dirigeant.</p>
+    <p class="section-intro section-subtitle reveal">Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et outils digitaux centrés sur les enjeux du dirigeant.</p>
     <div class="diff-grid" id="diff-grid"></div>
   </div>
 </section>
@@ -589,21 +560,12 @@
 <!-- 6 OFFRES -->
 <section class="offres-section" id="offres">
   <div class="container">
-    <div class="section-label reveal">Nos leviers d'intervention</div>
-    <h2 class="section-title reveal">6 offres modulables et combinables</h2>
-    <p class="section-intro reveal">De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources.</p>
+    <div class="section-label section-label-white reveal">Nos leviers d'intervention</div>
+    <h2 class="section-title section-title-white reveal">6 offres modulables et combinables</h2>
+    <p class="section-intro section-subtitle--inverse reveal">De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources.</p>
     <div class="offres-grid" id="offres-grid"></div>
   </div>
 </section>
-
-<!-- PHOTO TERRAIN -->
-<div class="terrain-section">
-  <div class="terrain-photo"></div>
-  <div class="terrain-overlay"></div>
-  <div class="terrain-content">
-    <p>« Nous partageons avec vous ce que notre propre expérience face à des défis similaires nous a permis de construire. Nous réunissons tous une double compétence : la vision stratégique et sa mise en œuvre concrète. »</p>
-  </div>
-</div>
 
 <!-- TÉMOIGNAGES -->
 <section class="temoignages-section" id="temoignages">
@@ -651,7 +613,7 @@
   <div class="container">
     <div class="section-label reveal">Les fondateurs</div>
     <h2 class="section-title reveal">Des dirigeants à vos côtés</h2>
-    <p class="section-intro reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
+    <p class="section-intro section-subtitle reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
     <div class="equipe-grid" id="equipe-grid"></div>
     <div class="equipe-phrase reveal">
       <p>« Nous sommes un groupe de pairs et de partenaires qui ont déjà traversé vos défis. <strong>Nous sommes au service de vos équipes.</strong> »</p>
@@ -662,14 +624,14 @@
 <!-- LINKEDIN / REGARD DE TERRAIN -->
 <section class="linkedin-section">
   <div class="container">
-    <div class="section-label reveal">Ressources</div>
+    <div class="section-label reveal">Aller plus loin</div>
     <h2 class="section-title reveal">Notre regard de terrain</h2>
-    <p class="section-intro reveal">Au-delà des missions, nous partageons régulièrement des retours d'expérience, des cas concrets et des points de vue de dirigeants sur LinkedIn. C'est le meilleur moyen de sentir notre culture, notre manière de travailler et les sujets qui nous mobilisent sur le terrain.</p>
+    <p class="section-intro section-subtitle reveal">Au&#8209;delà des missions, nous partageons des retours d'expérience de dirigeants, des cas concrets et nos analyses de terrain sur LinkedIn. C'est le meilleur moyen de voir comment nous aidons PME, ETI et investisseurs à exécuter leur stratégie.</p>
     <p class="linkedin-sub reveal">Sélection de publications LinkedIn</p>
     <ul class="linkedin-bullets">
-      <li class="reveal">Retours d'expérience sur des programmes de croissance, de transformation ou de retournement.</li>
-      <li class="reveal">Points de vue de dirigeants sur l'exécution, la gouvernance, la relation avec les investisseurs.</li>
-      <li class="reveal">Exemples d'outils, de bonnes pratiques et de rituels de pilotage que nous utilisons avec nos clients.</li>
+      <li class="reveal">Récits de programmes de croissance, de transformation ou de retournement menés avec des dirigeants.</li>
+      <li class="reveal">Points de vue de dirigeants sur l'exécution, la gouvernance et la relation avec les investisseurs.</li>
+      <li class="reveal">Outils, rituels de pilotage et bonnes pratiques que nous utilisons sur le terrain.</li>
     </ul>
     <p class="ressources-linkedin reveal">Suivre nos analyses et retours de terrain sur LinkedIn :
       <a href="https://www.linkedin.com/company/operating360/" target="_blank" rel="noopener">Operating Partners 360 sur LinkedIn</a>
@@ -737,6 +699,7 @@ document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
     <div class="offre-icon-wrap">${o.icone}</div>
     <div class="offre-body">
       <h3>${o.titre}</h3>
+      ${o.accroche ? `<p class="offre-accroche">${o.accroche}</p>` : ''}
       <ul class="offre-bullets">${o.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
       <span class="offre-lien">En savoir plus →</span>
     </div>
