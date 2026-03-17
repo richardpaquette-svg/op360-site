@@ -151,6 +151,7 @@
 .moments-section { background: var(--navy); position: relative; overflow: hidden; }
 .moments-photo { display: none; }
 .moments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
+.segment-banner { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 40px; }
 .moment-card { border: 1px solid rgba(0,212,170,0.18); border-radius: var(--radius); padding: 28px 24px; transition: all 0.3s; background: rgba(255,255,255,0.03); position: relative; display: flex; align-items: flex-start; gap: 16px; }
 .moment-card:hover { border-color: rgba(0,212,170,0.5); transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); }
 .moment-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--cyan); transform:scaleX(0); transform-origin:left; transition:transform 0.3s; border-radius:var(--radius) var(--radius) 0 0; }
@@ -387,11 +388,6 @@
       Dirigeants de PME, ETI et investisseurs : des pairs à vos côtés pour exécuter votre stratégie et sécuriser vos décisions clés.
     </p>
     <!-- Segmentation : profils cibles -->
-    <div class="hero-tags">
-      <a href="pme.html" class="hero-tag">🏭 Dirigeants de PME</a>
-      <a href="eti.html" class="hero-tag">🏢 Dirigeants d'ETI</a>
-      <a href="investisseurs.html" class="hero-tag">📈 Investisseurs &amp; Fonds</a>
-    </div>
     <div class="hero-pillars">
       <div class="hero-pillar">
         <div style="display:inline-flex;align-items:center;justify-content:center;background:rgba(0,212,170,0.12);border-radius:50%;padding:8px;margin-right:12px;flex-shrink:0">
@@ -544,6 +540,11 @@
     <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
     <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire.</p>
     <div class="moments-grid" id="moments-grid"></div>
+    <div class="segment-banner">
+      <a href="pme.html" class="hero-tag">🏭 Dirigeants de PME</a>
+      <a href="eti.html" class="hero-tag">🏢 Dirigeants d'ETI</a>
+      <a href="investisseurs.html" class="hero-tag">📈 Investisseurs &amp; Fonds</a>
+    </div>
   </div>
 </section>
 
