@@ -207,18 +207,8 @@
 .fit-bandeau-name { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
 .fit-bandeau-desc { font-size: 14px; color: #ffffff; line-height: 1.55; }
 
-/* ── ÉQUIPE — fond blanc ── */
-.equipe-section { background: var(--white); }
-.equipe-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 48px; }
-.equipe-card { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 14px; padding: 32px 24px; text-align: center; transition: all 0.25s; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
-.equipe-card:hover { border-color: var(--cyan); transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-.equipe-photo { width: 88px; height: 88px; border-radius: 50%; margin: 0 auto 18px; border: 2.5px solid rgba(0,212,170,0.35); object-fit: cover; }
-.equipe-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-.equipe-titre { font-size: 13px; color: var(--cyan); font-weight: 600; margin-bottom: 10px; }
-.equipe-expertise { font-size: 13px; color: var(--gray-text); line-height: 1.5; }
-.equipe-phrase { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 12px; padding: 36px 48px; text-align: center; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
-.equipe-phrase p { font-size: 18px; font-weight: 300; color: var(--navy); line-height: 1.65; max-width: 760px; margin: 0 auto; font-style: italic; }
-.equipe-phrase p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
+/* ── ÉQUIPE ── */
+.equipe-sec { background: var(--gray-bg); padding: 64px 48px; border-top: 1px solid var(--border); } .equipe-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; } .equipe-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 24px 18px; text-align: center; transition: all 0.25s; display: flex; flex-direction: column; align-items: center; } .equipe-card:hover { border-color: var(--em); transform: translateY(-4px); box-shadow: 0 14px 36px rgba(16,185,129,0.1); } .equipe-photo-wrap { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 14px; border: 2px solid rgba(16,185,129,0.25); overflow: hidden; background: var(--em-l); display: flex; align-items: center; justify-content: center; } .equipe-photo-wrap img { width: 100%; height: 100%; object-fit: cover; } .equipe-initiales { font-size: 20px; font-weight: 700; color: var(--em-m); } .equipe-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 3px; } .equipe-titre { font-size: 12px; color: var(--em-m); font-weight: 600; margin-bottom: 8px; } .equipe-expertise { font-size: 12px; color: var(--txt); line-height: 1.5; flex: 1; } .equipe-citation { background: var(--navy); border-radius: 12px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; gap: 32px; } .equipe-citation p { font-size: 16px; font-weight: 300; color: var(--white); line-height: 1.7; font-style: italic; max-width: 560px; } .equipe-citation p strong { color: var(--em); font-weight: 600; font-style: normal; } .btn-equipe { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--em); font-size: 13px; font-weight: 700; border: 1.5px solid rgba(16,185,129,0.4); border-radius: 6px; padding: 12px 22px; text-decoration: none; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; } .btn-equipe:hover { background: rgba(16,185,129,0.1); border-color: var(--em); }
 
 /* ── LINKEDIN ── */
 .linkedin-section { background: var(--gray-bg); padding: 80px 48px; }
@@ -663,15 +653,55 @@
   </div>
 </section>
 
-<!-- ÉQUIPE — fond blanc -->
-<section class="equipe-section" id="equipe-home">
+<!-- 7. ÉQUIPE -->
+<section class="equipe-sec">
   <div class="container">
-    <div class="section-label reveal">Les fondateurs</div>
-    <h2 class="section-title reveal">Des dirigeants à vos côtés</h2>
-    <p class="section-intro section-subtitle reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
-    <div class="equipe-grid" id="equipe-grid"></div>
-    <div class="equipe-phrase reveal">
-      <p>« Nous sommes un groupe de pairs et de partenaires qui ont déjà traversé vos défis. <strong>Nous sommes au service de vos équipes.</strong> »</p>
+    <div class="lbl reveal">Les fondateurs</div>
+    <div class="ttl reveal">Des dirigeants à vos côtés</div>
+    <p class="sub reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
+    <div class="equipe-grid">
+      <div class="equipe-card reveal">
+        <div class="equipe-photo-wrap">
+          <img src="https://operating360.com/assets/v1/1fc62ef918429c6b134bc819dcd0ab5300a56aff7.png" alt="Annie Belquin" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="equipe-initiales" style="display:none">AB</div>
+        </div>
+        <h3>Annie Belquin</h3>
+        <div class="equipe-titre">Présidente</div>
+        <div class="equipe-expertise">Vision stratégique &amp; gouvernance</div>
+      </div>
+      <div class="equipe-card reveal">
+        <div class="equipe-photo-wrap">
+          <img src="https://operating360.com/assets/v1/2f8733a0399f8085163edaa1a7d0725dc2b2f4f4.png" alt="Richard Paquette" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="equipe-initiales" style="display:none">RP</div>
+        </div>
+        <h3>Richard Paquette</h3>
+        <div class="equipe-titre">Directeur Général</div>
+        <div class="equipe-expertise">Exécution opérationnelle &amp; développement</div>
+      </div>
+      <div class="equipe-card reveal">
+        <div class="equipe-photo-wrap">
+          <img src="https://operating360.com/assets/v1/65a4c6227ef12db51910bb9cb6ab8dee23fa0891.png" alt="Suzanne Grimal" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="equipe-initiales" style="display:none">SG</div>
+        </div>
+        <h3>Suzanne Grimal</h3>
+        <div class="equipe-titre">Directrice de la Valeur</div>
+        <div class="equipe-expertise">Création de valeur &amp; transformation</div>
+      </div>
+      <div class="equipe-card reveal">
+        <div class="equipe-photo-wrap">
+          <img src="https://operating360.com/assets/v1/0d2a1023ad5820c69a65779194a7ffa09d1867a6.png" alt="Christophe Raix" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="equipe-initiales" style="display:none">CR</div>
+        </div>
+        <h3>Christophe Raix</h3>
+        <div class="equipe-titre">Directeur de l'Innovation</div>
+        <div class="equipe-expertise">Innovation &amp; outils numériques</div>
+      </div>
+    </div>
+    <div class="equipe-citation reveal">
+      <div>
+        <p>Nous sommes un groupe de pairs et de partenaires qui ont déjà traversé vos défis.<br><strong>Nous sommes au service de vos équipes.</strong></p>
+      </div>
+      <a href="equipe.html" class="btn-equipe">Découvrir l'équipe →</a>
     </div>
   </div>
 </section>
