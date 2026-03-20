@@ -219,6 +219,7 @@
 .equipe-phrase { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 12px; padding: 36px 48px; text-align: center; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
 .equipe-phrase p { font-size: 18px; font-weight: 300; color: var(--navy); line-height: 1.65; max-width: 760px; margin: 0 auto; font-style: italic; }
 .equipe-phrase p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
+.equipe-citation { background: var(--navy); border-radius: 12px; padding: 28px 36px; display: flex; align-items: center; justify-content: space-between; gap: 32px; } .equipe-citation p { font-size: 16px; font-weight: 300; color: var(--white); line-height: 1.7; font-style: italic; max-width: 560px; } .equipe-citation p strong { color: var(--em); font-weight: 600; font-style: normal; } .btn-equipe { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--em); font-size: 13px; font-weight: 700; border: 1.5px solid rgba(16,185,129,0.4); border-radius: 6px; padding: 12px 22px; text-decoration: none; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; } .btn-equipe:hover { background: rgba(16,185,129,0.1); border-color: var(--em); }
 
 /* ── LINKEDIN ── */
 .linkedin-section { background: var(--gray-bg); padding: 80px 48px; }
@@ -670,8 +671,11 @@
     <h2 class="section-title reveal">Des dirigeants à vos côtés</h2>
     <p class="section-intro section-subtitle reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
     <div class="equipe-grid" id="equipe-grid"></div>
-    <div class="equipe-phrase reveal">
-      <p>« Nous sommes un groupe de pairs et de partenaires qui ont déjà traversé vos défis. <strong>Nous sommes au service de vos équipes.</strong> »</p>
+    <div class="equipe-citation reveal">
+      <div>
+        <p>Nous sommes un groupe de pairs et de partenaires qui ont déjà traversé vos défis.<br><strong>Nous sommes au service de vos équipes.</strong></p>
+      </div>
+      <a href="equipe.html" class="btn-equipe">Découvrir l'équipe →</a>
     </div>
   </div>
 </section>
