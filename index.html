@@ -187,14 +187,15 @@
 .temofit-section { background: var(--white); }
 .temofit-section .container { padding-top: 80px; padding-bottom: 64px; }
 .temos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.temo-card { background: var(--navy); border-radius: var(--radius); padding: 40px 36px; position: relative; overflow: hidden; }
-.temo-card::before { content: '\201C'; position: absolute; top: -12px; left: 18px; font-size: 110px; color: rgba(0,212,170,0.12); line-height: 1; }
+.temo-card { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: var(--radius); padding: 36px 32px; position: relative; overflow: hidden; transition: all 0.25s; }
+.temo-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+.temo-card::before { content: '\201C'; position: absolute; top: -12px; left: 18px; font-size: 110px; color: rgba(0,212,170,0.15); line-height: 1; }
 .temo-stars { display: flex; gap: 3px; margin-bottom: 16px; }
 .temo-stars span { color: var(--cyan); font-size: 13px; }
-.temo-quote { font-size: 16px; color: var(--white); line-height: 1.65; font-style: italic; margin-bottom: 24px; position: relative; z-index: 1; }
+.temo-quote { font-size: 16px; color: var(--navy); line-height: 1.65; font-style: italic; margin-bottom: 24px; position: relative; z-index: 1; }
 .temo-bar { width: 32px; height: 2px; background: var(--cyan); border-radius: 2px; margin-bottom: 12px; }
-.temo-author { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; text-transform: uppercase; }
-.temo-entreprise { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+.temo-author { font-size: 13px; font-weight: 700; color: var(--gray-text); letter-spacing: 0.04em; text-transform: uppercase; }
+.temo-entreprise { font-size: 12px; color: var(--gray-text); opacity: 0.6; margin-top: 2px; }
 
 /* ── PHOTO TERRAIN ── */
 .terrain-section { background: var(--navy); padding: 0; position: relative; height: 420px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
@@ -204,10 +205,10 @@
 .terrain-content p { font-size: clamp(20px, 3vw, 30px); font-weight: 300; color: var(--white); line-height: 1.5; max-width: 760px; font-style: italic; }
 .terrain-content p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
 
-/* FIT inner (fond navy intégré) */
-.fit-inner { background: var(--navy); padding: 64px 0; }
+/* FIT bandeau (fond navy pleine largeur) */
+.fit-bandeau { background: var(--navy); padding: 64px 0; width: 100%; }
 .fit-header { text-align: center; margin-bottom: 48px; }
-.fit-title { font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
+.fit-title { font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--white); letter-spacing: -0.02em; margin-top: 8px; }
 .fit-title span { color: var(--cyan); }
 .fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .fit-card { background: rgba(255,255,255,0.05); border-radius: 14px; padding: 40px 32px; text-align: center; border: 1px solid rgba(0,212,170,0.2); transition: all 0.25s; }
@@ -425,7 +426,7 @@
   .temofit-section .container { padding-top: 48px; padding-bottom: 40px; }
   .temos-grid { grid-template-columns: 1fr; }
   .temo-card { padding: 28px 22px; }
-  .fit-inner { padding: 48px 20px; }
+  .fit-bandeau { padding: 48px 20px; }
   .fit-header { margin-bottom: 28px; }
   .fit-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .fit-card { padding: 24px 16px; }
@@ -637,7 +638,7 @@
     <h2 class="section-title reveal">Ce que disent nos clients</h2>
     <div class="temos-grid" id="temos-grid"></div>
   </div>
-  <div class="fit-inner">
+  <div class="fit-bandeau">
     <div class="container">
       <div class="fit-header reveal">
         <div class="section-label section-label-white" style="text-align:center">Nos valeurs</div>
