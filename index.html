@@ -101,7 +101,6 @@
 .stat-choc-text p { font-size: 15px; color: rgba(255,255,255,0.88); line-height: 1.65; }
 
 /* ── SÉPARATEURS — sections blanches adjacentes ── */
-.approche-section,
 .diag-section,
 .diff-section,
 .offres-section,
@@ -109,20 +108,6 @@
 .linkedin-section {
   border-top: 1px solid var(--gray-border);
 }
-
-/* ── APPROCHE 360 ── */
-.approche-section { background: var(--white); padding: 80px 48px; }
-.approche-intro p { margin-bottom: 24px; }
-.approche-bullets { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
-.approche-bullets li { font-size: 15px; color: var(--navy); line-height: 1.6; display: flex; align-items: flex-start; gap: 14px; }
-.approche-bullets li svg { flex-shrink: 0; margin-top: 2px; }
-.piliers-sub { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 24px; }
-.piliers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-.pilier-card { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px 24px; border-top: 3px solid var(--cyan); box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
-.pilier-nb { font-size: 34px; font-weight: 700; color: var(--cyan); line-height: 1; margin-bottom: 8px; }
-.pilier-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-.pilier-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
-.pilier-card:hover { box-shadow: 0 8px 28px rgba(0, 212, 170, 0.18); }
 
 /* ── DIAGNOSTIC FLASH ── */
 .diag-section { background: var(--gray-bg); padding: 80px 48px; }
@@ -387,7 +372,7 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .offres-grid, .piliers-grid, .diag-grid { grid-template-columns: repeat(2, 1fr); }
+  .offres-grid, .diag-grid { grid-template-columns: repeat(2, 1fr); }
   .diff-grid { grid-template-columns: repeat(3, 1fr); }
   .equipe-grid { grid-template-columns: repeat(2, 1fr); }
   .video-inner { grid-template-columns: 1fr; }
@@ -409,11 +394,6 @@
   .stat-choc-wrap { padding: 0 20px; }
   .stat-choc { padding: 24px 20px; flex-direction: column; text-align: center; gap: 16px; }
   .stat-choc-nb { font-size: 48px; }
-
-  /* ── APPROCHE ── */
-  .approche-section { padding: 48px 20px; }
-  .piliers-grid { grid-template-columns: 1fr; }
-  .pilier-card { padding: 20px 16px; }
 
   /* ── DIAGNOSTIC ── */
   .diag-section { padding: 48px 20px; }
@@ -601,36 +581,18 @@
   </div>
 </div>
 
-<!-- APPROCHE 360 -->
-<section class="approche-section" id="diagnostic-flash">
+<!-- 3 MOMENTS CLÉS -->
+<section class="moments-section" id="moments">
+  <div class="moments-photo"></div>
   <div class="container">
-    <div class="section-label reveal">Notre méthode</div>
-    <h2 class="section-title reveal">Notre approche 360 de l'exécution</h2>
-    <div class="approche-intro">
-      <p class="section-subtitle reveal">OP360 est le partenaire des dirigeants et des investisseurs pour exécuter leur stratégie et créer de la valeur durable.<br>Nous combinons l'expertise de dirigeants expérimentés, une méthodologie 360 et une plateforme SaaS dédiée au pilotage.</p>
-    </div>
-    <p class="piliers-sub reveal">Un parcours d'exécution en 4 axes</p>
-    <div class="piliers-grid">
-      <div class="pilier-card reveal">
-        <div class="pilier-nb">1</div>
-        <h4>Voir clair</h4>
-        <p>Diagnostic 360° pour évaluer votre capacité d'exécution et identifier les principaux leviers de valeur.</p>
-      </div>
-      <div class="pilier-card reveal">
-        <div class="pilier-nb">2</div>
-        <h4>Décider et prioriser</h4>
-        <p>Feuille de route pragmatique, priorisation des chantiers et scénarios d'exécution adaptés à vos ressources.</p>
-      </div>
-      <div class="pilier-card reveal">
-        <div class="pilier-nb">3</div>
-        <h4>Exécuter et transmettre</h4>
-        <p>Shadow Codir et accompagnement terrain pour ancrer les transformations et transmettre.</p>
-      </div>
-      <div class="pilier-card reveal">
-        <div class="pilier-nb">4</div>
-        <h4>Suivre et monitorer</h4>
-        <p>Plateforme SaaS pour piloter vos projets stratégiques, visualiser les impacts et garder une vision claire des priorités.</p>
-      </div>
+    <div class="section-label section-label-white reveal">Quand intervenir</div>
+    <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
+    <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire.</p>
+    <div class="moments-grid" id="moments-grid"></div>
+    <div class="segment-banner">
+      <a href="pme.html" class="hero-tag">🏭 Dirigeants de PME</a>
+      <a href="eti.html" class="hero-tag">🏢 Dirigeants d'ETI</a>
+      <a href="investisseurs.html" class="hero-tag">📈 Investisseurs &amp; Fonds</a>
     </div>
   </div>
 </section>
@@ -662,22 +624,6 @@
     <div class="diag-cta">
       <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Parler d'un Diagnostic OP360</a>
       <a href="#contact" class="diag-link">Recevoir un exemple de livrable →</a>
-    </div>
-  </div>
-</section>
-
-<!-- 3 MOMENTS CLÉS -->
-<section class="moments-section" id="moments">
-  <div class="moments-photo"></div>
-  <div class="container">
-    <div class="section-label section-label-white reveal">Quand intervenir</div>
-    <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
-    <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire.</p>
-    <div class="moments-grid" id="moments-grid"></div>
-    <div class="segment-banner">
-      <a href="pme.html" class="hero-tag">🏭 Dirigeants de PME</a>
-      <a href="eti.html" class="hero-tag">🏢 Dirigeants d'ETI</a>
-      <a href="investisseurs.html" class="hero-tag">📈 Investisseurs &amp; Fonds</a>
     </div>
   </div>
 </section>
