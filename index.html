@@ -101,7 +101,6 @@
 
 /* ── SÉPARATEURS — sections blanches adjacentes ── */
 .diag-section,
-.diff-section,
 .offres-section,
 .equipe-section,
 .linkedin-section {
@@ -149,15 +148,12 @@
 .moment-card h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
 .moment-cas { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.65; margin: 0; }
 
-/* ── DIFF ── */
-.diff-section { background: var(--white); }
-.diff-section .section-intro { max-width: 100%; color: var(--navy); }
-.diff-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 32px; }
-.diff-step { padding: 24px 12px; text-align: center; }
-.diff-step-icon { width: 40px; height: 40px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; }
-.diff-step-icon svg { width: 40px; height: 40px; }
-.diff-step h3 { font-size: 1rem; font-weight: 700; font-style: normal; color: #1a2332; margin-bottom: 8px; line-height: 1.35; }
-.diff-step p { font-size: 0.95rem; color: #4a5568; line-height: 1.6; }
+/* ── DIFF BANDEAU ── */
+.diff-bandeau { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 48px; padding-top: 40px; }
+.diff-bandeau-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; align-items: start; }
+.diff-bandeau-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+.diff-bandeau-icon svg { width: 28px; height: 28px; flex-shrink: 0; }
+.diff-bandeau-titre { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.85); line-height: 1.35; }
 
 /* ── OFFRES ── */
 .offres-section { background: var(--navy); }
@@ -370,7 +366,7 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .offres-grid, .diag-grid { grid-template-columns: repeat(2, 1fr); }
-  .diff-grid { grid-template-columns: repeat(3, 1fr); }
+  .diff-bandeau-grid { grid-template-columns: repeat(3, 1fr); }
   .equipe-grid { grid-template-columns: repeat(2, 1fr); }
   .video-inner { grid-template-columns: 1fr; }
 }
@@ -408,11 +404,8 @@
   .moment-icon-wrap { font-size: 26px; padding: 4px; }
   .moment-card h3 { font-size: 17px; }
 
-  /* ── DIFFÉRENCIATEURS (2 colonnes × 3 lignes) ── */
-  .diff-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .diff-step { padding: 20px 12px; }
-  .diff-step-icon { width: 32px; height: 32px; margin-bottom: 12px; }
-  .diff-step-icon svg { width: 32px; height: 32px; }
+  .diff-bandeau-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .diff-bandeau-titre { font-size: 12px; }
 
   /* ── OFFRES (6 cartes → carrousel horizontal) ── */
   .offres-grid {
@@ -591,6 +584,9 @@
       <a href="eti.html" class="hero-tag">🏢 Dirigeants d'ETI</a>
       <a href="investisseurs.html" class="hero-tag">📈 Investisseurs &amp; Fonds</a>
     </div>
+    <div class="diff-bandeau">
+      <div class="diff-bandeau-grid" id="diff-bandeau-grid"></div>
+    </div>
   </div>
 </section>
 
@@ -625,15 +621,6 @@
   </div>
 </section>
 
-<!-- 6 DIFFÉRENCIATEURS -->
-<section class="diff-section" id="diff">
-  <div class="container">
-    <div class="section-label reveal">Notre approche</div>
-    <h2 class="section-title reveal">Quand OP360 fait la différence</h2>
-    <p class="section-intro section-subtitle reveal">Le seul partenaire combinant approche systémique, Shadow Codir, parcours d'exécution et outils digitaux centrés sur les enjeux du dirigeant.</p>
-    <div class="diff-grid" id="diff-grid"></div>
-  </div>
-</section>
 
 <!-- 6 OFFRES -->
 <section class="offres-section" id="offres">
@@ -763,12 +750,11 @@ document.getElementById('moments-grid').innerHTML = OP360.moments.map(m => `
     </div>
   </div>`).join('');
 
-document.getElementById('diff-grid').innerHTML = OP360.differenciateurs.map(d => `
-  <article class="diff-step reveal">
-    <div class="diff-step-icon">${d.icone}</div>
-    <h3>${d.titre}</h3>
-    <p>${d.desc}</p>
-  </article>`).join('');
+document.getElementById('diff-bandeau-grid').innerHTML = OP360.differenciateurs.map(d => `
+  <div class="diff-bandeau-item">
+    <div class="diff-bandeau-icon">${d.icone}</div>
+    <div class="diff-bandeau-titre">${d.titre}</div>
+  </div>`).join('');
 
 document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
   <a class="offre-card ${o.featured ? 'featured' : ''} reveal" href="${o.href || 'offres.html'}">
