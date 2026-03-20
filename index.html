@@ -100,7 +100,9 @@
 .stat-choc-text p { font-size: 15px; color: rgba(255,255,255,0.88); line-height: 1.65; }
 
 /* ── SÉPARATEURS — sections blanches adjacentes ── */
+.approche-section,
 .diag-section,
+.temofit-section,
 .offres-section,
 .equipe-section,
 .linkedin-section {
@@ -181,17 +183,15 @@
 .offres-section .offre-card h3 { color: var(--white); }
 .offres-section .offre-bullets li { color: rgba(255,255,255,0.65); }
 
-/* ── TÉMOIGNAGES ── */
-.temoignages-section { background: var(--white); }
-.temos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.temo-card { background: var(--navy); border-radius: var(--radius); padding: 40px 36px; position: relative; overflow: hidden; }
-.temo-card::before { content:'\201C'; position:absolute; top:-12px; left:18px; font-size:110px; color:rgba(0,212,170,0.12); line-height:1; }
-.temo-stars { display:flex; gap:3px; margin-bottom:16px; }
-.temo-stars span { color:var(--cyan); font-size:13px; }
-.temo-quote { font-size: 16px; color: var(--white); line-height: 1.65; font-style: italic; margin-bottom: 24px; position: relative; z-index: 1; }
-.temo-bar { width: 32px; height: 2px; background: var(--cyan); border-radius: 2px; margin-bottom: 12px; }
-.temo-author { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; text-transform: uppercase; }
-.temo-entreprise { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 2px; }
+/* ── TÉMOIGNAGES + FIT ── */
+.temofit-section { background: var(--white); border-top: 1px solid var(--gray-border); }
+.temofit-section .container { padding-top: 80px; padding-bottom: 64px; }
+.temos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.temo-card { background: var(--card-bg); border: 1px solid #e2e8f0; border-left: 3px solid var(--cyan); border-radius: var(--radius); padding: 24px 28px; transition: all 0.25s; }
+.temo-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.temo-quote { font-size: 15px; color: var(--navy); line-height: 1.65; font-style: italic; margin: 0 0 16px; }
+.temo-bar { width: 24px; height: 2px; background: var(--cyan); border-radius: 2px; margin-bottom: 10px; }
+.temo-author { font-size: 12px; font-weight: 700; color: var(--gray-text); letter-spacing: 0.04em; text-transform: uppercase; }
 
 /* ── PHOTO TERRAIN ── */
 .terrain-section { background: var(--navy); padding: 0; position: relative; height: 420px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
@@ -201,17 +201,16 @@
 .terrain-content p { font-size: clamp(20px, 3vw, 30px); font-weight: 300; color: var(--white); line-height: 1.5; max-width: 760px; font-style: italic; }
 .terrain-content p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
 
-/* ── VALEURS FIT — fond bleu foncé ── */
-.fit-section { background: var(--navy); padding: 80px 48px; }
-.fit-header { text-align: center; margin-bottom: 56px; }
-.fit-title { font-size: clamp(30px, 4vw, 48px); font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
-.fit-title span { color: var(--cyan); }
-.fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.fit-card { background: rgba(255,255,255,0.05); border-radius: 14px; padding: 40px 32px; text-align: center; border: 1px solid rgba(0,212,170,0.2); transition: all 0.25s; }
-.fit-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); background: rgba(255,255,255,0.08); }
-.fit-letter { font-size: 64px; font-weight: 700; color: var(--cyan); line-height: 1; margin-bottom: 6px; }
-.fit-card h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-.fit-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.65; }
+/* ── FIT BANDEAU ── */
+.fit-bandeau { background: var(--navy); width: 100%; }
+.fit-bandeau-inner { display: flex; align-items: center; gap: 48px; padding: 40px 0; flex-wrap: wrap; }
+.fit-bandeau-titre { font-size: clamp(22px, 2.8vw, 32px); font-weight: 700; color: var(--white); white-space: nowrap; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.15); padding-right: 48px; }
+.fit-bandeau-titre span { color: var(--cyan); }
+.fit-bandeau-items { display: flex; gap: 40px; flex: 1; flex-wrap: wrap; }
+.fit-bandeau-item { display: flex; align-items: center; gap: 16px; flex: 1; }
+.fit-bandeau-letter { font-size: 40px; font-weight: 700; color: var(--cyan); line-height: 1; flex-shrink: 0; }
+.fit-bandeau-name { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+.fit-bandeau-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
 
 /* ── ÉQUIPE — fond blanc ── */
 .equipe-section { background: var(--white); }
@@ -369,6 +368,7 @@
   .diff-bandeau-grid { grid-template-columns: repeat(3, 1fr); }
   .equipe-grid { grid-template-columns: repeat(2, 1fr); }
   .video-inner { grid-template-columns: 1fr; }
+  .temos-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
   /* ── HERO (mobile) ── */
@@ -417,17 +417,14 @@
   /* ── TERRAIN ── */
   .terrain-section { height: 260px; }
 
-  /* ── TÉMOIGNAGES ── */
+  /* ── TÉMOIGNAGES + FIT ── */
+  .temofit-section .container { padding-top: 48px; padding-bottom: 40px; }
   .temos-grid { grid-template-columns: 1fr; }
-  .temo-card { padding: 28px 22px; }
-
-  /* ── VALEURS FIT (2 colonnes) ── */
-  .fit-section { padding: 48px 20px; }
-  .fit-header { margin-bottom: 28px; }
-  .fit-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .fit-card { padding: 24px 16px; }
-  .fit-letter { font-size: 46px; }
-  .fit-card h3 { font-size: 17px; }
+  .temo-card { padding: 20px 20px; }
+  .fit-bandeau-inner { gap: 24px; padding: 32px 0; flex-direction: column; align-items: flex-start; }
+  .fit-bandeau-titre { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-right: 0; padding-bottom: 20px; width: 100%; }
+  .fit-bandeau-items { flex-direction: column; gap: 20px; width: 100%; }
+  .fit-bandeau-item { flex: 0 0 auto; }
 
   /* ── ÉQUIPE (grille 2×2) ── */
   .equipe-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -627,44 +624,42 @@
   </div>
 </section>
 
-<!-- TÉMOIGNAGES -->
-<section class="temoignages-section" id="temoignages">
+<!-- TÉMOIGNAGES + FIT -->
+<section class="temofit-section" id="temoignages">
   <div class="container">
     <div class="section-label reveal">Ils nous ont fait confiance</div>
     <h2 class="section-title reveal">Ce que disent nos clients</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-quote">"Avec le seul diagnostic, il y a un avant et un après."</div>
-        <div class="testimonial-author">Directeur Général — PME industrielle</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-quote">"Un accompagnement bienveillant et une exécution terrain efficace, unanimement salués. Par ces quelques mots, merci."</div>
-        <div class="testimonial-author">Directeur Général — ETI agro-alimentaire</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-quote">"En quelques mois à nos côtés leurs interventions nous ont fait grandir et passer à une nouvelle étape."</div>
-        <div class="testimonial-author">Président — Coopérative mobilités</div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-quote">"Cet accompagnement a sécurisé la décision, y compris lorsqu'elle a conduit à un non investissement, en apportant méthode, lucidité et sérénité."</div>
-        <div class="testimonial-author">Investisseur</div>
+    <div class="temos-grid" id="temos-grid"></div>
+  </div>
+  <div class="fit-bandeau">
+    <div class="container">
+      <div class="fit-bandeau-inner">
+        <div class="fit-bandeau-titre">We <span>FIT</span> You</div>
+        <div class="fit-bandeau-items">
+          <div class="fit-bandeau-item">
+            <div class="fit-bandeau-letter">F</div>
+            <div>
+              <div class="fit-bandeau-name">Fiabilité</div>
+              <div class="fit-bandeau-desc">Le partenaire sur lequel vous pouvez compter.</div>
+            </div>
+          </div>
+          <div class="fit-bandeau-item">
+            <div class="fit-bandeau-letter">I</div>
+            <div>
+              <div class="fit-bandeau-name">Impact</div>
+              <div class="fit-bandeau-desc">Moins de slides, plus d'exécution terrain.</div>
+            </div>
+          </div>
+          <div class="fit-bandeau-item">
+            <div class="fit-bandeau-letter">T</div>
+            <div>
+              <div class="fit-bandeau-name">Transmission</div>
+              <div class="fit-bandeau-desc">Vers une autonomie durable de vos équipes.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- VALEURS FIT — fond bleu foncé -->
-<section class="fit-section">
-  <div class="container">
-  <div class="fit-header reveal">
-    <div class="section-label section-label-white" style="text-align:center">Nos valeurs</div>
-    <h2 class="fit-title">We <span>FIT</span> You !</h2>
-  </div>
-  <div class="fit-grid">
-    <div class="fit-card reveal"><div class="fit-letter">F</div><h3>Fiabilité</h3><p>Être le partenaire de confiance, expérimenté et structuré, sur lequel dirigeants et investisseurs peuvent compter en toutes circonstances.</p></div>
-    <div class="fit-card reveal"><div class="fit-letter">I</div><h3>Impact</h3><p>Rechercher le concret, la performance mesurable et la création de valeur durable. Moins de slides, plus d'exécution terrain.</p></div>
-    <div class="fit-card reveal"><div class="fit-letter">T</div><h3>Transmission</h3><p>Partager l'expertise, renforcer l'autonomie des équipes et pérenniser les transformations. Éviter la dépendance à un prestataire.</p></div>
-  </div>
   </div>
 </section>
 
@@ -749,6 +744,13 @@ document.getElementById('diff-bandeau-grid').innerHTML = OP360.differenciateurs.
   <div class="diff-bandeau-item">
     <div class="diff-bandeau-icon">${d.icone}</div>
     <div class="diff-bandeau-titre">${d.titre}</div>
+  </div>`).join('');
+
+document.getElementById('temos-grid').innerHTML = OP360.temoignages.map(t => `
+  <div class="temo-card reveal">
+    <p class="temo-quote">${t.quote}</p>
+    <div class="temo-bar"></div>
+    <div class="temo-author">${t.auteur}${t.entreprise ? ` — ${t.entreprise}` : ''}</div>
   </div>`).join('');
 
 document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
