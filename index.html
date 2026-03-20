@@ -275,28 +275,26 @@
 .cta-coords a:hover { color: var(--cyan); }
 .cta-coords span { color: rgba(255,255,255,0.3); font-size: 15px; }
 
-/* ── HERO 3 LIGNES ── */
+/* ── HERO 4 LIGNES ── */
 .hero-content {
   display: grid;
   grid-template-columns: 60fr 40fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   gap: 0 56px;
   align-items: start;
   max-width: 1100px;
   width: 100%;
 }
-/* Ligne 0 : eyebrow pleine largeur col 1 */
 .hero-eyebrow-wrap {
   grid-column: 1; grid-row: 1;
   padding-bottom: 16px;
 }
-/* Ligne 1 gauche : H1 + sous-titre */
 .hero-col-left-top {
   grid-column: 1; grid-row: 2;
   display: flex; flex-direction: column; gap: 16px;
   padding-bottom: 24px;
+  text-align: left;
 }
-/* Lignes 1+2 droite : carte méthode s'étire */
 .hero-col-right {
   grid-column: 2; grid-row: 2 / 4;
   background: rgba(255,255,255,0.05);
@@ -304,25 +302,21 @@
   border-radius: 16px;
   padding: 28px 24px;
   display: flex; flex-direction: column; gap: 18px;
-  align-self: stretch;
+  align-self: start;
 }
-/* Ligne 2 gauche : CTAs */
 .hero-col-left-bottom {
   grid-column: 1; grid-row: 3;
   display: flex; align-items: center;
 }
-/* Témoignage dans la carte droite */
-.hero-col-temo { display: none; }
-.hero-temo {
-  border-left: none;
-  padding-left: 0;
-  margin-top: auto;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+.hero-col-temo {
+  grid-column: 2; grid-row: 4;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,212,170,0.25);
+  margin-top: 8px;
 }
 .hero-temo-quote {
   font-size: 13px; font-style: italic;
-  color: rgba(255,255,255,0.65); line-height: 1.6;
+  color: rgba(255,255,255,0.7); line-height: 1.6;
 }
 .hero-temo-author {
   font-size: 11px; font-weight: 600;
@@ -377,7 +371,7 @@
     text-align: center;
   }
   .hero-eyebrow-wrap { grid-column: 1; grid-row: 1; }
-  .hero-col-left-top { grid-column: 1; grid-row: 2; padding-bottom: 0; }
+  .hero-col-left-top { grid-column: 1; grid-row: 2; text-align: center; padding-bottom: 0; }
   .hero-col-left-bottom { grid-column: 1; grid-row: 3; justify-content: center; }
   .hero-col-right { display: none; }
   .hero-col-temo { display: none; }
@@ -483,14 +477,14 @@
   <div class="hero-overlay"></div>
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <!-- LIGNE 0 : eyebrow seul -->
+    <!-- ROW 1 : eyebrow -->
     <div class="hero-eyebrow-wrap">
       <div class="hero-eyebrow">
         <span></span> Operating Partners 360
       </div>
     </div>
 
-    <!-- LIGNE 1 : H1 + sous-titre gauche / Carte droite -->
+    <!-- ROW 2 gauche : H1 + sous-titre -->
     <div class="hero-col-left-top">
       <h1>
         Vous portez la vision,<br>
@@ -502,6 +496,7 @@
       </p>
     </div>
 
+    <!-- ROW 2-3 droite : carte méthode SANS témoignage -->
     <div class="hero-col-right">
       <div class="hero-method-title">Un parcours d'exécution en 4 axes</div>
       <ul class="hero-method-axes">
@@ -534,18 +529,20 @@
           </div>
         </li>
       </ul>
-      <div class="hero-temo">
-        <div class="hero-temo-quote">« Avec le seul diagnostic, il y a un avant et un après. »</div>
-        <div class="hero-temo-author">— Directeur Général, PME Industrielle</div>
-      </div>
     </div>
 
-    <!-- LIGNE 2 : CTAs gauche -->
+    <!-- ROW 3 gauche : CTAs -->
     <div class="hero-col-left-bottom">
       <div class="hero-ctas">
         <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Planifier un échange</a>
         <a href="diagnostic.html" class="btn-secondary">Découvrir notre diagnostic →</a>
       </div>
+    </div>
+
+    <!-- ROW 4 droite : témoignage indépendant sous la carte -->
+    <div class="hero-col-temo">
+      <div class="hero-temo-quote">« Avec le seul diagnostic, il y a un avant et un après. »</div>
+      <div class="hero-temo-author">— Directeur Général, PME Industrielle</div>
     </div>
   </div>
 </section>
