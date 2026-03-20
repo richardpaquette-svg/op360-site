@@ -147,9 +147,7 @@
 .moment-icon-wrap { font-size: 36px; flex-shrink: 0; line-height: 1.2; background: rgba(0,212,170,0.06); border-radius: 999px; padding: 6px; }
 .moment-body { flex: 1; }
 .moment-card h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-.moment-valeur { font-size: 14px; font-weight: 600; color: var(--cyan); margin-bottom: 16px; line-height: 1.45; }
-.moment-cas { font-size: 14px; color: var(--white); line-height: 1.65; }
-.moment-cas strong { color: var(--white); font-weight: 600; }
+.moment-cas { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.65; margin: 0; }
 
 /* ── DIFF ── */
 .diff-section { background: var(--white); }
@@ -761,8 +759,7 @@ document.getElementById('moments-grid').innerHTML = OP360.moments.map(m => `
     <div class="moment-icon-wrap">${m.icone}</div>
     <div class="moment-body">
       <h3>${m.titre}</h3>
-      <p class="moment-valeur">${m.valeur}</p>
-      <p class="moment-cas"><strong>Cas :</strong> ${m.cas}</p>
+      <p class="moment-cas">${m.cas}</p>
     </div>
   </div>`).join('');
 
