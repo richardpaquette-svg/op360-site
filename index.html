@@ -120,10 +120,13 @@
 .diag-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
 .diag-card ul li { font-size: 14px; color: var(--gray-text); line-height: 1.55; display: flex; align-items: flex-start; gap: 8px; }
 .diag-card ul li::before { content: '→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; }
-.diag-bandeau { background: var(--navy); border-left: 4px solid var(--cyan); border-radius: 0 12px 12px 0; padding: 16px 28px; margin-bottom: 36px; text-align: center; min-height: 110px; }
-.diag-bandeau-main { font-size: clamp(14px, 1.6vw, 17px); font-weight: 700; color: var(--white); margin-bottom: 10px; line-height: 1.4; }
+.diag-bandeau { background: var(--navy); border-left: 4px solid var(--cyan); border-radius: 0 12px 12px 0; padding: 16px 28px; margin-bottom: 36px; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; min-height: 110px; }
+.diag-bandeau-nb { font-size: 36px; font-weight: 700; color: var(--white); line-height: 1; flex-shrink: 0; }
+.diag-bandeau-nb span { color: var(--cyan); }
+.diag-bandeau-body { flex: 1; }
+.diag-bandeau-main { font-size: clamp(16px, 1.8vw, 20px); font-weight: 700; color: var(--white); margin-bottom: 8px; line-height: 1.4; }
 .diag-bandeau-main em { color: var(--cyan); font-style: normal; }
-.diag-bandeau-quote { font-size: 13px; color: rgba(255,255,255,0.9); font-style: italic; line-height: 1.7; margin-top: 12px; }
+.diag-bandeau-quote { font-size: 14px; color: rgba(255,255,255,0.9); font-style: italic; line-height: 1.7; }
 .diag-cta { display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; }
 .diag-link { font-size: 14px; font-weight: 600; color: var(--navy); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s; }
 .diag-link:hover { color: var(--cyan); }
@@ -603,8 +606,11 @@
       </div>
     </div>
     <div class="diag-bandeau reveal">
-      <div class="diag-bandeau-main"><em>2 à 3 jours de terrain,</em> restitution complète en moins de 10 jours.</div>
-      <div class="diag-bandeau-quote">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</div>
+      <div class="diag-bandeau-nb">360<span>°</span></div>
+      <div class="diag-bandeau-body">
+        <div class="diag-bandeau-main"><em>2 à 3 jours de terrain,</em> restitution complète en moins de 10 jours.</div>
+        <div class="diag-bandeau-quote">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</div>
+      </div>
     </div>
     <div class="diag-cta">
       <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Parler d'un Diagnostic OP360</a>
