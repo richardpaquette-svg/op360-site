@@ -60,6 +60,7 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 .nav-cta:hover { background: var(--cyan-mid); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,212,170,0.25); }
 
 .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.nav-cta-mobile { display: none; }
 .nav-burger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
 /* ── BOUTONS ── */
@@ -192,6 +193,12 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .nav-links a { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .nav-burger { display: flex; }
   .nav-cta { display: none; }
+  .nav-links.open .nav-cta-mobile {
+    display: flex;
+    justify-content: center;
+    padding: 16px 24px 20px;
+    border-top: 1px solid rgba(0,212,170,0.15);
+  }
   section { padding: 56px 20px; }
   /* Typographie */
   .section-intro { font-size: 16px; margin-bottom: 32px; }

@@ -28,7 +28,11 @@ function buildNav(activePage) {
       <a href="index.html" class="nav-logo">
         ${LOGO_SVG}
       </a>
-      <div class="nav-links" id="nav-links">${links}</div>
+      <div class="nav-links" id="nav-links">${links}
+        <div class="nav-cta-mobile">
+          <a href="contact.html" class="btn-primary" style="font-size:14px;padding:13px 32px;">Prendre contact</a>
+        </div>
+      </div>
       <a href="diagnostic.html" class="nav-cta">Diagnostic OP360</a>
       <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
