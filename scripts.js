@@ -49,16 +49,15 @@ function toggleMenu() {
 function buildFooter() {
   document.getElementById('footer-placeholder').innerHTML = `
     <footer>
-      <div class="footer-inner">
-        <div class="footer-top">
+      <div class="footer-inner" style="padding: 32px 0;">
+        <div class="footer-top" style="grid-template-columns: 1.8fr 1.2fr 0.8fr 0.8fr 0.8fr;">
           <div class="footer-brand">
             <a href="index.html" class="footer-logo">
               ${LOGO_SVG_SM}
             </a>
             <p class="footer-brand-tagline">
               Vous portez la Vision, la Stratégie et le Risque.<br>
-              Nous accélérons et sécurisons l'Exécution.<br><br>
-              ${OP360.entreprise.adresse}
+              Nous accélérons et sécurisons l'Exécution.
             </p>
           </div>
           <div class="footer-col">
@@ -79,7 +78,9 @@ function buildFooter() {
               <li><a href="eti.html">Dirigeants d'ETI</a></li>
               <li><a href="investisseurs.html">Investisseurs & Fonds</a></li>
             </ul>
-            <h4 style="margin-top:24px">OP360</h4>
+          </div>
+          <div class="footer-col">
+            <h4>OP360</h4>
             <ul>
               <li><a href="equipe.html">Qui sommes-nous</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -96,7 +97,7 @@ function buildFooter() {
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© 2026 Operating Partners 360 — Tous droits réservés</span>
+          <span>© 2026 Operating Partners 360 — Tous droits réservés · ${OP360.entreprise.adresse}</span>
           <span>Valeurs <strong style="color:var(--cyan)">FIT</strong> — Fiabilité · Impact · Transmission</span>
           <span><a href="mentions.html">Mentions légales</a></span>
         </div>
