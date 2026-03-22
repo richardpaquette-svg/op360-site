@@ -50,7 +50,7 @@ function buildFooter() {
   document.getElementById('footer-placeholder').innerHTML = `
     <footer>
       <div class="footer-inner" style="padding: 32px 0;">
-        <div class="footer-top" style="grid-template-columns: 1.8fr 1.2fr 0.8fr 0.8fr 0.8fr;">
+        <div class="footer-top" style="grid-template-columns: 1.4fr 1fr 1fr 0.8fr 0.8fr 0.8fr;">
           <div class="footer-brand">
             <a href="index.html" class="footer-logo">
               ${LOGO_SVG_SM}
@@ -66,6 +66,10 @@ function buildFooter() {
               <li><a href="diagnostic.html">Diagnostic Flash</a></li>
               <li><a href="shadow-codir.html">Shadow Codir</a></li>
               <li><a href="accompagnement.html">Accompagnement Terrain</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <ul style="margin-top: 38px;">
               <li><a href="due-diligence.html">Due Diligence Opérationnelle</a></li>
               <li><a href="formations.html">Formations &amp; Workshops</a></li>
               <li><a href="saas.html">Plateforme SaaS</a></li>
