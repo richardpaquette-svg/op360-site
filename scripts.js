@@ -50,7 +50,7 @@ function buildFooter() {
   document.getElementById('footer-placeholder').innerHTML = `
     <footer>
       <div class="footer-inner" style="padding: 32px 0;">
-        <div class="footer-top" style="grid-template-columns: 1.4fr 1fr 1fr 0.8fr 0.8fr 0.8fr;">
+        <div class="footer-top">
           <div class="footer-brand">
             <a href="index.html" class="footer-logo">
               ${LOGO_SVG_SM}
