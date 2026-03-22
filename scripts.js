@@ -104,6 +104,18 @@ function buildFooter() {
             </ul>
           </div>
         </div>
+        <div class="footer-mobile">
+          <div class="footer-mobile-title">Navigation</div>
+          <div class="footer-mobile-links">
+            <a href="index.html">Accueil</a>
+            <a href="pourqui.html">Pour qui</a>
+            <a href="offres.html">Offres</a>
+            <a href="diagnostic.html">Diagnostic</a>
+            <a href="equipe.html">Équipe</a>
+            <a href="contact.html">Contact</a>
+            <a href="mentions.html">Mentions légales</a>
+          </div>
+        </div>
         <div class="footer-bottom">
           <span>© 2026 Operating Partners 360 — Tous droits réservés · ${OP360.entreprise.adresse}</span>
           <span>Valeurs <strong style="color:var(--cyan)">FIT</strong> — Fiabilité · Impact · Transmission</span>
