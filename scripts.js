@@ -71,7 +71,7 @@ function buildFooter() {
           <div class="footer-col">
             <ul style="margin-top: 38px;">
               <li><a href="due-diligence.html">Due Diligence Opérationnelle</a></li>
-              <li><a href="formations.html">Formations &amp; Workshops</a></li>
+              <li><a href="formations.html">Formations</a></li>
               <li><a href="saas.html">Plateforme SaaS</a></li>
             </ul>
           </div>
