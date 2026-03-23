@@ -418,6 +418,11 @@
     background: transparent;
   }
   .diag-card:last-child { border-bottom: none; }
+  .diag-cta-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
   .diag-card::before {
     content: counter(diag-step);
     counter-increment: diag-step;
@@ -697,7 +702,7 @@
       </div>
     </div>
     <div class="diag-cta">
-      <a href="diagnostic.html" class="btn-primary" style="width:100%;text-align:center;justify-content:center;">En savoir plus →</a>
+      <a href="diagnostic.html" class="btn-primary diag-cta-btn">En savoir plus →</a>
     </div>
   </div>
 </section>
