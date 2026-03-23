@@ -518,16 +518,48 @@
     padding: 16px 18px;
     gap: 14px;
     min-height: unset;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 4px solid var(--cyan);
+    border-radius: 0 8px 8px 0;
   }
   .fit-bandeau-titre {
     font-size: 18px;
-    padding-bottom: 10px;
+    font-weight: 700;
+    border-right: none;
+    border-bottom: none;
+    padding: 0;
+    width: auto;
+    white-space: normal;
   }
-  .fit-bandeau-items { gap: 12px; }
-  .fit-bandeau-item { gap: 10px; }
-  .fit-bandeau-letter { font-size: 24px; }
-  .fit-bandeau-name { font-size: 13px; margin-bottom: 2px; }
-  .fit-bandeau-desc { font-size: 12px; }
+  .fit-bandeau-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: 100%;
+  }
+  .fit-bandeau-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+    padding: 0 6px;
+    border-right: 1px solid rgba(255,255,255,0.12);
+  }
+  .fit-bandeau-item:last-child { border-right: none; }
+  .fit-bandeau-letter {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cyan);
+    line-height: 1;
+  }
+  .fit-bandeau-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .fit-bandeau-desc { display: none; }
 
   /* ── ÉQUIPE (grille 2×2) ── */
   .equipe-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
