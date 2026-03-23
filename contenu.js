@@ -129,10 +129,10 @@ const OP360 = {
 
   // ── ÉQUIPE ────────────────────────────────────────
   equipe: [
-    { prenom:"Annie", nom:"Belquin", titre:"Présidente", photo:"annie", expertise:"Vision stratégique & gouvernance" },
-    { prenom:"Richard", nom:"Paquette", titre:"Directeur Général", photo:"richard", expertise:"Exécution opérationnelle & développement" },
-    { prenom:"Suzanne", nom:"Grimal", titre:"Directrice de la Valeur", photo:"suzanne", expertise:"Création de valeur & transformation" },
-    { prenom:"Christophe", nom:"Raix", titre:"Directeur de l'Innovation", photo:"christophe", expertise:"Innovation & outils numériques" },
+    { prenom:"Annie",      nom:"Belquin",  titre:"Présidente",                photo:"annie",      expertise:"Vision stratégique & gouvernance" },
+    { prenom:"Suzanne",    nom:"Grimal",   titre:"Directrice de la Valeur",   photo:"suzanne",    expertise:"Création de valeur & transformation" },
+    { prenom:"Christophe", nom:"Raix",     titre:"Directeur de l'Innovation", photo:"christophe", expertise:"Innovation & outils numériques" },
+    { prenom:"Richard",    nom:"Paquette", titre:"Directeur Général",         photo:"richard",    expertise:"Exécution opérationnelle & développement" },
   ],
 
   // ── PAGE DIAGNOSTIC FLASH ─────────────────────────
