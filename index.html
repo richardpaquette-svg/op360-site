@@ -486,8 +486,32 @@
   /* ── TÉMOIGNAGES + FIT ── */
   .temofit-section { padding-bottom: 0; }
   .temofit-section .container { padding-top: 0; padding-bottom: 24px; }
-  .temos-grid { grid-template-columns: 1fr; }
-  .temo-card { padding: 20px 20px; }
+  /* ── TÉMOIGNAGES → carrousel ── */
+  .temos-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+  }
+  .temos-grid::-webkit-scrollbar { display: none; }
+  .temo-card {
+    flex: 0 0 85vw;
+    max-width: 320px;
+    scroll-snap-align: start;
+    padding: 20px 18px;
+  }
+  .temo-quote {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .temo-author { font-size: 11px; }
   /* ── FIT BANDEAU mobile ── */
   .fit-bandeau-wrap { padding: 0 20px 20px; }
   .fit-bandeau-inner {
