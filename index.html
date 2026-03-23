@@ -399,8 +399,52 @@
 
   /* ── DIAGNOSTIC ── */
   .diag-section { padding: 48px 20px; }
-  .diag-grid { grid-template-columns: 1fr; }
-  .diag-card { padding: 24px 20px; }
+  .diag-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 24px;
+    counter-reset: diag-step;
+  }
+  .diag-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--gray-border);
+    box-shadow: none;
+    background: transparent;
+  }
+  .diag-card:last-child { border-bottom: none; }
+  .diag-cta-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .diag-card::before {
+    content: counter(diag-step);
+    counter-increment: diag-step;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cyan);
+    flex-shrink: 0;
+    min-width: 24px;
+    line-height: 1.4;
+  }
+  .diag-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .diag-card p {
+    display: block;
+    font-size: 13px;
+    color: var(--gray-text);
+    line-height: 1.5;
+  }
   /* ── DIAG BANDEAU mobile ── */
   .diag-bandeau {
     padding: 14px 16px;
@@ -484,7 +528,7 @@
   .video-differenciateur { display: none; }
   .stat-choc-text p { display: none; }
   .moments-section .section-intro { display: none; }
-  .diag-card p { display: none; }
+
   .diff-bandeau { display: none; }
   .equipe-expertise { display: none; }
   .cta-final .contact-card p { display: none; }
@@ -658,8 +702,7 @@
       </div>
     </div>
     <div class="diag-cta">
-      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Parler d'un Diagnostic OP360</a>
-      <a href="diagnostic.html" class="diag-link">En savoir plus →</a>
+      <a href="diagnostic.html" class="btn-primary diag-cta-btn">En savoir plus →</a>
     </div>
   </div>
 </section>
