@@ -402,20 +402,22 @@
   .diag-grid {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 10px;
     margin-bottom: 24px;
     counter-reset: diag-step;
   }
   .diag-card {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 14px;
-    padding: 14px 0;
+    padding: 14px 16px;
+    background: var(--white);
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 8px 8px 0;
     border-top: none;
-    border-radius: 0;
-    border-bottom: 1px solid var(--gray-border);
-    box-shadow: none;
-    background: transparent;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: 0 1px 4px rgba(15,23,42,0.07);
   }
   .diag-card:last-child { border-bottom: none; }
   .diag-cta-btn {
@@ -426,24 +428,27 @@
   .diag-card::before {
     content: counter(diag-step);
     counter-increment: diag-step;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--cyan);
     flex-shrink: 0;
     min-width: 24px;
-    line-height: 1.4;
+    line-height: 1;
   }
   .diag-card h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--navy);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
   .diag-card p {
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     color: var(--gray-text);
-    line-height: 1.5;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   /* ── DIAG BANDEAU mobile ── */
   .diag-bandeau {
@@ -683,15 +688,15 @@
     <div class="diag-grid">
       <div class="diag-card reveal">
         <h3>Quand l'exécution devient le sujet</h3>
-        <p>Croissance, transition, retournement : vous devez décider vite, avec une vision claire des risques et des leviers de valeur, sans lancer un audit lourd.</p>
+        <p>Croissance, transition, retournement</p>
       </div>
       <div class="diag-card reveal">
         <h3>Une méthode orientée action</h3>
-        <p>Cadrage de vos enjeux de dirigeant, visites et entretiens sur le terrain, lecture systémique, scoring et priorisation des leviers de valeur.</p>
+        <p>Terrain, scoring, priorisation</p>
       </div>
       <div class="diag-card reveal">
         <h3>Ce que vous recevez</h3>
-        <p>Diagnostic détaillé sur 12 domaines clés, executive pack et rapport d'analyse, parcours d'exécution et plan d'action priorisé.</p>
+        <p>12 domaines · executive pack · plan d'action</p>
       </div>
     </div>
     <div class="diag-bandeau reveal">
