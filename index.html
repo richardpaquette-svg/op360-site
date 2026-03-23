@@ -384,16 +384,35 @@
   .video-bullets { gap: 16px; margin-bottom: 0; }
   .video-bullets li { font-size: 14px; }
 
-  /* ── STAT CHOC ── */
+  /* ── STAT CHOC mobile ── */
   .stat-choc-wrap { padding: 0 20px; }
-  .stat-choc { padding: 24px 20px; flex-direction: column; text-align: center; gap: 16px; }
-  .stat-choc-nb { font-size: 48px; }
+  .stat-choc {
+    padding: 16px 18px;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    min-height: unset;
+    flex-wrap: nowrap;
+  }
+  .stat-choc-nb { font-size: 28px; flex-shrink: 0; }
+  .stat-choc-text h3 { font-size: 14px; margin-bottom: 0; }
 
   /* ── DIAGNOSTIC ── */
   .diag-section { padding: 48px 20px; }
   .diag-grid { grid-template-columns: 1fr; }
   .diag-card { padding: 24px 20px; }
-  .diag-bandeau { padding: 20px 16px; }
+  /* ── DIAG BANDEAU mobile ── */
+  .diag-bandeau {
+    padding: 14px 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    min-height: unset;
+    flex-wrap: nowrap;
+  }
+  .diag-bandeau-nb { font-size: 24px; flex-shrink: 0; }
+  .diag-bandeau-main { font-size: 14px; margin-bottom: 0; }
+  .diag-bandeau-quote { display: none; }
   .diag-summary { flex-direction: column; gap: 8px; }
   .diag-summary-arrow { display: none; }
   .diag-summary-item { flex-direction: row; text-align: left; gap: 14px; padding: 14px 16px; align-items: center; }
@@ -420,19 +439,34 @@
   .temofit-section .container { padding-top: 0; padding-bottom: 24px; }
   .temos-grid { grid-template-columns: 1fr; }
   .temo-card { padding: 20px 20px; }
-  /* ── FIT BANDEAU ── */
-  .fit-bandeau-wrap { background: var(--white); padding: 0 20px 24px; }
-  .fit-bandeau-inner { padding: 28px 24px; flex-direction: column; align-items: flex-start; gap: 24px; border-radius: 0 8px 8px 0; }
-  .fit-bandeau-titre { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-right: 0; padding-bottom: 16px; width: 100%; white-space: normal; }
-  .fit-bandeau-items { flex-direction: column; gap: 20px; width: 100%; }
-  .fit-bandeau-item { flex: 0 0 auto; }
+  /* ── FIT BANDEAU mobile ── */
+  .fit-bandeau-wrap { padding: 0 20px 20px; }
+  .fit-bandeau-inner {
+    padding: 16px 18px;
+    gap: 14px;
+    min-height: unset;
+  }
+  .fit-bandeau-titre {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .fit-bandeau-items { gap: 12px; }
+  .fit-bandeau-item { gap: 10px; }
+  .fit-bandeau-letter { font-size: 24px; }
+  .fit-bandeau-name { font-size: 13px; margin-bottom: 2px; }
+  .fit-bandeau-desc { font-size: 12px; }
 
   /* ── ÉQUIPE (grille 2×2) ── */
   .equipe-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .equipe-card { padding: 20px 14px; }
   .equipe-photo { width: 72px; height: 72px; }
   .equipe-phrase { padding: 24px 18px; }
-  .equipe-citation { flex-direction: column; align-items: center; gap: 16px; }
+  /* ── ÉQUIPE CITATION mobile ── */
+  .equipe-citation {
+    padding: 16px 18px;
+    gap: 12px;
+    min-height: unset;
+  }
   .equipe-citation > div:first-child { display: none; }
   .btn-equipe { color: var(--cyan); border-color: var(--cyan); width: 100%; text-align: center; justify-content: center; }
 
