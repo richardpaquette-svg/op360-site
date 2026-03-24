@@ -225,7 +225,7 @@
 .equipe-phrase { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 12px; padding: 36px 48px; text-align: center; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
 .equipe-phrase p { font-size: 18px; font-weight: 300; color: var(--navy); line-height: 1.65; max-width: 760px; margin: 0 auto; font-style: italic; }
 .equipe-phrase p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
-.equipe-citation { background: var(--navy); border-left: 4px solid var(--cyan); border-radius: 0 12px 12px 0; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 110px; } .equipe-citation p { font-size: 17px; font-weight: 300; color: var(--white); line-height: 1.7; font-style: italic; max-width: 560px; } .equipe-citation p strong { color: var(--white); font-weight: 700; font-style: normal; } .btn-equipe { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--cyan); font-size: 15px; font-weight: 700; border: 1.5px solid var(--cyan); border-radius: 6px; padding: 14px 28px; text-decoration: none; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; } .btn-equipe:hover { background: rgba(0,212,170,0.1); border-color: var(--cyan); }
+.btn-equipe { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--cyan); font-size: 15px; font-weight: 700; border: 1.5px solid var(--cyan); border-radius: 6px; padding: 14px 28px; text-decoration: none; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; } .btn-equipe:hover { background: rgba(0,212,170,0.1); border-color: var(--cyan); }
 
 /* ── LINKEDIN ── */
 .linkedin-section { background: var(--gray-bg); padding: 80px 48px; }
@@ -590,14 +590,6 @@
   .equipe-titre { font-size: 11px; margin-bottom: 0; }
   .equipe-expertise { display: none; }
   .equipe-phrase { display: none; }
-  .equipe-citation {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 14px 16px;
-    gap: 12px;
-    min-height: unset;
-  }
-  .equipe-citation > div:first-child { display: none; }
   .btn-equipe {
     width: 100%;
     text-align: center;
@@ -858,12 +850,7 @@
     <h2 class="section-title reveal">Des dirigeants à vos côtés</h2>
     <p class="section-intro section-subtitle reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
     <div class="equipe-grid" id="equipe-grid"></div>
-    <div class="equipe-citation reveal">
-      <div>
-        <p>Nous sommes un groupe de pairs et de partenaires qui ont déjà traversé vos défis.<br><strong>Nous sommes au service de vos équipes.</strong></p>
-      </div>
-      <a href="equipe.html" class="btn-equipe">Découvrir l'équipe →</a>
-    </div>
+    <a href="equipe.html" class="btn-equipe reveal">Découvrir l'équipe →</a>
   </div>
 </section>
 
