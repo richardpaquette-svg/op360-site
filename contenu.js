@@ -47,7 +47,7 @@ const OP360 = {
     hero_titre1:  "Vous portez la Vision,",
     hero_titre2:  "la Stratégie et le Risque.",
     hero_accent:  "Nous accélérons et sécurisons l'Exécution.",
-    hero_sous_titre: "Dirigeants de PME, ETI, investisseurs… OP360, des pairs à vos côtés, pour transformer vos ambitions en résultats opérationnels, accroître la valeur et sécuriser vos décisions.",
+    hero_sous_titre: "Dirigeants de PME, ETI et investisseurs : des pairs-partenaires qui ont vécu les mêmes défis que vous — engagés à vos côtés pour transformer vos ambitions en résultats.",
   },
 
   // ── 3 MOMENTS CLÉS ───────────────────────────────
