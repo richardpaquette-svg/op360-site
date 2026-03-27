@@ -113,7 +113,6 @@ function buildFooter() {
             <a href="diagnostic.html">Diagnostic</a>
             <a href="equipe.html">Équipe</a>
             <a href="contact.html">Contact</a>
-            <a href="mentions.html">Mentions légales</a>
           </div>
         </div>
         <div class="footer-bottom">
