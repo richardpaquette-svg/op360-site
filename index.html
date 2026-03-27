@@ -225,6 +225,7 @@
 .equipe-phrase { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 12px; padding: 36px 48px; text-align: center; box-shadow: 0 1px 3px rgba(15,23,42,0.06); }
 .equipe-phrase p { font-size: 18px; font-weight: 300; color: var(--navy); line-height: 1.65; max-width: 760px; margin: 0 auto; font-style: italic; }
 .equipe-phrase p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
+.equipe-btn-wrap { background: var(--card-bg); border: 1px solid #e2e8f0; border-radius: 14px; padding: 32px 24px; text-align: center; box-shadow: 0 1px 3px rgba(15,23,42,0.06); margin-top: 24px; }
 .btn-equipe { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--cyan); font-size: 15px; font-weight: 700; border: 1.5px solid var(--cyan); border-radius: 6px; padding: 14px 28px; text-decoration: none; transition: all 0.2s; white-space: nowrap; flex-shrink: 0; } .btn-equipe:hover { background: rgba(0,212,170,0.1); border-color: var(--cyan); }
 
 /* ── LINKEDIN ── */
@@ -842,7 +843,9 @@
     <h2 class="section-title reveal">Des dirigeants à vos côtés</h2>
     <p class="section-intro section-subtitle reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
     <div class="equipe-grid" id="equipe-grid"></div>
-    <a href="equipe.html" class="btn-equipe reveal">Découvrir l'équipe →</a>
+    <div class="equipe-btn-wrap">
+      <a href="equipe.html" class="btn-equipe reveal">Découvrir l'équipe →</a>
+    </div>
   </div>
 </section>
 
