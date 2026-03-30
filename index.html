@@ -236,7 +236,10 @@
 .cta-inner h2 { font-size: clamp(30px, 4.5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
 .cta-inner h2 span { color: var(--cyan); }
 .cta-inner p { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 600px; margin: 0 auto 48px; line-height: 1.65; }
-.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+.cta-btns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 720px; margin: 0 auto 56px; }
+.cta-btn-block { display: flex; flex-direction: column; align-items: center; gap: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 28px 24px; }
+.cta-btn-label { font-size: 11px; font-weight: 700; color: var(--cyan); letter-spacing: 0.1em; text-transform: uppercase; }
+.cta-btn-desc { font-size: 13px; color: rgba(255,255,255,0.55); text-align: center; line-height: 1.6; margin: 0; }
 .cta-contacts { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
 .cta-contact { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.6); font-size: 15px; transition: color 0.2s; }
 .cta-contact:hover { color: var(--cyan); }
@@ -591,6 +594,7 @@
   /* ── CTA FINAL ── */
   .cta-final { padding: 56px 20px 40px; }
   .cta-coords { flex-direction: column; align-items: center; }
+  .cta-btns-grid { grid-template-columns: 1fr; }
 
   /* ── OPTIMISATION MOBILE : masquage éléments secondaires ── */
   .video-bullets { display: none; }
@@ -849,9 +853,17 @@
       <div class="section-label section-label-white" style="text-align:center;margin-bottom:16px">Passons à l'action</div>
       <h2>Parlons de <span>vos enjeux</span></h2>
       <p style="color:#ffffff">Chaque contexte est spécifique. En 30 minutes, nous pouvons faire le point sur vos enjeux, vos priorités et voir si OP360 a du sens pour vous.</p>
-      <div class="cta-btns">
-        <a class="btn-primary" href="mailto:contact@operating360.com?subject=Contact%20OP360%20-%20Prise%20de%20contact&body=Bonjour%20OP360%2C%0A%0AJe%20souhaite%20%C3%A9changer%20%C3%A0%20propos%20de%20...">Nous contacter par email</a>
-        <a class="btn-navy" href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener">Prendre rendez-vous →</a>
+      <div class="cta-btns-grid">
+        <div class="cta-btn-block">
+          <div class="cta-btn-label">Vous préférez écrire</div>
+          <a class="btn-primary" href="mailto:contact@operating360.com?subject=Contact%20OP360%20-%20Prise%20de%20contact&body=Bonjour%20OP360%2C%0A%0AJe%20souhaite%20%C3%A9changer%20%C3%A0%20propos%20de%20...">Nous contacter par email</a>
+          <p class="cta-btn-desc">Réponse sous 24h — précisez votre contexte et vos enjeux.</p>
+        </div>
+        <div class="cta-btn-block">
+          <div class="cta-btn-label">Vous préférez échanger</div>
+          <a class="btn-navy" href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener">Prendre rendez-vous →</a>
+          <p class="cta-btn-desc">30 minutes pour faire le point — sans engagement.</p>
+        </div>
       </div>
     </div>
   </div>
