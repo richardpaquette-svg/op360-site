@@ -23,12 +23,10 @@
 .hero-diag-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(26,35,50,0.92) 55%, rgba(26,35,50,0.5) 100%); }
 .hero-diag-inner {
   position: relative; z-index: 2;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  display: grid; grid-template-columns: 3fr 2fr; gap: 64px;
   align-items: center; width: 100%; max-width: 1120px; margin: 0 auto;
 }
 .hero-diag-content { position: relative; }
-.hero-diag-mockup { display: flex; align-items: center; justify-content: flex-end; }
-.hero-diag-mockup svg { width: 100%; max-width: 440px; height: auto; border-radius: 16px; filter: drop-shadow(0 20px 48px rgba(0,0,0,0.45)); }
 .hero-diag-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
@@ -42,39 +40,45 @@
 .pill { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 20px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
 .pill.pill-accent { border-color: rgba(0,212,170,0.4); color: var(--cyan); background: rgba(0,212,170,0.08); }
 
-/* ── 5 PHASES ── */
-.phases-section { background: var(--white); }
-.phases-flow { display: flex; align-items: flex-start; gap: 0; position: relative; }
-.phases-flow::before { content:''; position:absolute; top:36px; left:36px; right:36px; height:2px; background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.2)); }
-.phase-step { flex: 1; text-align: center; position: relative; padding: 0 16px; }
-.phase-circle {
-  width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 20px;
-  background: var(--navy); border: 3px solid var(--cyan);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px; font-weight: 700; color: var(--cyan);
-  position: relative; z-index: 1; transition: all 0.3s;
+/* ── PHASES CARD (hero colonne droite) ── */
+.hero-phases-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(0,212,170,0.35);
+  border-radius: 16px; padding: 24px; align-self: start;
 }
-.phase-step:hover .phase-circle { background: var(--cyan); color: var(--navy); transform: scale(1.08); }
-.phase-label { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-.phase-desc { font-size: 13px; color: var(--gray-text); line-height: 1.55; }
+.hero-phases-card-title {
+  font-size: 13px; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 18px;
+}
+.hero-phase-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-phase-item:last-of-type { border-bottom: none; }
+.hero-phase-num {
+  font-size: 14px; font-weight: 700; color: var(--cyan);
+  flex-shrink: 0; width: 20px; padding-top: 1px;
+}
+.hero-phase-content { flex: 1; }
+.hero-phase-name { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+.hero-phase-desc { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+.hero-phases-timing {
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(0,212,170,0.2);
+  font-size: 12px; color: rgba(255,255,255,0.5); text-align: center;
+}
 
-/* ── 12 DOMAINES ── */
-.domaines-section { background: var(--navy); }
-.domaines-intro { max-width: 640px; margin-bottom: 48px; }
-.domaines-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.domaine-card {
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(0,212,170,0.15);
-  border-radius: 10px; padding: 16px 14px; transition: all 0.2s; cursor: default;
-  display: flex; align-items: flex-start; gap: 10px;
+/* ── SECTION 2 : DOMAINES + LIVRABLES ── */
+.diag-content-section { background: var(--gray-bg); }
+.diag-subsection { margin-bottom: 64px; }
+.diag-subsection:last-child { margin-bottom: 0; }
+.domaine-pills-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.domaine-pill {
+  background: var(--white); border: 1.5px solid var(--gray-border);
+  border-radius: 8px; padding: 9px 18px;
+  font-size: 13px; font-weight: 600; color: var(--navy); line-height: 1.3;
 }
-.domaine-card:hover { border-color: rgba(0,212,170,0.5); background: rgba(0,212,170,0.06); transform: translateY(-2px); }
-.domaine-icon { font-size: 18px; flex-shrink: 0; padding-top: 2px; }
-.domaine-body { flex: 1; }
-.domaine-nb { font-size: 11px; font-weight: 700; color: rgba(0,212,170,0.5); letter-spacing: 0.08em; margin-bottom: 4px; }
-.domaine-card h4 { font-size: 13px; font-weight: 700; color: var(--white); line-height: 1.35; }
+.domaines-note { font-size: 14px; color: var(--gray-text); line-height: 1.65; max-width: 640px; }
 
 /* ── LIVRABLES ── */
-.livrables-section { background: var(--gray-bg); }
 .livrables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .livrable-body { flex: 1; }
 .livrable-card {
@@ -88,11 +92,6 @@
 .livrable-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .livrable-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
 
-/* ── TÉMOIGNAGE SOLO ── */
-.temo-solo { background: var(--cyan-light); padding: 80px 48px; text-align: center; }
-.temo-solo blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; color: var(--navy); font-style: italic; line-height: 1.5; max-width: 700px; margin: 0 auto 24px; }
-.temo-solo cite { font-size: 15px; font-weight: 700; color: var(--cyan); font-style: normal; letter-spacing: 0.06em; text-transform: uppercase; }
-
 /* ── CTA DIAG ── */
 .cta-diag { background: var(--navy); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
 .cta-diag::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,212,170,0.07) 0%, transparent 70%); }
@@ -104,17 +103,20 @@
 .cta-contact-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.6); font-size: 15px; transition: color 0.2s; }
 .cta-contact-item:hover { color: var(--cyan); }
 .cta-icon { width: 36px; height: 36px; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.cta-temo {
+  font-size: clamp(17px, 2.2vw, 22px); font-style: italic; color: var(--cyan);
+  max-width: 620px; margin: 0 auto 36px; line-height: 1.5;
+  position: relative; z-index: 1;
+}
+.cta-temo-cite {
+  display: block; margin-top: 8px;
+  font-size: 12px; font-style: normal; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.45);
+}
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .domaines-grid { grid-template-columns: repeat(3, 1fr); }
-  .livrables-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 1024px) {
   .hero-diag-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-diag-mockup { justify-content: center; }
-  .hero-diag-mockup svg { max-width: 360px; }
-  .domaines-grid { grid-template-columns: repeat(3, 1fr); }
   .livrables-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
@@ -128,7 +130,7 @@
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .hero-diag-mockup { display: none; }
+  .hero-phases-card { display: none; }
 
   .hero-diag h1 {
     font-size: clamp(28px, 8vw, 38px);
@@ -139,7 +141,6 @@
     padding: 5px 14px;
     margin-bottom: 20px;
   }
-  /* Sous-titre visible et court */
   .hero-diag-sub {
     display: block;
     font-size: 15px;
@@ -147,7 +148,6 @@
     margin-bottom: 20px;
     color: rgba(255,255,255,0.75);
   }
-  /* Pills : 2 par ligne max */
   .hero-diag-pills {
     gap: 8px;
     margin-bottom: 28px;
@@ -156,7 +156,6 @@
     font-size: 12px;
     padding: 7px 14px;
   }
-  /* CTAs : colonne pleine largeur */
   .hero-diag-inner > .hero-diag-content > div[style] {
     flex-direction: column;
     gap: 10px;
@@ -197,64 +196,14 @@
     line-height: 1.4;
   }
 
-  /* ── PHASES ── */
-  .phases-section .section-intro { display: none; }
-  .phases-flow { flex-direction: column; gap: 0; }
-  .phases-flow::before { display: none; }
-  .phase-step {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    text-align: left;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--gray-border);
-  }
-  .phase-step:last-child { border-bottom: none; }
-  .phase-circle {
-    width: 44px; height: 44px;
-    font-size: 17px;
-    flex-shrink: 0;
-    margin: 0;
-  }
-  .phase-label {
-    font-size: 15px;
-    margin-bottom: 4px;
-  }
-  .phase-desc {
-    display: block;
-    font-size: 13px;
-    color: var(--gray-text);
-    line-height: 1.5;
-  }
-
-  /* ── 12 DOMAINES ── */
-  .domaines-section .section-intro { display: none; }
-  .domaines-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 10px;
-    padding-bottom: 12px;
-    /* Scrollbar discrète */
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0,212,170,0.3) transparent;
-  }
-  .domaine-card {
-    flex: 0 0 72vw;
-    max-width: 280px;
-    scroll-snap-align: start;
-    padding: 16px 14px;
-  }
-  .domaine-card h4 { font-size: 14px; }
+  /* ── DOMAINES ── */
+  .domaine-pills-row { gap: 8px; }
+  .domaine-pill { font-size: 12px; padding: 7px 14px; }
+  .diag-subsection { margin-bottom: 48px; }
 
   /* ── LIVRABLES ── */
-  .livrables-section .section-intro { display: none; }
   .livrables-grid { grid-template-columns: 1fr; gap: 14px; }
-  .livrable-card {
-    padding: 20px 18px;
-  }
-  /* Descriptions visibles — c'est la valeur perçue */
+  .livrable-card { padding: 20px 18px; }
   .livrable-card p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -265,13 +214,8 @@
   }
   .livrable-card h3 { font-size: 16px; }
 
-  /* ── TÉMOIGNAGE ── */
-  .temo-solo { padding: 44px 20px; }
-  .temo-solo blockquote { font-size: 18px; }
-
   /* ── CTA FINAL ── */
   .cta-diag { padding: 52px 20px; }
-  /* Sous-texte visible */
   .cta-diag p {
     display: block;
     font-size: 15px;
@@ -293,9 +237,7 @@
     align-items: center;
     gap: 16px;
   }
-  .cta-contact-item {
-    font-size: 14px;
-  }
+  .cta-contact-item { font-size: 14px; }
 }
 </style>
 </head>
@@ -303,7 +245,7 @@
 
 <div id="nav-placeholder"></div>
 
-<!-- HERO -->
+<!-- SECTION 1 — HERO -->
 <section class="hero-diag">
   <div class="hero-diag-photo"></div>
   <div class="hero-diag-overlay"></div>
@@ -338,166 +280,79 @@
         </div>
       </div>
     </div>
-    <div class="hero-diag-mockup" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" fill="none" role="img">
-        <!-- Fond principal -->
-        <rect width="420" height="320" rx="16" fill="#1a2332"/>
-        <!-- En-tête -->
-        <rect width="420" height="52" rx="16" fill="#111b27"/>
-        <rect y="36" width="420" height="16" fill="#111b27"/>
-        <rect x="20" y="16" width="96" height="10" rx="4" fill="#00d4aa" opacity="0.9"/>
-        <rect x="130" y="16" width="52" height="10" rx="4" fill="rgba(255,255,255,0.22)"/>
-        <rect x="338" y="12" width="62" height="22" rx="11" fill="rgba(0,212,170,0.12)" stroke="#00d4aa" stroke-width="1"/>
-        <rect x="350" y="18" width="38" height="8" rx="3" fill="rgba(0,212,170,0.65)"/>
-        <!-- Séparateur -->
-        <line x1="20" y1="68" x2="400" y2="68" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <!-- Titre section -->
-        <rect x="20" y="78" width="130" height="9" rx="4" fill="rgba(255,255,255,0.7)"/>
-        <rect x="20" y="94" width="78" height="5" rx="2" fill="rgba(0,212,170,0.55)"/>
-        <!-- ── Radar chart ── -->
-        <polygon points="160,108 212,136 212,188 160,216 108,188 108,136" fill="none" stroke="rgba(0,212,170,0.1)" stroke-width="1"/>
-        <polygon points="160,120 200,144 200,180 160,204 120,180 120,144" fill="none" stroke="rgba(0,212,170,0.1)" stroke-width="1"/>
-        <polygon points="160,132 188,152 188,172 160,192 132,172 132,152" fill="none" stroke="rgba(0,212,170,0.1)" stroke-width="1"/>
-        <!-- Axes radiaux -->
-        <line x1="160" y1="108" x2="160" y2="162" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-        <line x1="212" y1="136" x2="160" y2="162" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-        <line x1="212" y1="188" x2="160" y2="162" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-        <line x1="160" y1="216" x2="160" y2="162" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-        <line x1="108" y1="188" x2="160" y2="162" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-        <line x1="108" y1="136" x2="160" y2="162" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-        <!-- Zone de données radar -->
-        <polygon points="160,114 208,142 205,184 160,210 118,182 112,140" fill="rgba(0,212,170,0.12)" stroke="#00d4aa" stroke-width="1.5"/>
-        <!-- Points de données -->
-        <circle cx="160" cy="114" r="3" fill="#00d4aa" opacity="0.85"/>
-        <circle cx="208" cy="142" r="3" fill="#00d4aa" opacity="0.85"/>
-        <circle cx="205" cy="184" r="3" fill="#00d4aa" opacity="0.85"/>
-        <circle cx="160" cy="210" r="3" fill="#00d4aa" opacity="0.85"/>
-        <circle cx="118" cy="182" r="3" fill="#00d4aa" opacity="0.85"/>
-        <circle cx="112" cy="140" r="3" fill="#00d4aa" opacity="0.85"/>
-        <circle cx="160" cy="162" r="3" fill="#00d4aa"/>
-        <!-- ── Panel scores ── -->
-        <rect x="238" y="72" width="162" height="150" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(0,212,170,0.1)" stroke-width="1"/>
-        <rect x="250" y="84" width="60" height="6" rx="3" fill="rgba(255,255,255,0.45)"/>
-        <!-- Barres de score -->
-        <rect x="250" y="100" width="130" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="250" y="100" width="104" height="5" rx="2" fill="rgba(0,212,170,0.7)"/>
-        <rect x="250" y="114" width="130" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="250" y="114" width="80" height="5" rx="2" fill="rgba(0,212,170,0.55)"/>
-        <rect x="250" y="128" width="130" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="250" y="128" width="118" height="5" rx="2" fill="rgba(0,212,170,0.85)"/>
-        <rect x="250" y="142" width="130" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="250" y="142" width="60" height="5" rx="2" fill="rgba(0,212,170,0.42)"/>
-        <rect x="250" y="156" width="130" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="250" y="156" width="90" height="5" rx="2" fill="rgba(0,212,170,0.62)"/>
-        <rect x="250" y="170" width="130" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="250" y="170" width="44" height="5" rx="2" fill="rgba(0,212,170,0.38)"/>
-        <rect x="250" y="184" width="130" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="250" y="184" width="96" height="5" rx="2" fill="rgba(0,212,170,0.66)"/>
-        <rect x="250" y="198" width="130" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
-        <rect x="250" y="198" width="70" height="5" rx="2" fill="rgba(0,212,170,0.5)"/>
-        <!-- ── Priorités bas ── -->
-        <line x1="20" y1="234" x2="400" y2="234" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <rect x="20" y="246" width="88" height="7" rx="3" fill="rgba(255,255,255,0.42)"/>
-        <!-- Ligne priorité 1 -->
-        <rect x="20" y="262" width="6" height="6" rx="1" fill="#00d4aa"/>
-        <rect x="32" y="263" width="108" height="4" rx="2" fill="rgba(255,255,255,0.32)"/>
-        <rect x="148" y="263" width="54" height="4" rx="2" fill="rgba(0,212,170,0.38)"/>
-        <!-- Ligne priorité 2 -->
-        <rect x="20" y="276" width="6" height="6" rx="1" fill="#00d4aa" opacity="0.65"/>
-        <rect x="32" y="277" width="84" height="4" rx="2" fill="rgba(255,255,255,0.22)"/>
-        <rect x="124" y="277" width="64" height="4" rx="2" fill="rgba(0,212,170,0.28)"/>
-        <!-- Ligne priorité 3 -->
-        <rect x="20" y="290" width="6" height="6" rx="1" fill="#00d4aa" opacity="0.45"/>
-        <rect x="32" y="291" width="118" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
-        <rect x="158" y="291" width="46" height="4" rx="2" fill="rgba(0,212,170,0.2)"/>
-        <!-- Bouton CTA mock -->
-        <rect x="272" y="258" width="128" height="36" rx="8" fill="#00d4aa" opacity="0.92"/>
-        <rect x="294" y="273" width="84" height="6" rx="3" fill="#1a2332" opacity="0.55"/>
-      </svg>
+    <div class="hero-phases-card">
+      <div class="hero-phases-card-title">Votre parcours en 5 phases</div>
+      <div class="hero-phase-item">
+        <div class="hero-phase-num">1</div>
+        <div class="hero-phase-content">
+          <div class="hero-phase-name">Diagnostic</div>
+          <div class="hero-phase-desc">Étude sur 12 domaines, entretiens, analyse documentaire</div>
+        </div>
+      </div>
+      <div class="hero-phase-item">
+        <div class="hero-phase-num">2</div>
+        <div class="hero-phase-content">
+          <div class="hero-phase-name">Analyse</div>
+          <div class="hero-phase-desc">Lecture systémique, visites terrain, avis croisés</div>
+        </div>
+      </div>
+      <div class="hero-phase-item">
+        <div class="hero-phase-num">3</div>
+        <div class="hero-phase-content">
+          <div class="hero-phase-name">Maturité</div>
+          <div class="hero-phase-desc">Scoring par domaine, identification des blocages</div>
+        </div>
+      </div>
+      <div class="hero-phase-item">
+        <div class="hero-phase-num">4</div>
+        <div class="hero-phase-content">
+          <div class="hero-phase-name">Plan d'action</div>
+          <div class="hero-phase-desc">Priorisation et actions immédiatement actionnables</div>
+        </div>
+      </div>
+      <div class="hero-phase-item">
+        <div class="hero-phase-num">5</div>
+        <div class="hero-phase-content">
+          <div class="hero-phase-name">Exécution</div>
+          <div class="hero-phase-desc">Accompagnement adapté avec suivi monitoring SaaS</div>
+        </div>
+      </div>
+      <div class="hero-phases-timing">⏱ Terrain : 1 à 3 jours · Restitution sous 10 jours</div>
     </div>
   </div>
 </section>
 
-<!-- 5 PHASES -->
-<section class="phases-section">
+<!-- SECTION 2 — DOMAINES & LIVRABLES -->
+<section class="diag-content-section">
   <div class="container">
-    <div class="section-label reveal">Méthodologie</div>
-    <h2 class="section-title reveal">Votre parcours en 5 phases</h2>
-    <p class="section-intro section-subtitle reveal">Un parcours structuré qui transforme l'analyse en action. Chaque phase génère des livrables concrets.</p>
-    <div class="phases-flow">
-      <div class="phase-step reveal">
-        <div class="phase-circle">1</div>
-        <div class="phase-label">Diagnostic</div>
-        <p class="phase-desc">Étude personnalisée sur 12 domaines, entretien dirigeant, analyse documentaire, benchmark</p>
+
+    <div class="diag-subsection">
+      <div class="section-label reveal">Notre méthodologie</div>
+      <h2 class="section-title reveal">Une analyse sur 12 domaines clés</h2>
+      <div class="domaine-pills-row reveal">
+        <span class="domaine-pill">Stratégie & Business Model</span>
+        <span class="domaine-pill">Gouvernance & Organisation</span>
+        <span class="domaine-pill">Finance & Pilotage</span>
+        <span class="domaine-pill">Performance Opérationnelle</span>
+        <span class="domaine-pill">Maturité Numérique</span>
+        <span class="domaine-pill">RH & Culture</span>
       </div>
-      <div class="phase-step reveal">
-        <div class="phase-circle">2</div>
-        <div class="phase-label">Analyse</div>
-        <p class="phase-desc">Lecture systémique, visite terrain, entretiens intervenants clés, avis croisés</p>
-      </div>
-      <div class="phase-step reveal">
-        <div class="phase-circle">3</div>
-        <div class="phase-label">Maturité</div>
-        <p class="phase-desc">Scoring par domaine, identification des blocages, matrice impact/priorité</p>
-      </div>
-      <div class="phase-step reveal">
-        <div class="phase-circle">4</div>
-        <div class="phase-label">Plan d'action</div>
-        <p class="phase-desc">Priorisation, actions clés actionnables immédiatement pour des résultats mesurables</p>
-      </div>
-      <div class="phase-step reveal">
-        <div class="phase-circle">5</div>
-        <div class="phase-label">Exécution</div>
-        <p class="phase-desc">Parcours adapté à votre dimension et vos ressources, avec suivi monitoring SaaS</p>
-      </div>
+      <p class="domaines-note reveal">Les domaines analysés sont ajustés en fonction du profil, du secteur et des enjeux spécifiques de votre entreprise.</p>
     </div>
-    <div style="margin-top:40px;text-align:center;color:var(--gray-text);font-size:14px;font-weight:600;">
-      ⏱ Durée terrain : 1 à 3 jours &nbsp;|&nbsp; Restitution : sous 10 jours
+
+    <div class="diag-subsection" id="livrables">
+      <div class="section-label reveal">Ce que vous recevez</div>
+      <h2 class="section-title reveal">5 livrables concrets et actionnables</h2>
+      <p class="section-intro section-subtitle reveal">Pas un rapport de plus. Un plan d'action opérationnel immédiatement utilisable.</p>
+      <div class="livrables-grid" id="livrables-grid"></div>
     </div>
+
   </div>
 </section>
 
-<!-- 12 DOMAINES -->
-<section class="domaines-section">
-  <div class="container">
-    <div class="section-label section-label-white reveal">Notre méthodologie</div>
-    <h2 class="section-title section-title-white reveal">12 domaines, 1 vision systémique</h2>
-    <p class="section-intro section-intro-white section-subtitle--inverse reveal">Chaque domaine est scoré, analysé et croisé avec vos enjeux stratégiques pour identifier les vrais leviers de création de valeur.</p>
-    <div class="domaines-grid">
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="domaine-body"><div class="domaine-nb">01</div><h4>Stratégie & Business Model</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><div class="domaine-body"><div class="domaine-nb">02</div><h4>Spécialisation et Positionnement</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="6" rx="1"/><rect x="2" y="16" width="7" height="6" rx="1"/><rect x="15" y="16" width="7" height="6" rx="1"/><line x1="12" y1="8" x2="12" y2="13"/><path d="M5.5 16v-3h13v3"/></svg></div><div class="domaine-body"><div class="domaine-nb">03</div><h4>Gouvernance, Organisation & Management</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="domaine-body"><div class="domaine-nb">04</div><h4>Ressources Humaines, Talents & Culture</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="domaine-body"><div class="domaine-nb">05</div><h4>Pilotage Économique, Finance & Reporting</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 1 18"/><polyline points="15 7 22 7 22 14"/></svg></div><div class="domaine-body"><div class="domaine-nb">06</div><h4>Marché, Clients, Partenariats & Export</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></div><div class="domaine-body"><div class="domaine-nb">07</div><h4>Performance Opérationnelle & Excellence Process</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg></div><div class="domaine-body"><div class="domaine-nb">08</div><h4>Cartographie des Processus & Exploitation opérationnelle</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="domaine-body"><div class="domaine-nb">09</div><h4>Maturité numérique</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div><div class="domaine-body"><div class="domaine-nb">10</div><h4>Innovation, R&D, Laboratoire & Propriété Intellectuelle</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="domaine-body"><div class="domaine-nb">11</div><h4>Environnement, Qualité, Sécurité & RSE</h4></div></div>
-      <div class="domaine-card reveal"><div class="domaine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><div class="domaine-body"><div class="domaine-nb">12</div><h4>Relations Groupe, Intégration & Reporting Post-Acquisition</h4></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- LIVRABLES -->
-<section class="livrables-section" id="livrables">
-  <div class="container">
-    <div class="section-label reveal">Ce que vous recevez</div>
-    <h2 class="section-title reveal">5 livrables concrets et actionnables</h2>
-    <p class="section-intro section-subtitle reveal">Pas un rapport de plus. Un plan d'action opérationnel immédiatement utilisable.</p>
-    <div class="livrables-grid" id="livrables-grid"></div>
-  </div>
-</section>
-
-<!-- TÉMOIGNAGE -->
-<div class="temo-solo">
-  <blockquote class="reveal">« Avec le seul diagnostic, il y a un avant et un après. »</blockquote>
-  <cite>Dirigeant PME Industrielle</cite>
-</div>
-
-<!-- CTA -->
+<!-- SECTION 3 — CTA FINAL -->
 <section class="cta-diag" id="contact-diag">
+  <p class="cta-temo">« Avec le seul diagnostic, il y a un avant et un après. »<span class="cta-temo-cite">Dirigeant PME Industrielle</span></p>
   <h2>Parlons de <span>vos enjeux</span></h2>
   <p>Un Diagnostic vous apportera la visibilité que vous attendez. Réponse sous 24h.</p>
   <div class="cta-diag-btns">
