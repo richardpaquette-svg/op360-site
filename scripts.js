@@ -13,10 +13,9 @@ function buildNav(activePage) {
     { href: "index.html", label: "Accueil" },
     { href: "equipe.html", label: "Qui sommes-nous" },
     { href: "offres.html", label: "Nos offres" },
-    { href: "pme.html", label: "Dirigeants de PME" },
-    { href: "eti.html", label: "Dirigeants d'ETI" },
-    { href: "investisseurs.html", label: "Investisseurs & fonds" },
-    { href: "contact.html", label: "Parlons de vos enjeux" },
+    { href: "notre-differenciation.html", label: "Notre différenciation" },
+    { href: "diagnostic.html", label: "Le diagnostic OP360" },
+    { href: "formations.html", label: "Nos formations" },
   ];
 
   const links = pages.map(p =>
@@ -33,7 +32,7 @@ function buildNav(activePage) {
           <a href="contact.html" class="btn-primary" style="font-size:14px;padding:13px 32px;">Prendre contact</a>
         </div>
       </div>
-      <a href="diagnostic.html" class="nav-cta">Diagnostic OP360</a>
+      <a href="#contact" class="nav-cta">Nous contacter</a>
       <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
