@@ -112,10 +112,7 @@
   white-space: nowrap;
   transition: all 0.2s;
 }
-.domaine-pill:hover {
-  background: rgba(0,212,170,0.08);
-  border-color: var(--cyan);
-}
+.domaine-pill:hover { background: rgba(0,212,170,0.08); border-color: var(--cyan); }
 .methode-domaines-note {
   font-size: 13px; color: var(--gray-text);
   font-style: italic; margin-top: 0;
@@ -143,6 +140,15 @@
 .cta-diag h2 span { color: var(--cyan); }
 .cta-diag p { font-size: 18px; font-weight: 300; color: var(--gray-text); max-width: 500px; margin: 0 auto 40px; line-height: 1.65; position: relative; z-index: 1; }
 .cta-diag-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+/* Surcharge btn-secondary pour fond clair — texte/bordure navy */
+.cta-diag .btn-secondary {
+  color: var(--navy);
+  border-color: rgba(26,35,50,0.35);
+}
+.cta-diag .btn-secondary:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
 .cta-contact-row { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; padding-top: 36px; border-top: 1px solid var(--gray-border); position: relative; z-index: 1; }
 .cta-contact-item { display: flex; align-items: center; gap: 10px; color: var(--gray-text); font-size: 15px; transition: color 0.2s; }
 .cta-contact-item:hover { color: var(--cyan); }
@@ -272,8 +278,6 @@
         <p class="phase-desc">Parcours adapté à votre dimension et vos ressources, avec suivi monitoring SaaS</p>
       </div>
     </div>
-
-    <!-- BLOC DOMAINES — encadré gris -->
     <div class="methode-domaines reveal">
       <div class="methode-domaines-header">
         <div class="methode-domaines-title">12 domaines évalués</div>
