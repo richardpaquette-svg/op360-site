@@ -56,78 +56,74 @@
   letter-spacing: 0.08em; text-transform: uppercase;
 }
 
-/* ── SECTION MÉTHODE (phases + domaines fusionnés) ── */
-.methode-section { background: var(--navy); }
-.methode-section .section-label-white { color: var(--cyan); }
-.methode-section .section-title-white { color: var(--white); }
+/* ── SECTION MÉTHODE — fond blanc ── */
+.methode-section { background: var(--white); }
 .methode-timing {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5);
+  font-size: 13px; font-weight: 600; color: var(--gray-text);
   margin-bottom: 48px; letter-spacing: 0.04em;
 }
 .methode-timing span { color: var(--cyan); }
 
-/* Timeline phases */
+/* Timeline phases sur fond blanc */
 .phases-flow { display: flex; align-items: flex-start; gap: 0; position: relative; }
-.phases-flow::before { content:''; position:absolute; top:36px; left:36px; right:36px; height:2px; background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.2)); }
+.phases-flow::before { content:''; position:absolute; top:36px; left:36px; right:36px; height:2px; background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.15)); }
 .phase-step { flex: 1; text-align: center; position: relative; padding: 0 16px; }
 .phase-circle {
   width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 20px;
-  background: var(--navy); border: 3px solid var(--cyan);
+  background: var(--white); border: 3px solid var(--cyan);
   display: flex; align-items: center; justify-content: center;
   font-size: 22px; font-weight: 700; color: var(--cyan);
   position: relative; z-index: 1; transition: all 0.3s;
+  box-shadow: 0 2px 12px rgba(0,212,170,0.12);
 }
-.phase-step:hover .phase-circle { background: var(--cyan); color: var(--navy); transform: scale(1.08); }
-.phase-label { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-.phase-desc { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.55; }
+.phase-step:hover .phase-circle { background: var(--cyan); color: var(--white); transform: scale(1.08); }
+.phase-label { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.phase-desc { font-size: 13px; color: var(--gray-text); line-height: 1.55; }
 
-/* Séparateur domaines */
+/* Domaines pills sur fond blanc */
 .methode-domaines { margin-top: 56px; }
 .methode-domaines-label {
-  font-size: 12px; font-weight: 700; color: rgba(0,212,170,0.6);
+  font-size: 12px; font-weight: 700; color: var(--cyan);
   letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px;
 }
-.domaines-pills {
-  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;
-}
+.domaines-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
 .domaine-pill {
-  background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.25);
+  background: rgba(0,100,90,0.05); border: 1px solid rgba(0,212,170,0.3);
   border-radius: 100px; padding: 8px 20px;
-  font-size: 14px; color: var(--white);
+  font-size: 14px; color: var(--navy); font-weight: 500;
   white-space: nowrap;
 }
 .methode-domaines-note {
-  font-size: 14px; color: rgba(255,255,255,0.45);
+  font-size: 14px; color: var(--gray-text);
   font-style: italic; margin-top: 4px; max-width: 600px;
 }
 
-/* ── LIVRABLES ── */
-.livrables-section { background: var(--gray-bg); }
+/* ── LIVRABLES — fond navy ── */
+.livrables-section { background: var(--navy); }
 .livrables-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .livrable-body { flex: 1; }
 .livrable-card {
-  background: var(--white); border: 1.5px solid var(--gray-border);
+  background: rgba(255,255,255,0.04); border: 1.5px solid rgba(0,212,170,0.15);
   border-radius: var(--radius); padding: 28px 24px; transition: all 0.25s;
   display: flex; align-items: flex-start; gap: 16px;
 }
-.livrable-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
-.livrable-card.featured { border-color: var(--cyan); background: linear-gradient(135deg, var(--white) 0%, var(--cyan-light) 100%); }
+.livrable-card:hover { border-color: var(--cyan); background: rgba(0,212,170,0.06); transform: translateY(-3px); }
+.livrable-card.featured { border-color: rgba(0,212,170,0.5); background: rgba(0,212,170,0.07); }
 .livrable-icon { font-size: 28px; flex-shrink: 0; line-height: 1.3; }
-.livrable-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-.livrable-card p { font-size: 14px; color: var(--gray-text); line-height: 1.65; }
+.livrable-card h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.livrable-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.65; }
 
-/* ── CTA DIAG ── */
-.cta-diag { background: var(--navy); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
-.cta-diag::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,212,170,0.07) 0%, transparent 70%); }
-.cta-diag h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: -0.02em; position: relative; z-index: 1; }
+/* ── CTA DIAG — fond gris clair ── */
+.cta-diag { background: var(--gray-bg); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
+.cta-diag h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em; position: relative; z-index: 1; }
 .cta-diag h2 span { color: var(--cyan); }
-.cta-diag p { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 500px; margin: 0 auto 40px; line-height: 1.65; position: relative; z-index: 1; }
+.cta-diag p { font-size: 18px; font-weight: 300; color: var(--gray-text); max-width: 500px; margin: 0 auto 40px; line-height: 1.65; position: relative; z-index: 1; }
 .cta-diag-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
-.cta-contact-row { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 1; }
-.cta-contact-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.6); font-size: 15px; transition: color 0.2s; }
+.cta-contact-row { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; padding-top: 36px; border-top: 1px solid var(--gray-border); position: relative; z-index: 1; }
+.cta-contact-item { display: flex; align-items: center; gap: 10px; color: var(--gray-text); font-size: 15px; transition: color 0.2s; }
 .cta-contact-item:hover { color: var(--cyan); }
-.cta-icon { width: 36px; height: 36px; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.cta-icon { width: 36px; height: 36px; background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
 
 /* ── DESKTOP ONLY ── */
 @media (min-width: 769px) {
@@ -139,12 +135,7 @@
   .livrables-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  /* ── HERO MOBILE ── */
-  .hero-diag {
-    padding: 88px 20px 48px;
-    min-height: auto;
-    align-items: flex-start;
-  }
+  .hero-diag { padding: 88px 20px 48px; min-height: auto; align-items: flex-start; }
   .hero-diag-inner { grid-template-columns: 1fr; gap: 0; }
   .hero-diag-content { display: block; }
   .hero-diag h1 { font-size: clamp(28px, 8vw, 38px); margin-bottom: 10px; }
@@ -156,36 +147,26 @@
   .pill { font-size: 12px; padding: 7px 14px; }
   .hero-diag-inner .btn-primary,
   .hero-diag-inner .btn-secondary { width: 100%; text-align: center; justify-content: center; padding: 16px 24px; font-size: 15px; }
-
-  /* Stats choc mobile */
-  .hero-diag-stats {
-    display: flex; justify-content: center; gap: 0;
-    background: rgba(0,212,170,0.06);
-    border-top: 1px solid rgba(0,212,170,0.2);
-    margin-top: 28px; padding-top: 20px;
-  }
+  .hero-diag-stats { display: flex; justify-content: center; gap: 0; background: rgba(0,212,170,0.06); border-top: 1px solid rgba(0,212,170,0.2); margin-top: 28px; padding-top: 20px; }
   .hero-diag-stat { flex: 1; text-align: center; padding: 0 12px; border-right: 1px solid rgba(0,212,170,0.15); }
   .hero-diag-stat:last-child { border-right: none; }
   .hero-diag-stat-nb { font-size: 28px; font-weight: 700; color: var(--cyan); display: block; line-height: 1; margin-bottom: 4px; }
   .hero-diag-stat-label { font-size: 11px; color: rgba(255,255,255,0.55); line-height: 1.4; }
-
-  /* ── MÉTHODE MOBILE ── */
+  /* Méthode mobile */
   .phases-flow { flex-direction: column; gap: 0; }
   .phases-flow::before { display: none; }
-  .phase-step { display: flex; align-items: flex-start; gap: 16px; text-align: left; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .phase-step { display: flex; align-items: flex-start; gap: 16px; text-align: left; padding: 16px 0; border-bottom: 1px solid var(--gray-border); }
   .phase-step:last-child { border-bottom: none; }
   .phase-circle { width: 44px; height: 44px; font-size: 17px; flex-shrink: 0; margin: 0; }
   .phase-label { font-size: 15px; margin-bottom: 4px; }
   .phase-desc { display: block; font-size: 13px; line-height: 1.5; }
   .domaine-pill { font-size: 13px; padding: 7px 14px; }
-
-  /* ── LIVRABLES MOBILE ── */
+  /* Livrables mobile */
   .livrables-grid { grid-template-columns: 1fr; gap: 14px; }
   .livrable-card { padding: 20px 18px; }
   .livrable-card p { font-size: 13px; line-height: 1.6; }
   .livrable-card h3 { font-size: 16px; }
-
-  /* ── CTA FINAL MOBILE ── */
+  /* CTA mobile */
   .cta-diag { padding: 52px 20px; }
   .cta-diag p { display: block; font-size: 15px; margin-bottom: 28px; }
   .cta-diag-btns { flex-direction: column; gap: 10px; }
@@ -200,7 +181,7 @@
 
 <div id="nav-placeholder"></div>
 
-<!-- HERO -->
+<!-- HERO — fond navy -->
 <section class="hero-diag">
   <div class="hero-diag-photo"></div>
   <div class="hero-diag-overlay"></div>
@@ -219,20 +200,10 @@
         <span class="hero-diag-temo-quote">« Avec le seul diagnostic, il y a un avant et un après. »</span>
         <span class="hero-diag-temo-cite">Dirigeant PME Industrielle</span>
       </div>
-      <!-- Stats choc mobile uniquement -->
       <div class="hero-diag-stats">
-        <div class="hero-diag-stat">
-          <span class="hero-diag-stat-nb">8</span>
-          <span class="hero-diag-stat-label">jours terrain</span>
-        </div>
-        <div class="hero-diag-stat">
-          <span class="hero-diag-stat-nb">12</span>
-          <span class="hero-diag-stat-label">domaines analysés</span>
-        </div>
-        <div class="hero-diag-stat">
-          <span class="hero-diag-stat-nb">4</span>
-          <span class="hero-diag-stat-label">livrables concrets</span>
-        </div>
+        <div class="hero-diag-stat"><span class="hero-diag-stat-nb">8</span><span class="hero-diag-stat-label">jours terrain</span></div>
+        <div class="hero-diag-stat"><span class="hero-diag-stat-nb">12</span><span class="hero-diag-stat-label">domaines analysés</span></div>
+        <div class="hero-diag-stat"><span class="hero-diag-stat-nb">4</span><span class="hero-diag-stat-label">livrables concrets</span></div>
       </div>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="index.html#contact" class="btn-primary">Demander un Diagnostic</a>
@@ -242,11 +213,11 @@
   </div>
 </section>
 
-<!-- SECTION 1 : MÉTHODE (5 phases + domaines) -->
+<!-- SECTION 1 : MÉTHODE — fond blanc -->
 <section class="methode-section">
   <div class="container">
-    <div class="section-label section-label-white reveal">Méthodologie</div>
-    <h2 class="section-title section-title-white reveal">Une méthodologie en 5 phases sur 12 domaines</h2>
+    <div class="section-label reveal">Méthodologie</div>
+    <h2 class="section-title reveal">Une méthodologie en 5 phases sur 12 domaines</h2>
     <div class="methode-timing reveal">
       <span>⏱</span> 1 à 3 jours terrain &nbsp;·&nbsp; Restitution sous 10 jours
     </div>
@@ -291,17 +262,17 @@
   </div>
 </section>
 
-<!-- SECTION 2 : LIVRABLES -->
+<!-- SECTION 2 : LIVRABLES — fond navy -->
 <section class="livrables-section" id="livrables">
   <div class="container">
-    <div class="section-label reveal">Ce que vous recevez</div>
-    <h2 class="section-title reveal">4 livrables concrets et actionnables</h2>
-    <p class="section-intro section-subtitle reveal">Pas un rapport de plus. Un plan d'action opérationnel prêt à être exécuté.</p>
+    <div class="section-label section-label-white reveal">Ce que vous recevez</div>
+    <h2 class="section-title section-title-white reveal">4 livrables concrets et actionnables</h2>
+    <p class="section-intro section-intro-white section-subtitle--inverse reveal">Pas un rapport de plus. Un plan d'action opérationnel prêt à être exécuté.</p>
     <div class="livrables-grid" id="livrables-grid"></div>
   </div>
 </section>
 
-<!-- SECTION 3 : CTA -->
+<!-- SECTION 3 : CTA — fond gris clair -->
 <section class="cta-diag" id="contact-diag">
   <h2>Parlons de <span>vos enjeux</span></h2>
   <p>Un Diagnostic vous apportera la visibilité que vous attendez. Réponse sous 24h.</p>
