@@ -84,32 +84,30 @@
   padding: 36px 40px;
   box-shadow: 0 4px 20px rgba(0,212,170,0.08);
 }
+/* Header : colonne — titre puis note en dessous */
 .methode-domaines-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
+  gap: 6px;
   margin-bottom: 24px;
 }
 .methode-domaines-title {
   font-size: 17px; font-weight: 700; color: var(--navy);
   display: flex; align-items: center; gap: 10px;
-  flex-shrink: 0;
 }
 .methode-domaines-title::before {
   content: '';
   display: inline-block; width: 4px; height: 20px;
   background: var(--cyan); border-radius: 2px;
+  flex-shrink: 0;
 }
-/* Note inline à droite du titre */
+/* Note sous le titre, dans sa continuité */
 .methode-domaines-note-inline {
   font-size: 13px;
   color: var(--gray-text);
   font-style: italic;
-  text-align: right;
-  flex: 1;
-  padding-left: 16px;
+  padding-left: 14px; /* aligné avec le texte du titre (après le trait cyan) */
+  margin: 0;
 }
 .domaines-pills { display: flex; flex-wrap: wrap; gap: 10px; }
 .domaine-pill {
@@ -190,8 +188,7 @@
   .phase-desc { display: block; font-size: 13px; line-height: 1.5; }
   /* Domaines mobile */
   .methode-domaines { padding: 24px 20px; }
-  .methode-domaines-header { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 20px; }
-  .methode-domaines-note-inline { text-align: left; padding-left: 0; font-size: 12px; }
+  .methode-domaines-note-inline { padding-left: 14px; font-size: 12px; }
   .domaine-pill { font-size: 13px; padding: 8px 16px; white-space: normal; }
   /* Livrables mobile */
   .livrables-grid { grid-template-columns: 1fr; gap: 14px; }
@@ -281,11 +278,11 @@
       </div>
     </div>
 
-    <!-- BLOC 12 DOMAINES : contraste renforcé, note inline, +Commerce & Marketing -->
+    <!-- BLOC DOMAINES -->
     <div class="methode-domaines reveal">
       <div class="methode-domaines-header">
-        <div class="methode-domaines-title">12 domaines évalués</div>
-        <span class="methode-domaines-note-inline">Sélectionnés et ajustés selon le profil de votre entreprise et vos enjeux prioritaires.</span>
+        <div class="methode-domaines-title">Exemples de domaines évalués</div>
+        <p class="methode-domaines-note-inline">Les 12 domaines sont sélectionnés et ajustés selon le profil de votre entreprise et vos enjeux prioritaires.</p>
       </div>
       <div class="domaines-pills">
         <span class="domaine-pill">Gouvernance, Organisation & Management</span>
