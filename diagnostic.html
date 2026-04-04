@@ -84,7 +84,6 @@
   padding: 36px 40px;
   box-shadow: 0 4px 20px rgba(0,212,170,0.08);
 }
-/* Header : colonne — titre puis note en dessous */
 .methode-domaines-header {
   display: flex;
   flex-direction: column;
@@ -101,12 +100,11 @@
   background: var(--cyan); border-radius: 2px;
   flex-shrink: 0;
 }
-/* Note sous le titre, dans sa continuité */
 .methode-domaines-note-inline {
   font-size: 13px;
   color: var(--gray-text);
   font-style: italic;
-  padding-left: 14px; /* aligné avec le texte du titre (après le trait cyan) */
+  padding-left: 14px;
   margin: 0;
 }
 .domaines-pills { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -178,7 +176,6 @@
   .hero-diag-stat:last-child { border-right: none; }
   .hero-diag-stat-nb { font-size: 28px; font-weight: 700; color: var(--cyan); display: block; line-height: 1; margin-bottom: 4px; }
   .hero-diag-stat-label { font-size: 11px; color: rgba(255,255,255,0.55); line-height: 1.4; }
-  /* Méthode mobile */
   .phases-flow { flex-direction: column; gap: 0; }
   .phases-flow::before { display: none; }
   .phase-step { display: flex; align-items: flex-start; gap: 16px; text-align: left; padding: 16px 0; border-bottom: 1px solid var(--gray-border); }
@@ -186,16 +183,13 @@
   .phase-circle { width: 44px; height: 44px; font-size: 17px; flex-shrink: 0; margin: 0; }
   .phase-label { font-size: 15px; margin-bottom: 4px; }
   .phase-desc { display: block; font-size: 13px; line-height: 1.5; }
-  /* Domaines mobile */
   .methode-domaines { padding: 24px 20px; }
   .methode-domaines-note-inline { padding-left: 14px; font-size: 12px; }
   .domaine-pill { font-size: 13px; padding: 8px 16px; white-space: normal; }
-  /* Livrables mobile */
   .livrables-grid { grid-template-columns: 1fr; gap: 14px; }
   .livrable-card { padding: 20px 18px; }
   .livrable-card p { font-size: 13px; line-height: 1.6; }
   .livrable-card h3 { font-size: 16px; }
-  /* CTA mobile */
   .cta-diag { padding: 52px 20px; }
   .cta-diag p { display: block; font-size: 15px; margin-bottom: 28px; }
   .cta-diag-btns { flex-direction: column; max-width: 100%; gap: 10px; }
@@ -210,7 +204,6 @@
 
 <div id="nav-placeholder"></div>
 
-<!-- HERO — fond navy -->
 <section class="hero-diag">
   <div class="hero-diag-photo"></div>
   <div class="hero-diag-overlay"></div>
@@ -242,7 +235,6 @@
   </div>
 </section>
 
-<!-- SECTION 1 : MÉTHODE — fond blanc -->
 <section class="methode-section">
   <div class="container">
     <div class="section-label reveal">Méthodologie</div>
@@ -278,7 +270,6 @@
       </div>
     </div>
 
-    <!-- BLOC DOMAINES -->
     <div class="methode-domaines reveal">
       <div class="methode-domaines-header">
         <div class="methode-domaines-title">Exemples de domaines évalués</div>
@@ -291,12 +282,12 @@
         <span class="domaine-pill">Ressources Humaines, Talents & Culture</span>
         <span class="domaine-pill">Pilotage Économique</span>
         <span class="domaine-pill">Commerce & Marketing</span>
+        <span class="domaine-pill">RSE impact & opportunités</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2 : LIVRABLES — fond navy -->
 <section class="livrables-section" id="livrables">
   <div class="container">
     <div class="section-label section-label-white reveal">Ce que vous recevez</div>
@@ -306,7 +297,6 @@
   </div>
 </section>
 
-<!-- SECTION 3 : CTA — fond gris clair -->
 <section class="cta-diag" id="contact-diag">
   <h2>Parlons de <span>vos enjeux</span></h2>
   <p>Un Diagnostic vous apportera la visibilité que vous attendez. Réponse sous 24h.</p>
