@@ -138,8 +138,12 @@
 .cta-diag { background: var(--gray-bg); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
 .cta-diag h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em; position: relative; z-index: 1; }
 .cta-diag h2 span { color: var(--cyan); }
-.cta-diag p { font-size: 18px; font-weight: 300; color: var(--gray-text); max-width: 500px; margin: 0 auto 40px; line-height: 1.65; position: relative; z-index: 1; }
+/* Sous-titre : poids et contraste renforcés */
+.cta-diag p { font-size: 18px; font-weight: 500; color: var(--navy-mid); max-width: 500px; margin: 0 auto 40px; line-height: 1.65; position: relative; z-index: 1; }
+/* Boutons : largeur égale via min-width identique */
 .cta-diag-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+.cta-diag-btns .btn-primary,
+.cta-diag-btns .btn-secondary { min-width: 220px; text-align: center; justify-content: center; }
 /* Surcharge btn-secondary pour fond clair — texte/bordure navy */
 .cta-diag .btn-secondary {
   color: var(--navy);
@@ -201,7 +205,7 @@
   .cta-diag p { display: block; font-size: 15px; margin-bottom: 28px; }
   .cta-diag-btns { flex-direction: column; gap: 10px; }
   .cta-diag-btns .btn-primary,
-  .cta-diag-btns .btn-secondary { width: 100%; text-align: center; justify-content: center; padding: 16px 24px; }
+  .cta-diag-btns .btn-secondary { width: 100%; min-width: unset; text-align: center; justify-content: center; padding: 16px 24px; }
   .cta-contact-row { flex-direction: column; align-items: center; gap: 16px; }
   .cta-contact-item { font-size: 14px; }
 }
@@ -231,7 +235,7 @@
         <span class="hero-diag-temo-cite">Dirigeant PME Industrielle</span>
       </div>
       <div class="hero-diag-stats">
-        <div class="hero-diag-stat"><span class="hero-diag-stat-nb">8</span><span class="hero-diag-stat-label">jours terrain</span></div>
+        <div class="hero-diag-stat"><span class="hero-diag-stat-nb">8</span><span class="hero-diag-stat-nb">jours terrain</span></div>
         <div class="hero-diag-stat"><span class="hero-diag-stat-nb">12</span><span class="hero-diag-stat-label">domaines analysés</span></div>
         <div class="hero-diag-stat"><span class="hero-diag-stat-nb">4</span><span class="hero-diag-stat-label">livrables concrets</span></div>
       </div>
