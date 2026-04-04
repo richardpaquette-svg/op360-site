@@ -26,9 +26,10 @@
   display: grid; grid-template-columns: 1fr; gap: 0;
   align-items: center; width: 100%; max-width: 1120px; margin: 0 auto;
 }
-.hero-diag-content { position: relative; max-width: none; display: flex; flex-direction: column; }
+.hero-diag-content { position: relative; max-width: none; display: flex; flex-direction: column; align-items: flex-start; }
 .hero-diag-badge {
   display: inline-flex; align-items: center; gap: 8px;
+  width: fit-content;
   background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
   border-radius: 100px; padding: 7px 18px; margin-bottom: 28px;
   font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.1em; text-transform: uppercase;
@@ -39,9 +40,21 @@
 .hero-diag-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
 .pill { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 20px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); text-align: center; }
 .pill.pill-accent { border-color: rgba(0,212,170,0.4); color: var(--cyan); background: rgba(0,212,170,0.08); }
-.hero-diag-temo { display:flex; flex-direction:row; align-items:center; gap:24px; margin-bottom:32px; padding:14px 24px; border-left:3px solid var(--cyan); background:rgba(0,212,170,0.05); border-radius:0 8px 8px 0; }
-.hero-diag-temo-quote { font-size:16px; font-style:italic; font-weight:300; color:rgba(255,255,255,0.85); line-height:1.55; flex:1; }
-.hero-diag-temo-cite { font-size:12px; font-weight:700; color:var(--cyan); letter-spacing:0.08em; text-transform:uppercase; flex-shrink:0; white-space:nowrap; }
+.hero-diag-temo {
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 32px; padding: 16px 24px;
+  border-left: 3px solid var(--cyan);
+  background: rgba(0,212,170,0.05);
+  border-radius: 0 8px 8px 0;
+}
+.hero-diag-temo-quote {
+  font-size: 19px; font-style: italic; font-weight: 400;
+  color: #ffffff; line-height: 1.5;
+}
+.hero-diag-temo-cite {
+  font-size: 12px; font-weight: 700; color: var(--cyan);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
 
 /* ── 5 PHASES ── */
 .phases-section { background: var(--white); }
@@ -160,12 +173,12 @@
     gap: 8px;
     margin-bottom: 28px;
   }
-  /* Témoignage : retour en colonne sur mobile */
+  /* Témoignage : déjà en colonne, bon sur mobile */
   .hero-diag-temo {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
     padding: 14px 16px;
+  }
+  .hero-diag-temo-quote {
+    font-size: 16px;
   }
   .pill {
     font-size: 12px;
@@ -252,7 +265,6 @@
     -webkit-overflow-scrolling: touch;
     gap: 10px;
     padding-bottom: 12px;
-    /* Scrollbar discrète */
     scrollbar-width: thin;
     scrollbar-color: rgba(0,212,170,0.3) transparent;
   }
@@ -270,7 +282,6 @@
   .livrable-card {
     padding: 20px 18px;
   }
-  /* Descriptions visibles — c'est la valeur perçue */
   .livrable-card p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -287,7 +298,6 @@
 
   /* ── CTA FINAL ── */
   .cta-diag { padding: 52px 20px; }
-  /* Sous-texte visible */
   .cta-diag p {
     display: block;
     font-size: 15px;
