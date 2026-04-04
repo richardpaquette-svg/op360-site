@@ -47,14 +47,8 @@
   background: rgba(0,212,170,0.05);
   border-radius: 0 8px 8px 0;
 }
-.hero-diag-temo-quote {
-  font-size: 19px; font-style: italic; font-weight: 400;
-  color: #ffffff; line-height: 1.5;
-}
-.hero-diag-temo-cite {
-  font-size: 12px; font-weight: 700; color: var(--cyan);
-  letter-spacing: 0.08em; text-transform: uppercase;
-}
+.hero-diag-temo-quote { font-size: 19px; font-style: italic; font-weight: 400; color: #ffffff; line-height: 1.5; }
+.hero-diag-temo-cite { font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; }
 
 /* ── SECTION MÉTHODE — fond blanc ── */
 .methode-section { background: var(--white); }
@@ -65,7 +59,7 @@
 }
 .methode-timing span { color: var(--cyan); }
 
-/* Timeline phases sur fond blanc */
+/* Timeline phases */
 .phases-flow { display: flex; align-items: flex-start; gap: 0; position: relative; }
 .phases-flow::before { content:''; position:absolute; top:36px; left:36px; right:36px; height:2px; background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.15)); }
 .phase-step { flex: 1; text-align: center; position: relative; padding: 0 16px; }
@@ -81,22 +75,51 @@
 .phase-label { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .phase-desc { font-size: 13px; color: var(--gray-text); line-height: 1.55; }
 
-/* Domaines pills sur fond blanc */
-.methode-domaines { margin-top: 56px; }
-.methode-domaines-label {
+/* ── BLOC DOMAINES — encadré gris ── */
+.methode-domaines {
+  margin-top: 56px;
+  background: var(--gray-bg);
+  border-radius: 16px;
+  border: 1px solid var(--gray-border);
+  padding: 36px 40px;
+}
+.methode-domaines-header {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  margin-bottom: 24px;
+}
+.methode-domaines-title {
+  font-size: 17px; font-weight: 700; color: var(--navy);
+  display: flex; align-items: center; gap: 10px;
+}
+.methode-domaines-title::before {
+  content: '';
+  display: inline-block; width: 4px; height: 20px;
+  background: var(--cyan); border-radius: 2px;
+}
+.methode-domaines-count {
   font-size: 12px; font-weight: 700; color: var(--cyan);
-  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px;
+  background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.25);
+  border-radius: 100px; padding: 4px 14px;
+  letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
 }
 .domaines-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
 .domaine-pill {
-  background: rgba(0,100,90,0.05); border: 1px solid rgba(0,212,170,0.3);
-  border-radius: 100px; padding: 8px 20px;
-  font-size: 14px; color: var(--navy); font-weight: 500;
+  background: var(--white);
+  border: 1.5px solid rgba(0,212,170,0.45);
+  border-radius: 100px; padding: 10px 22px;
+  font-size: 14px; font-weight: 600; color: var(--navy);
   white-space: nowrap;
+  transition: all 0.2s;
+}
+.domaine-pill:hover {
+  background: rgba(0,212,170,0.08);
+  border-color: var(--cyan);
 }
 .methode-domaines-note {
-  font-size: 14px; color: var(--gray-text);
-  font-style: italic; margin-top: 4px; max-width: 600px;
+  font-size: 13px; color: var(--gray-text);
+  font-style: italic; margin-top: 0;
+  padding-top: 16px; border-top: 1px solid var(--gray-border);
 }
 
 /* ── LIVRABLES — fond navy ── */
@@ -126,9 +149,7 @@
 .cta-icon { width: 36px; height: 36px; background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
 
 /* ── DESKTOP ONLY ── */
-@media (min-width: 769px) {
-  .hero-diag-stats { display: none; }
-}
+@media (min-width: 769px) { .hero-diag-stats { display: none; } }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
@@ -160,7 +181,10 @@
   .phase-circle { width: 44px; height: 44px; font-size: 17px; flex-shrink: 0; margin: 0; }
   .phase-label { font-size: 15px; margin-bottom: 4px; }
   .phase-desc { display: block; font-size: 13px; line-height: 1.5; }
-  .domaine-pill { font-size: 13px; padding: 7px 14px; }
+  /* Domaines mobile */
+  .methode-domaines { padding: 24px 20px; }
+  .methode-domaines-header { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
+  .domaine-pill { font-size: 13px; padding: 8px 16px; white-space: normal; }
   /* Livrables mobile */
   .livrables-grid { grid-template-columns: 1fr; gap: 14px; }
   .livrable-card { padding: 20px 18px; }
@@ -248,8 +272,13 @@
         <p class="phase-desc">Parcours adapté à votre dimension et vos ressources, avec suivi monitoring SaaS</p>
       </div>
     </div>
+
+    <!-- BLOC DOMAINES — encadré gris -->
     <div class="methode-domaines reveal">
-      <div class="methode-domaines-label">Exemples de domaines analysés</div>
+      <div class="methode-domaines-header">
+        <div class="methode-domaines-title">12 domaines évalués</div>
+        <span class="methode-domaines-count">Exemples</span>
+      </div>
       <div class="domaines-pills">
         <span class="domaine-pill">Gouvernance, Organisation & Management</span>
         <span class="domaine-pill">Performance Opérationnelle & Process</span>
@@ -257,7 +286,7 @@
         <span class="domaine-pill">Ressources Humaines, Talents & Culture</span>
         <span class="domaine-pill">Pilotage Économique</span>
       </div>
-      <p class="methode-domaines-note">Les 12 domaines sont sélectionnés et ajustés selon le profil de votre entreprise et vos enjeux prioritaires.</p>
+      <p class="methode-domaines-note">Sélectionnés et ajustés selon le profil de votre entreprise et vos enjeux prioritaires.</p>
     </div>
   </div>
 </section>
