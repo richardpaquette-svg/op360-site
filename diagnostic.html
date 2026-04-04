@@ -12,7 +12,7 @@
 /* ── HERO DIAGNOSTIC ── */
 .hero-diag {
   min-height: 70vh; background: var(--navy); position: relative; overflow: hidden;
-  display: flex; align-items: center; padding: 110px 48px 80px;
+  display: flex; align-items: center; padding: 110px 0 80px;
 }
 .hero-diag-photo {
   position: absolute; inset: 0;
@@ -24,7 +24,7 @@
 .hero-diag-inner {
   position: relative; z-index: 2;
   display: grid; grid-template-columns: 1fr; gap: 0;
-  align-items: center; width: 100%; max-width: 1120px; margin: 0 auto;
+  align-items: center; width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 48px;
 }
 .hero-diag-content { position: relative; max-width: 680px; }
 .hero-diag-badge {
@@ -156,13 +156,14 @@
 @media (max-width: 768px) {
   /* ── HERO MOBILE ── */
   .hero-diag {
-    padding: 88px 20px 48px;
+    padding: 88px 0 48px;
     min-height: auto;
     align-items: flex-start;
   }
   .hero-diag-inner {
     grid-template-columns: 1fr;
     gap: 0;
+    padding: 0 20px;
   }
   .hero-phases-card { display: none; }
 
