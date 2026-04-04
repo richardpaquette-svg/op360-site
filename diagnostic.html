@@ -50,45 +50,51 @@
 .hero-diag-temo-quote { font-size: 19px; font-style: italic; font-weight: 400; color: #ffffff; line-height: 1.5; }
 .hero-diag-temo-cite { font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; }
 
-/* ── SECTION MÉTHODE — fond blanc ── */
+/* ── SECTION MÉTHODE — densification desktop (option medium) ── */
 .methode-section { background: var(--white); }
+/* Padding section réduit : 56px au lieu du global ~80-96px */
+.methode-section .container { padding-top: 56px; padding-bottom: 56px; }
+
 .methode-timing {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 13px; font-weight: 600; color: var(--gray-text);
-  margin-bottom: 48px; letter-spacing: 0.04em;
+  margin-bottom: 24px; /* ↓ 48px → 24px */
+  letter-spacing: 0.04em;
 }
 .methode-timing span { color: var(--cyan); }
 
 /* Timeline phases */
 .phases-flow { display: flex; align-items: flex-start; gap: 0; position: relative; }
-.phases-flow::before { content:''; position:absolute; top:36px; left:36px; right:36px; height:2px; background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.15)); }
-.phase-step { flex: 1; text-align: center; position: relative; padding: 0 16px; }
+/* Ligne de connexion adaptée aux cercles 56px (centre à 28px) */
+.phases-flow::before { content:''; position:absolute; top:28px; left:28px; right:28px; height:2px; background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.15)); }
+.phase-step { flex: 1; text-align: center; position: relative; padding: 0 12px; }
 .phase-circle {
-  width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 20px;
+  width: 56px; height: 56px; /* ↓ 72px → 56px */
+  border-radius: 50%; margin: 0 auto 14px; /* ↓ 20px → 14px */
   background: var(--white); border: 3px solid var(--cyan);
   display: flex; align-items: center; justify-content: center;
-  font-size: 22px; font-weight: 700; color: var(--cyan);
+  font-size: 18px; font-weight: 700; color: var(--cyan); /* ↓ 22px → 18px */
   position: relative; z-index: 1; transition: all 0.3s;
   box-shadow: 0 2px 12px rgba(0,212,170,0.12);
 }
 .phase-step:hover .phase-circle { background: var(--cyan); color: var(--white); transform: scale(1.08); }
-.phase-label { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-.phase-desc { font-size: 13px; color: var(--gray-text); line-height: 1.55; }
+.phase-label { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; } /* ↓ 14px → 13px */
+.phase-desc { font-size: 12px; color: var(--gray-text); line-height: 1.4; } /* ↓ 13px/1.55 → 12px/1.4 */
 
-/* ── BLOC DOMAINES — contraste renforcé ── */
+/* ── BLOC DOMAINES ── */
 .methode-domaines {
-  margin-top: 56px;
+  margin-top: 32px; /* ↓ 56px → 32px */
   background: #eef4f3;
   border-radius: 16px;
   border: 2px solid rgba(0,212,170,0.35);
-  padding: 36px 40px;
+  padding: 28px 36px; /* ↓ 36px 40px → 28px 36px */
   box-shadow: 0 4px 20px rgba(0,212,170,0.08);
 }
 .methode-domaines-header {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 24px;
+  margin-bottom: 20px; /* ↓ 24px → 20px */
 }
 .methode-domaines-title {
   font-size: 17px; font-weight: 700; color: var(--navy);
@@ -159,6 +165,8 @@
   .livrables-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
+  /* Reset densification desktop pour mobile */
+  .methode-section .container { padding-top: 40px; padding-bottom: 40px; }
   .hero-diag { padding: 88px 20px 48px; min-height: auto; align-items: flex-start; }
   .hero-diag-inner { grid-template-columns: 1fr; gap: 0; }
   .hero-diag-content { display: block; }
@@ -183,7 +191,8 @@
   .phase-circle { width: 44px; height: 44px; font-size: 17px; flex-shrink: 0; margin: 0; }
   .phase-label { font-size: 15px; margin-bottom: 4px; }
   .phase-desc { display: block; font-size: 13px; line-height: 1.5; }
-  .methode-domaines { padding: 24px 20px; }
+  .methode-timing { margin-bottom: 20px; }
+  .methode-domaines { margin-top: 24px; padding: 24px 20px; }
   .methode-domaines-note-inline { padding-left: 14px; font-size: 12px; }
   .domaine-pill { font-size: 13px; padding: 8px 16px; white-space: normal; }
   .livrables-grid { grid-template-columns: 1fr; gap: 14px; }
