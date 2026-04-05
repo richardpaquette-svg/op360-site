@@ -434,9 +434,14 @@
   .diff-bandeau-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .diff-bandeau-titre { font-size: 12px; }
 
+  /* ── BANDEAU DIAGNOSTIC ── */
+  .diag-bandeau-home { grid-template-columns: 1fr; gap: 16px; padding: 20px 20px; margin-top: 24px; }
+  .diag-bandeau-home-body { display: none; }
+  .diag-bandeau-home a.btn-primary { width: 100%; text-align: center; justify-content: center; }
+
   /* ── OFFRES ── */
-  .offres-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 14px; padding-bottom: 16px; }
-  .offres-grid .offre-card { flex: 0 0 80%; scroll-snap-align: start; }
+  .offres-grid { display: flex; flex-direction: column; gap: 10px; padding-bottom: 0; overflow: visible; }
+  .offres-grid .offre-card { flex: 0 0 auto; width: 100%; scroll-snap-align: unset; }
   .offres-header { flex-direction: column; align-items: flex-start; gap: 12px; }
 
   /* ── TERRAIN ── */
