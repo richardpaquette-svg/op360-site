@@ -260,4 +260,5 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .cta-btn-block .btn-outline-white,
   .btn-outline-white { display: flex !important; width: 100% !important; justify-content: center !important; white-space: normal !important; box-sizing: border-box !important; }
   .offres-section .section-intro:last-of-type { display: none !important; }
+  .parcours-section .section-intro:last-of-type { display: none !important; }
 }
