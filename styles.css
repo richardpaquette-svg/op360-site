@@ -252,7 +252,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 
 /* ── OVERRIDES MOBILE PRIORITAIRES ── */
 @media (max-width: 768px) {
-  .hero-sub { max-height: calc(1.55em * 2); overflow: hidden; }
+  .hero-sub { height: 46px; overflow: hidden; }
   .cta-btns-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
   .offres-section .section-intro:last-of-type { display: none !important; }
 }
