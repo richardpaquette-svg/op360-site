@@ -422,10 +422,12 @@
 .cta-inner h2 { font-size: clamp(30px, 4.5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
 .cta-inner h2 span { color: var(--cyan); }
 .cta-inner p { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 28px; line-height: 1.65; }
-.cta-btns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 700px; margin: 0 auto 0; align-items: start; }
-/* FIX: boutons même largeur — stretch remplace center pour que chaque bouton
-   remplisse sa colonne de grille ; justify-content center sur les boutons eux-mêmes */
-.cta-btn-block { display: flex; flex-direction: column; align-items: stretch; gap: 10px; background: transparent; }
+/* FIX: grille des 2 boutons CTA —
+   align-items: stretch → les 2 colonnes ont la même hauteur
+   Les .cta-btn-block utilisent justify-content: space-between pour épingler
+   le label en haut et le bouton + desc en bas → alignement parfait */
+.cta-btns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 700px; margin: 0 auto 0; align-items: stretch; }
+.cta-btn-block { display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 10px; background: transparent; }
 .cta-btns-grid .btn-primary,
 .cta-btns-grid .btn-outline-white { width: 100%; justify-content: center; }
 .cta-btn-label { font-size: 10px; font-weight: 700; color: var(--cyan); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; text-align: center; }
