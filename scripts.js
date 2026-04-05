@@ -3,11 +3,11 @@
    Navigation, scroll, animations
    ============================================ */
 
-// ── Logo PNG ──────────────────────────────────
+// ── Logo PNG ───────────────────────────────────────────────
 const LOGO_SVG    = `<img src="logo-white.png" alt="Operating Partners 360" class="logo-img">`;
 const LOGO_SVG_SM = `<img src="logo-white.png" alt="Operating Partners 360" class="logo-img-sm">`;
 
-// ── Navigation ────────────────────────────────
+// ── Navigation ──────────────────────────────────────────
 function buildNav(activePage) {
   const pages = [
     { href: "index.html", label: "Accueil" },
@@ -48,7 +48,7 @@ function toggleMenu() {
   document.getElementById('nav-links').classList.toggle('open');
 }
 
-// ── Footer ────────────────────────────────────
+// ── Footer ────────────────────────────────────────────
 function buildFooter() {
   document.getElementById('footer-placeholder').innerHTML = `
     <footer>
@@ -83,7 +83,7 @@ function buildFooter() {
             <ul>
               <li><a href="pme.html">Dirigeants de PME</a></li>
               <li><a href="eti.html">Dirigeants d'ETI</a></li>
-              <li><a href="investisseurs.html">Investisseurs & Fonds</a></li>
+              <li><a href="investisseurs.html">Investisseurs &amp; Fonds</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -123,7 +123,7 @@ function buildFooter() {
     </footer>`;
 }
 
-// ── Scroll Reveal ─────────────────────────────
+// ── Scroll Reveal (fade-up de base) ────────────────────────
 function initReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -137,7 +137,92 @@ function initReveal() {
   });
 }
 
-// ── Init page ─────────────────────────────────
+// ────────────────────────────────────────────────────────
+// ANIMATIONS SCROLL CIBLÉES — 3 effets, zéro dépendance
+// ────────────────────────────────────────────────────────
+
+/**
+ * EFFET 1 — Stat choc : slide-in depuis la droite
+ * .stat-choc passe de translateX(+60px) + opacity:0 à position naturelle
+ * Glissement horizontal marqué — le chiffre "arrive" avec force
+ */
+function initStatChocSlide() {
+  const el = document.querySelector('.stat-choc');
+  if (!el) return;
+  el.classList.add('reveal-slide-right');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  obs.observe(el);
+}
+
+/**
+ * EFFET 2 — Cartes Moments clés : stagger en cascade
+ * Chaque carte fade-up avec un décalage de 140ms entre elles
+ * Renforce visuellement la notion de "3 moments distincts"
+ */
+function initMomentsStagger() {
+  // On attend que les cartes soient injectées par le template JS
+  const waitForGrid = setInterval(() => {
+    const cards = document.querySelectorAll('.moment-card');
+    if (!cards.length) return;
+    clearInterval(waitForGrid);
+
+    cards.forEach((card, i) => {
+      card.classList.add('reveal-stagger');
+      card.style.transitionDelay = `${i * 140}ms`;
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          // Déclenche toutes les cartes dès que la section est visible
+          document.querySelectorAll('.reveal-stagger').forEach(c => c.classList.add('visible'));
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const section = document.querySelector('.moments-section');
+    if (section) obs.observe(section);
+  }, 50);
+}
+
+/**
+ * EFFET 3 — Labels section (small caps cyan) : fade + micro slide-up
+ * Amplitude 8px seulement, très subtil — donne du rythme sans bruit
+ * S'applique à tous les .section-label de la page
+ */
+function initSectionLabelsFade() {
+  const labels = document.querySelectorAll('.section-label');
+  if (!labels.length) return;
+
+  labels.forEach((label, i) => {
+    label.classList.add('reveal-label');
+  });
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  labels.forEach(label => obs.observe(label));
+}
+
+// ── Init page ────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
+  initStatChocSlide();
+  initSectionLabelsFade();
+  // initMomentsStagger appelé après injection du template
+  // (le script inline de index.html appelle initMomentsStagger() après buildNav)
 });
