@@ -591,6 +591,8 @@
   .diff-home-container { padding: 16px 20px; }
   .diff-home-grid { grid-template-columns: repeat(2, 1fr); gap: 12px 0; }
   .diff-home-item { padding: 8px 12px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  /* FIX: reset du padding-left:0 desktop — Shadow Codir aligné comme les autres items */
+  .diff-home-item:first-child { padding-left: 12px; }
   .diff-home-item:nth-last-child(-n+2) { border-bottom: none; }
   .equipe-expertise { display: none; }
 }
