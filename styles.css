@@ -15,6 +15,7 @@
   --cyan: #00d4aa;
   --cyan-light: #e6f9f5;
   --cyan-mid: #00bfa0;
+  --tangerine: #F79009;
   --white: #ffffff;
   --gray-bg: #f7f9fc;
   --card-bg: #edf2f7;
@@ -160,6 +161,13 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 .domaine-icon svg {
   display: block;
   flex-shrink: 0;
+}
+
+/* ── MOMENTS CLÉS : fond icône Tangerine ── */
+/* Les 3 icônes SVG passent en #F79009 (Accent 2 charte OP360).
+   Le fond du bubble suit en tangerine teinté pour la cohérence. */
+.moments-section .moment-icon-wrap {
+  background: rgba(247, 144, 9, 0.12);
 }
 
 /* ── REVEAL AU SCROLL ── */
