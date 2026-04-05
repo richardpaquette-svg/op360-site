@@ -36,7 +36,7 @@
 |---|---|---|
 | Hero | `--navy` | |
 | Vidéo | Blanc | |
-| Stat choc 10–20 % | Blanc | Bandeau navy intégré |
+| Stat choc 10–20 % | Blanc | Bandeau navy intégré |
 | Moments clés / Passer un cap | `--navy` | Icônes SVG en Tangerine `#F79009` |
 | Parcours 4 axes + 6 différenciateurs | Blanc | Icônes différenciateurs en Cyan |
 | 6 offres modulables | `--navy` | Implémenté — fil 5 |
@@ -64,6 +64,14 @@
 - **Cartes sur fond blanc** : `background: --card-bg`, bordure `--gray-border`, titre navy, accroche cyan.
 - **Boutons primaires** : fond cyan, texte navy, pas de gradient.
 - **Boutons secondaires** : borde cyan, texte cyan, fond transparent.
+
+---
+
+## Animations scroll — règles & historique
+
+- **Seul `initReveal()` est actif** : fade-up 22px, `opacity 0→1`, classe `.reveal` sur les éléments HTML.
+- **Animations scroll ciblées abandonnées** (PR #285, avr 2026) : slide-right sur `.stat-choc`, stagger cartes `.moment-card`, fade-label sur `.section-label` — effets jugés non nets visuellement. Ne pas réimplémenter sans validation préalable.
+- Toute nouvelle animation doit être validée visuellement avant merge.
 
 ---
 
@@ -96,6 +104,7 @@
 | Avr 2026 | Fix alignement mobile `.diff-home-item:first-child` (Shadow Codir) | PR #277 |
 | Avr 2026 | Section "6 offres" passée sur fond `--navy` (alternance bandes home) | Fil 5 |
 | Avr 2026 | Icônes Moments clés en Tangerine `#F79009` — sémantique urgence/criticité | PR #283 |
+| Avr 2026 | Animations scroll ciblées (slide-right, stagger, label fade) — **abandonnées**, effets non nets | PR #285 fermée |
 
 ---
 
