@@ -20,7 +20,8 @@
 
 ```css
 --navy:       #1a2332   /* fond principal sections fortes */
---cyan:       #00D4AA   /* accent, CTA, highlights */
+--cyan:       #00D4AA   /* accent, CTA, highlights, différenciateurs */
+--tangerine:  #F79009   /* Accent 2 — icônes Moments clés (urgence, criticité) */
 --white:      #ffffff
 --gray-bg:    /* fond sections secondaires */
 --card-bg:    /* fond cartes blanches */
@@ -35,24 +36,34 @@
 |---|---|---|
 | Hero | `--navy` | |
 | Vidéo | Blanc | |
-| Stat choc 10–20 % | Blanc | Bandeau navy intégré |
-| Moments clés / Passer un cap | `--navy` | |
-| Parcours 4 axes + 6 différenciateurs | Blanc | |
-| 6 offres modulables | Blanc → **Navy en cours** | Décision prise fil 4, à implémenter |
+| Stat choc 10–20 % | Blanc | Bandeau navy intégré |
+| Moments clés / Passer un cap | `--navy` | Icônes SVG en Tangerine `#F79009` |
+| Parcours 4 axes + 6 différenciateurs | Blanc | Icônes différenciateurs en Cyan |
+| 6 offres modulables | `--navy` | Implémenté — fil 5 |
 | Témoignages | Gris clair | |
 | Équipe – Les fondateurs | Blanc | |
 | CTA final | `--navy` | |
 
 ---
 
+## Sémantique des couleurs d'accent
+
+| Couleur | Variable | Usage |
+|---|---|---|
+| Cyan `#00D4AA` | `--cyan` | CTA, liens, highlights, icônes différenciateurs, icônes offres — **promesse et méthode** |
+| Tangerine `#F79009` | `--tangerine` | Icônes Moments clés uniquement — **urgence et criticité** |
+
+---
+
 ## Règles générales de design
 
 - **Accent `--cyan`** : uniquement pour éléments interactifs (CTA, liens, highlights, bordures cartes navy).
+- **Accent `--tangerine`** : réservé aux icônes des 3 Moments clés (section `.moments-section`).
 - **Pas d'images Unsplash** : utiliser uniquement les photos réelles des fondateurs.
 - **Cartes sur fond navy** : `background: rgba(255,255,255,0.04)`, bordure top cyan, titre blanc, accroche cyan, texte `rgba(255,255,255,0.75)`.
 - **Cartes sur fond blanc** : `background: --card-bg`, bordure `--gray-border`, titre navy, accroche cyan.
 - **Boutons primaires** : fond cyan, texte navy, pas de gradient.
-- **Boutons secondaires** : bordure cyan, texte cyan, fond transparent.
+- **Boutons secondaires** : borde cyan, texte cyan, fond transparent.
 
 ---
 
@@ -83,7 +94,8 @@
 | Mar 2026 | Section témoignages `.temofit-section` conservée mais allégée | — |
 | Mar 2026 | Hero `diagnostic.html` — suppression SVG mockup, pills 2×2, témoignage, CTA corrigé | PR #239 |
 | Avr 2026 | Fix alignement mobile `.diff-home-item:first-child` (Shadow Codir) | PR #277 |
-| Avr 2026 | Décision : passer section "6 offres" sur fond `--navy` | À implémenter (fil 5) |
+| Avr 2026 | Section "6 offres" passée sur fond `--navy` (alternance bandes home) | Fil 5 |
+| Avr 2026 | Icônes Moments clés en Tangerine `#F79009` — sémantique urgence/criticité | PR #283 |
 
 ---
 
@@ -99,4 +111,4 @@
 
 ---
 
-*Dernière mise à jour : avril 2026 — fil website 4*
+*Dernière mise à jour : avril 2026 — fil website 5*
