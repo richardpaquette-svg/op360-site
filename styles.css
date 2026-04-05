@@ -257,6 +257,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .hero-ctas .btn-secondary { width: 100%; text-align: center; justify-content: center; }
   .cta-btns-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
   .cta-btn-block .btn-cyan,
-  .cta-btn-block .btn-outline-white { width: 100%; justify-content: center; }
+  .btn-outline-white,
+  .cta-btn-block .btn-outline-white { width: 100%; justify-content: center; box-sizing: border-box; }
   .offres-section .section-intro:last-of-type { display: none !important; }
 }
