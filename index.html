@@ -422,15 +422,10 @@
 .cta-inner h2 { font-size: clamp(30px, 4.5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
 .cta-inner h2 span { color: var(--cyan); }
 .cta-inner p { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 28px; line-height: 1.65; }
-/* FIX: grille des 2 boutons CTA —
-   align-items: stretch → les 2 colonnes ont la même hauteur
-   Les .cta-btn-block utilisent justify-content: space-between pour épingler
-   le label en haut et le bouton + desc en bas → alignement parfait */
 .cta-btns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 700px; margin: 0 auto 0; align-items: stretch; }
 .cta-btn-block { display: flex; flex-direction: column; align-items: stretch; justify-content: space-between; gap: 10px; background: transparent; }
 .cta-btns-grid .btn-primary,
 .cta-btns-grid .btn-outline-white { width: 100%; justify-content: center; }
-/* FIX hauteur boutons : forcer le même padding sur btn-outline-white que btn-primary (16px vs 13px) */
 .cta-btns-grid .btn-outline-white { padding: 16px 40px; }
 .cta-btn-label { font-size: 10px; font-weight: 700; color: var(--cyan); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; text-align: center; }
 .btn-outline-white { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); font-size: 15px; font-weight: 700; border-radius: 6px; padding: 13px 28px; text-decoration: none; white-space: nowrap; transition: all 0.2s; }
@@ -554,7 +549,6 @@
     box-shadow: 0 1px 5px rgba(15,23,42,0.09);
     padding: 12px 14px;
     gap: 0;
-    /* Ligne 1 : titre + lien côte à côte */
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr auto;
@@ -690,7 +684,7 @@
 <!-- BLOC VIDÉO -->
 <section class="video-section">
   <div class="container reveal">
-    <div class="section-label">En 90 secondes</div>
+    <div class="section-label reveal-label">En 90 secondes</div>
     <h2 class="section-title">Une équipe de pairs‑dirigeants qui exécute avec vous.</h2>
     <div class="video-inner">
       <div class="video-text">
@@ -722,7 +716,7 @@
 <!-- STAT CHOC -->
 <div class="stat-choc-wrap">
   <div class="container" style="padding:24px 0 48px;">
-    <div class="stat-choc reveal">
+    <div class="stat-choc reveal-slide-right">
       <div class="stat-choc-nb">10–<span>20%</span></div>
       <div class="stat-choc-text">
         <h3>Seulement 10–20 % des stratégies aboutissent. <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.45);font-style:italic">Selon McKinsey &amp; Company et la Harvard Business Review</span></h3>
@@ -736,7 +730,7 @@
 <section class="moments-section" id="moments">
   <div class="moments-photo"></div>
   <div class="container">
-    <div class="section-label section-label-white reveal">Quand intervenir</div>
+    <div class="section-label section-label-white reveal-label">Quand intervenir</div>
     <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
     <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire — et 6 points qui marquent notre différence.</p>
     <div class="moments-grid" id="moments-grid"></div>
@@ -746,7 +740,7 @@
 <!-- PARCOURS D'EXÉCUTION EN 4 AXES -->
 <section class="parcours-section" id="parcours">
   <div class="container">
-    <div class="section-label reveal">Notre méthode</div>
+    <div class="section-label reveal-label">Notre méthode</div>
     <h2 class="section-title reveal">Un parcours d'exécution en 4 axes</h2>
     <p class="section-intro section-subtitle reveal" style="margin-bottom:0">De la vision à l'action — une colonne vertébrale structurée pour transformer votre stratégie en résultats mesurables.</p>
     <p class="section-intro section-subtitle reveal" style="margin-bottom:40px">Et 6 points qui marquent notre différence.</p>
@@ -797,7 +791,7 @@
   <div class="container">
     <div class="offres-header">
       <div>
-        <div class="section-label reveal">Nos leviers d'intervention</div>
+        <div class="section-label reveal-label">Nos leviers d'intervention</div>
         <h2 class="section-title reveal">6 offres modulables et combinables</h2>
         <p class="section-intro section-subtitle reveal" style="margin-bottom:0">De l'analyse à l'exécution — adaptées à votre dimension et vos ressources</p>
         <p class="section-intro section-subtitle reveal" style="margin-bottom:16px;font-style:italic">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</p>
@@ -821,7 +815,7 @@
 <!-- TÉMOIGNAGES + FIT -->
 <section class="temofit-section" id="temoignages">
   <div class="container">
-    <div class="section-label reveal">Ils nous ont fait confiance</div>
+    <div class="section-label reveal-label">Ils nous ont fait confiance</div>
     <h2 class="section-title reveal">Ce que disent nos clients</h2>
     <div class="temos-grid" id="temos-grid"></div>
   </div>
@@ -830,7 +824,7 @@
 <!-- ÉQUIPE -->
 <section class="equipe-section" id="equipe-home">
   <div class="container">
-    <div class="section-label reveal">Les fondateurs</div>
+    <div class="section-label reveal-label">Les fondateurs</div>
     <h2 class="section-title reveal">Des dirigeants à vos côtés</h2>
     <p class="section-intro section-subtitle reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
     <div class="equipe-grid" id="equipe-grid"></div>
@@ -841,7 +835,7 @@
 <section class="cta-final" id="contact">
   <div class="container">
     <div class="cta-inner">
-      <div class="section-label section-label-white" style="text-align:center;margin-bottom:16px">Passons à l'action</div>
+      <div class="section-label section-label-white reveal-label" style="text-align:center;margin-bottom:16px">Passons à l'action</div>
       <h2>Parlons de <span>vos enjeux</span></h2>
       <p style="color:#ffffff">Chaque contexte est spécifique. En 30 minutes, nous pouvons faire le point sur vos enjeux, vos priorités et voir si OP360 a du sens pour vous.</p>
       <div class="cta-btns-grid">
@@ -869,7 +863,7 @@ buildNav('index.html');
 buildFooter();
 
 document.getElementById('moments-grid').innerHTML = OP360.moments.map(m => `
-  <div class="moment-card reveal">
+  <div class="moment-card reveal-stagger">
     <div class="moment-icon-wrap">${m.icone}</div>
     <div class="moment-body">
       <h3>${m.titre}</h3>

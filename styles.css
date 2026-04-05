@@ -164,15 +164,66 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 }
 
 /* ── MOMENTS CLÉS : fond icône Tangerine ── */
-/* Les 3 icônes SVG passent en #F79009 (Accent 2 charte OP360).
-   Le fond du bubble suit en tangerine teinté pour la cohérence. */
 .moments-section .moment-icon-wrap {
   background: rgba(247, 144, 9, 0.12);
 }
 
-/* ── REVEAL AU SCROLL ── */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+/* ══════════════════════════════════════════════
+   REVEAL AU SCROLL — système d'animations ciblées
+   3 variantes en plus du fade-up générique :
+   1. .reveal-slide-right  → stat-choc (chiffre qui «arrive»)
+   2. .reveal-stagger      → moment-card (cascade 120ms)
+   3. .reveal-label        → section-label (8px, très subtil)
+   Tout le reste conserve .reveal (fade-up 22px existant)
+   ══════════════════════════════════════════════ */
+
+/* Générique fade-up — inchangé */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 .reveal.visible { opacity: 1; transform: none; }
+
+/* 1 — Slide depuis la droite (stat choc 10–20%) */
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-slide-right.visible { opacity: 1; transform: none; }
+
+/* 2 — Stagger cascade moments clés
+   Chaque .moment-card reçoit un --stagger-i via JS
+   transition-delay calculée : i * 120ms */
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition-delay: calc(var(--stagger-i, 0) * 120ms);
+}
+.reveal-stagger.visible { opacity: 1; transform: none; }
+
+/* 3 — Labels section-label : 8px très subtil */
+.reveal-label {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-label.visible { opacity: 1; transform: none; }
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-slide-right,
+  .reveal-stagger,
+  .reveal-label {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 
 /* ── TÉMOIGNAGES STATIQUES ── */
 .testimonials-grid {
