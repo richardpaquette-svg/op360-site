@@ -313,7 +313,7 @@
 .temo-card { background: var(--card-bg); border: 1px solid #e2e8f0; border-left: 3px solid var(--cyan); border-radius: var(--radius); padding: 24px 28px; transition: all 0.25s; }
 .temo-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-2px); }
 .temo-quote { font-size: 15px; color: var(--navy); line-height: 1.65; font-style: italic; margin: 0 0 16px; }
-.temo-bar { width: 24px; height: 2px; background: var(--cyan); border-radius: 2px; margin-bottom: 10px; }
+
 .temo-author { font-size: 12px; font-weight: 700; color: var(--gray-text); letter-spacing: 0.04em; text-transform: uppercase; }
 
 /* ── PHOTO TERRAIN ── */
@@ -734,7 +734,6 @@ document.getElementById('diff-home-grid').innerHTML = OP360.differenciateurs.map
 document.getElementById('temos-grid').innerHTML = OP360.temoignages.map(t => `
   <div class="temo-card reveal">
     <p class="temo-quote">${t.quote}</p>
-    <div class="temo-bar"></div>
     <div class="temo-author">${t.auteur}${t.entreprise ? ` — ${t.entreprise}` : ''}</div>
   </div>`).join('');
 
