@@ -217,16 +217,40 @@
 /* ── MOMENTS ── */
 .moments-section { background: var(--navy); position: relative; overflow: hidden; }
 .moments-photo { display: none; }
-.moments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
 .segment-banner { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 40px; }
-.moment-card { border: 1px solid rgba(0,212,170,0.18); border-radius: var(--radius); padding: 28px 24px; transition: all 0.3s; background: rgba(255,255,255,0.03); position: relative; display: flex; align-items: flex-start; gap: 16px; }
-.moment-card:hover { border-color: rgba(0,212,170,0.5); transform: translateY(-5px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); }
+.moment-card {
+  border: 1px solid rgba(0,212,170,0.18);
+  border-radius: var(--radius);
+  padding: 20px 20px;
+  transition: all 0.3s;
+  background: rgba(255,255,255,0.03);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.moment-card:hover { border-color: rgba(0,212,170,0.5); transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.28); }
 .moment-card::after { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--cyan); transform:scaleX(0); transform-origin:left; transition:transform 0.3s; border-radius:var(--radius) var(--radius) 0 0; }
 .moment-card:hover::after { transform: scaleX(1); }
-.moment-icon-wrap { font-size: 36px; flex-shrink: 0; line-height: 1.2; background: rgba(0,212,170,0.06); border-radius: 999px; padding: 6px; }
+.moment-icon-wrap {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+  background: rgba(0,212,170,0.08);
+  border-radius: 50%;
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+}
 .moment-body { flex: 1; }
-.moment-card h3 { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-.moment-cas { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.65; margin: 0; }
+.moment-card h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 6px; line-height: 1.25; }
+.moment-cas { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.55; margin: 0; }
 
 /* ── DIFF BANDEAU ── */
 .diff-bandeau { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 24px; padding-top: 32px; }
@@ -426,13 +450,13 @@
   .diag-summary-arrow { display: none; }
   .diag-summary-item { flex-direction: row; text-align: left; gap: 14px; padding: 14px 16px; align-items: center; }
 
-  /* ── MOMENTS ── */
-  .moments-grid { grid-template-columns: 1fr; }
-  .moment-card { padding: 20px 16px; }
-  .moment-icon-wrap { font-size: 26px; padding: 4px; }
-  .moment-card h3 { font-size: 17px; }
+  /* ── MOMENTS mobile — cartes compactes ── */
+  .moments-section { padding-top: 40px; padding-bottom: 32px; }
+  .moments-grid { grid-template-columns: 1fr; gap: 8px; }
+  .moment-card { padding: 12px 14px; gap: 12px; }
+  .moment-icon-wrap { font-size: 22px; width: 40px; height: 40px; }
+  .moment-card h3 { font-size: 15px; margin-bottom: 0; }
   .moment-cas { display: none; }
-  .moment-card { padding: 14px 16px; }
   .diff-bandeau-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .diff-bandeau-titre { font-size: 12px; }
 
@@ -585,7 +609,7 @@
       <span class="accent">Nous accélérons et<br>sécurisons l'exécution.</span>
     </h1>
     <p class="hero-sub">
-      Dirigeants de PME, ETI et investisseurs : des pairs-partenaires qui ont vécu les mêmes défis que vous — engagés à vos côtés pour transformer vos ambitions en résultats.
+      Dirigeants de PME, ETI et investisseurs : des pairs-partenaires qui ont vécu les mêmes défis que vous — engagés à vos côtés pour transformer vos ambitions en résultats.
     </p>
     <div class="hero-ctas">
       <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Planifier un échange</a>
@@ -632,7 +656,7 @@
     <div class="stat-choc reveal">
       <div class="stat-choc-nb">10–<span>20%</span></div>
       <div class="stat-choc-text">
-        <h3>Seulement 10–20 % des stratégies aboutissent. <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.45);font-style:italic">Selon McKinsey &amp; Company et la Harvard Business Review</span></h3>
+        <h3>Seulement 10–20 % des stratégies aboutissent. <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.45);font-style:italic">Selon McKinsey &amp; Company et la Harvard Business Review</span></h3>
         <p style="font-size:15px;color:rgba(255,255,255,0.88);line-height:1.65;margin:0">OP360 renforce l'exécution grâce à un diagnostic rapide, un parcours structuré et un monitoring SaaS.</p>
       </div>
     </div>
@@ -693,7 +717,7 @@
   <div class="moments-photo"></div>
   <div class="container">
     <div class="section-label section-label-white reveal">Quand intervenir</div>
-    <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
+    <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
     <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire — et 6 points qui marquent notre différence.</p>
     <div class="moments-grid" id="moments-grid"></div>
   </div>
@@ -707,7 +731,7 @@
         <div class="section-label reveal">Nos leviers d'intervention</div>
         <h2 class="section-title reveal">6 offres modulables et combinables</h2>
         <p class="section-intro section-subtitle reveal" style="margin-bottom:0">De l'analyse à l'exécution — adaptées à votre dimension et vos ressources</p>
-        <p class="section-intro section-subtitle reveal" style="margin-bottom:16px;font-style:italic">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</p>
+        <p class="section-intro section-subtitle reveal" style="margin-bottom:16px;font-style:italic">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</p>
       </div>
     </div>
     <div class="offres-grid" id="offres-grid"></div>
@@ -715,7 +739,7 @@
     <div class="diag-bandeau-home reveal">
       <div class="diag-bandeau-home-title">
         <span class="diag-bandeau-home-label">Notre offre phare</span>
-        <div class="diag-bandeau-home-h3">Diagnostic OP360 :<br>10 jours pour voir clair et agir juste</div>
+        <div class="diag-bandeau-home-h3">Diagnostic OP360 :<br>10 jours pour voir clair et agir juste</div>
       </div>
       <div class="diag-bandeau-home-body">
         <div class="diag-bandeau-home-main"><em>2 à 3 jours de terrain,</em> restitution complète en moins de 10 jours.</div>
