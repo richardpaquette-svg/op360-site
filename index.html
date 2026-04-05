@@ -322,8 +322,11 @@
 .offre-lien { font-size: 12px; font-weight: 700; color: var(--cyan); display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; transition: color 0.25s; }
 .offres-footer { text-align: center; }
 .offres-footer-sub { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.6); margin-top: 10px; line-height: 1.6; }
-/* Bandeau diagnostic — ressort sur fond Navy avec bg légèrement plus clair + bordure cyan */
-.diag-bandeau-home { background: rgba(255,255,255,0.07); border: 1px solid rgba(0,212,170,0.3); border-left: 4px solid var(--cyan); border-radius: 0 12px 12px 0; padding: 28px 32px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; margin-top: 40px; }
+/* Bandeau diagnostic home :
+   - padding réduit pour aligner la hauteur sur le stat-choc 10-20%
+   - fond éclairci : rgba(255,255,255,0.13) au lieu de 0.07 pour créer du contraste sur navy
+*/
+.diag-bandeau-home { background: rgba(255,255,255,0.13); border: 1px solid rgba(0,212,170,0.3); border-left: 4px solid var(--cyan); border-radius: 0 12px 12px 0; padding: 16px 32px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 40px; margin-top: 40px; }
 .diag-bandeau-home-title { display: flex; flex-direction: column; gap: 4px; }
 .diag-bandeau-home-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); }
 .diag-bandeau-home-h3 { font-size: 20px; font-weight: 700; color: var(--white); line-height: 1.2; }
