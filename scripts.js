@@ -124,15 +124,39 @@ function buildFooter() {
 }
 
 // ── Scroll Reveal ─────────────────────────────
+// Gère 4 classes :
+//   .reveal            → fade-up 22px générique (inchangé)
+//   .reveal-slide-right → translateX(60px) — stat choc
+//   .reveal-stagger    → fade-up 18px en cascade — moment-cards (--stagger-i)
+//   .reveal-label      → fade-up 8px très subtil — section-label
 function initReveal() {
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
   }, { threshold: 0.08 });
 
+  // Générique fade-up
   document.querySelectorAll('.reveal').forEach((el, i) => {
     const siblings = el.parentElement.querySelectorAll('.reveal');
     const idx = Array.from(siblings).indexOf(el);
     el.style.transitionDelay = `${idx * 0.08}s`;
+    observer.observe(el);
+  });
+
+  // Slide depuis la droite (stat choc)
+  document.querySelectorAll('.reveal-slide-right').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Stagger cascade (moment-cards) — délai calculé par index
+  document.querySelectorAll('.reveal-stagger').forEach((el, i) => {
+    el.style.setProperty('--stagger-i', i);
+    observer.observe(el);
+  });
+
+  // Labels subtils
+  document.querySelectorAll('.reveal-label').forEach(el => {
     observer.observe(el);
   });
 }
