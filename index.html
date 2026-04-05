@@ -336,7 +336,7 @@
 .linkedin-sub { font-size: 15px; font-weight: 700; color: var(--navy); margin: 28px 0 16px; }
 .linkedin-bullets { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
 .linkedin-bullets li { font-size: 15px; color: var(--gray-text); line-height: 1.65; display: flex; align-items: flex-start; gap: 12px; }
-.linkedin-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+.linkedin-bullets li::before { content: '→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
 
 /* ── CTA FINAL ── */
 .cta-final { background: var(--navy); padding: 72px 48px 48px; position: relative; overflow: hidden; }
@@ -439,10 +439,70 @@
   .diag-bandeau-home-body { display: none; }
   .diag-bandeau-home a.btn-primary { width: 100%; text-align: center; justify-content: center; }
 
-  /* ── OFFRES ── */
-  .offres-grid { display: flex; flex-direction: column; gap: 10px; padding-bottom: 0; overflow: visible; }
-  .offres-grid .offre-card { flex: 0 0 auto; width: 100%; scroll-snap-align: unset; }
+  /* ── OFFRES mobile compact ── */
+  .offres-section { padding-top: 40px; }
   .offres-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .offres-grid {
+    display: flex; flex-direction: column; gap: 8px;
+    padding-bottom: 0; overflow: visible;
+  }
+  /* Carte offre : fond blanc, bordure gauche cyan, ombre légère */
+  .offres-grid .offre-card {
+    flex: 0 0 auto; width: 100%;
+    background: #ffffff;
+    border: none;
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 5px rgba(15,23,42,0.09);
+    padding: 12px 14px;
+    gap: 0;
+    /* Ligne 1 : titre + lien côte à côte */
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "titre lien"
+      "accroche accroche";
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 3px;
+  }
+  .offres-grid .offre-card .offre-badge {
+    display: none;
+  }
+  .offres-grid .offre-card .offre-titre {
+    grid-area: titre;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.25;
+  }
+  .offres-grid .offre-card .offre-accroche {
+    grid-area: accroche;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0f766e; /* teal-700 — contraste fort sur blanc */
+    line-height: 1.35;
+    margin-top: 2px;
+  }
+  .offres-grid .offre-card .offre-lien {
+    grid-area: lien;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cyan);
+    white-space: nowrap;
+    margin-top: 0;
+    align-self: center;
+  }
+  /* Carte featured (Shadow Codir) : garde fond navy */
+  .offres-grid .offre-card.featured {
+    background: var(--navy);
+    border-left-color: var(--cyan);
+    box-shadow: 0 2px 8px rgba(15,23,42,0.18);
+  }
+  .offres-grid .offre-card.featured .offre-titre { color: var(--white); }
+  .offres-grid .offre-card.featured .offre-accroche { color: var(--cyan); }
+  .offres-grid .offre-card.featured .offre-lien { color: var(--cyan); }
 
   /* ── TERRAIN ── */
   .terrain-section { height: 260px; }
@@ -551,7 +611,7 @@
     <div class="stat-choc reveal">
       <div class="stat-choc-nb">10–<span>20%</span></div>
       <div class="stat-choc-text">
-        <h3>Seulement 10–20 % des stratégies aboutissent. <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.45);font-style:italic">Selon McKinsey &amp; Company et la Harvard Business Review</span></h3>
+        <h3>Seulement 10–20 % des stratégies aboutissent. <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.45);font-style:italic">Selon McKinsey &amp; Company et la Harvard Business Review</span></h3>
         <p style="font-size:15px;color:rgba(255,255,255,0.88);line-height:1.65;margin:0">OP360 renforce l'exécution grâce à un diagnostic rapide, un parcours structuré et un monitoring SaaS.</p>
       </div>
     </div>
@@ -627,7 +687,7 @@
         <div class="section-label reveal">Nos leviers d'intervention</div>
         <h2 class="section-title reveal">6 offres modulables et combinables</h2>
         <p class="section-intro section-subtitle reveal" style="margin-bottom:0">De l'analyse à l'exécution — adaptées à votre dimension et vos ressources</p>
-        <p class="section-intro section-subtitle reveal" style="margin-bottom:16px;font-style:italic">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</p>
+        <p class="section-intro section-subtitle reveal" style="margin-bottom:16px;font-style:italic">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</p>
       </div>
     </div>
     <div class="offres-grid" id="offres-grid"></div>
