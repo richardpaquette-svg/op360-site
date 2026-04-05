@@ -278,14 +278,18 @@
 .offres-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; gap: 24px; }
 .btn-outline-cyan { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--cyan); border: 1.5px solid rgba(0,212,170,0.4); border-radius: 6px; padding: 10px 20px; white-space: nowrap; transition: all 0.2s; text-decoration: none; }
 .btn-outline-cyan:hover { background: var(--cyan); color: var(--navy); border-color: var(--cyan); }
-.offres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px; }
+.offres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px; align-items: stretch; }
 .offre-card { background: var(--gray-bg); border: 1px solid var(--gray-border); border-top: 2px solid var(--cyan); border-radius: 10px; padding: 20px 18px; display: flex; flex-direction: column; gap: 7px; transition: all 0.25s; cursor: pointer; text-decoration: none; color: inherit; }
 .offre-card:hover { background: var(--navy); border-color: var(--cyan); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(26,35,50,0.18); }
 .offre-card:hover .offre-titre { color: var(--white); }
 .offre-card:hover .offre-accroche { color: var(--cyan); }
 .offre-card:hover .offre-desc { color: rgba(255,255,255,0.75); }
 .offre-card:hover .offre-lien { color: var(--cyan); }
-.offre-card.featured { background: rgba(0,212,170,0.06); border-color: var(--cyan); }
+.offre-card.featured { background: var(--gray-bg); border-color: var(--cyan); }
+.offre-card.featured:hover { background: var(--navy); border-color: var(--cyan); }
+.offre-card.featured:hover .offre-titre { color: var(--white); }
+.offre-card.featured:hover .offre-accroche { color: var(--cyan); }
+.offre-card.featured:hover .offre-desc { color: rgba(255,255,255,0.75); }
 .offre-badge { display: inline-block; align-self: flex-start; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--cyan); color: var(--navy); padding: 2px 9px; border-radius: 100px; }
 .offre-titre { font-size: 16px; font-weight: 700; color: var(--navy); line-height: 1.3; transition: color 0.25s; }
 .offre-accroche { font-size: 12px; font-weight: 600; color: var(--cyan); line-height: 1.35; transition: color 0.25s; }
@@ -655,7 +659,8 @@
       <div>
         <div class="section-label reveal">Nos leviers d'intervention</div>
         <h2 class="section-title reveal">6 offres modulables et combinables</h2>
-        <p class="section-intro reveal">De l'analyse à l'exécution — adaptées à votre dimension et vos ressources</p>
+        <p class="section-intro reveal" style="margin-bottom:0">De l'analyse à l'exécution — adaptées à votre dimension et vos ressources</p>
+        <p class="section-intro reveal" style="margin-bottom:32px;font-style:italic;color:#6b7280">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</p>
       </div>
     </div>
     <div class="offres-grid" id="offres-grid"></div>
@@ -667,7 +672,6 @@
       </div>
       <div class="diag-bandeau-home-body">
         <div class="diag-bandeau-home-main"><em>2 à 3 jours de terrain,</em> restitution complète en moins de 10 jours.</div>
-        <div class="diag-bandeau-home-quote">« Avec le seul diagnostic, il y a un avant et un après. » – Dirigeant de PME industrielle</div>
       </div>
       <a href="diagnostic.html" class="btn-primary">En savoir plus →</a>
     </div>
