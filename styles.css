@@ -164,15 +164,71 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 }
 
 /* ── MOMENTS CLÉS : fond icône Tangerine ── */
-/* Les 3 icônes SVG passent en #F79009 (Accent 2 charte OP360).
-   Le fond du bubble suit en tangerine teinté pour la cohérence. */
 .moments-section .moment-icon-wrap {
   background: rgba(247, 144, 9, 0.12);
 }
 
-/* ── REVEAL AU SCROLL ── */
+/* ── REVEAL AU SCROLL (base) ── */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: none; }
+
+/* ════════════════════════════════════════════════════════
+   ANIMATIONS SCROLL CIBLÉES — 3 effets
+   Respectent prefers-reduced-motion
+   ════════════════════════════════════════════════════════ */
+
+/* EFFET 1 — Stat choc : glissement depuis la droite
+   Amplitude 60px, opacité 0→1, timing cubic-bezier tendu
+   Renforce l'impact du chiffre choc */
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* EFFET 2 — Cartes Moments : stagger cascade
+   Fade-up 16px, chaque carte avec delay croissant via JS (140ms step)
+   Visualise la progression : Crise → Ambition → Transition */
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-stagger.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* EFFET 3 — Labels section : micro fade + slide-up 8px
+   Très subtil — donne du rythme sans bruit visuel
+   S'applique à tous les .section-label */
+.reveal-label {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease,
+              transform 0.5s ease;
+}
+.reveal-label.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect prefers-reduced-motion — désactive toutes les animations ciblées */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-slide-right,
+  .reveal-stagger,
+  .reveal-label {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
 
 /* ── TÉMOIGNAGES STATIQUES ── */
 .testimonials-grid {
@@ -230,18 +286,14 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
     border-top: 1px solid rgba(0,212,170,0.15);
   }
   section { padding: 48px 20px 36px; }
-  /* Typographie */
   .section-intro { font-size: 16px; margin-bottom: 32px; }
   h2.section-title { font-size: clamp(22px, 6vw, 32px); margin-bottom: 10px; }
-  /* Boutons plus compacts */
   .btn-primary, .btn-secondary, .btn-navy { padding: 14px 28px; font-size: 14px; }
-  /* Touch targets minimum 44px */
   .btn-outline { padding: 14px 28px; font-size: 14px; }
   .nav-burger { padding: 10px; }
   .nav-links a { min-height: 44px; display: flex; align-items: center; }
   .footer-mobile-links a { min-height: 44px; display: flex; align-items: center; }
   .cta-contact-item { min-height: 44px; }
-  /* ── FOOTER MOBILE ultra-minimaliste ── */
   .footer-top { display: none; }
   .footer-mobile { display: flex; }
   .footer-bottom {
