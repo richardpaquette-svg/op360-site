@@ -253,6 +253,10 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 /* ── OVERRIDES MOBILE PRIORITAIRES ── */
 @media (max-width: 768px) {
   .hero-sub { height: 46px; overflow: hidden; }
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-secondary { width: 100%; text-align: center; justify-content: center; }
   .cta-btns-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .cta-btn-block .btn-cyan,
+  .cta-btn-block .btn-outline-white { width: 100%; justify-content: center; }
   .offres-section .section-intro:last-of-type { display: none !important; }
 }
