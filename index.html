@@ -364,11 +364,13 @@
 .cta-inner { text-align: center; position: relative; z-index: 1; }
 .cta-inner h2 { font-size: clamp(30px, 4.5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 18px; }
 .cta-inner h2 span { color: var(--cyan); }
-.cta-inner p { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 600px; margin: 0 auto 28px; line-height: 1.65; }
-.cta-btns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 820px; margin: 0 auto 40px; align-items: start; grid-auto-rows: min-content; }
-.cta-btn-block { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; background: rgba(255,255,255,0.95); border: none; border-radius: 8px; padding: 12px 24px; align-self: start; width: 100%; }
-.cta-btn-label { font-size: 11px; font-weight: 700; color: var(--navy) !important; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
-.cta-btn-desc { font-size: 13px; color: #475569 !important; text-align: center; line-height: 1.6; margin: 0; padding-bottom: 0; }
+.cta-inner p { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 28px; line-height: 1.65; }
+.cta-btns-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 700px; margin: 0 auto 40px; align-items: start; }
+.cta-btn-block { display: flex; flex-direction: column; align-items: center; gap: 10px; background: transparent; }
+.cta-btn-label { font-size: 10px; font-weight: 700; color: var(--cyan); letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; }
+.btn-outline-white { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); font-size: 15px; font-weight: 700; border-radius: 6px; padding: 13px 28px; text-decoration: none; white-space: nowrap; transition: all 0.2s; }
+.btn-outline-white:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+.cta-btn-desc { font-size: 13px; color: rgba(255,255,255,0.75); text-align: center; line-height: 1.5; margin: 0; }
 .cta-contacts { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); }
 .cta-contact { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.6); font-size: 15px; transition: color 0.2s; }
 .cta-contact:hover { color: var(--cyan); }
@@ -742,7 +744,7 @@
         </div>
         <div class="cta-btn-block">
           <div class="cta-btn-label">Planifier un échange</div>
-          <a class="btn-navy" href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener">Prendre rendez-vous →</a>
+          <a class="btn-outline-white" href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener">Prendre rendez-vous →</a>
           <p class="cta-btn-desc">Échangeons directement, sans engagement.</p>
         </div>
       </div>
