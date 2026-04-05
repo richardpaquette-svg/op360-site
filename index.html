@@ -244,6 +244,30 @@
 .diff-bandeau-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
 .diff-bandeau-icon svg { width: 28px; height: 28px; flex-shrink: 0; }
 .diff-bandeau-titre { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.85); line-height: 1.35; }
+/* ── DIFF HOME CONTAINER ── */
+.diff-home-container {
+  margin-top: 40px;
+  background: var(--navy);
+  border-left: 4px solid var(--cyan);
+  border-radius: 0 12px 12px 0;
+  padding: 20px 32px;
+}
+.diff-home-label {
+  display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px;
+}
+.diff-home-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 0;
+}
+.diff-home-item {
+  display: flex; flex-direction: row; align-items: center;
+  gap: 10px; padding: 0 16px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.diff-home-item:first-child { padding-left: 0; }
+.diff-home-item:last-child { border-right: none; }
+.diff-home-item svg { flex-shrink: 0; width: 20px !important; height: 20px !important; }
+.diff-home-titre { font-size: 13px; font-weight: 700; color: var(--white); line-height: 1.35; }
 
 /* ── OFFRES ── */
 .offres-section .section-intro { margin-bottom: 20px; }
@@ -461,6 +485,10 @@
   .stat-choc-text p { display: none; }
   .moments-section .section-intro { display: none; }
   .diff-bandeau { display: none; }
+  .diff-home-container { padding: 16px 20px; }
+  .diff-home-grid { grid-template-columns: repeat(2, 1fr); gap: 12px 0; }
+  .diff-home-item { padding: 8px 12px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .diff-home-item:nth-last-child(-n+2) { border-bottom: none; }
   .equipe-expertise { display: none; }
 }
 </style>
@@ -551,7 +579,8 @@
   <div class="container">
     <div class="section-label reveal">Notre méthode</div>
     <h2 class="section-title reveal">Un parcours d'exécution en 4 axes</h2>
-    <p class="section-intro section-subtitle reveal">De la vision à l'action — une colonne vertébrale structurée pour transformer votre stratégie en résultats mesurables.</p>
+    <p class="section-intro section-subtitle reveal" style="margin-bottom:0">De la vision à l'action — une colonne vertébrale structurée pour transformer votre stratégie en résultats mesurables.</p>
+    <p class="section-intro section-subtitle reveal" style="margin-bottom:40px">Et 6 points qui marquent notre différence.</p>
     <div class="parcours-timeline">
       <div class="parcours-step reveal">
         <div class="parcours-num-wrap"><div class="parcours-num">1</div></div>
@@ -586,6 +615,11 @@
         </div>
       </div>
     </div>
+    <!-- 6 DIFFÉRENCIATEURS -->
+    <div class="diff-home-container reveal">
+      <span class="diff-home-label">Ce qui fait notre différence</span>
+      <div class="diff-home-grid" id="diff-home-grid"></div>
+    </div>
   </div>
 </section>
 
@@ -597,9 +631,7 @@
     <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
     <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire — et 6 points qui marquent notre différence.</p>
     <div class="moments-grid" id="moments-grid"></div>
-    <div class="diff-bandeau">
-      <div class="diff-bandeau-grid" id="diff-bandeau-grid"></div>
-    </div>
+
   </div>
 </section>
 
@@ -742,10 +774,16 @@ document.getElementById('moments-grid').innerHTML = OP360.moments.map(m => `
     </div>
   </div>`).join('');
 
-document.getElementById('diff-bandeau-grid').innerHTML = OP360.differenciateurs.map(d => `
+document.getElementById('diff-bandeau-grid') && (document.getElementById('diff-bandeau-grid').innerHTML = OP360.differenciateurs.map(d => `
   <div class="diff-bandeau-item">
     <div class="diff-bandeau-icon">${d.icone}</div>
     <div class="diff-bandeau-titre">${d.titre}</div>
+  </div>`).join(''));
+
+document.getElementById('diff-home-grid').innerHTML = OP360.differenciateurs.map(d => `
+  <div class="diff-home-item">
+    ${d.icone}
+    <span class="diff-home-titre">${d.titre}</span>
   </div>`).join('');
 
 document.getElementById('temos-grid').innerHTML = OP360.temoignages.map(t => `
