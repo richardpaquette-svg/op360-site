@@ -722,7 +722,7 @@
 <!-- STAT CHOC -->
 <div class="stat-choc-wrap">
   <div class="container" style="padding:24px 0 48px;">
-    <div class="stat-choc reveal">
+    <div class="stat-choc">
       <div class="stat-choc-nb">10–<span>20%</span></div>
       <div class="stat-choc-text">
         <h3>Seulement 10–20 % des stratégies aboutissent. <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,0.45);font-style:italic">Selon McKinsey &amp; Company et la Harvard Business Review</span></h3>
@@ -739,6 +739,7 @@
     <div class="section-label section-label-white reveal">Quand intervenir</div>
     <h2 class="section-title section-title-white reveal">Passer un cap : quand la stratégie devient action</h2>
     <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire — et 6 points qui marquent notre différence.</p>
+    <!-- Les .moment-card sont injectées par JS sans class reveal : géré par initMomentsStagger() -->
     <div class="moments-grid" id="moments-grid"></div>
   </div>
 </section>
@@ -868,8 +869,9 @@
 buildNav('index.html');
 buildFooter();
 
+// Injection des cartes moments SANS class reveal (gérée par initMomentsStagger)
 document.getElementById('moments-grid').innerHTML = OP360.moments.map(m => `
-  <div class="moment-card reveal">
+  <div class="moment-card">
     <div class="moment-icon-wrap">${m.icone}</div>
     <div class="moment-body">
       <h3>${m.titre}</h3>
@@ -912,7 +914,9 @@ document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => `
     <div class="equipe-expertise">${e.expertise}</div>
   </div>`).join('');
 
+// Init animations : reveal général + 3 effets ciblés
 initReveal();
+initMomentsStagger();
 </script>
 </body>
 </html>
