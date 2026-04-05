@@ -308,8 +308,7 @@
 .diag-bandeau-home-quote { font-size: 13px; font-style: italic; color: rgba(255,255,255,0.55); line-height: 1.5; }
 
 /* ── TÉMOIGNAGES + FIT ── */
-.temofit-section { background: var(--gray-bg); border-top: 1px solid var(--gray-border); padding-bottom: 0; }
-.temofit-section .container { padding-bottom: 48px; }
+.temofit-section { background: var(--gray-bg); border-top: 1px solid var(--gray-border); }
 .temos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .temo-card { background: var(--card-bg); border: 1px solid #e2e8f0; border-left: 3px solid var(--cyan); border-radius: var(--radius); padding: 24px 28px; transition: all 0.25s; }
 .temo-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-2px); }
@@ -325,16 +324,7 @@
 .terrain-content p { font-size: clamp(20px, 3vw, 30px); font-weight: 300; color: var(--white); line-height: 1.5; max-width: 760px; font-style: italic; }
 .terrain-content p strong { color: var(--cyan); font-weight: 600; font-style: normal; }
 
-/* ── FIT BANDEAU ── */
-.fit-bandeau-wrap { background: var(--white); padding: 0 48px; }
-.fit-bandeau-inner { background: var(--navy); border-left: 4px solid var(--cyan); border-radius: 0 12px 12px 0; padding: 16px 28px; display: flex; align-items: center; gap: 48px; flex-wrap: wrap; width: 100%; box-sizing: border-box; min-height: 110px; }
-.fit-bandeau-titre { font-size: clamp(20px, 2.4vw, 28px); font-weight: 700; color: var(--white); white-space: nowrap; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.15); padding-right: 48px; }
-.fit-bandeau-titre span { color: var(--cyan); }
-.fit-bandeau-items { display: flex; gap: 40px; flex: 1; flex-wrap: wrap; }
-.fit-bandeau-item { display: flex; align-items: center; gap: 16px; flex: 1; }
-.fit-bandeau-letter { font-size: 36px; font-weight: 700; color: var(--cyan); line-height: 1; flex-shrink: 0; min-width: 32px; text-align: center; }
-.fit-bandeau-name { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-.fit-bandeau-desc { font-size: 13px; color: #ffffff; line-height: 1.55; }
+
 
 /* ── ÉQUIPE ── */
 .equipe-section { background: var(--white); }
@@ -468,16 +458,6 @@
   .temo-quote { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; font-size: 14px; margin-bottom: 12px; }
   .temo-author { font-size: 11px; }
 
-  /* ── FIT BANDEAU mobile ── */
-  .fit-bandeau-wrap { padding: 0; }
-  .fit-bandeau-wrap .container { padding-bottom: 20px; }
-  .fit-bandeau-inner { flex-direction: row; align-items: center; gap: 16px; padding: 14px 16px; min-height: unset; width: 100%; box-sizing: border-box; margin: 0; border-left: 4px solid var(--cyan); border-radius: 0 8px 8px 0; }
-  .fit-bandeau-titre { font-size: 14px; font-weight: 700; padding: 0; border: none; white-space: nowrap; flex-shrink: 0; width: auto; }
-  .fit-bandeau-items { display: flex; flex-direction: row; gap: 0; flex: 1; width: auto; }
-  .fit-bandeau-item { flex: 1; flex-direction: column; align-items: center; text-align: center; gap: 2px; padding: 0 4px; }
-  .fit-bandeau-letter { font-size: 18px; }
-  .fit-bandeau-name { font-size: 10px; }
-  .fit-bandeau-desc { display: none; }
 
   /* ── ÉQUIPE ── */
   .equipe-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 12px; padding-bottom: 12px; scrollbar-width: none; margin-bottom: 16px; }
@@ -686,36 +666,6 @@
     <div class="section-label reveal">Ils nous ont fait confiance</div>
     <h2 class="section-title reveal">Ce que disent nos clients</h2>
     <div class="temos-grid" id="temos-grid"></div>
-  </div>
-  <div class="fit-bandeau-wrap">
-    <div class="container">
-      <div class="fit-bandeau-inner">
-        <div class="fit-bandeau-titre">We <span>FIT</span> You</div>
-        <div class="fit-bandeau-items">
-          <div class="fit-bandeau-item">
-            <div class="fit-bandeau-letter">F</div>
-            <div>
-              <div class="fit-bandeau-name">Fiabilité</div>
-              <div class="fit-bandeau-desc">Le partenaire sur lequel vous pouvez compter.</div>
-            </div>
-          </div>
-          <div class="fit-bandeau-item">
-            <div class="fit-bandeau-letter">I</div>
-            <div>
-              <div class="fit-bandeau-name">Impact</div>
-              <div class="fit-bandeau-desc">Moins de slides, plus d'exécution terrain.</div>
-            </div>
-          </div>
-          <div class="fit-bandeau-item">
-            <div class="fit-bandeau-letter">T</div>
-            <div>
-              <div class="fit-bandeau-name">Transmission</div>
-              <div class="fit-bandeau-desc">Vers une autonomie durable de vos équipes.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
