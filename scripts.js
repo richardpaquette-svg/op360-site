@@ -10,12 +10,12 @@ const LOGO_SVG_SM = `<img src="logo-white.png" alt="Operating Partners 360" clas
 // ── Navigation ────────────────────────────────
 function buildNav(activePage) {
   const pages = [
-    { href: "index.html", label: "Accueil" },
-    { href: "equipe.html", label: "Qui sommes-nous" },
-    { href: "offres.html", label: "Nos offres" },
-    { href: "notre-differenciation.html", label: "Notre différenciation" },
-    { href: "diagnostic.html", label: "Le diagnostic OP360" },
-    { href: "formations.html", label: "Nos formations" },
+    { href: "index.html",                 label: "Accueil" },
+    { href: "equipe.html",                label: "Qui sommes-nous" },
+    { href: "notre-differenciation.html", label: "Pourquoi OP360 ?" },
+    { href: "offres.html",                label: "Nos offres" },
+    { href: "diagnostic.html",            label: "Le diagnostic OP360" },
+    { href: "formations.html",            label: "Nos formations" },
   ];
 
   const links = pages.map(p =>
@@ -38,6 +38,7 @@ function buildNav(activePage) {
       </button>
     </nav>`;
 
+  // Scroll effect
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
@@ -152,14 +153,12 @@ function initReveal() {
 }
 
 // ── Compteurs animés ──────────────────────────
-// Déclenché quand l'élément [data-count] entre dans le viewport.
-// Supporte les suffixes (ex : "20%", " jours") et les préfixes (ex : "10–").
 function animateCounter(el) {
   const target  = parseFloat(el.dataset.count);
   const suffix  = el.dataset.suffix  || '';
   const prefix  = el.dataset.prefix  || '';
   const decimal = el.dataset.decimal === 'true';
-  const duration = 1400; // ms
+  const duration = 1400;
   const start   = performance.now();
 
   el.classList.add('count-animated', 'counting');
@@ -167,7 +166,6 @@ function animateCounter(el) {
   function tick(now) {
     const elapsed  = now - start;
     const progress = Math.min(elapsed / duration, 1);
-    // Ease-out cubic
     const eased    = 1 - Math.pow(1 - progress, 3);
     const current  = decimal
       ? (eased * target).toFixed(1)
@@ -190,7 +188,6 @@ function initCounters() {
   const counters = document.querySelectorAll('[data-count]');
   if (!counters.length) return;
 
-  // Respecter prefers-reduced-motion
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) {
     counters.forEach(el => {
