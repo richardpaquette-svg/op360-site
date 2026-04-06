@@ -32,7 +32,7 @@ function buildNav(activePage) {
         </div>
       </div>
       <div class="nav-ctas">
-        <a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta--rdv">Prendre RDV</a>
+        <a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta--rdv">Planifier un RDV</a>
         <a href="contact.html" class="nav-cta">Nous contacter</a>
       </div>
       <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
