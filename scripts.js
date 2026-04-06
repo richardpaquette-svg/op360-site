@@ -12,10 +12,9 @@ function buildNav(activePage) {
   const pages = [
     { href: "index.html",                 label: "Accueil" },
     { href: "equipe.html",                label: "Qui sommes-nous" },
-    { href: "notre-differenciation.html", label: "Pourquoi OP360 ?" },
+    { href: "notre-differenciation.html", label: "Pourquoi OP360\u00a0?" },
     { href: "offres.html",                label: "Nos offres" },
     { href: "diagnostic.html",            label: "Le diagnostic OP360" },
-    { href: "formations.html",            label: "Nos formations" },
   ];
 
   const links = pages.map(p =>
@@ -32,7 +31,10 @@ function buildNav(activePage) {
           <a href="contact.html" class="btn-primary" style="font-size:14px;padding:13px 32px;">Prendre contact</a>
         </div>
       </div>
-      <a href="#contact" class="nav-cta">Nous contacter</a>
+      <div class="nav-ctas">
+        <a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta--rdv">Prendre RDV</a>
+        <a href="contact.html" class="nav-cta">Nous contacter</a>
+      </div>
       <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
