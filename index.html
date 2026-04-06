@@ -234,11 +234,14 @@
   position: relative;
   z-index: 1;
 }
-/* Les deux boutons ont la même largeur minimale */
+/* Les deux boutons ont exactement la même largeur via flex:1 */
 .segment-banner .btn-primary,
 .segment-banner .btn-outline-white {
-  min-width: 220px;
+  flex: 1 1 0;
+  min-width: 0;
   justify-content: center;
+  text-align: center;
+  max-width: 320px;
 }
 .moment-card {
   border: 1px solid rgba(0,212,170,0.18);
@@ -532,7 +535,7 @@
   /* Segment banner mobile — colonne, pleine largeur */
   .segment-banner { flex-direction: column; gap: 10px; }
   .segment-banner .btn-primary,
-  .segment-banner .btn-outline-white { min-width: 0; width: 100%; }
+  .segment-banner .btn-outline-white { flex: none; min-width: 0; width: 100%; max-width: 100%; }
 
   /* ── BANDEAU DIAGNOSTIC home — masqué sur mobile (doublon avec carte) ── */
   .diag-bandeau-home { display: none; }
