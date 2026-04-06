@@ -42,19 +42,6 @@
   display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
 }
 
-/* ── INTRO BAND ── */
-.diff-intro-band {
-  background: var(--white); border-bottom: 1px solid var(--gray-border);
-  padding: 40px 48px;
-}
-.diff-intro-band-inner {
-  max-width: 860px; margin: 0 auto; text-align: center;
-}
-.diff-intro-band p {
-  font-size: 17px; color: var(--gray-text); line-height: 1.75;
-}
-.diff-intro-band strong { color: var(--navy); }
-
 /* ── 6 DIFFÉRENCIATEURS ── */
 .diff-section { background: var(--gray-bg); padding: 80px 48px; }
 .diff-grid {
@@ -106,7 +93,6 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .hero-diff { padding: 100px 20px 60px; }
-  .diff-intro-band { padding: 32px 20px; }
   .diff-section { padding: 48px 20px; }
   .diff-grid { grid-template-columns: 1fr; gap: 20px; }
   .diff-card { padding: 28px 20px; gap: 16px; }
@@ -125,23 +111,16 @@
   <div class="hero-diff-inner">
     <div class="hero-diff-badge">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      Ce qui nous rend différents
+      Pourquoi OP360
     </div>
-    <h1>6 points qui définissent<br><span>notre approche unique</span></h1>
-    <p class="hero-diff-sub">Nous ne sommes pas un cabinet de conseil classique. Nous sommes des pairs-dirigeants qui s'engagent sur l'exécution, avec des méthodes et des outils conçus pour transformer les ambitions en résultats.</p>
+    <h1>Une approche 360° pour <span>exécuter et créer de la valeur</span></h1>
+    <p class="hero-diff-sub">Nous ne sommes pas un cabinet de conseil classique. Nous sommes des pairs-dirigeants qui s'engagent sur l'exécution — avec une méthode systémique, un collectif mobilisable et des outils digitaux conçus pour transformer les ambitions en résultats concrets.</p>
     <div class="hero-diff-cta">
       <a href="diagnostic.html" class="btn-primary">Démarrer par le diagnostic →</a>
       <a href="contact.html" class="btn-secondary">Parlons de vos enjeux</a>
     </div>
   </div>
 </section>
-
-<!-- INTRO -->
-<div class="diff-intro-band">
-  <div class="diff-intro-band-inner">
-    <p>Chez OP360, chaque engagement repose sur une conviction : <strong>la stratégie ne vaut que par son exécution</strong>. Nos 6 différenciateurs ne sont pas des promesses marketing — ce sont les piliers concrets de notre façon de travailler à vos côtés.</p>
-  </div>
-</div>
 
 <!-- 6 DIFFÉRENCIATEURS -->
 <section class="diff-section">
