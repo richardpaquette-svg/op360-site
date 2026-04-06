@@ -83,9 +83,8 @@ function buildFooter() {
           <div class="footer-col">
             <h4>Pour qui</h4>
             <ul>
-              <li><a href="pme.html">Dirigeants de PME</a></li>
-              <li><a href="eti.html">Dirigeants d'ETI</a></li>
-              <li><a href="investisseurs.html">Investisseurs & Fonds</a></li>
+              <li><a href="dirigeants.html">Dirigeants PME &amp; ETI</a></li>
+              <li><a href="investisseurs.html">Investisseurs &amp; Fonds</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -101,7 +100,7 @@ function buildFooter() {
             <ul>
               <li><a href="mailto:${OP360.entreprise.email}">${OP360.entreprise.email}</a></li>
               <li><a href="tel:+33651721524">${OP360.entreprise.tel}</a></li>
-              <li><a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener">Prendre RDV</a></li>
+              <li><a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener">Planifier un RDV</a></li>
             </ul>
           </div>
         </div>
