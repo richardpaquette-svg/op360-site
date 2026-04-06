@@ -170,14 +170,8 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 
 /* ══════════════════════════════════════════════
    REVEAL AU SCROLL — système d'animations ciblées
-   3 variantes en plus du fade-up générique :
-   1. .reveal-slide-right  → stat-choc (chiffre qui «arrive»)
-   2. .reveal-stagger      → moment-card (cascade 120ms)
-   3. .reveal-label        → section-label (8px, très subtil)
-   Tout le reste conserve .reveal (fade-up 22px existant)
    ══════════════════════════════════════════════ */
 
-/* Générique fade-up — inchangé */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -185,7 +179,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 }
 .reveal.visible { opacity: 1; transform: none; }
 
-/* 1 — Slide depuis la droite (stat choc 10–20%) */
 .reveal-slide-right {
   opacity: 0;
   transform: translateX(60px);
@@ -194,9 +187,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 }
 .reveal-slide-right.visible { opacity: 1; transform: none; }
 
-/* 2 — Stagger cascade moments clés
-   Chaque .moment-card reçoit un --stagger-i via JS
-   transition-delay calculée : i * 120ms */
 .reveal-stagger {
   opacity: 0;
   transform: translateY(18px);
@@ -205,7 +195,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 }
 .reveal-stagger.visible { opacity: 1; transform: none; }
 
-/* 3 — Labels section-label : 8px très subtil */
 .reveal-label {
   opacity: 0;
   transform: translateY(8px);
@@ -213,7 +202,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 }
 .reveal-label.visible { opacity: 1; transform: none; }
 
-/* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal-slide-right,
@@ -222,6 +210,89 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
     transition: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   EFFETS VISUELS P1 — ajoutés avril 2026
+   1. Compteurs animés (.count-animated)
+   2. Barre cyan animée (.diff-home-container)
+   3. Hover lift amélioré (.offre-card, .moment-card)
+   ══════════════════════════════════════════════ */
+
+/* 1 — Compteurs : flash cyan au moment où le chiffre s'incrémente */
+.count-animated {
+  transition: color 0.15s ease;
+}
+.count-animated.counting {
+  color: var(--cyan);
+}
+
+/* 2 — Barre cyan gauche animée au chargement de la section */
+@keyframes cyanBarGrow {
+  from { background-size: 4px 0%; }
+  to   { background-size: 4px 100%; }
+}
+
+.diff-home-container {
+  position: relative;
+  overflow: hidden;
+}
+.diff-home-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--cyan), var(--cyan-mid));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 0 2px 2px 0;
+}
+.diff-home-container.bar-visible::before {
+  transform: scaleY(1);
+}
+
+/* Gradient animé sur la bordure existante (shimmer) */
+@keyframes cyanShimmer {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+.diff-home-container {
+  border-left: 4px solid transparent;
+  background-image: linear-gradient(var(--navy), var(--navy)),
+                    linear-gradient(to bottom, var(--cyan), var(--cyan-mid) 50%, var(--cyan));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: auto, 4px 200%;
+  animation: cyanShimmer 4s ease-in-out infinite;
+}
+
+/* 3 — Hover lift amélioré sur offre-card (desktop uniquement) */
+@media (hover: hover) {
+  .offre-card {
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.28s ease,
+                background 0.28s ease;
+  }
+  .offre-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0,212,170,0.18);
+  }
+
+  /* Hover lift sur moment-card */
+  .moment-card {
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.28s ease;
+  }
+  .moment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.32);
+    border-color: rgba(0,212,170,0.6);
   }
 }
 
@@ -281,18 +352,14 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
     border-top: 1px solid rgba(0,212,170,0.15);
   }
   section { padding: 48px 20px 36px; }
-  /* Typographie */
   .section-intro { font-size: 16px; margin-bottom: 32px; }
   h2.section-title { font-size: clamp(22px, 6vw, 32px); margin-bottom: 10px; }
-  /* Boutons plus compacts */
   .btn-primary, .btn-secondary, .btn-navy { padding: 14px 28px; font-size: 14px; }
-  /* Touch targets minimum 44px */
   .btn-outline { padding: 14px 28px; font-size: 14px; }
   .nav-burger { padding: 10px; }
   .nav-links a { min-height: 44px; display: flex; align-items: center; }
   .footer-mobile-links a { min-height: 44px; display: flex; align-items: center; }
   .cta-contact-item { min-height: 44px; }
-  /* ── FOOTER MOBILE ultra-minimaliste ── */
   .footer-top { display: none; }
   .footer-mobile { display: flex; }
   .footer-bottom {
@@ -309,7 +376,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   }
 }
 
-/* ── OVERRIDES MOBILE PRIORITAIRES ── */
 @media (max-width: 768px) {
   .hero-sub { height: 46px; overflow: hidden; }
   .hero-ctas .btn-primary,
