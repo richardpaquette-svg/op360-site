@@ -7,12 +7,12 @@
 <meta name="description" content="Diagnostic OP360, Shadow Codir, Accompagnement Terrain, Due Diligence, Formations et Plateforme SaaS : 6 offres modulables et combinables selon vos besoins.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
 <style>
 /* ── HERO ── */
 .hero-offres {
   min-height: 55vh; background: var(--navy); position: relative; overflow: hidden;
-  display: flex; align-items: center; padding: 110px 48px 80px; justify-content: center; text-align: center;
+  display: flex; align-items: center; padding: 110px 48px 80px;
 }
 .hero-offres-photo {
   position: absolute; inset: 0;
@@ -20,10 +20,14 @@
   background-size: cover; background-position: center; opacity: 0.1;
 }
 .hero-offres-overlay { position: absolute; inset: 0; background: rgba(26,35,50,0.88); }
-.hero-offres-content { position: relative; z-index: 2; max-width: 720px; }
+.hero-offres-content {
+  position: relative; z-index: 2;
+  width: 100%; max-width: 1120px; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
 .hero-offres h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 16px; }
-.hero-offres h1 span { color: var(--cyan); }
-.hero-offres-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 580px; margin: 0 auto 0; }
+.hero-offres h1 span { color: var(--cyan); display: block; }
+.hero-offres-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 680px; margin: 0 0 0 0; }
 
 /* ── HUB GRID ── */
 .hub-section { padding: 80px 48px; background: var(--white); }
@@ -48,23 +52,35 @@
 .hub-card-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; font-size: 12px; margin-top: 1px; }
 .hub-cta { text-align: center; font-size: 14px; }
 
-/* ── COMBO ── */
-.combo-section { background: var(--cyan-light); padding: 80px 48px; }
-.combo-content { max-width: 760px; margin: 0 auto; text-align: center; }
-.combo-content h2 { font-size: clamp(26px, 3.5vw, 38px); font-weight: 700; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em; }
-.combo-content p { font-size: 17px; font-weight: 300; color: var(--gray-text); line-height: 1.7; margin-bottom: 32px; }
-.combo-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
-.combo-tag { background: var(--white); border: 1.5px solid rgba(0,212,170,0.3); border-radius: 8px; padding: 10px 20px; font-size: 14px; font-weight: 600; color: var(--navy); }
-.combo-tag span { color: var(--cyan); margin-right: 6px; }
+/* ── CTA FINAL ── */
+.offres-cta-section {
+  background: var(--navy); padding: 80px 48px;
+}
+.offres-cta-inner {
+  max-width: 760px;
+}
+.offres-cta-section .section-label-white { margin-bottom: 16px; }
+.offres-cta-section h2 {
+  font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--white);
+  line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 16px;
+}
+.offres-cta-section p {
+  font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.68);
+  line-height: 1.7; margin-bottom: 36px; max-width: 580px;
+}
+.offres-cta-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.offres-cta-btns a { min-width: 240px; text-align: center; justify-content: center; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) { .hub-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) {
-  .hero-offres { min-height: auto; padding: 80px 20px 40px; }
+  .hero-offres { min-height: auto; padding: 80px 20px 48px; }
   .hero-offres h1 { font-size: clamp(28px, 8vw, 38px); }
+  .hero-offres-sub { font-size: 16px; max-width: 100%; }
   .hub-section { padding: 48px 20px; }
   .hub-grid { grid-template-columns: 1fr; }
-  .combo-section { padding: 48px 20px; }
+  .offres-cta-section { padding: 56px 20px; }
+  .offres-cta-btns a { min-width: 0; width: 100%; }
 }
 </style>
 </head>
@@ -77,9 +93,9 @@
   <div class="hero-offres-photo"></div>
   <div class="hero-offres-overlay"></div>
   <div class="hero-offres-content">
-    <div class="section-label section-label-white" style="text-align:center;margin-bottom:16px">Nos leviers d'intervention</div>
-    <h1>6 offres <span>modulables</span><br>et combinables</h1>
-    <p class="hero-offres-sub">De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources. Chacune peut être utilisée seule ou combinée.</p>
+    <div class="section-label section-label-white" style="margin-bottom:16px">Nos leviers d'intervention</div>
+    <h1>6 offres <span>modulables et combinables</span></h1>
+    <p class="hero-offres-sub">De l’analyse à l’exécution, nos offres s’adaptent à vos besoins, votre taille et vos ressources. Chacune peut être utilisée seule ou combinée.</p>
   </div>
 </section>
 
@@ -102,7 +118,7 @@
         <p class="hub-card-sub">10 jours pour voir clair et agir juste</p>
         <ul class="hub-card-bullets">
           <li>12 domaines analysés, vision systémique complète</li>
-          <li>5 livrables concrets : rapport, heatmap, plan d'action…</li>
+          <li>4 livrables concrets : rapport, heatmap, plan d’action, restitution</li>
           <li>Recommandations actionnables dès la restitution</li>
         </ul>
         <a href="diagnostic.html" class="btn-primary hub-cta">Découvrir →</a>
@@ -115,7 +131,7 @@
           <span class="hub-num">Offre 02</span>
         </div>
         <h3>Shadow Codir</h3>
-        <p class="hub-card-sub">L'appui d'un collectif de pairs qui ont vécu vos défis</p>
+        <p class="hub-card-sub">L’appui d’un collectif de pairs qui ont vécu vos défis</p>
         <ul class="hub-card-bullets">
           <li>Collectif pluridisciplinaire : stratégie, finance, digital, RSE</li>
           <li>Mobilisable en 24/48h, ponctuel ou récurrent</li>
@@ -131,7 +147,7 @@
           <span class="hub-num">Offre 03</span>
         </div>
         <h3>Accompagnement Terrain</h3>
-        <p class="hub-card-sub">Au cœur de l'exécution, à vos côtés ou au sein de vos équipes</p>
+        <p class="hub-card-sub">Au cœur de l’exécution, à vos côtés ou au sein de vos équipes</p>
         <ul class="hub-card-bullets">
           <li>Immersion (temps plein ou partiel) ou appui externe</li>
           <li>Plans 100 jours / 1 an / 3 ans, KPIs, pilotage</li>
@@ -151,7 +167,7 @@
         <ul class="hub-card-bullets">
           <li>Pré/post-investissement, cession, acquisition, transmission</li>
           <li>Volet RSE intégré — CSRD, ESG des LPs</li>
-          <li>Investment case traduit en plan d'action chiffré</li>
+          <li>Investment case traduit en plan d’action chiffré</li>
         </ul>
         <a href="due-diligence.html" class="btn-outline hub-cta" style="border-color:var(--navy);color:var(--navy)">Découvrir →</a>
       </div>
@@ -192,20 +208,16 @@
   </div>
 </section>
 
-<!-- COMBO -->
-<section class="combo-section">
-  <div class="combo-content">
-    <div class="section-label reveal">Modularité</div>
-    <h2 class="reveal">Des offres qui se combinent</h2>
-    <p class="reveal">Nos offres sont conçues pour fonctionner ensemble. Un Diagnostic OP360 ouvre naturellement vers un Accompagnement Terrain, un Shadow Codir ou la Plateforme SaaS selon vos besoins.</p>
-    <div class="combo-tags reveal">
-      <span class="combo-tag"><span>⚡</span>Diagnostic OP360</span>
-      <span class="combo-tag" style="background:var(--navy);color:rgba(255,255,255,0.9);border-color:var(--navy)">+</span>
-      <span class="combo-tag"><span>🤝</span>Accompagnement Terrain</span>
-      <span class="combo-tag" style="background:var(--navy);color:rgba(255,255,255,0.9);border-color:var(--navy)">+</span>
-      <span class="combo-tag"><span>💻</span>Plateforme SaaS</span>
+<!-- CTA FINAL -->
+<section class="offres-cta-section">
+  <div class="offres-cta-inner container">
+    <div class="section-label section-label-white reveal">Passons à l’action</div>
+    <h2 class="reveal">Pas sûr de votre point d’entrée ?</h2>
+    <p class="reveal">Commencez par un Diagnostic OP360 — 10 jours pour voir clair sur vos priorités et construire votre dispositif sur mesure.</p>
+    <div class="offres-cta-btns reveal">
+      <a href="diagnostic.html" class="btn-primary">Démarrer par le diagnostic →</a>
+      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-secondary">Parlons de vos enjeux</a>
     </div>
-    <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary reveal">Construire mon dispositif sur mesure →</a>
   </div>
 </section>
 
