@@ -51,12 +51,26 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 .nav-links a { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.7); transition: color 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
 
+/* Wrapper des deux boutons CTA desktop */
+.nav-ctas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--cyan); color: var(--navy);
   font-family: var(--font); font-weight: 700; font-size: 13px;
   letter-spacing: 0.05em; text-transform: uppercase;
-  padding: 11px 26px; border: none; border-radius: 5px;
+  padding: 11px 20px;
+  min-width: 148px;
+  border: none; border-radius: 5px;
   cursor: pointer; transition: all 0.2s; white-space: nowrap;
+  box-sizing: border-box;
 }
 .nav-cta:hover { background: var(--cyan-mid); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,212,170,0.25); }
 
@@ -344,7 +358,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .nav-burger { display: flex; }
-  .nav-cta { display: none; }
+  .nav-ctas { display: none; }
   .nav-links.open .nav-cta-mobile {
     display: flex;
     justify-content: center;
