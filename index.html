@@ -224,7 +224,22 @@
   position: relative;
   z-index: 1;
 }
-.segment-banner { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 40px; }
+/* Segment banner — aligné à gauche comme la section Hero */
+.segment-banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+/* Les deux boutons ont la même largeur minimale */
+.segment-banner .btn-primary,
+.segment-banner .btn-outline-white {
+  min-width: 220px;
+  justify-content: center;
+}
 .moment-card {
   border: 1px solid rgba(0,212,170,0.18);
   border-radius: var(--radius);
@@ -514,6 +529,11 @@
   .diff-bandeau-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .diff-bandeau-titre { font-size: 12px; }
 
+  /* Segment banner mobile — colonne, pleine largeur */
+  .segment-banner { flex-direction: column; gap: 10px; }
+  .segment-banner .btn-primary,
+  .segment-banner .btn-outline-white { min-width: 0; width: 100%; }
+
   /* ── BANDEAU DIAGNOSTIC home — masqué sur mobile (doublon avec carte) ── */
   .diag-bandeau-home { display: none; }
 
@@ -735,7 +755,7 @@
     <p class="section-intro section-intro-white section-subtitle--inverse reveal">3 moments clés où notre expertise opérationnelle change la trajectoire — et 6 points qui marquent notre différence.</p>
     <div class="moments-grid" id="moments-grid"></div>
     <div class="segment-banner">
-      <a href="dirigeants.html" class="btn-primary">Dirigeant de PME &amp; ETI →</a>
+      <a href="dirigeants.html" class="btn-primary">Dirigeants PME &amp; ETI →</a>
       <a href="investisseurs.html" class="btn-outline-white">Investisseurs &amp; fonds →</a>
     </div>
   </div>
