@@ -38,7 +38,6 @@ function buildNav(activePage) {
       </button>
     </nav>`;
 
-  // Scroll effect
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
@@ -124,11 +123,6 @@ function buildFooter() {
 }
 
 // ── Scroll Reveal ─────────────────────────────
-// Gère 4 classes :
-//   .reveal            → fade-up 22px générique (inchangé)
-//   .reveal-slide-right → translateX(60px) — stat choc
-//   .reveal-stagger    → fade-up 18px en cascade — moment-cards (--stagger-i)
-//   .reveal-label      → fade-up 8px très subtil — section-label
 function initReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -136,7 +130,6 @@ function initReveal() {
     });
   }, { threshold: 0.08 });
 
-  // Générique fade-up
   document.querySelectorAll('.reveal').forEach((el, i) => {
     const siblings = el.parentElement.querySelectorAll('.reveal');
     const idx = Array.from(siblings).indexOf(el);
@@ -144,24 +137,101 @@ function initReveal() {
     observer.observe(el);
   });
 
-  // Slide depuis la droite (stat choc)
   document.querySelectorAll('.reveal-slide-right').forEach(el => {
     observer.observe(el);
   });
 
-  // Stagger cascade (moment-cards) — délai calculé par index
   document.querySelectorAll('.reveal-stagger').forEach((el, i) => {
     el.style.setProperty('--stagger-i', i);
     observer.observe(el);
   });
 
-  // Labels subtils
   document.querySelectorAll('.reveal-label').forEach(el => {
     observer.observe(el);
   });
 }
 
+// ── Compteurs animés ──────────────────────────
+// Déclenché quand l'élément [data-count] entre dans le viewport.
+// Supporte les suffixes (ex : "20%", " jours") et les préfixes (ex : "10–").
+function animateCounter(el) {
+  const target  = parseFloat(el.dataset.count);
+  const suffix  = el.dataset.suffix  || '';
+  const prefix  = el.dataset.prefix  || '';
+  const decimal = el.dataset.decimal === 'true';
+  const duration = 1400; // ms
+  const start   = performance.now();
+
+  el.classList.add('count-animated', 'counting');
+
+  function tick(now) {
+    const elapsed  = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease-out cubic
+    const eased    = 1 - Math.pow(1 - progress, 3);
+    const current  = decimal
+      ? (eased * target).toFixed(1)
+      : Math.round(eased * target);
+
+    el.textContent = prefix + current + suffix;
+
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      el.textContent = prefix + target + suffix;
+      el.classList.remove('counting');
+    }
+  }
+
+  requestAnimationFrame(tick);
+}
+
+function initCounters() {
+  const counters = document.querySelectorAll('[data-count]');
+  if (!counters.length) return;
+
+  // Respecter prefers-reduced-motion
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) {
+    counters.forEach(el => {
+      el.textContent = (el.dataset.prefix || '') + el.dataset.count + (el.dataset.suffix || '');
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !e.target.dataset.counted) {
+        e.target.dataset.counted = 'true';
+        animateCounter(e.target);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(el => observer.observe(el));
+}
+
+// ── Barre cyan .diff-home-container ───────────
+function initCyanBar() {
+  const container = document.querySelector('.diff-home-container');
+  if (!container) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('bar-visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  observer.observe(container);
+}
+
 // ── Init page ─────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
+  initCounters();
+  initCyanBar();
 });
