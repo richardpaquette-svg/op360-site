@@ -234,11 +234,13 @@
   position: relative;
   z-index: 1;
 }
-/* Les deux boutons ont la même largeur minimale */
+/* Les deux boutons ont la même largeur — flex:1 depuis base 0 */
 .segment-banner .btn-primary,
 .segment-banner .btn-outline-white {
-  min-width: 220px;
+  flex: 1 1 0;
+  min-width: 0;
   justify-content: center;
+  max-width: 320px;
 }
 .moment-card {
   border: 1px solid rgba(0,212,170,0.18);
@@ -297,6 +299,18 @@
 .diff-home-item:last-child { border-right: none; }
 .diff-home-item svg { flex-shrink: 0; width: 28px !important; height: 28px !important; }
 .diff-home-titre { font-size: 13px; font-weight: 700; color: var(--white); line-height: 1.35; }
+/* ── DIFF HOME CTA ── */
+.diff-home-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.diff-home-cta .btn-outline-white {
+  font-size: 14px;
+  padding: 10px 24px;
+}
 
 /* ── OFFRES ── */
 .offres-section .section-intro { margin-bottom: 20px; }
@@ -532,7 +546,7 @@
   /* Segment banner mobile — colonne, pleine largeur */
   .segment-banner { flex-direction: column; gap: 10px; }
   .segment-banner .btn-primary,
-  .segment-banner .btn-outline-white { min-width: 0; width: 100%; }
+  .segment-banner .btn-outline-white { min-width: 0; width: 100%; max-width: 100%; flex: none; }
 
   /* ── BANDEAU DIAGNOSTIC home — masqué sur mobile (doublon avec carte) ── */
   .diag-bandeau-home { display: none; }
@@ -676,6 +690,8 @@
   /* FIX: reset du padding-left:0 desktop — Shadow Codir aligné comme les autres items */
   .diff-home-item:first-child { padding-left: 12px; }
   .diff-home-item:nth-last-child(-n+2) { border-bottom: none; }
+  /* CTA diff-home masqué sur mobile — déjà accessible via menu */
+  .diff-home-cta { display: none; }
 }
 </style>
 </head>
@@ -806,6 +822,9 @@
     <div class="diff-home-container">
       <span class="diff-home-label">Ce qui fait notre différence</span>
       <div class="diff-home-grid" id="diff-home-grid"></div>
+      <div class="diff-home-cta">
+        <a href="notre-differenciation.html" class="btn-outline-white">En savoir plus →</a>
+      </div>
     </div>
   </div>
 </section>
