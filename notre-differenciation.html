@@ -35,13 +35,19 @@
   font-size: clamp(34px, 5vw, 56px); font-weight: 700; color: var(--white);
   line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 20px;
 }
-.hero-diff h1 span { color: var(--cyan); }
+.hero-diff h1 span {
+  color: var(--cyan);
+  display: block;
+}
 .hero-diff-sub {
   font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.72);
-  line-height: 1.6; max-width: 620px; margin: 0 0 40px 0;
+  line-height: 1.6; max-width: 860px; margin: 0 0 40px 0;
 }
 .hero-diff-cta {
   display: flex; gap: 16px; flex-wrap: wrap;
+}
+.hero-diff-cta a {
+  min-width: 240px; text-align: center; justify-content: center;
 }
 
 /* ── 6 DIFFÉRENCIATEURS ── */
@@ -95,6 +101,8 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .hero-diff { padding: 100px 20px 60px; }
+  .hero-diff-sub { font-size: 16px; max-width: 100%; }
+  .hero-diff-cta a { min-width: 0; width: 100%; }
   .diff-section { padding: 48px 20px; }
   .diff-grid { grid-template-columns: 1fr; gap: 20px; }
   .diff-card { padding: 28px 20px; gap: 16px; }
@@ -115,7 +123,7 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       Pourquoi OP360
     </div>
-    <h1>Une approche 360° pour <span>exécuter et créer de la valeur</span></h1>
+    <h1>Une approche 360° pour<span>exécuter et créer de la valeur</span></h1>
     <p class="hero-diff-sub">Nous ne sommes pas un cabinet de conseil classique. Nous sommes des pairs-dirigeants qui s'engagent sur l'exécution — avec une méthode systémique, un collectif mobilisable et des outils digitaux conçus pour transformer les ambitions en résultats concrets.</p>
     <div class="hero-diff-cta">
       <a href="diagnostic.html" class="btn-primary">Démarrer par le diagnostic →</a>
