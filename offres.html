@@ -11,23 +11,42 @@
 <style>
 /* ── HERO ── */
 .hero-offres {
-  min-height: 55vh; background: var(--navy); position: relative; overflow: hidden;
-  display: flex; align-items: center; padding: 110px 48px 80px;
+  min-height: 60vh; background: var(--navy); position: relative; overflow: hidden;
+  display: flex; align-items: center; padding: 120px 48px 80px;
 }
-.hero-offres-photo {
+.hero-offres-overlay {
   position: absolute; inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1400&q=80');
-  background-size: cover; background-position: center; opacity: 0.1;
+  background: linear-gradient(120deg, rgba(26,35,50,0.97) 55%, rgba(0,212,170,0.08) 100%);
 }
-.hero-offres-overlay { position: absolute; inset: 0; background: rgba(26,35,50,0.88); }
-.hero-offres-content {
+.hero-offres-inner {
   position: relative; z-index: 2;
   width: 100%; max-width: 1120px; margin: 0 auto;
   display: flex; flex-direction: column; align-items: flex-start;
 }
-.hero-offres h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 16px; }
-.hero-offres h1 span { color: var(--cyan); display: block; }
-.hero-offres-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; max-width: 680px; margin: 0 0 0 0; }
+.hero-offres-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  width: fit-content;
+  background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
+  border-radius: 100px; padding: 7px 18px; margin-bottom: 28px;
+  font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.1em; text-transform: uppercase;
+}
+.hero-offres h1 {
+  font-size: clamp(34px, 5vw, 56px); font-weight: 700; color: var(--white);
+  line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 20px;
+}
+.hero-offres h1 span {
+  color: var(--cyan); display: block;
+}
+.hero-offres-sub {
+  font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.72);
+  line-height: 1.6; max-width: 680px; margin: 0 0 40px 0;
+}
+.hero-offres-cta {
+  display: flex; gap: 16px; flex-wrap: wrap;
+}
+.hero-offres-cta a {
+  min-width: 240px; text-align: center; justify-content: center;
+}
 
 /* ── HUB GRID ── */
 .hub-section { padding: 80px 48px; background: var(--white); }
@@ -53,12 +72,8 @@
 .hub-cta { text-align: center; font-size: 14px; }
 
 /* ── CTA FINAL ── */
-.offres-cta-section {
-  background: var(--navy); padding: 80px 48px;
-}
-.offres-cta-inner {
-  max-width: 760px;
-}
+.offres-cta-section { background: var(--navy); padding: 80px 48px; }
+.offres-cta-inner { max-width: 760px; }
 .offres-cta-section .section-label-white { margin-bottom: 16px; }
 .offres-cta-section h2 {
   font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--white);
@@ -74,9 +89,10 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) { .hub-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) {
-  .hero-offres { min-height: auto; padding: 80px 20px 48px; }
+  .hero-offres { min-height: auto; padding: 100px 20px 60px; }
   .hero-offres h1 { font-size: clamp(28px, 8vw, 38px); }
-  .hero-offres-sub { font-size: 16px; max-width: 100%; }
+  .hero-offres-sub { font-size: 16px; max-width: 100%; margin-bottom: 32px; }
+  .hero-offres-cta a { min-width: 0; width: 100%; }
   .hub-section { padding: 48px 20px; }
   .hub-grid { grid-template-columns: 1fr; }
   .offres-cta-section { padding: 56px 20px; }
@@ -90,12 +106,18 @@
 
 <!-- HERO -->
 <section class="hero-offres">
-  <div class="hero-offres-photo"></div>
   <div class="hero-offres-overlay"></div>
-  <div class="hero-offres-content">
-    <div class="section-label section-label-white" style="margin-bottom:16px">Nos leviers d'intervention</div>
-    <h1>6 offres <span>modulables et combinables</span></h1>
-    <p class="hero-offres-sub">De l’analyse à l’exécution, nos offres s’adaptent à vos besoins, votre taille et vos ressources. Chacune peut être utilisée seule ou combinée.</p>
+  <div class="hero-offres-inner">
+    <div class="hero-offres-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Nos offres
+    </div>
+    <h1>6 offres modulables<span>et combinables</span></h1>
+    <p class="hero-offres-sub">De l'analyse à l'exécution, nos offres s'adaptent à vos besoins, votre taille et vos ressources. Chacune peut être utilisée seule ou combinée avec les autres.</p>
+    <div class="hero-offres-cta">
+      <a href="diagnostic.html" class="btn-primary">Démarrer par le diagnostic →</a>
+      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-secondary">Parlons de vos enjeux</a>
+    </div>
   </div>
 </section>
 
@@ -107,7 +129,7 @@
     <p class="section-intro section-subtitle reveal">Cliquez sur une offre pour découvrir son contenu détaillé, son déroulé et ses livrables.</p>
     <div class="hub-grid">
 
-      <!-- Offre 01 — Diagnostic Flash -->
+      <!-- Offre 01 -->
       <div class="hub-card featured reveal">
         <div class="hub-card-top">
           <span class="hub-icon-sm">⚡</span>
@@ -118,20 +140,20 @@
         <p class="hub-card-sub">10 jours pour voir clair et agir juste</p>
         <ul class="hub-card-bullets">
           <li>12 domaines analysés, vision systémique complète</li>
-          <li>4 livrables concrets : rapport, heatmap, plan d’action, restitution</li>
+          <li>4 livrables concrets : rapport, heatmap, plan d'action, restitution</li>
           <li>Recommandations actionnables dès la restitution</li>
         </ul>
         <a href="diagnostic.html" class="btn-primary hub-cta">Découvrir →</a>
       </div>
 
-      <!-- Offre 02 — Shadow Codir -->
+      <!-- Offre 02 -->
       <div class="hub-card reveal">
         <div class="hub-card-top">
           <span class="hub-icon-sm">👥</span>
           <span class="hub-num">Offre 02</span>
         </div>
         <h3>Shadow Codir</h3>
-        <p class="hub-card-sub">L’appui d’un collectif de pairs qui ont vécu vos défis</p>
+        <p class="hub-card-sub">L'appui d'un collectif de pairs qui ont vécu vos défis</p>
         <ul class="hub-card-bullets">
           <li>Collectif pluridisciplinaire : stratégie, finance, digital, RSE</li>
           <li>Mobilisable en 24/48h, ponctuel ou récurrent</li>
@@ -140,14 +162,14 @@
         <a href="shadow-codir.html" class="btn-outline hub-cta" style="border-color:var(--navy);color:var(--navy)">Découvrir →</a>
       </div>
 
-      <!-- Offre 03 — Accompagnement Terrain -->
+      <!-- Offre 03 -->
       <div class="hub-card reveal">
         <div class="hub-card-top">
           <span class="hub-icon-sm">🤝</span>
           <span class="hub-num">Offre 03</span>
         </div>
         <h3>Accompagnement Terrain</h3>
-        <p class="hub-card-sub">Au cœur de l’exécution, à vos côtés ou au sein de vos équipes</p>
+        <p class="hub-card-sub">Au cœur de l'exécution, à vos côtés ou au sein de vos équipes</p>
         <ul class="hub-card-bullets">
           <li>Immersion (temps plein ou partiel) ou appui externe</li>
           <li>Plans 100 jours / 1 an / 3 ans, KPIs, pilotage</li>
@@ -156,7 +178,7 @@
         <a href="accompagnement.html" class="btn-outline hub-cta" style="border-color:var(--navy);color:var(--navy)">Découvrir →</a>
       </div>
 
-      <!-- Offre 04 — Due Diligence -->
+      <!-- Offre 04 -->
       <div class="hub-card reveal">
         <div class="hub-card-top">
           <span class="hub-icon-sm">🔬</span>
@@ -167,12 +189,12 @@
         <ul class="hub-card-bullets">
           <li>Pré/post-investissement, cession, acquisition, transmission</li>
           <li>Volet RSE intégré — CSRD, ESG des LPs</li>
-          <li>Investment case traduit en plan d’action chiffré</li>
+          <li>Investment case traduit en plan d'action chiffré</li>
         </ul>
         <a href="due-diligence.html" class="btn-outline hub-cta" style="border-color:var(--navy);color:var(--navy)">Découvrir →</a>
       </div>
 
-      <!-- Offre 05 — Formations -->
+      <!-- Offre 05 -->
       <div class="hub-card reveal">
         <div class="hub-card-top">
           <span class="hub-icon-sm">🎓</span>
@@ -188,7 +210,7 @@
         <a href="formations.html" class="btn-outline hub-cta" style="border-color:var(--navy);color:var(--navy)">Découvrir →</a>
       </div>
 
-      <!-- Offre 06 — SaaS -->
+      <!-- Offre 06 -->
       <div class="hub-card reveal">
         <div class="hub-card-top">
           <span class="hub-icon-sm">💻</span>
@@ -211,8 +233,8 @@
 <!-- CTA FINAL -->
 <section class="offres-cta-section">
   <div class="offres-cta-inner container">
-    <div class="section-label section-label-white reveal">Passons à l’action</div>
-    <h2 class="reveal">Pas sûr de votre point d’entrée ?</h2>
+    <div class="section-label section-label-white reveal">Passons à l'action</div>
+    <h2 class="reveal">Pas sûr de votre point d'entrée ?</h2>
     <p class="reveal">Commencez par un Diagnostic OP360 — 10 jours pour voir clair sur vos priorités et construire votre dispositif sur mesure.</p>
     <div class="offres-cta-btns reveal">
       <a href="diagnostic.html" class="btn-primary">Démarrer par le diagnostic →</a>
