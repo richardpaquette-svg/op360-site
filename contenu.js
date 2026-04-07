@@ -14,7 +14,7 @@
 
 const OP360 = {
 
-  // ── INFOS GÉNÉRALES ──────────────────────────────
+  // ── INFOS GÉNÉRALES ─────────────────────────────────
   entreprise: {
     nom: "Operating Partners 360",
     slogan: "Vous portez la Vision, la Stratégie et le Risque. Nous accélérons et sécurisons l'Exécution.",
@@ -42,7 +42,7 @@ const OP360 = {
     richard:      "https://operating360.com/_assets/v11/2f8733a0399f8085163edaa1a7d0725dc2b2f4f4.png",
   },
 
-  // ── PAGE HOME ─────────────────────────────────────
+  // ── PAGE HOME ───────────────────────────────────
   home: {
     hero_titre1:  "Vous portez la Vision,",
     hero_titre2:  "la Stratégie et le Risque.",
@@ -50,7 +50,7 @@ const OP360 = {
     hero_sous_titre: "Dirigeants de PME, ETI et investisseurs : des pairs-partenaires qui ont vécu les mêmes défis que vous — engagés à vos côtés pour transformer vos ambitions en résultats.",
   },
 
-  // ── 3 MOMENTS CLÉS ───────────────────────────────
+  // ── 3 MOMENTS CLÉS ──────────────────────────────
   // Icônes en Tangerine #F79009 (Accent 2 charte OP360) — chaleur, urgence, "moment critique"
   moments: [
     {
@@ -70,7 +70,7 @@ const OP360 = {
     },
   ],
 
-  // ── 6 DIFFÉRENCIATEURS ───────────────────────────
+  // ── 6 DIFFÉRENCIATEURS ──────────────────────────
   differenciateurs: [
     {
       nb:"1",
@@ -110,14 +110,79 @@ const OP360 = {
     },
   ],
 
-  // ── 6 OFFRES ──────────────────────────────────────
+  // ── 6 OFFRES ────────────────────────────────────
+  // Titre de section
+  offres_titre: "Quelques exemples d'intervention",
+  offres_sous_titre_1: "De l'analyse à l'exécution — des solutions conçues à votre dimension et vos ressources",
+  offres_sous_titre_2: "Des expériences & outils éprouvés et combinables selon vos besoins",
+
   offres: [
-    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`, titre:"Diagnostic OP360", accroche:"Voir clair avant de décider.", tagline:"10 jours pour voir clair et agir juste", desc:"360° sur 12 domaines — 10 jours, plan d'action priorisé.", href:"diagnostic.html", featured:true, badge:"", bullets:["Diagnostic opérationnel 360 sur 12 domaines clés avec scoring.","Plan d'action priorisé et parcours d'exécution recommandés."] },
-    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`, titre:"Shadow Codir", accroche:"Ne plus décider seul.", tagline:"", desc:"Collectif de pairs-dirigeants mobilisable à la demande.", href:"shadow-codir.html", featured:false, badge:"", bullets:["Collectif de pairs-dirigeants mobilisable à la demande sur vos enjeux clés.","Regards croisés pour sécuriser vos choix."] },
-    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`, titre:"Accompagnement Terrain", accroche:"De la feuille de route aux résultats.", tagline:"", desc:"Intervention opérationnelle en immersion ou en appui.", href:"accompagnement.html", featured:false, badge:"", bullets:["Intervention opérationnelle en immersion ou en appui auprès de vos équipes.","Animation et pilotage des chantiers jusqu'aux premiers résultats."] },
-    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`, titre:"Due Diligence Opérationnelle", accroche:"Sécuriser un deal avant et après signature.", tagline:"", desc:"Analyse des risques et leviers de valeur pré/post deal.", href:"due-diligence.html", featured:false, badge:"", bullets:["Analyse opérationnelle des risques et leviers de valeur pré/post deal.","Recommandations concrètes pour traduire la thèse en plan d'action pilotable."] },
-    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`, titre:"Formations & Workshops", accroche:"Faire grandir vos équipes.", tagline:"", desc:"Ateliers pratiques sur l'exécution et le leadership.", href:"formations.html", featured:false, badge:"", bullets:["Ateliers pratiques sur l'exécution, le leadership, le pilotage et l'innovation.","Modules sur-mesure pour renforcer l'autonomie et le passage à l'action."] },
-    { icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="6 8 9 12 12 8 15 12 18 8"/></svg>`, titre:"Plateforme SaaS OP360", accroche:"Garder une vue claire sur l'exécution.", tagline:"", desc:"Pilotage des projets stratégiques en un seul endroit.", href:"saas.html", featured:false, badge:"", bullets:["Pilotage des projets stratégiques et des indicateurs clés en un seul endroit.","Idea Vault et indicateurs de progression."] },
+    {
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`,
+      titre:"Diagnostic OP360",
+      accroche:"Voir clair avant de décider.",
+      tagline:"PME industrielle : 10j pour définir les priorités et le parcours d'exécution de la stratégie",
+      desc:"360° sur 12 domaines — 10 jours, plan d'action priorisé.",
+      href:"diagnostic.html",
+      featured:true,
+      badge:"",
+      bullets:["Diagnostic opérationnel 360 sur 12 domaines clés avec scoring.","Plan d'action priorisé et parcours d'exécution recommandés."]
+    },
+    {
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+      titre:"Shadow Codir",
+      accroche:"Ne plus décider seul.",
+      tagline:"ETI agro : des codirs à la demande pour sécuriser la prise de décision",
+      desc:"Collectif de pairs-dirigeants mobilisable à la demande.",
+      href:"shadow-codir.html",
+      featured:false,
+      badge:"",
+      bullets:["Collectif de pairs-dirigeants mobilisable à la demande sur vos enjeux clés.","Regards croisés pour sécuriser vos choix."]
+    },
+    {
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>`,
+      titre:"Accompagnement Terrain",
+      accroche:"De la feuille de route aux résultats.",
+      tagline:"PME service : Immersion d'une équipe pour exécuter la stratégie de croissance externe",
+      desc:"Intervention opérationnelle en immersion ou en appui.",
+      href:"accompagnement.html",
+      featured:false,
+      badge:"",
+      bullets:["Intervention opérationnelle en immersion ou en appui auprès de vos équipes.","Animation et pilotage des chantiers jusqu'aux premiers résultats."]
+    },
+    {
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`,
+      titre:"Due Diligence Opérationnelle",
+      accroche:"Sécuriser un deal avant et après signature.",
+      tagline:"Fond PE : participer à la prise de décision de non investissement",
+      desc:"Analyse des risques et leviers de valeur pré/post deal.",
+      href:"due-diligence.html",
+      featured:false,
+      badge:"",
+      bullets:["Analyse opérationnelle des risques et leviers de valeur pré/post deal.","Recommandations concrètes pour traduire la thèse en plan d'action pilotable."]
+    },
+    {
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
+      titre:"Formations & Workshops",
+      accroche:"Faire grandir vos équipes.",
+      tagline:"Start-up de service : interventions mensuelles pour faire monter en compétence un jeune CEO",
+      desc:"Ateliers pratiques sur l'exécution et le leadership.",
+      href:"formations.html",
+      featured:false,
+      badge:"",
+      bullets:["Ateliers pratiques sur l'exécution, le leadership, le pilotage et l'innovation.","Modules sur-mesure pour renforcer l'autonomie et le passage à l'action."]
+    },
+    {
+      icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="6 8 9 12 12 8 15 12 18 8"/></svg>`,
+      titre:"Plateforme SaaS OP360",
+      accroche:"Garder une vue claire sur l'exécution.",
+      tagline:"(En cours de développement)",
+      desc:"Pilotage des projets stratégiques en un seul endroit.",
+      href:"saas.html",
+      featured:false,
+      badge:"",
+      bullets:["Pilotage des projets stratégiques et des indicateurs clés en un seul endroit.","Idea Vault et indicateurs de progression."]
+    },
   ],
 
   // ── TÉMOIGNAGES ───────────────────────────────────
@@ -128,7 +193,7 @@ const OP360 = {
     { quote:"Cet accompagnement a sécurisé la décision, y compris lorsqu'elle a conduit à un non-investissement, en apportant méthode, lucidité et sérénité.", auteur:"Investisseur", entreprise:"" },
   ],
 
-  // ── ÉQUIPE ────────────────────────────────────────
+  // ── ÉQUIPE ─────────────────────────────────────────
   equipe: [
     { prenom:"Annie",      nom:"Belquin",  titre:"Présidente",                photo:"annie",      expertise:"Vision stratégique & gouvernance" },
     { prenom:"Suzanne",    nom:"Grimal",   titre:"Directrice de la Valeur",   photo:"suzanne",    expertise:"Création de valeur & transformation" },
