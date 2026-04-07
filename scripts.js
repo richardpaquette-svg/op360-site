@@ -12,8 +12,8 @@ function buildNav(activePage) {
   const pages = [
     { href: "index.html",                 label: "Accueil" },
     { href: "equipe.html",                label: "Qui sommes-nous" },
-    { href: "notre-differenciation.html", label: "Pourquoi OP360\u00a0?" },
-    { href: "offres.html",                label: "Nos offres" },
+    { href: "notre-differenciation.html", label: "Pourquoi OP360" },
+    { href: "offres.html",                label: "Nos interventions" },
     { href: "diagnostic.html",            label: "Le diagnostic OP360" },
   ];
 
