@@ -1,14 +1,25 @@
-# Instructions permanentes — op360-site
+# Contexte technique — op360-site
 
-## Règle PR : à appliquer après chaque push
+## Stack
+- HTML statique multi-pages
+- CSS : `styles.css` (fichier unique)
+- JS : `scripts.js` (interactions) + `contenu.js` (données de contenu)
+- Déployé via Cloudflare Pages
 
-**Sans exception**, après chaque `git push`, terminer la réponse avec le lien de création de PR :
+## Fichiers clés
 
-```
-👉 Créer la PR : https://github.com/richardpaquette-svg/op360-site/compare/main...NOM-DE-LA-BRANCHE
-```
+| Fichier | Rôle |
+|---|---|
+| `index.html` | Page d'accueil |
+| `contenu.js` | Données de contenu du site — **ne jamais modifier sans instruction explicite** |
+| `styles.css` | Styles globaux |
+| `scripts.js` | Interactions et comportements JS |
+| `DESIGN_SYSTEM.md` | Source de vérité design — couleurs, typographie, espacements |
 
-- Ne jamais créer la PR automatiquement
-- Toujours générer le lien compare GitHub pour création manuelle
-- Remplacer `NOM-DE-LA-BRANCHE` par le nom exact de la branche poussée
-- Aucune tâche de push ne se termine sans ce lien
+## Règles techniques obligatoires
+
+- Ne jamais committer directement sur `main`
+- Toute modification passe par une **branche dédiée + Pull Request**
+- Ne modifier `contenu.js` que sur instruction explicite
+- Si une modification nécessite de toucher plusieurs fichiers non prévus, s'arrêter et le signaler avant d'agir
+- Nommer les branches de façon descriptive (ex: `fix/hero-spacing`, `feat/section-equipe`)
