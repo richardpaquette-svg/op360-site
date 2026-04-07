@@ -51,6 +51,8 @@ function toggleMenu() {
 }
 
 // ── Footer ────────────────────────────────────
+const LINKEDIN_ICON = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0;vertical-align:middle;margin-right:5px;position:relative;top:-1px"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`;
+
 function buildFooter() {
   document.getElementById('footer-placeholder').innerHTML = `
     <footer>
@@ -92,7 +94,7 @@ function buildFooter() {
             <ul>
               <li><a href="equipe.html">Qui sommes-nous</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li><a href="${OP360.entreprise.linkedin}" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="${OP360.entreprise.linkedin}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center">${LINKEDIN_ICON}LinkedIn</a></li>
             </ul>
           </div>
           <div class="footer-col">
