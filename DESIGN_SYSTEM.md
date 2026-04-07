@@ -83,7 +83,7 @@
 | `styles.css` | Styles globaux partagés |
 | `contenu.js` | Données dynamiques (équipe, offres, témoignages, moments) — **ne jamais modifier via Claude Code sans instruction explicite** |
 | `scripts.js` | Comportements (navigation, footer, animations reveal) |
-| `CLAUDE.md` | Instructions permanentes pour Claude Code (règle PR) |
+| `CLAUDE.md` | Contexte technique repo pour Claude Code |
 
 ---
 
@@ -120,4 +120,4 @@
 
 ---
 
-*Dernière mise à jour : avril 2026 — fil website 5*
+*Dernière mise à jour : avril 2026 — fil website 6*
