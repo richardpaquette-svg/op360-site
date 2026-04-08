@@ -13,7 +13,7 @@ function buildNav(activePage) {
     { href: "index.html",                 label: "Accueil" },
     { href: "equipe.html",                label: "Qui sommes-nous" },
     { href: "notre-differenciation.html", label: "Pourquoi OP360" },
-    { href: "offres.html",                label: "Nos interventions" },
+    { href: "offres.html",                label: "Exemples" },
     { href: "diagnostic.html",            label: "Le diagnostic OP360" },
   ];
 
