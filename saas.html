@@ -7,61 +7,182 @@
 <meta name="description" content="La plateforme SaaS OP360 : pilotage de la performance, Idea Vault augmentée, monitoring en temps réel. Incluse dans toutes les interventions OP360.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
 <style>
-/* ── HERO ── */
-.hero-offer {
-  min-height: 55vh; background: var(--navy); position: relative; overflow: hidden;
-  display: flex; align-items: center; padding: 110px 48px 80px;
+/* ── HERO SAAS ── */
+.hero-saas {
+  min-height: 60vh; background: var(--navy); position: relative; overflow: hidden;
+  display: flex; align-items: center; padding: 120px 48px 80px;
 }
-.hero-offer-photo {
+.hero-saas-overlay {
   position: absolute; inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1400&q=80');
-  background-size: cover; background-position: center; opacity: 0.1;
+  background: linear-gradient(120deg, rgba(26,35,50,0.97) 55%, rgba(0,212,170,0.08) 100%);
 }
-.hero-offer-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(26,35,50,0.92) 55%, rgba(26,35,50,0.5) 100%); }
-.hero-offer-content { position: relative; z-index: 2; max-width: 640px; }
-.hero-offer-badge {
+.hero-saas-inner {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: flex-start;
+  width: 100%; max-width: 1120px; margin: 0 auto;
+}
+.hero-saas-badge {
   display: inline-flex; align-items: center; gap: 8px;
+  width: fit-content;
   background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
   border-radius: 100px; padding: 7px 18px; margin-bottom: 28px;
   font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.1em; text-transform: uppercase;
 }
-.hero-offer h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 700; color: var(--white); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 12px; }
-.hero-offer h1 span { color: var(--cyan); }
-.hero-offer-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.55; margin-bottom: 36px; max-width: 520px; }
-/* ── CONTENT ── */
-.offer-split { padding: 80px 48px; background: var(--white); }
-.offer-split-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; max-width: 1120px; margin: 0 auto; }
-.offer-intro { margin-bottom: 8px; }
-.offer-bullets { list-style: none; margin: 24px 0 32px; }
-.offer-bullets li { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--gray-border); font-size: 15px; color: var(--navy); line-height: 1.55; }
-.offer-bullets li:last-child { border: none; }
-.offer-bullets li::before { content:'→'; color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
-/* ── VISUAL BOX ── */
-.offer-visual { background: var(--navy); border-radius: 16px; padding: 40px 36px; }
-.offer-visual-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-.offer-visual-icon { font-size: 36px; }
-.offer-visual-title { font-size: 16px; font-weight: 700; color: var(--white); }
-.offer-visual-badge { font-size: 11px; font-weight: 700; color: var(--cyan); background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 100px; padding: 3px 10px; margin-top: 4px; display: inline-block; }
-.offer-kpi { background: rgba(0,212,170,0.06); border: 1px solid rgba(0,212,170,0.15); border-radius: 10px; padding: 18px 20px; margin-bottom: 12px; }
-.offer-kpi:last-child { margin-bottom: 0; }
-.offer-kpi h4 { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-.offer-kpi p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.5; margin: 0; }
+.hero-saas h1 {
+  font-size: clamp(34px, 5vw, 56px); font-weight: 700; color: var(--white);
+  line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 20px;
+}
+.hero-saas h1 span { color: var(--cyan); }
+.hero-saas-sub {
+  font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.72);
+  line-height: 1.6; max-width: 680px; margin: 0 0 28px 0;
+}
+.hero-saas-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.pill { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 20px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); text-align: center; }
+.pill.pill-accent { border-color: rgba(0,212,170,0.4); color: var(--cyan); background: rgba(0,212,170,0.08); }
+.hero-saas-temo {
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 32px; padding: 16px 24px;
+  border-left: 3px solid var(--cyan);
+  background: rgba(0,212,170,0.05);
+  border-radius: 0 8px 8px 0;
+}
+.hero-saas-temo-quote { font-size: 19px; font-style: italic; font-weight: 400; color: #ffffff; line-height: 1.5; }
+.hero-saas-temo-cite { font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* ── SECTION FONCTIONNALITÉS ── */
+.fonctions-saas { background: var(--white); }
+.fonctions-saas .container { padding-top: 56px; padding-bottom: 28px; }
+.methode-timing {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 600; color: var(--gray-text);
+  margin-bottom: 24px; letter-spacing: 0.04em;
+}
+.methode-timing span { color: var(--cyan); }
+
+/* Grille modules */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+.module-card {
+  background: var(--white);
+  border: 1.5px solid var(--gray-border);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  transition: all 0.25s;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.module-card:hover { border-color: var(--cyan); box-shadow: 0 4px 16px rgba(0,212,170,0.1); transform: translateY(-2px); }
+.module-card.featured { border-color: rgba(0,212,170,0.45); background: rgba(0,212,170,0.03); }
+.module-icon { font-size: 26px; line-height: 1; }
+.module-tag {
+  font-size: 12px; font-weight: 700; color: var(--cyan);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.module-title { font-size: 16px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+.module-desc { font-size: 13px; color: var(--gray-text); line-height: 1.55; }
+
+/* ── BLOC INCLUS ── */
+.inclus-block {
+  margin-top: 8px;
+  background: #eef4f3;
+  border-radius: 16px;
+  border: 2px solid rgba(0,212,170,0.35);
+  padding: 28px 36px;
+  box-shadow: 0 4px 20px rgba(0,212,170,0.08);
+}
+.inclus-block-header { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+.inclus-block-title {
+  font-size: 17px; font-weight: 700; color: var(--navy);
+  display: flex; align-items: center; gap: 10px;
+}
+.inclus-block-title::before {
+  content: ''; display: inline-block; width: 4px; height: 20px;
+  background: var(--cyan); border-radius: 2px; flex-shrink: 0;
+}
+.inclus-block-note { font-size: 13px; color: var(--gray-text); font-style: italic; padding-left: 14px; margin: 0; }
+.inclus-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.inclus-pill {
+  background: var(--white);
+  border: 1.5px solid rgba(0,212,170,0.45);
+  border-radius: 100px; padding: 10px 22px;
+  font-size: 14px; font-weight: 600; color: var(--navy);
+  white-space: nowrap; transition: all 0.2s;
+}
+.inclus-pill:hover { background: rgba(0,212,170,0.08); border-color: var(--cyan); }
+.inclus-pill.pill-star { border-color: rgba(0,212,170,0.6); color: var(--cyan); background: rgba(0,212,170,0.06); }
+
+/* ── LIVRABLES ── */
+.livrables-saas { background: var(--navy); }
+.livrables-saas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.livrable-card {
+  background: rgba(255,255,255,0.04); border: 1.5px solid rgba(0,212,170,0.15);
+  border-radius: var(--radius); padding: 28px 24px; transition: all 0.25s;
+  display: flex; align-items: flex-start; gap: 16px;
+}
+.livrable-card:hover { border-color: var(--cyan); background: rgba(0,212,170,0.06); transform: translateY(-3px); }
+.livrable-card.featured { border-color: rgba(0,212,170,0.5); background: rgba(0,212,170,0.07); }
+.livrable-icon { font-size: 28px; flex-shrink: 0; line-height: 1.3; }
+.livrable-body { flex: 1; }
+.livrable-card h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.livrable-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
 /* ── CTA ── */
-.cta-offer { background: var(--navy); padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
-.cta-offer::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,212,170,0.07) 0%, transparent 70%); }
-.cta-offer h2 { font-size: clamp(26px, 4vw, 42px); font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: -0.02em; position: relative; z-index: 1; }
-.cta-offer h2 span { color: var(--cyan); }
-.cta-offer p { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 480px; margin: 0 auto 36px; line-height: 1.65; position: relative; z-index: 1; }
-.cta-offer-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+.cta-saas { background: var(--gray-bg); padding: 96px 48px; text-align: center; position: relative; overflow: hidden; }
+.cta-saas h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 700; color: var(--navy); margin-bottom: 16px; letter-spacing: -0.02em; position: relative; z-index: 1; }
+.cta-saas h2 span { color: var(--cyan); }
+.cta-saas p { font-size: 18px; font-weight: 500; color: var(--navy-mid); max-width: 520px; margin: 0 auto 40px; line-height: 1.65; position: relative; z-index: 1; }
+.cta-saas-btns {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  position: relative; z-index: 1; max-width: 560px; margin-inline: auto;
+}
+.cta-saas-btns .btn-primary,
+.cta-saas-btns .btn-secondary { flex: 1; text-align: center; justify-content: center; white-space: nowrap; }
+.cta-saas .btn-secondary { color: var(--navy); border-color: rgba(26,35,50,0.35); }
+.cta-saas .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+.cta-contact-row { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; padding-top: 36px; border-top: 1px solid var(--gray-border); position: relative; z-index: 1; }
+.cta-contact-item { display: flex; align-items: center; gap: 10px; color: var(--gray-text); font-size: 15px; transition: color 0.2s; }
+.cta-contact-item:hover { color: var(--cyan); }
+.cta-icon { width: 36px; height: 36px; background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+
 /* ── RESPONSIVE ── */
-@media (max-width: 1024px) { .offer-split-inner { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 1024px) {
+  .modules-grid { grid-template-columns: repeat(2, 1fr); }
+  .livrables-saas-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 768px) {
-  .hero-offer { padding: 90px 24px 64px; min-height: auto; }
-  .offer-split { padding: 48px 20px; }
-  .offer-visual { padding: 24px 18px; }
-  .cta-offer { padding: 56px 24px; }
+  .hero-saas { padding: 88px 20px 48px; min-height: auto; }
+  .hero-saas h1 { font-size: clamp(26px, 7vw, 36px); margin-bottom: 12px; }
+  .hero-saas-badge { font-size: 11px; padding: 5px 14px; margin-bottom: 20px; }
+  .hero-saas-sub { font-size: 15px; line-height: 1.55; margin-bottom: 20px; }
+  .hero-saas-pills { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+  .hero-saas-temo { padding: 14px 16px; }
+  .hero-saas-temo-quote { font-size: 16px; }
+  .pill { font-size: 12px; padding: 7px 14px; }
+  .hero-saas-inner .btn-primary,
+  .hero-saas-inner .btn-secondary { width: 100%; text-align: center; justify-content: center; padding: 16px 24px; font-size: 15px; }
+  .fonctions-saas .container { padding-top: 40px; padding-bottom: 24px; }
+  .modules-grid { grid-template-columns: 1fr; gap: 14px; }
+  .module-card { padding: 20px 18px; }
+  .inclus-block { padding: 24px 20px; }
+  .inclus-block-note { padding-left: 14px; font-size: 12px; }
+  .inclus-pill { font-size: 13px; padding: 8px 16px; white-space: normal; }
+  .livrables-saas-grid { grid-template-columns: 1fr; gap: 14px; }
+  .livrable-card { padding: 20px 18px; }
+  .livrable-card p { font-size: 13px; }
+  .livrable-card h3 { font-size: 16px; }
+  .cta-saas { padding: 52px 20px; }
+  .cta-saas p { font-size: 15px; margin-bottom: 28px; }
+  .cta-saas-btns { flex-direction: column; max-width: 100%; gap: 10px; }
+  .cta-saas-btns .btn-primary,
+  .cta-saas-btns .btn-secondary { flex: unset; width: 100%; padding: 16px 24px; }
+  .cta-contact-row { flex-direction: column; align-items: center; gap: 16px; }
+  .cta-contact-item { font-size: 14px; }
 }
 </style>
 </head>
@@ -70,68 +191,134 @@
 <div id="nav-placeholder"></div>
 
 <!-- HERO -->
-<section class="hero-offer">
-  <div class="hero-offer-photo"></div>
-  <div class="hero-offer-overlay"></div>
-  <div class="hero-offer-content">
-    <div class="hero-offer-badge">💻 Offre 06 — Plateforme SaaS OP360</div>
-    <h1>Piloter l'exécution<br><span>en temps réel, sans surcharge mentale</span></h1>
-    <p class="hero-offer-sub">Une plateforme conçue pour réduire la charge mentale du dirigeant et piloter l'exécution de la stratégie en temps réel. Incluse dans toutes les interventions OP360.</p>
+<section class="hero-saas">
+  <div class="hero-saas-overlay"></div>
+  <div class="hero-saas-inner">
+    <div class="hero-saas-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      Plateforme SaaS OP360 — Offre 06
+    </div>
+    <h1>Piloter l’exécution<br><span>en temps réel, sans surcharge mentale</span></h1>
+    <p class="hero-saas-sub">Votre stratégie est définie. Vos équipes sont en marche. Mais comment savoir, en un coup d’œil, si l’exécution tient la route ?</p>
+    <div class="hero-saas-pills">
+      <span class="pill pill-accent">Centraliser le pilotage ?</span>
+      <span class="pill pill-accent">Capturer &amp; structurer vos idées ?</span>
+      <span class="pill pill-accent">Monitorer en temps réel ?</span>
+      <span class="pill pill-accent">Incluse sans surcoût ?</span>
+    </div>
+    <div class="hero-saas-temo">
+      <span class="hero-saas-temo-quote">« Enfin un outil qui fait moins, mais mieux — tout ce que je dois voir est là, rien de superflu. »</span>
+      <span class="hero-saas-temo-cite">PDG PME industrielle — utilisateur plateforme OP360</span>
+    </div>
     <div style="display:flex;gap:14px;flex-wrap:wrap;">
       <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" rel="noopener" class="btn-primary">Demander une démo</a>
-      <a href="offres.html" class="btn-secondary">Toutes les offres</a>
+      <a href="#livrables-saas" class="btn-secondary">Ce que vous obtenez</a>
     </div>
   </div>
 </section>
 
-<!-- CONTENT -->
-<section class="offer-split">
-  <div class="offer-split-inner">
-    <div>
-      <div class="section-label">Fonctionnalités</div>
-      <h2 class="section-title">Un cockpit de pilotage<br>pour le dirigeant</h2>
-      <p class="offer-intro section-subtitle">La plateforme SaaS OP360 centralise le pilotage de la performance, la gestion des idées et le suivi des projets stratégiques. Conçue pour servir l'exécution, pas l'alourdir.</p>
-      <ul class="offer-bullets">
-        <li>Pilotage de la performance et des projets stratégiques</li>
-        <li>Idea Vault augmentée — capture et structuration des idées avec IA</li>
-        <li>Monitoring de l'exécution en temps réel, alertes et tableaux de bord</li>
-        <li>Accessible à tous les intervenants OP360 sans coût supplémentaire</li>
-        <li>Réduction de la charge mentale du dirigeant</li>
-        <li>Intégration native avec les diagnostics et parcours d'exécution</li>
-      </ul>
-      <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" rel="noopener" class="btn-primary">Demander une démo →</a>
+<!-- FONCTIONNALITÉS / GRID -->
+<section class="fonctions-saas">
+  <div class="container">
+    <div class="section-label reveal">Fonctionnalités</div>
+    <h2 class="section-title reveal">3 modules, 1 cockpit de pilotage</h2>
+    <div class="methode-timing reveal">
+      <span>⚡</span> Incluse dans toutes les interventions OP360 &nbsp;·&nbsp; Zéro surcoût
     </div>
-    <div class="offer-visual">
-      <div class="offer-visual-header">
-        <div class="offer-visual-icon">💻</div>
-        <div>
-          <div class="offer-visual-title">Plateforme SaaS OP360</div>
-          <div class="offer-visual-badge">Incluse dans toutes les offres</div>
+
+    <div class="modules-grid">
+      <div class="module-card featured reveal">
+        <div class="module-icon">📊</div>
+        <div class="module-tag">Pilotage</div>
+        <div class="module-title">Performance &amp; projets stratégiques</div>
+        <p class="module-desc">KPIs, avancements, alertes et tableaux de bord centrés sur l’exécution — ce que vous devez voir, pas plus.</p>
+      </div>
+      <div class="module-card reveal">
+        <div class="module-icon">💡</div>
+        <div class="module-tag">Idea Vault</div>
+        <div class="module-title">Capture &amp; structuration augmentée par l’IA</div>
+        <p class="module-desc">Capturez vos idées en mobilité, l’IA les structure, les relie à vos chantiers et les classe par priorité.</p>
+      </div>
+      <div class="module-card reveal">
+        <div class="module-icon">🔔</div>
+        <div class="module-tag">Monitoring</div>
+        <div class="module-title">Alertes &amp; suivi en temps réel</div>
+        <p class="module-desc">Détection proactive des dérives, alertes configurées, partage fluide avec vos intervenants OP360.</p>
+      </div>
+    </div>
+
+    <div class="inclus-block reveal">
+      <div class="inclus-block-header">
+        <div class="inclus-block-title">Incluse dans toutes les offres OP360</div>
+        <p class="inclus-block-note">La plateforme est accessible à tous les intervenants OP360 sur votre dossier — sans surcoût, sans friction.</p>
+      </div>
+      <div class="inclus-pills">
+        <span class="inclus-pill pill-star">Diagnostic OP360 ★</span>
+        <span class="inclus-pill pill-star">Shadow Codir ★</span>
+        <span class="inclus-pill pill-star">Accompagnement Terrain ★</span>
+        <span class="inclus-pill pill-star">Due Diligence ★</span>
+        <span class="inclus-pill">Accès multi-intervenants</span>
+        <span class="inclus-pill">Intégration native diagnostics</span>
+        <span class="inclus-pill">Disponible sur mobile</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVRABLES -->
+<section class="livrables-saas" id="livrables-saas">
+  <div class="container">
+    <div class="section-label section-label-white reveal">Ce que vous obtenez</div>
+    <h2 class="section-title section-title-white reveal">Moins de surcharge, plus de clarté</h2>
+    <p class="section-intro section-intro-white section-subtitle--inverse reveal">Un outil conçu pour servir l’exécution, pas pour l’alourdir.</p>
+    <div class="livrables-saas-grid">
+      <div class="livrable-card featured reveal">
+        <div class="livrable-icon">🎯</div>
+        <div class="livrable-body">
+          <h3>Cockpit de pilotage unique</h3>
+          <p>Tous vos KPIs, projets et alertes en un seul endroit — visibilité totale sur l’exécution stratégique.</p>
         </div>
       </div>
-      <div class="offer-kpi">
-        <h4>Pilotage en temps réel</h4>
-        <p>Performance, projets, KPIs — tout centralisé dans un cockpit unique</p>
+      <div class="livrable-card reveal">
+        <div class="livrable-icon">🧠</div>
+        <div class="livrable-body">
+          <h3>Idea Vault augmentée</h3>
+          <p>Vos idées capturées, structurées et priorisées par l’IA — plus rien ne se perd entre deux réunions.</p>
+        </div>
       </div>
-      <div class="offer-kpi">
-        <h4>Idea Vault augmentée</h4>
-        <p>Vos idées capturées, structurées et priorisées par l'IA</p>
+      <div class="livrable-card reveal">
+        <div class="livrable-icon">🔔</div>
+        <div class="livrable-body">
+          <h3>Alertes &amp; monitoring proactif</h3>
+          <p>Détectez les dérives avant qu’elles deviennent des problèmes — alertes configurées sur vos seuils.</p>
+        </div>
       </div>
-      <div class="offer-kpi">
-        <h4>Incluse sans surcoût</h4>
-        <p>Accessible à tous les intervenants OP360 sur votre dossier</p>
+      <div class="livrable-card reveal">
+        <div class="livrable-icon">🔗</div>
+        <div class="livrable-body">
+          <h3>Intégration native OP360</h3>
+          <p>Connectée à vos diagnostics, plans d’action et rapports — accessible à tous vos intervenants sans friction.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-offer">
+<section class="cta-saas" id="contact-saas">
   <h2>Voir la <span>plateforme en action</span></h2>
-  <p>Demandez une démo personnalisée et découvrez comment piloter votre exécution sans alourdir votre quotidien.</p>
-  <div class="cta-offer-btns">
+  <p>Demandez une démo personnalisée et découvrez comment piloter votre exécution sans alourdir votre quotidien. Réponse sous 24h.</p>
+  <div class="cta-saas-btns">
     <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360" target="_blank" rel="noopener" class="btn-primary">Demander une démo</a>
     <a href="mailto:contact@operating360.com?subject=Plateforme%20SaaS%20OP360&body=Bonjour%20OP360%2C%0A%0AJe%20souhaite%20une%20d%C3%A9mo%20de%20la%20plateforme%20SaaS." class="btn-secondary">Nous écrire</a>
+  </div>
+  <div class="cta-contact-row">
+    <a href="mailto:contact@operating360.com" class="cta-contact-item">
+      <div class="cta-icon">✉</div> contact@operating360.com
+    </a>
+    <a href="tel:+33651721524" class="cta-contact-item">
+      <div class="cta-icon">📞</div> 06 51 72 15 24 — Richard Paquette
+    </a>
   </div>
 </section>
 
