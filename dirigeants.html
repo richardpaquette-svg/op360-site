@@ -11,182 +11,96 @@
 <style>
 
 /* ── HERO ── */
-.hero-dirigeants {
+.hero-dir {
   min-height: 60vh; background: var(--navy); position: relative; overflow: hidden;
   display: flex; align-items: center; padding: 120px 48px 80px;
 }
-.hero-dirigeants-overlay {
+.hero-dir-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(120deg, rgba(26,35,50,0.97) 55%, rgba(0,212,170,0.07) 100%);
+  background: linear-gradient(120deg, rgba(26,35,50,0.97) 55%, rgba(0,212,170,0.08) 100%);
 }
-.hero-dirigeants-inner {
+.hero-dir-inner {
   position: relative; z-index: 2;
   width: 100%; max-width: 1120px; margin: 0 auto;
   display: flex; flex-direction: column; align-items: flex-start;
 }
-.hero-dirigeants-badge {
+.hero-dir-badge {
   display: inline-flex; align-items: center; gap: 8px;
   width: fit-content;
   background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
   border-radius: 100px; padding: 7px 18px; margin-bottom: 28px;
   font-size: 12px; font-weight: 700; color: var(--cyan); letter-spacing: 0.1em; text-transform: uppercase;
 }
-.hero-dirigeants h1 {
+.hero-dir h1 {
   font-size: clamp(34px, 5vw, 56px); font-weight: 700; color: var(--white);
   line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 20px;
 }
-.hero-dirigeants h1 span { color: var(--cyan); display: block; }
-.hero-dirigeants-sub {
+.hero-dir h1 span { color: var(--cyan); display: block; }
+.hero-dir-sub {
   font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.72);
-  line-height: 1.6; max-width: 760px; margin: 0 0 40px 0;
+  line-height: 1.6; max-width: 860px; margin: 0 0 40px 0;
 }
-.hero-dirigeants-cta { display: flex; gap: 16px; flex-wrap: wrap; }
-.hero-dirigeants-cta a { min-width: 240px; text-align: center; justify-content: center; }
+.hero-dir-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-dir-cta a { min-width: 240px; text-align: center; justify-content: center; }
 
-/* ── ENJEUX (contexte PME & ETI) ── */
-.enjeux-section { background: var(--gray-bg); padding: 80px 48px; }
-.enjeux-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
-  max-width: 1080px; margin: 40px auto 0;
+/* ── GRILLE D'ENJEUX ── */
+.dir-section { background: var(--gray-bg); padding: 80px 48px; }
+.dir-section-header { max-width: 1080px; margin: 0 auto 48px; }
+.dir-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+  max-width: 1080px; margin: 0 auto;
 }
-.enjeu-card {
-  background: var(--white); border: 1px solid #e2e8f0; border-radius: 14px;
-  padding: 32px 28px; display: flex; gap: 20px; align-items: flex-start;
+.dir-card {
+  background: var(--white); border: 1px solid #e2e8f0; border-radius: 16px;
+  padding: 36px 32px; display: flex; gap: 24px; align-items: flex-start;
   box-shadow: 0 1px 4px rgba(15,23,42,0.06); transition: all 0.25s;
   position: relative; overflow: hidden;
 }
-.enjeu-card::before {
+.dir-card::before {
   content:''; position: absolute; top:0; left:0; right:0; height:3px;
   background: var(--cyan); transform: scaleX(0); transform-origin: left;
-  transition: transform 0.3s; border-radius: 14px 14px 0 0;
+  transition: transform 0.3s; border-radius: 16px 16px 0 0;
 }
-.enjeu-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(15,23,42,0.10); border-color: rgba(0,212,170,0.3); }
-.enjeu-card:hover::before { transform: scaleX(1); }
-.enjeu-icon {
-  font-size: 28px; flex-shrink: 0; line-height: 1.4;
-  width: 52px; height: 52px;
-  background: rgba(0,212,170,0.08); border-radius: 12px;
+.dir-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(15,23,42,0.12); border-color: rgba(0,212,170,0.35); }
+.dir-card:hover::before { transform: scaleX(1); }
+.dir-card-icon {
+  width: 56px; height: 56px; flex-shrink: 0;
+  background: rgba(0,212,170,0.08); border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
 }
-.enjeu-body { flex: 1; }
-.enjeu-body h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
-.enjeu-body p { font-size: 14px; color: var(--gray-text); line-height: 1.7; margin: 0; }
-
-/* ── CE QUE OP360 CHANGE ── */
-.apports-section { background: var(--white); padding: 80px 48px; }
-.apports-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-  max-width: 1080px; margin: 40px auto 0;
+.dir-card-icon svg { width: 28px; height: 28px; }
+.dir-card-body { flex: 1; }
+.dir-card-nb {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; background: var(--cyan); color: var(--navy);
+  font-size: 11px; font-weight: 800; border-radius: 50%;
+  margin-bottom: 10px; flex-shrink: 0;
 }
-.apport-card {
-  background: var(--gray-bg); border: 1px solid #e2e8f0; border-radius: 14px;
-  padding: 28px 24px; transition: all 0.25s;
-}
-.apport-card:hover { border-color: rgba(0,212,170,0.35); box-shadow: 0 10px 28px rgba(15,23,42,0.09); transform: translateY(-3px); }
-.apport-icon { font-size: 26px; margin-bottom: 14px; line-height: 1; }
-.apport-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
-.apport-card p { font-size: 14px; color: var(--gray-text); line-height: 1.7; margin: 0; }
-
-/* ── MÉTHODE ── */
-.methode-section { background: var(--gray-bg); padding: 80px 48px; }
-.methode-steps {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-  max-width: 1080px; margin: 40px auto 0;
-  position: relative;
-}
-.methode-steps::before {
-  content:''; position: absolute; top: 28px;
-  left: calc(16.66% + 12px); right: calc(16.66% + 12px);
-  height: 2px;
-  background: linear-gradient(to right, var(--cyan), rgba(0,212,170,0.2));
-  z-index: 0;
-}
-.methode-step {
-  display: flex; flex-direction: column; align-items: flex-start;
-  padding: 0 32px 0 0; position: relative; z-index: 1;
-}
-.methode-step:last-child { padding-right: 0; }
-.methode-num {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: var(--white); border: 3px solid var(--cyan);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; font-weight: 700; color: var(--cyan);
-  flex-shrink: 0; margin-bottom: 20px;
-  box-shadow: 0 0 0 6px rgba(0,212,170,0.08);
-  transition: all 0.25s;
-}
-.methode-step:hover .methode-num { background: var(--cyan); color: var(--white); transform: scale(1.06); }
-.methode-badge {
-  display: inline-block; margin-bottom: 8px;
-  font-size: 11px; font-weight: 700; color: var(--cyan);
-  background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.25);
-  border-radius: 100px; padding: 3px 12px; letter-spacing: 0.08em; text-transform: uppercase;
-}
-.methode-step h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
-.methode-step p { font-size: 14px; color: var(--gray-text); line-height: 1.7; margin: 0; }
-
-/* ── EXEMPLES TERRAIN ── */
-.exemples-section { background: var(--white); padding: 80px 48px; }
-.exemples-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;
-  max-width: 1080px; margin: 40px auto 0;
-}
-.exemple-card {
-  background: var(--gray-bg); border: 1px solid #e2e8f0; border-radius: 14px;
-  padding: 32px 28px; transition: all 0.25s;
-}
-.exemple-card:hover { border-color: rgba(0,212,170,0.3); box-shadow: 0 10px 28px rgba(15,23,42,0.09); }
-.exemple-profil {
-  display: inline-flex; align-items: center; gap: 7px;
+.dir-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.dir-card h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin: 0; }
+.dir-card p { font-size: 15px; color: var(--gray-text); line-height: 1.7; margin: 0; }
+.dir-card-tag {
+  display: inline-block; margin-top: 14px;
   font-size: 11px; font-weight: 700; color: var(--cyan);
   background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2);
-  border-radius: 100px; padding: 3px 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  margin-bottom: 14px;
+  border-radius: 100px; padding: 3px 12px; letter-spacing: 0.06em; text-transform: uppercase;
 }
-.exemple-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
-.exemple-rows { display: flex; flex-direction: column; gap: 10px; }
-.exemple-row { display: flex; gap: 10px; align-items: flex-start; }
-.exemple-row-label {
-  font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--gray-text); flex-shrink: 0; padding-top: 2px; min-width: 70px;
-}
-.exemple-row-text { font-size: 14px; color: var(--gray-text); line-height: 1.6; }
-.exemple-row-text strong { color: var(--navy); font-weight: 700; }
 
 /* ── CTA FINAL ── */
-.dirigeants-cta-section { background: var(--navy); padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
-.dirigeants-cta-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0,212,170,0.07) 0%, transparent 70%); pointer-events:none; }
-.dirigeants-cta-section h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: -0.02em; position: relative; z-index: 1; }
-.dirigeants-cta-section h2 span { color: var(--cyan); }
-.dirigeants-cta-section p { font-size: 17px; color: rgba(255,255,255,0.68); margin-bottom: 36px; position: relative; z-index: 1; }
-.dirigeants-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
-.cta-contact-row { display: flex; justify-content: center; gap: 36px; margin-top: 36px; flex-wrap: wrap; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 1; }
-.cta-contact-item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.55); font-size: 14px; text-decoration: none; transition: color 0.2s; }
-.cta-contact-item:hover { color: var(--cyan); }
-.cta-icon { width: 34px; height: 34px; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.dir-cta-section { background: var(--navy); padding: 80px 48px; text-align: center; }
+.dir-cta-section h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--white); margin-bottom: 16px; }
+.dir-cta-section p { font-size: 17px; color: rgba(255,255,255,0.68); margin-bottom: 36px; }
+.dir-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .enjeux-grid { grid-template-columns: 1fr; max-width: 600px; }
-  .apports-grid { grid-template-columns: repeat(2, 1fr); }
-  .methode-steps { grid-template-columns: 1fr; gap: 32px; }
-  .methode-steps::before { display: none; }
-  .methode-step { flex-direction: row; align-items: flex-start; gap: 20px; padding: 0; }
-  .methode-num { margin-bottom: 0; flex-shrink: 0; }
-  .exemples-grid { grid-template-columns: 1fr; max-width: 600px; }
-}
 @media (max-width: 768px) {
-  .hero-dirigeants { padding: 100px 20px 60px; min-height: auto; }
-  .hero-dirigeants-sub { font-size: 16px; }
-  .hero-dirigeants-cta { flex-direction: column; gap: 10px; }
-  .hero-dirigeants-cta a { min-width: 0; width: 100%; }
-  .enjeux-section, .apports-section, .methode-section, .exemples-section { padding: 48px 20px; }
-  .enjeux-grid { grid-template-columns: 1fr; }
-  .apports-grid { grid-template-columns: 1fr; }
-  .methode-step { flex-direction: row; gap: 16px; }
-  .methode-num { width: 44px; height: 44px; font-size: 17px; flex-shrink: 0; }
-  .dirigeants-cta-section { padding: 56px 20px; }
-  .cta-contact-row { flex-direction: column; align-items: center; gap: 16px; }
+  .hero-dir { padding: 100px 20px 60px; }
+  .hero-dir-sub { font-size: 16px; max-width: 100%; }
+  .hero-dir-cta a { min-width: 0; width: 100%; }
+  .dir-section { padding: 48px 20px; }
+  .dir-grid { grid-template-columns: 1fr; gap: 20px; }
+  .dir-card { padding: 28px 20px; gap: 16px; }
+  .dir-cta-section { padding: 56px 20px; }
 }
 </style>
 </head>
@@ -195,181 +109,85 @@
 <div id="nav-placeholder"></div>
 
 <!-- HERO -->
-<section class="hero-dirigeants">
-  <div class="hero-dirigeants-overlay"></div>
-  <div class="hero-dirigeants-inner">
-    <div class="hero-dirigeants-badge">
+<section class="hero-dir">
+  <div class="hero-dir-overlay"></div>
+  <div class="hero-dir-inner">
+    <div class="hero-dir-badge">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-      Pour qui — Dirigeants
+      Dirigeants PME &amp; ETI
     </div>
     <h1>Vous dirigez une PME ou une ETI<span>face à un moment charnière.</span></h1>
-    <p class="hero-dirigeants-sub">Croissance à structurer, transition à sécuriser, rentabilité à redresser, transformations complexes à piloter : OP360 vous apporte des pairs-dirigeants engagés dans l'exécution — pas des consultants qui livrent des rapports.</p>
-    <div class="hero-dirigeants-cta">
+    <p class="hero-dir-sub">Croissance à structurer, transition à sécuriser, rentabilité à redresser, transformations complexes à piloter : OP360 vous apporte des pairs-dirigeants engagés dans l'exécution — pas des consultants qui livrent des rapports.</p>
+    <div class="hero-dir-cta">
       <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Parler de votre situation →</a>
       <a href="diagnostic.html" class="btn-secondary">Découvrir le Diagnostic OP360</a>
     </div>
   </div>
 </section>
 
-<!-- ENJEUX ──────────────────────────────────────────
-     4 situations typiques, valables PME & ETI
-─────────────────────────────────────────────────── -->
-<section class="enjeux-section">
+<!-- GRILLE D'ENJEUX -->
+<section class="dir-section">
   <div class="container">
-    <div style="max-width:1080px;margin:0 auto">
-      <div class="section-label reveal">Votre contexte</div>
+    <div class="dir-section-header">
+      <div class="section-label reveal">Vos enjeux</div>
       <h2 class="section-title reveal">Les situations où OP360 fait la différence</h2>
       <p class="section-intro section-subtitle reveal">PME de 5 à 50 M€ ou ETI multi-sites en transformation — les enjeux varient en complexité, pas en nature.</p>
     </div>
-    <div class="enjeux-grid">
-      <div class="enjeu-card reveal">
-        <div class="enjeu-icon">🚀</div>
-        <div class="enjeu-body">
-          <h3>Ambition de croissance</h3>
-          <p>Vous voulez doubler le CA, ouvrir un marché, accélérer à l'international ou intégrer une acquisition. L'organisation existante commence à saturer et le modèle ne tiendra pas la cadence seul.</p>
-        </div>
-      </div>
-      <div class="enjeu-card reveal">
-        <div class="enjeu-icon">🔄</div>
-        <div class="enjeu-body">
-          <h3>Transitions &amp; transformations complexes</h3>
-          <p>Transmission, rachat, changement de modèle, programmes multi-sites, intégration post-acquisition : ces moments mobilisent plusieurs expertises en même temps et exigent une coordination que la direction ne peut pas assumer seule.</p>
-        </div>
-      </div>
-      <div class="enjeu-card reveal">
-        <div class="enjeu-icon">📊</div>
-        <div class="enjeu-body">
-          <h3>Retournement de rentabilité</h3>
-          <p>Tensions sur les marges, trésorerie sous pression, besoin de retrouver rapidement de la visibilité sur les leviers d'action. Chaque semaine compte — les priorités doivent être claires et le plan d'action actionnable dès la restitution.</p>
-        </div>
-      </div>
-      <div class="enjeu-card reveal">
-        <div class="enjeu-icon">🧭</div>
-        <div class="enjeu-body">
-          <h3>Structurer le pilotage &amp; la gouvernance</h3>
-          <p>Vous portez trop de sujets en première ligne. Gouvernance, arbitrages complexes, coordination des expertises internes : vous avez besoin de déléguer sur des bases solides et d'un pair à vos côtés pour décider avec lucidité.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="dir-grid">
 
-<!-- CE QUE OP360 CHANGE ────────────────────────────
-     3 apports concrets, fusionnés PME+ETI
-─────────────────────────────────────────────────── -->
-<section class="apports-section">
-  <div class="container">
-    <div style="max-width:1080px;margin:0 auto">
-      <div class="section-label reveal">Nos apports concrets</div>
-      <h2 class="section-title reveal">Ce que OP360 change pour vous</h2>
-      <p class="section-intro section-subtitle reveal">Pas de rapport supplémentaire. Des résultats opérationnels, une clarté immédiate, un pair à vos côtés.</p>
-    </div>
-    <div class="apports-grid">
-      <div class="apport-card reveal">
-        <div class="apport-icon">⚡</div>
-        <h3>Voir clair en quelques jours</h3>
-        <p>Un Diagnostic OP360 sur 12 domaines — état des lieux de votre capacité d'exécution, vrais leviers de valeur identifiés, plan d'action priorisé actionnables dès la restitution.</p>
-      </div>
-      <div class="apport-card reveal">
-        <div class="apport-icon">🗺️</div>
-        <h3>Un parcours d'exécution réaliste</h3>
-        <p>Une feuille de route adaptée à vos ressources et à votre tempo — pas un plan théorique. Pour une PME : un Operating Partner dédié. Pour une ETI : un Shadow Codir pluridisciplinaire coordonné.</p>
-      </div>
-      <div class="apport-card reveal">
-        <div class="apport-icon">🤝</div>
-        <h3>Des pairs, pas des consultants</h3>
-        <p>Des dirigeants qui ont eux-mêmes tenu votre rôle — ancré dans l'exécution, pas seulement dans les recommandations. La transmission d'autonomie à vos équipes est intégrée dès le départ.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MÉTHODE ────────────────────────────────────────
-     3 étapes, communes PME & ETI
-─────────────────────────────────────────────────── -->
-<section class="methode-section" id="methode">
-  <div class="container">
-    <div style="max-width:1080px;margin:0 auto">
-      <div class="section-label reveal">Méthodologie</div>
-      <h2 class="section-title reveal">Comment se déroule l'accompagnement</h2>
-      <p class="section-intro section-subtitle reveal">Un parcours en 3 étapes, chacune générant des livrables concrets — dimensionné selon votre réalité PME ou ETI.</p>
-    </div>
-    <div class="methode-steps">
-      <div class="methode-step reveal">
-        <div class="methode-num">1</div>
-        <div>
-          <div class="methode-badge">5 à 10 jours</div>
-          <h3>Diagnostic OP360</h3>
-          <p>Entretiens direction &amp; terrain, analyse des 12 domaines opérationnels. Restitution complète : état des lieux, scoring par domaine, plan de priorités actionnables immédiatement.</p>
+      <div class="dir-card reveal">
+        <div class="dir-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 1 18"/><polyline points="15 7 22 7 22 14"/></svg>
         </div>
-      </div>
-      <div class="methode-step reveal">
-        <div class="methode-num">2</div>
-        <div>
-          <div class="methode-badge">Co-construction</div>
-          <h3>Feuille de route d'exécution</h3>
-          <p>Parcours pragmatique adapté à votre taille et vos contraintes : chantiers prioritaires, horizons de temps, ressources, KPIs de suivi. Ni trop large ni trop court — calibré pour être tenu.</p>
-        </div>
-      </div>
-      <div class="methode-step reveal">
-        <div class="methode-num">3</div>
-        <div>
-          <div class="methode-badge">Terrain</div>
-          <h3>Accompagnement &amp; Shadow Codir</h3>
-          <p>Operating Partner ou Shadow Codir à vos côtés pour piloter les chantiers structurants et monter vos équipes en compétence — en immersion, en appui régulier, ou en mode hybride.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXEMPLES TERRAIN ───────────────────────────────
-     1 cas PME + 1 cas ETI, format compact
-─────────────────────────────────────────────────── -->
-<section class="exemples-section">
-  <div class="container">
-    <div style="max-width:1080px;margin:0 auto">
-      <div class="section-label reveal">Exemples terrain</div>
-      <h2 class="section-title reveal">Deux situations concrètes</h2>
-      <p class="section-intro section-subtitle reveal">PME industrielle ou ETI multi-sites — même exigence de résultats, dispositifs adaptés.</p>
-    </div>
-    <div class="exemples-grid">
-
-      <div class="exemple-card reveal">
-        <div class="exemple-profil">🏭 PME — 30 M€ de CA</div>
-        <h3>Doubler en 5 ans avec des équipes sous tension</h3>
-        <div class="exemple-rows">
-          <div class="exemple-row">
-            <div class="exemple-row-label">Situation</div>
-            <div class="exemple-row-text">Organisation peu structurée, dirigeant en première ligne sur tout, peu de pilotage consolidé, projets en parallèle sans fil directeur.</div>
+        <div class="dir-card-body">
+          <div class="dir-card-header">
+            <div class="dir-card-nb">1</div>
+            <h3>Ambition de croissance</h3>
           </div>
-          <div class="exemple-row">
-            <div class="exemple-row-label">Intervention</div>
-            <div class="exemple-row-text">Diagnostic 12 domaines, priorisation de 3 chantiers structurants (gouvernance, pilotage, commercial), Operating Partner à temps partiel avec plateforme SaaS.</div>
-          </div>
-          <div class="exemple-row">
-            <div class="exemple-row-label">Résultats</div>
-            <div class="exemple-row-text"><strong>Visibilité retrouvée sur les priorités</strong>, trajectoire de croissance sécurisée, dirigeant dégagé des urgences non stratégiques.</div>
-          </div>
+          <p>Doubler le CA, ouvrir un marché, accélérer à l'international ou intégrer une acquisition : l'organisation existante commence à saturer et le modèle ne tiendra pas la cadence seul. OP360 structure l'exécution pour que l'ambition devienne réalité.</p>
+          <span class="dir-card-tag">Croissance · Structuration</span>
         </div>
       </div>
 
-      <div class="exemple-card reveal">
-        <div class="exemple-profil">🏢 ETI multi-sites — en transformation</div>
-        <h3>Piloter plusieurs programmes simultanés sans perdre le cap</h3>
-        <div class="exemple-rows">
-          <div class="exemple-row">
-            <div class="exemple-row-label">Situation</div>
-            <div class="exemple-row-text">Chantiers industriel, digital et organisationnel en parallèle, peu de coordination, angles morts entre fonctions, direction générale absorbée par les arbitrages opérationnels.</div>
+      <div class="dir-card reveal">
+        <div class="dir-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="dir-card-body">
+          <div class="dir-card-header">
+            <div class="dir-card-nb">2</div>
+            <h3>Transitions &amp; transformations complexes</h3>
           </div>
-          <div class="exemple-row">
-            <div class="exemple-row-label">Intervention</div>
-            <div class="exemple-row-text">Diagnostic OP360 ciblé ETI, mise en place d'un Shadow Codir (stratégie, finance, opérations, digital, RSE), feuille de route intégrée avec gouvernance dédiée.</div>
+          <p>Transmission, rachat, changement de modèle, intégration post-acquisition : ces moments mobilisent plusieurs expertises simultanément et exigent une coordination que la direction ne peut pas assumer seule.</p>
+          <span class="dir-card-tag">Transmission · Post-acquisition</span>
+        </div>
+      </div>
+
+      <div class="dir-card reveal">
+        <div class="dir-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="dir-card-body">
+          <div class="dir-card-header">
+            <div class="dir-card-nb">3</div>
+            <h3>Retournement de rentabilité</h3>
           </div>
-          <div class="exemple-row">
-            <div class="exemple-row-label">Résultats</div>
-            <div class="exemple-row-text"><strong>Vision partagée des priorités</strong>, coordination retrouvée entre expertises, direction générale repositionnée sur les décisions stratégiques.</div>
+          <p>Tensions sur les marges, trésorerie sous pression : chaque semaine compte. Un Diagnostic OP360 sur 12 domaines identifie les vrais leviers d'action et produit un plan priorisé actionnable dès la restitution.</p>
+          <span class="dir-card-tag">Marges · Trésorerie · Urgence</span>
+        </div>
+      </div>
+
+      <div class="dir-card reveal">
+        <div class="dir-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="dir-card-body">
+          <div class="dir-card-header">
+            <div class="dir-card-nb">4</div>
+            <h3>Structurer le pilotage &amp; la gouvernance</h3>
           </div>
+          <p>Vous portez trop de sujets en première ligne. Operating Partner dédié ou Shadow Codir pluridisciplinaire : OP360 vous donne un pair à vos côtés pour décider avec lucidité et déléguer sur des bases solides.</p>
+          <span class="dir-card-tag">Gouvernance · Shadow Codir</span>
         </div>
       </div>
 
@@ -377,18 +195,14 @@
   </div>
 </section>
 
-<!-- CTA FINAL ── -->
-<section class="dirigeants-cta-section">
+<!-- CTA FINAL -->
+<section class="dir-cta-section">
   <div class="container">
-    <h2>30 minutes pour <span>clarifier vos enjeux.</span></h2>
+    <h2>30 minutes pour <span style="color:var(--cyan)">clarifier vos enjeux.</span></h2>
     <p>Un échange confidentiel, sans engagement — pour poser un premier regard sur votre situation et voir ensemble si OP360 a du sens pour vous.</p>
-    <div class="dirigeants-cta-btns">
+    <div class="dir-cta-btns">
       <a href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener" class="btn-primary">Planifier un échange →</a>
       <a href="mailto:contact@operating360.com?subject=Dirigeant%20PME%20%26%20ETI%20%E2%80%94%20Prise%20de%20contact&body=Bonjour%20OP360%2C%0A%0AJe%20dirige%20une%20PME%2FETI%20et%20souhaite%20%C3%A9changer%20avec%20vous." class="btn-secondary">Nous écrire directement</a>
-    </div>
-    <div class="cta-contact-row">
-      <a href="mailto:contact@operating360.com" class="cta-contact-item"><div class="cta-icon">✉</div> contact@operating360.com</a>
-      <a href="tel:+33651721524" class="cta-contact-item"><div class="cta-icon">📞</div> 06 51 72 15 24</a>
     </div>
   </div>
 </section>
@@ -400,7 +214,11 @@
 <script>
   buildNav('pourqui.html');
   buildFooter();
-  initReveal();
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
