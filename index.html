@@ -426,6 +426,7 @@
   margin-bottom: 5px;
   line-height: 1.35;
 }
+.equipe-mobile-sous-titre { display: none; }
 .equipe-expertise {
   font-size: 12px;
   color: var(--gray-text);
@@ -654,7 +655,8 @@
   .equipe-portrait { flex: 0 0 140px; }
   .equipe-photo { width: 88px; height: 88px; margin-bottom: 12px; }
   .equipe-nom { font-size: 13px; }
-  .equipe-titre { font-size: 11px; }
+  .equipe-titre { display: none; }
+  .equipe-mobile-sous-titre { display: block; font-size: 11px; color: var(--cyan); font-weight: 600; margin-bottom: 5px; line-height: 1.35; }
   .equipe-expertise { display: none; }
   .equipe-phrase { display: none; }
   .btn-equipe { width: 100%; text-align: center; justify-content: center; }
@@ -921,11 +923,18 @@ document.getElementById('offres-grid').innerHTML = OP360.offres.map(o => `
     <span class="offre-lien">En savoir plus →</span>
   </a>`).join('');
 
+const _mobileSousTitres = {
+  'Annie Belquin':    'Gouvernance, Operations, Transformation',
+  'Richard Paquette': 'Execution operationnelle & Transformation',
+  'Suzanne Grimal':   'Finance, Transmission & création de valeur',
+  'Christophe Raix':  'IA industrielle, Produit & Tech'
+};
 document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => `
   <div class="equipe-portrait reveal">
     <img class="equipe-photo" src="${OP360.photos[e.photo]}" alt="${e.prenom} ${e.nom}" width="120" height="120" loading="lazy" onerror="this.style.display='none'">
     <div class="equipe-nom">${e.prenom} ${e.nom}</div>
     <div class="equipe-titre">${e.titre}</div>
+    <div class="equipe-mobile-sous-titre">${_mobileSousTitres[e.prenom + ' ' + e.nom] || ''}</div>
     <div class="equipe-expertise">${e.expertise}</div>
   </div>`).join('');
 
