@@ -51,6 +51,7 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 .nav-links a { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.7); transition: color 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
 
+/* Wrapper des deux boutons CTA desktop */
 .nav-ctas {
   display: flex;
   align-items: center;
@@ -122,195 +123,8 @@ h2.section-title-white { color: var(--white); }
 
 .section-intro { font-size: 18px; font-weight: 300; color: var(--gray-text); max-width: 600px; line-height: 1.65; margin-bottom: 56px; }
 .section-intro-white { color: rgba(255,255,255,0.6); }
-
-/* ── SOUS-TITRES DE SECTION ── */
-.section-subtitle {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--navy);
-  line-height: 1.5;
-  max-width: 100%;
-}
-.section-subtitle--inverse {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #FFFFFF;
-  line-height: 1.5;
-  max-width: 100%;
-}
-
-/* ══════════════════════════════════════════════════════════════
-   Règle universelle : TOUT texte (p, .section-subtitle,
-   .section-intro) sur fond navy → blanc
-   Couvre les <p> nus ET les classes utilitaires.
-   Sections concernées (toutes pages) :
-   hero, moments-section, offres-section, cta-final,
-   terrain-section, parcours-section, diff-section,
-   hero-dir, dir-cta-section,
-   hero-inv, inv-cta-section,
-   hero-diag, livrables-section,
-   hero-equipe, equipe-cta-section,
-   hero-offres, offres-cta-section,
-   pourqui-cta-section, hero-pourqui,
-   differenciation-cta-section, hero-differenciation,
-   accompagnement-cta-section, hero-accompagnement,
-   [data-bg="navy"], .bg-navy
-   ══════════════════════════════════════════════════════════════ */
-
-/* Liste exhaustive des sections navy connues */
-.hero,
-.moments-section,
-.offres-section,
-.cta-final,
-.terrain-section,
-.parcours-section,
-.diff-section,
-.hero-dir,
-.dir-cta-section,
-.hero-inv,
-.inv-cta-section,
-.hero-diag,
-.livrables-section,
-.hero-equipe,
-.equipe-cta-section,
-.hero-offres,
-.offres-cta-section,
-.hero-pourqui,
-.pourqui-cta-section,
-.hero-differenciation,
-.differenciation-cta-section,
-.hero-accompagnement,
-.accompagnement-cta-section,
-.hero-eti,
-.eti-cta-section,
-.hero-pme,
-.pme-cta-section,
-.hero-saas,
-.saas-cta-section,
-.hero-formations,
-.formations-cta-section,
-.hero-shadow,
-.shadow-cta-section,
-.hero-due,
-.due-cta-section,
-[data-bg="navy"],
-.bg-navy {
-  /* Forcer tous les paragraphes, sous-titres et intros en blanc */
-}
-
-.hero p,
-.moments-section p,
-.offres-section p,
-.cta-final p,
-.terrain-section p,
-.parcours-section p,
-.diff-section p,
-.hero-dir p,
-.dir-cta-section p,
-.hero-inv p,
-.inv-cta-section p,
-.hero-diag p,
-.livrables-section p,
-.hero-equipe p,
-.equipe-cta-section p,
-.hero-offres p,
-.offres-cta-section p,
-.hero-pourqui p,
-.pourqui-cta-section p,
-.hero-differenciation p,
-.differenciation-cta-section p,
-.hero-accompagnement p,
-.accompagnement-cta-section p,
-.hero-eti p,
-.eti-cta-section p,
-.hero-pme p,
-.pme-cta-section p,
-.hero-saas p,
-.saas-cta-section p,
-.hero-formations p,
-.formations-cta-section p,
-.hero-shadow p,
-.shadow-cta-section p,
-.hero-due p,
-.due-cta-section p,
-[data-bg="navy"] p,
-.bg-navy p,
-.hero .section-intro,
-.moments-section .section-intro,
-.offres-section .section-intro,
-.cta-final .section-intro,
-.terrain-section .section-intro,
-.parcours-section .section-intro,
-.diff-section .section-intro,
-.hero-dir .section-intro,
-.dir-cta-section .section-intro,
-.hero-inv .section-intro,
-.inv-cta-section .section-intro,
-.hero-diag .section-intro,
-.livrables-section .section-intro,
-.hero-equipe .section-intro,
-.equipe-cta-section .section-intro,
-.hero-offres .section-intro,
-.offres-cta-section .section-intro,
-.hero-pourqui .section-intro,
-.pourqui-cta-section .section-intro,
-.hero-differenciation .section-intro,
-.differenciation-cta-section .section-intro,
-.hero-accompagnement .section-intro,
-.accompagnement-cta-section .section-intro,
-.hero-eti .section-intro,
-.eti-cta-section .section-intro,
-.hero-pme .section-intro,
-.pme-cta-section .section-intro,
-.hero-saas .section-intro,
-.saas-cta-section .section-intro,
-.hero-formations .section-intro,
-.formations-cta-section .section-intro,
-.hero-shadow .section-intro,
-.shadow-cta-section .section-intro,
-.hero-due .section-intro,
-.due-cta-section .section-intro,
-[data-bg="navy"] .section-intro,
-.bg-navy .section-intro,
-.hero .section-subtitle,
-.moments-section .section-subtitle,
-.offres-section .section-subtitle,
-.cta-final .section-subtitle,
-.terrain-section .section-subtitle,
-.parcours-section .section-subtitle,
-.diff-section .section-subtitle,
-.hero-dir .section-subtitle,
-.dir-cta-section .section-subtitle,
-.hero-inv .section-subtitle,
-.inv-cta-section .section-subtitle,
-.hero-diag .section-subtitle,
-.livrables-section .section-subtitle,
-.hero-equipe .section-subtitle,
-.equipe-cta-section .section-subtitle,
-.hero-offres .section-subtitle,
-.offres-cta-section .section-subtitle,
-.hero-pourqui .section-subtitle,
-.pourqui-cta-section .section-subtitle,
-.hero-differenciation .section-subtitle,
-.differenciation-cta-section .section-subtitle,
-.hero-accompagnement .section-subtitle,
-.accompagnement-cta-section .section-subtitle,
-.hero-eti .section-subtitle,
-.eti-cta-section .section-subtitle,
-.hero-pme .section-subtitle,
-.pme-cta-section .section-subtitle,
-.hero-saas .section-subtitle,
-.saas-cta-section .section-subtitle,
-.hero-formations .section-subtitle,
-.formations-cta-section .section-subtitle,
-.hero-shadow .section-subtitle,
-.shadow-cta-section .section-subtitle,
-.hero-due .section-subtitle,
-.due-cta-section .section-subtitle,
-[data-bg="navy"] .section-subtitle,
-.bg-navy .section-subtitle {
-  color: rgba(255,255,255,0.72) !important;
-}
+.section-subtitle { font-size: 1.05rem; font-weight: 500; color: var(--navy); line-height: 1.5; max-width: 100%; }
+.section-subtitle--inverse { font-size: 1.05rem; font-weight: 500; color: #FFFFFF; line-height: 1.5; max-width: 100%; }
 
 /* ── FOOTER ── */
 footer { background: var(--navy-dark); padding: 64px 48px 32px; }
@@ -420,6 +234,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
    3. Hover lift amélioré (.offre-card, .moment-card)
    ══════════════════════════════════════════════ */
 
+/* 1 — Compteurs : flash cyan au moment où le chiffre s'incrémente */
 .count-animated {
   transition: color 0.15s ease;
 }
@@ -427,6 +242,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   color: var(--cyan);
 }
 
+/* 2 — Barre cyan gauche animée au chargement de la section */
 @keyframes cyanBarGrow {
   from { background-size: 4px 0%; }
   to   { background-size: 4px 100%; }
@@ -452,6 +268,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   transform: scaleY(1);
 }
 
+/* Gradient animé sur la bordure existante (shimmer) */
 @keyframes cyanShimmer {
   0%   { background-position: 0% 0%; }
   50%  { background-position: 0% 100%; }
@@ -467,6 +284,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   animation: cyanShimmer 4s ease-in-out infinite;
 }
 
+/* 3 — Hover lift amélioré sur offre-card (desktop uniquement) */
 @media (hover: hover) {
   .offre-card {
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
@@ -479,6 +297,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
     box-shadow: 0 16px 48px rgba(0,212,170,0.18);
   }
 
+  /* Hover lift sur moment-card */
   .moment-card {
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
                 box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
