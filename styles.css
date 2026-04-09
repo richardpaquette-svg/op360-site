@@ -141,31 +141,25 @@ h2.section-title-white { color: var(--white); }
   line-height: 1.5;
   max-width: 100%;
 }
-/* Règle contextuelle : .section-subtitle dans tout fond navy → blanc automatiquement */
-[style*="background: var(--navy)"] .section-subtitle,
-[style*="background:var(--navy)"] .section-subtitle,
-[style*="background: #1a2332"] .section-subtitle,
-[style*="background:#1a2332"] .section-subtitle,
-[style*="background: var(--navy-dark)"] .section-subtitle,
-[style*="background:var(--navy-dark)"] .section-subtitle,
-[style*="background: #111b27"] .section-subtitle,
-[style*="background:#111b27"] .section-subtitle,
-.bg-navy .section-subtitle,
+
+/* ══════════════════════════════════════════════
+   Règle clé : sous-titres blancs sur fond navy
+   S'applique à .section-intro ET .section-subtitle
+   sur toutes les sections à fond navy du site.
+   Utilise !important pour battre les styles inline
+   et les règles de spécificité locale.
+   ══════════════════════════════════════════════ */
+.moments-section .section-intro,
 .moments-section .section-subtitle,
-.diff-section .section-subtitle,
-.parcours-section .section-subtitle,
-.cta-section .section-subtitle,
-.hero-section .section-subtitle,
-.offres-hero .section-subtitle,
-.diagnostic-hero .section-subtitle,
-.investisseurs-hero .section-subtitle,
-.dirigeants-hero .section-subtitle,
-.equipe-hero .section-subtitle,
-.passer-un-cap .section-subtitle,
-.section-navy .section-subtitle,
-section[class*="-dark"] .section-subtitle,
-section[class*="navy"] .section-subtitle {
-  color: var(--white);
+.offres-section .section-intro,
+.offres-section .section-subtitle,
+.cta-final .section-intro,
+.cta-final .section-subtitle,
+.terrain-section .section-intro,
+.terrain-section .section-subtitle,
+.hero .section-intro,
+.hero .section-subtitle {
+  color: #ffffff !important;
 }
 
 /* ── FOOTER ── */
