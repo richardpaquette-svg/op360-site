@@ -361,21 +361,43 @@
 
 
 
-/* ── ÉQUIPE — portraits sans conteneurs ── */
+/* ── ÉQUIPE — défilement horizontal ── */
 .equipe-section { background: var(--white); }
-.equipe-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  margin-bottom: 0;
-  text-align: center;
+
+/* Piste scrollable */
+.equipe-scroll-track {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 4px 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,212,170,0.3) transparent;
 }
+.equipe-scroll-track::-webkit-scrollbar {
+  height: 4px;
+}
+.equipe-scroll-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+.equipe-scroll-track::-webkit-scrollbar-thumb {
+  background: rgba(0,212,170,0.35);
+  border-radius: 2px;
+}
+
+/* Portrait individuel */
 .equipe-portrait {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0;
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  text-align: center;
 }
+
 .equipe-photo {
   width: 120px;
   height: 120px;
@@ -451,7 +473,6 @@
 @media (max-width: 1024px) {
   .offres-grid, .diag-grid { grid-template-columns: repeat(2, 1fr); }
   .diff-bandeau-grid { grid-template-columns: repeat(3, 1fr); }
-  .equipe-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 32px; }
   .video-inner { grid-template-columns: 1fr; }
   .temos-grid { grid-template-columns: repeat(2, 1fr); }
   .parcours-timeline { grid-template-columns: repeat(2, 1fr); gap: 32px 40px; }
@@ -628,18 +649,11 @@
   .temo-quote { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; font-size: 14px; margin-bottom: 12px; }
   .temo-author { font-size: 11px; }
 
-  /* ── ÉQUIPE mobile — grid 2×2, portraits sans conteneurs ── */
-  .equipe-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 20px;
-    overflow: visible;
-    padding-bottom: 0;
-    margin-bottom: 16px;
-  }
-  .equipe-portrait { align-items: center; }
+  /* ── ÉQUIPE mobile — portraits plus petits ── */
+  .equipe-scroll-track { gap: 24px; padding: 8px 4px 16px; }
+  .equipe-portrait { flex: 0 0 140px; }
   .equipe-photo { width: 88px; height: 88px; margin-bottom: 12px; }
-  .equipe-nom { font-size: 14px; }
+  .equipe-nom { font-size: 13px; }
   .equipe-titre { font-size: 11px; }
   .equipe-expertise { display: none; }
   .equipe-phrase { display: none; }
@@ -830,7 +844,7 @@
     <div class="section-label reveal-label">Les fondateurs</div>
     <h2 class="section-title reveal">Des dirigeants à vos côtés</h2>
     <p class="section-intro section-subtitle reveal">Nous sommes des pairs qui ont déjà traversé vos défis, des dirigeants opérationnels avant tout.</p>
-    <div class="equipe-grid" id="equipe-grid"></div>
+    <div class="equipe-scroll-track" id="equipe-grid"></div>
   </div>
 </section>
 
