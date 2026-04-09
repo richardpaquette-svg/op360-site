@@ -123,8 +123,50 @@ h2.section-title-white { color: var(--white); }
 
 .section-intro { font-size: 18px; font-weight: 300; color: var(--gray-text); max-width: 600px; line-height: 1.65; margin-bottom: 56px; }
 .section-intro-white { color: rgba(255,255,255,0.6); }
-.section-subtitle { font-size: 1.05rem; font-weight: 500; color: var(--navy); line-height: 1.5; max-width: 100%; }
-.section-subtitle--inverse { font-size: 1.05rem; font-weight: 500; color: #FFFFFF; line-height: 1.5; max-width: 100%; }
+
+/* ── SOUS-TITRES DE SECTION ── */
+/* Par défaut : navy sur fond clair */
+.section-subtitle {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.5;
+  max-width: 100%;
+}
+/* Variante explicite inverse */
+.section-subtitle--inverse {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.5;
+  max-width: 100%;
+}
+/* Règle contextuelle : .section-subtitle dans tout fond navy → blanc automatiquement */
+[style*="background: var(--navy)"] .section-subtitle,
+[style*="background:var(--navy)"] .section-subtitle,
+[style*="background: #1a2332"] .section-subtitle,
+[style*="background:#1a2332"] .section-subtitle,
+[style*="background: var(--navy-dark)"] .section-subtitle,
+[style*="background:var(--navy-dark)"] .section-subtitle,
+[style*="background: #111b27"] .section-subtitle,
+[style*="background:#111b27"] .section-subtitle,
+.bg-navy .section-subtitle,
+.moments-section .section-subtitle,
+.diff-section .section-subtitle,
+.parcours-section .section-subtitle,
+.cta-section .section-subtitle,
+.hero-section .section-subtitle,
+.offres-hero .section-subtitle,
+.diagnostic-hero .section-subtitle,
+.investisseurs-hero .section-subtitle,
+.dirigeants-hero .section-subtitle,
+.equipe-hero .section-subtitle,
+.passer-un-cap .section-subtitle,
+.section-navy .section-subtitle,
+section[class*="-dark"] .section-subtitle,
+section[class*="navy"] .section-subtitle {
+  color: var(--white);
+}
 
 /* ── FOOTER ── */
 footer { background: var(--navy-dark); padding: 64px 48px 32px; }
