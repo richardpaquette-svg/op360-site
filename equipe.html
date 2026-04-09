@@ -118,19 +118,9 @@
   /* Afficher le carousel */
   .fondateurs-carousel-outer {
     display: block;
-    margin-top: 32px;
-    /*
-      Technique pour contourner overflow-x:hidden sur body :
-      on crée un nouveau contexte de débordé avec position:relative
-      et on laisse le scroll se faire à l'intérieur de cet élément
-      plutôt que de remonter jusqu'au body.
-    */
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: calc(100% + 40px);
+    margin: 24px -20px 0;
+    overflow: hidden;
   }
 
   /* Piste de défilement — élément scrollable indépendant */
@@ -378,13 +368,7 @@
 
   </div><!-- /.container -->
 
-  <!--
-    CAROUSEL MOBILE
-    Placé EN DEHORS du .container pour échapper à ses contraintes de largeur.
-    Le wrapper .fondateurs-carousel-outer utilise la technique 100vw + left:50% + margin:-50vw
-    pour s'étirer sur toute la largeur de la fenêtre,
-    et crée un nouveau contexte de scroll indépendant du body (overflow-x:hidden).
-  -->
+  <!-- CAROUSEL MOBILE — hors .container, pleine largeur -->
   <div class="fondateurs-carousel-outer" aria-label="Profils de l'équipe" role="region">
     <div class="fondateurs-carousel" id="fondateursCarousel">
 
