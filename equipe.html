@@ -35,20 +35,13 @@
   font-size: clamp(34px, 5vw, 56px); font-weight: 700; color: var(--white);
   line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 20px;
 }
-.hero-equipe h1 span {
-  color: var(--cyan);
-  display: block;
-}
+.hero-equipe h1 span { color: var(--cyan); display: block; }
 .hero-equipe-sub {
   font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.85);
   line-height: 1.6; max-width: 680px; margin: 0 0 40px 0;
 }
-.hero-equipe-cta {
-  display: flex; gap: 16px; flex-wrap: wrap;
-}
-.hero-equipe-cta a {
-  min-width: 240px; text-align: center; justify-content: center;
-}
+.hero-equipe-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-equipe-cta a { min-width: 240px; text-align: center; justify-content: center; }
 
 /* ── FONDATEURS ── */
 .fondateurs-section { background: var(--white); }
@@ -76,7 +69,6 @@
   border-radius: 6px; padding: 8px 16px; transition: all 0.2s;
 }
 .fondateur-linkedin:hover { border-color: var(--cyan); color: var(--cyan); }
-
 .fondateur-content h3 { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .fondateur-content .fondateur-role { font-size: 15px; font-weight: 600; color: var(--cyan); margin-bottom: 20px; }
 .fondateur-content p { font-size: 16px; color: var(--gray-text); line-height: 1.75; margin-bottom: 16px; }
@@ -90,17 +82,15 @@
   text-transform: uppercase; letter-spacing: 0.07em;
   margin: 20px 0 6px 0;
 }
-.fondateur-signature {
-  font-size: 14px; font-weight: 600; color: var(--navy);
-  margin: 4px 0 16px 0;
-}
-.fondateur-refs {
-  font-size: 13px; color: var(--gray-text); margin-bottom: 20px;
-}
+.fondateur-signature { font-size: 14px; font-weight: 600; color: var(--navy); margin: 4px 0 16px 0; }
+.fondateur-refs { font-size: 13px; color: var(--gray-text); margin-bottom: 20px; }
 .fondateur-refs strong { color: var(--navy); font-weight: 600; }
 .fondateur-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 .fondateur-tag { background: var(--gray-bg); border: 1px solid var(--gray-border); border-radius: 6px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: var(--navy); }
 .fondateur-tag-sector { background: transparent; border: 1px solid var(--gray-border); border-radius: 6px; padding: 5px 12px; font-size: 12px; font-weight: 500; color: var(--gray-text); }
+
+/* ── CAROUSEL MOBILE — masqué par défaut ── */
+.fondateurs-carousel-outer { display: none; }
 
 /* ── CTA FINAL ── */
 .equipe-cta-section { background: var(--navy); padding: 80px 48px; text-align: center; }
@@ -108,19 +98,133 @@
 .equipe-cta-section p { font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 36px; }
 .equipe-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-/* ── RESPONSIVE ── */
+/* ── RESPONSIVE DESKTOP ── */
 @media (max-width: 1024px) {
   .fondateur-card, .fondateur-card:nth-child(even) { grid-template-columns: 1fr; gap: 32px; }
-  .fondateur-card:nth-child(even) .fondateur-visual, .fondateur-card:nth-child(even) .fondateur-content { order: unset; }
+  .fondateur-card:nth-child(even) .fondateur-visual,
+  .fondateur-card:nth-child(even) .fondateur-content { order: unset; }
 }
+
+/* ── MOBILE ── */
 @media (max-width: 768px) {
   .hero-equipe { padding: 100px 20px 60px; }
   .hero-equipe-sub { font-size: 16px; max-width: 100%; }
   .hero-equipe-cta a { min-width: 0; width: 100%; }
-  .fondateur-card { padding: 32px 0; gap: 20px; }
-  .fondateur-photo { width: 140px; height: 140px; }
-  .fondateur-content p { font-size: 15px; line-height: 1.65; }
   .equipe-cta-section { padding: 56px 20px; }
+
+  /* Masquer les cartes desktop */
+  .fondateur-card { display: none !important; }
+
+  /* Afficher le carousel */
+  .fondateurs-carousel-outer {
+    display: block;
+    width: calc(100% + 40px);
+    margin: 24px -20px 0;
+    overflow: hidden;
+  }
+
+  /* Piste de défilement — élément scrollable indépendant */
+  .fondateurs-carousel {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding: 4px 20px 20px;
+    scrollbar-width: none;
+    /* Largeur et positionnement explicites */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .fondateurs-carousel::-webkit-scrollbar { display: none; }
+
+  /* Cartes carousel */
+  .carousel-card {
+    flex: 0 0 82vw;
+    min-width: 0;
+    scroll-snap-align: start;
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: 14px;
+    padding: 24px 18px 20px;
+    box-shadow: 0 2px 16px rgba(15,23,42,0.08);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* En-tête : photo + identité */
+  .carousel-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .carousel-card-photo {
+    width: 68px; height: 68px; flex-shrink: 0;
+    border-radius: 50%; object-fit: cover;
+    border: 2px solid rgba(0,212,170,0.4);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  .carousel-card-identity { flex: 1; min-width: 0; }
+  .carousel-card-nom { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+  .carousel-card-role {
+    font-size: 12px; font-weight: 600; color: var(--cyan); line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .carousel-card-linkedin {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11px; color: var(--gray-text);
+    border: 1px solid var(--gray-border); border-radius: 5px;
+    padding: 4px 10px; min-height: 28px;
+  }
+
+  /* Citation */
+  .carousel-card-citation {
+    font-size: 13px; font-style: italic; color: var(--navy);
+    border-left: 2px solid var(--cyan); padding-left: 12px;
+    margin-bottom: 14px; line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Corps */
+  .carousel-card-body {
+    font-size: 13px; color: var(--gray-text); line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  /* Signature */
+  .carousel-card-signature {
+    font-size: 12px; font-weight: 600; color: var(--navy);
+    margin-bottom: 12px; font-style: italic;
+  }
+
+  /* Tags */
+  .carousel-card-tags {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: auto; padding-top: 12px;
+    border-top: 1px solid var(--gray-border);
+  }
+  .carousel-card-tag {
+    background: var(--gray-bg); border: 1px solid var(--gray-border);
+    border-radius: 5px; padding: 4px 10px;
+    font-size: 11px; font-weight: 600; color: var(--navy);
+  }
+
+  /* Dots */
+  .carousel-dots {
+    display: flex; justify-content: center; gap: 8px;
+    padding: 8px 0 4px;
+  }
+  .carousel-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gray-border);
+    transition: background 0.25s, transform 0.25s;
+    cursor: pointer; border: none;
+  }
+  .carousel-dot.active { background: var(--cyan); transform: scale(1.35); }
 }
 </style>
 </head>
@@ -150,6 +254,8 @@
   <div class="container">
     <div class="section-label reveal">L'équipe fondatrice</div>
     <h2 class="section-title reveal">Des pairs qui ont vécu vos défis</h2>
+
+    <!-- CARTES DESKTOP -->
 
     <!-- Annie -->
     <div class="fondateur-card reveal">
@@ -260,7 +366,108 @@
       </div>
     </div>
 
-  </div>
+  </div><!-- /.container -->
+
+  <!-- CAROUSEL MOBILE — hors .container, pleine largeur -->
+  <div class="fondateurs-carousel-outer" aria-label="Profils de l'équipe" role="region">
+    <div class="fondateurs-carousel" id="fondateursCarousel">
+
+      <!-- Annie -->
+      <div class="carousel-card">
+        <div class="carousel-card-header">
+          <img class="carousel-card-photo" src="https://operating360.com/_assets/v11/fc62ef918429c6b134bc819dcd0ab5300a56aff7.png" alt="Annie Belquin" width="68" height="68" loading="lazy">
+          <div class="carousel-card-identity">
+            <div class="carousel-card-nom">Annie Belquin</div>
+            <div class="carousel-card-role">Opérations, Gouvernance &amp; Transformation</div>
+            <a href="https://www.linkedin.com/in/anniebelquin/" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">in LinkedIn</a>
+          </div>
+        </div>
+        <blockquote class="carousel-card-citation">« J'ai été des 2 côtés de la décision comme chaque membre de OP360 — dirigé des usines, assumé des retournements, siégé dans des boards… ce qui fait de nous des pairs, des partenaires, des opérationnels pragmatiques. Jamais hors sol. »</blockquote>
+        <p class="carousel-card-body">25 ans de direction générale et opérationnelle en ETI/PME &amp; grands groupes, avec la conviction que l'on transforme avec les équipes, jamais à leur place. Annie a restauré performance, organisation et fierté d'appartenance — dans des environnements exigeants.</p>
+        <div class="carousel-card-signature">Femme de collectif et Innovatrice dans l'âme — scientifique, sociale et opérationnelle</div>
+        <div class="carousel-card-tags">
+          <span class="carousel-card-tag">Gouvernance</span>
+          <span class="carousel-card-tag">Transformation</span>
+          <span class="carousel-card-tag">Opérations &amp; Sales</span>
+          <span class="carousel-card-tag">PME &amp; ETI</span>
+        </div>
+      </div>
+
+      <!-- Richard -->
+      <div class="carousel-card">
+        <div class="carousel-card-header">
+          <img class="carousel-card-photo" src="https://operating360.com/_assets/v11/2f8733a0399f8085163edaa1a7d0725dc2b2f4f4.png" alt="Richard Paquette" width="68" height="68" loading="lazy">
+          <div class="carousel-card-identity">
+            <div class="carousel-card-nom">Richard Paquette</div>
+            <div class="carousel-card-role">Exécution opérationnelle &amp; Transformation</div>
+            <a href="https://www.linkedin.com/in/richard-paquette-3011tv/" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">in LinkedIn</a>
+          </div>
+        </div>
+        <blockquote class="carousel-card-citation">« J'ai dirigé des transformations complexes, des fusions opérationnelles et des organisations internationales sous forte contrainte d'exécution. C'est cette expérience du terrain qui me permet aujourd'hui d'accompagner les dirigeants comme un pair, au plus près des décisions et de leur mise en œuvre. »</blockquote>
+        <p class="carousel-card-body">30 ans de terrain dans le retail, la distribution omnicanale et la supply chain internationale. Ex-Managing Director de filiale internationale et directeur de projets post-fusion, Richard combine vision stratégique, maîtrise du P&amp;L et conduite opérationnelle de programmes complexes multi-pays.</p>
+        <div class="carousel-card-signature">Homme de terrain. Exécution sécurisée. Création de valeur &amp; Résultat d'abord.</div>
+        <div class="carousel-card-tags">
+          <span class="carousel-card-tag">Exécution opérationnelle</span>
+          <span class="carousel-card-tag">Transformation</span>
+          <span class="carousel-card-tag">Supply Chain</span>
+          <span class="carousel-card-tag">Direction de BU</span>
+        </div>
+      </div>
+
+      <!-- Suzanne -->
+      <div class="carousel-card">
+        <div class="carousel-card-header">
+          <img class="carousel-card-photo" src="https://operating360.com/_assets/v11/65a4c6227ef12db51910bb9cb6ab8dee23fa0891.png" alt="Suzanne Grimal" width="68" height="68" loading="lazy">
+          <div class="carousel-card-identity">
+            <div class="carousel-card-nom">Suzanne Grimal</div>
+            <div class="carousel-card-role">Finance, Transmission &amp; Création de valeur</div>
+            <a href="https://www.linkedin.com/in/suzanne-grimal/" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">in LinkedIn</a>
+          </div>
+        </div>
+        <blockquote class="carousel-card-citation">« J'ai été des deux côtés de la table — 20 ans en banque d'investissement, puis immergée dans les PME, en tant que DG-fondatrice et DAF. Ce que ça donne : une pair qui sait ce que chaque décision financière ou pas coûte vraiment. »</blockquote>
+        <p class="carousel-card-body">30 ans de terrain, entre banque d'investissement, création d'entreprise et conseil auprès de PME. Suzanne a vécu de l'intérieur ce que vivent les dirigeants qu'elle accompagne. Chez OP360, elle intervient sur les moments qui engagent l'avenir.</p>
+        <div class="carousel-card-signature">Elle ne théorise pas. Elle sécurise.</div>
+        <div class="carousel-card-tags">
+          <span class="carousel-card-tag">Finance d'entreprise</span>
+          <span class="carousel-card-tag">Transmission &amp; Cession</span>
+          <span class="carousel-card-tag">Private Equity</span>
+          <span class="carousel-card-tag">PME &amp; ETI</span>
+        </div>
+      </div>
+
+      <!-- Christophe -->
+      <div class="carousel-card">
+        <div class="carousel-card-header">
+          <img class="carousel-card-photo" src="https://operating360.com/_assets/v11/0d2a1023ad5820c69a65779194a7ffa09d1867a6.png" alt="Christophe Raix" width="68" height="68" loading="lazy">
+          <div class="carousel-card-identity">
+            <div class="carousel-card-nom">Christophe Raix</div>
+            <div class="carousel-card-role">IA industrielle, Produit &amp; Tech</div>
+            <a href="https://www.linkedin.com/in/christopheraix/" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">in LinkedIn</a>
+          </div>
+        </div>
+        <blockquote class="carousel-card-citation">« Je simplifie la complexité pour permettre aux dirigeants de décider plus vite et plus juste. Chez OP360, nous concevons une plateforme SaaS pensée pour structurer, piloter et accélérer la transformation des entreprises, avec une approche très concrète du terrain. »</blockquote>
+        <p class="carousel-card-body">Entrepreneur dans l'âme, j'évolue à l'intersection de la deeptech, de l'industrie et de l'exécution opérationnelle. Lean Six Sigma Black Belt, j'allie vision, exigence et pragmatisme pour transformer l'ambition en résultats tangibles.</p>
+        <div class="carousel-card-signature">Entrepreneur dans l'âme. Rigoureux dans l'exécution.</div>
+        <div class="carousel-card-tags">
+          <span class="carousel-card-tag">IA industrielle</span>
+          <span class="carousel-card-tag">Plateforme SaaS</span>
+          <span class="carousel-card-tag">PME &amp; ETI</span>
+          <span class="carousel-card-tag">Lean Six Sigma</span>
+        </div>
+      </div>
+
+    </div><!-- /.fondateurs-carousel -->
+
+    <!-- Dots -->
+    <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigation profils">
+      <button class="carousel-dot active" data-index="0" aria-label="Annie Belquin" role="tab" aria-selected="true"></button>
+      <button class="carousel-dot" data-index="1" aria-label="Richard Paquette" role="tab" aria-selected="false"></button>
+      <button class="carousel-dot" data-index="2" aria-label="Suzanne Grimal" role="tab" aria-selected="false"></button>
+      <button class="carousel-dot" data-index="3" aria-label="Christophe Raix" role="tab" aria-selected="false"></button>
+    </div>
+
+  </div><!-- /.fondateurs-carousel-outer -->
+
 </section>
 
 <!-- CTA FINAL -->
@@ -283,6 +490,49 @@
 buildNav('equipe.html');
 buildFooter();
 initReveal();
+
+// Carousel mobile — dots + IntersectionObserver
+(function () {
+  var outer = document.querySelector('.fondateurs-carousel-outer');
+  // N'initialise que si le carousel est visible (mobile)
+  if (!outer || getComputedStyle(outer).display === 'none') return;
+
+  var carousel = document.getElementById('fondateursCarousel');
+  var dots = document.querySelectorAll('.carousel-dot');
+  var cards = carousel ? carousel.querySelectorAll('.carousel-card') : [];
+  if (!carousel || !cards.length || !dots.length) return;
+
+  // IntersectionObserver pour mettre à jour le dot actif
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var idx = Array.from(cards).indexOf(entry.target);
+        dots.forEach(function (d, i) {
+          d.classList.toggle('active', i === idx);
+          d.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+        });
+      }
+    });
+  }, { root: carousel, threshold: 0.6 });
+
+  cards.forEach(function (card) { observer.observe(card); });
+
+  // Clic sur un dot -> scroll vers la carte
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      var idx = parseInt(dot.getAttribute('data-index'), 10);
+      var card = cards[idx];
+      if (card) {
+        carousel.scrollTo({ left: card.offsetLeft - 20, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Re-check au resize (passage desktop <-> mobile)
+  window.addEventListener('resize', function () {
+    if (getComputedStyle(outer).display === 'none') observer.disconnect();
+  });
+}());
 </script>
 </body>
 </html>
