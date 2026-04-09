@@ -150,6 +150,10 @@ h2.section-title-white { color: var(--white); }
    .hero-inv, .inv-cta-section
    ── diagnostic.html ────────────────────────────────────────
    .hero-diag, .livrables-section
+   ── equipe.html ───────────────────────────────────────────
+   .hero-equipe, .equipe-cta-section
+   ── offres.html ───────────────────────────────────────────
+   .hero-offres, .offres-cta-section
    ══════════════════════════════════════════════════════════════ */
 .hero .section-intro,
 .hero .section-subtitle,
@@ -172,7 +176,15 @@ h2.section-title-white { color: var(--white); }
 .hero-diag .section-intro,
 .hero-diag .section-subtitle,
 .livrables-section .section-intro,
-.livrables-section .section-subtitle {
+.livrables-section .section-subtitle,
+.hero-equipe .section-intro,
+.hero-equipe .section-subtitle,
+.equipe-cta-section .section-intro,
+.equipe-cta-section .section-subtitle,
+.hero-offres .section-intro,
+.hero-offres .section-subtitle,
+.offres-cta-section .section-intro,
+.offres-cta-section .section-subtitle {
   color: #ffffff !important;
 }
 
