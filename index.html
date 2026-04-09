@@ -662,10 +662,20 @@
   /* ── LINKEDIN ── */
   .linkedin-section { padding: 48px 20px 36px; }
 
-  /* ── CTA FINAL ── */
+  /* ── CTA FINAL mobile ── */
   .cta-final { padding: 48px 20px 36px; }
   .cta-coords { flex-direction: column; align-items: center; }
-  .cta-btns-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  /* Colonne unique, boutons rapprochés, sans labels ni descriptions */
+  .cta-btns-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    max-width: 100%;
+  }
+  .cta-btn-block { gap: 0; }
+  .cta-btn-label { display: none; }
+  .cta-btn-desc { display: none; }
+  .cta-btns-grid .btn-primary,
+  .cta-btns-grid .btn-outline-white { width: 100%; }
   .offres-section .section-intro:last-of-type { display: none; }
 
   /* ── MASQUAGE éléments secondaires mobile ── */
@@ -854,17 +864,13 @@
     <div class="cta-inner">
       <div class="section-label section-label-white reveal-label" style="text-align:center;margin-bottom:16px">Passons à l'action</div>
       <h2>Parlons de <span>vos enjeux</span></h2>
-      <p style="color:#ffffff">Chaque contexte est spécifique. En 30 minutes, nous pouvons faire le point sur vos enjeux, vos priorités et voir si OP360 a du sens pour vous.</p>
+      <p style="color:#ffffff">En 30 minutes, nous pouvons faire le point sur vos enjeux, vos priorités et voir si OP360 a du sens pour vous.</p>
       <div class="cta-btns-grid">
         <div class="cta-btn-block">
-          <div class="cta-btn-label">Vous préférez nous écrire</div>
           <a class="btn-primary" href="mailto:contact@operating360.com?subject=Contact%20OP360%20-%20Prise%20de%20contact&body=Bonjour%20OP360%2C%0A%0AJe%20souhaite%20%C3%A9changer%20%C3%A0%20propos%20de%20...">Nous contacter par email</a>
-          <p class="cta-btn-desc">Nous vous répondons sous 24 heures.</p>
         </div>
         <div class="cta-btn-block">
-          <div class="cta-btn-label">Planifier un échange</div>
           <a class="btn-outline-white" href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener">Prendre rendez-vous →</a>
-          <p class="cta-btn-desc">Échangeons directement, sans engagement.</p>
         </div>
       </div>
     </div>
