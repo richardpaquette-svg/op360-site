@@ -51,7 +51,6 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 .nav-links a { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.7); transition: color 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
 
-/* Wrapper des deux boutons CTA desktop */
 .nav-ctas {
   display: flex;
   align-items: center;
@@ -125,7 +124,6 @@ h2.section-title-white { color: var(--white); }
 .section-intro-white { color: rgba(255,255,255,0.6); }
 
 /* ── SOUS-TITRES DE SECTION ── */
-/* Par défaut : navy sur fond clair */
 .section-subtitle {
   font-size: 1.05rem;
   font-weight: 500;
@@ -133,7 +131,6 @@ h2.section-title-white { color: var(--white); }
   line-height: 1.5;
   max-width: 100%;
 }
-/* Variante explicite inverse */
 .section-subtitle--inverse {
   font-size: 1.05rem;
   font-weight: 500;
@@ -142,13 +139,20 @@ h2.section-title-white { color: var(--white); }
   max-width: 100%;
 }
 
-/* ══════════════════════════════════════════════
-   Règle clé : sous-titres blancs sur fond navy
-   S'applique à .section-intro ET .section-subtitle
-   sur toutes les sections à fond navy du site.
-   Utilise !important pour battre les styles inline
-   et les règles de spécificité locale.
-   ══════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════════
+   Règle clé : sous-titres blancs sur TOUTES les sections navy
+   ── index.html ─────────────────────────────────────────────
+   .hero, .moments-section, .offres-section, .cta-final,
+   .terrain-section
+   ── dirigeants.html ────────────────────────────────────────
+   .hero-dir, .dir-cta-section
+   ── investisseurs.html ─────────────────────────────────────
+   .hero-inv, .inv-cta-section
+   ── diagnostic.html ────────────────────────────────────────
+   .hero-diag, .livrables-section
+   ══════════════════════════════════════════════════════════════ */
+.hero .section-intro,
+.hero .section-subtitle,
 .moments-section .section-intro,
 .moments-section .section-subtitle,
 .offres-section .section-intro,
@@ -157,8 +161,18 @@ h2.section-title-white { color: var(--white); }
 .cta-final .section-subtitle,
 .terrain-section .section-intro,
 .terrain-section .section-subtitle,
-.hero .section-intro,
-.hero .section-subtitle {
+.hero-dir .section-intro,
+.hero-dir .section-subtitle,
+.dir-cta-section .section-intro,
+.dir-cta-section .section-subtitle,
+.hero-inv .section-intro,
+.hero-inv .section-subtitle,
+.inv-cta-section .section-intro,
+.inv-cta-section .section-subtitle,
+.hero-diag .section-intro,
+.hero-diag .section-subtitle,
+.livrables-section .section-intro,
+.livrables-section .section-subtitle {
   color: #ffffff !important;
 }
 
@@ -270,7 +284,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
    3. Hover lift amélioré (.offre-card, .moment-card)
    ══════════════════════════════════════════════ */
 
-/* 1 — Compteurs : flash cyan au moment où le chiffre s'incrémente */
 .count-animated {
   transition: color 0.15s ease;
 }
@@ -278,7 +291,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   color: var(--cyan);
 }
 
-/* 2 — Barre cyan gauche animée au chargement de la section */
 @keyframes cyanBarGrow {
   from { background-size: 4px 0%; }
   to   { background-size: 4px 100%; }
@@ -304,7 +316,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   transform: scaleY(1);
 }
 
-/* Gradient animé sur la bordure existante (shimmer) */
 @keyframes cyanShimmer {
   0%   { background-position: 0% 0%; }
   50%  { background-position: 0% 100%; }
@@ -320,7 +331,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   animation: cyanShimmer 4s ease-in-out infinite;
 }
 
-/* 3 — Hover lift amélioré sur offre-card (desktop uniquement) */
 @media (hover: hover) {
   .offre-card {
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
@@ -333,7 +343,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
     box-shadow: 0 16px 48px rgba(0,212,170,0.18);
   }
 
-  /* Hover lift sur moment-card */
   .moment-card {
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
                 box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
