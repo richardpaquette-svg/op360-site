@@ -87,9 +87,19 @@
 
 ---
 
-## Pages dédiées
+## Pages du site — inventaire complet (main)
 
-`equipe.html`, `offres.html`, `diagnostic.html`, `pme.html`, `eti.html`, `investisseurs.html`, `shadow-codir.html`, `accompagnement.html`, `contact.html`, `formations.html`, `due-diligence.html`, `saas.html`, `pourqui.html`, `mentions.html`, `notre-differenciation.html`
+### Pages principales
+`index.html` · `equipe.html` · `offres.html` · `diagnostic.html` · `contact.html` · `mentions.html`
+
+### Pages personas
+`dirigeants.html` · `pme.html` · `eti.html` · `investisseurs.html` · `pourqui.html`
+
+### Pages offres détail
+`shadow-codir.html` · `accompagnement.html` · `due-diligence.html` · `formations.html` · `saas.html`
+
+### Pages contenu
+`notre-differenciation.html`
 
 ---
 
@@ -105,6 +115,7 @@
 | Avr 2026 | Section "6 offres" passée sur fond `--navy` (alternance bandes home) | Fil 5 |
 | Avr 2026 | Icônes Moments clés en Tangerine `#F79009` — sémantique urgence/criticité | PR #283 |
 | Avr 2026 | Animations scroll ciblées (slide-right, stagger, label fade) — **abandonnées**, effets non nets | PR #285 fermée |
+| Avr 2026 | Audit complet repo — inventaire 17 pages, mise à jour CLAUDE.md + DESIGN_SYSTEM.md | docs/update-context-files |
 
 ---
 
@@ -120,4 +131,4 @@
 
 ---
 
-*Dernière mise à jour : avril 2026 — fil website 6*
+*Dernière mise à jour : avril 2026 — audit repo V1.7*
