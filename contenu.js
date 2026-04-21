@@ -4,11 +4,11 @@
  * ============================================
  * Pour modifier le site, changez uniquement ce fichier.
  * Pas besoin de toucher aux autres fichiers.
- * 
+ *
  * COMMENT MODIFIER :
  * - Changez un texte entre guillemets
  * - Sauvegardez le fichier
- * - Re-déposez le dossier sur Netlify
+ * - Poussez sur GitHub — Cloudflare Pages redéploie automatiquement
  * ============================================
  */
 
@@ -111,7 +111,6 @@ const OP360 = {
   ],
 
   // ── 6 OFFRES ────────────────────────────────────
-  // Titre de section
   offres_titre: "Quelques exemples d'intervention",
   offres_sous_titre_1: "De l'analyse à l'exécution — des solutions conçues à votre dimension et vos ressources",
   offres_sous_titre_2: "Des expériences & outils éprouvés et combinables selon vos besoins",
