@@ -35,11 +35,11 @@ const OP360 = {
     equipe_bg:    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80", // Équipe collaborative
     workshop:     "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&q=80", // Workshop tableau blanc
     diagnostic:   "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80", // Dashboard stratégie
-    // Photos fondateurs (récupérées depuis operating360.com)
-    annie:        "https://operating360.com/_assets/v11/fc62ef918429c6b134bc819dcd0ab5300a56aff7.png",
-    christophe:   "https://operating360.com/_assets/v11/0d2a1023ad5820c69a65779194a7ffa09d1867a6.png",
-    suzanne:      "https://operating360.com/_assets/v11/65a4c6227ef12db51910bb9cb6ab8dee23fa0891.png",
-    richard:      "https://operating360.com/_assets/v11/2f8733a0399f8085163edaa1a7d0725dc2b2f4f4.png",
+    // Photos fondateurs — fichiers locaux servis par Cloudflare Pages
+    annie:        "/Annie .png",
+    christophe:   "/Christophe .png",
+    suzanne:      "/Suzanne .png",
+    richard:      "/Richard .png",
   },
 
   // ── PAGE HOME ───────────────────────────────────
