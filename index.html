@@ -929,9 +929,15 @@ const _mobileSousTitres = {
   'Suzanne Grimal':   'Finance, Transmission & création de valeur',
   'Christophe Raix':  'IA industrielle, Produit & Tech'
 };
+const _photoPosition = {
+  'Annie Belquin':    'center 20%',
+  'Suzanne Grimal':   'center center',
+  'Christophe Raix':  'center center',
+  'Richard Paquette': 'center 20%'
+};
 document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => `
   <div class="equipe-portrait reveal">
-    <img class="equipe-photo" src="${OP360.photos[e.photo]}" alt="${e.prenom} ${e.nom}" width="120" height="120" loading="lazy" onerror="this.style.display='none'">
+    <img class="equipe-photo" src="${OP360.photos[e.photo]}" alt="${e.prenom} ${e.nom}" width="120" height="120" loading="lazy" style="object-position: ${_photoPosition[e.prenom + ' ' + e.nom] || 'center center'}" onerror="this.style.display='none'">
     <div class="equipe-nom">${e.prenom} ${e.nom}</div>
     <div class="equipe-titre">${e.titre}</div>
     <div class="equipe-mobile-sous-titre">${_mobileSousTitres[e.prenom + ' ' + e.nom] || ''}</div>
