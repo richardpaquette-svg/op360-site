@@ -393,8 +393,6 @@
   flex-direction: column;
   align-items: center;
   gap: 0;
-  flex: 0 0 200px;
-  scroll-snap-align: start;
   text-align: center;
   opacity: 1;
 }
@@ -416,7 +414,11 @@
 .equipe-portrait-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 200px;
+  scroll-snap-align: start;
 }
 .equipe-portrait-link:hover .equipe-photo {
   transform: scale(1.05);
