@@ -7,7 +7,9 @@
 <meta name="description" content="Découvrez les 6 points qui distinguent OP360 : Shadow Codir, approche 360° systémique, parcours d'exécution, intelligence de situation, outils numériques et formation.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1a2332">
 <style>
 
 /* ── HERO ── */
@@ -262,6 +264,14 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+      .catch(function() { /* SW non supporté ou bloqué — silencieux */ });
+  });
+}
 </script>
 </body>
 </html>

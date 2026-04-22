@@ -7,9 +7,9 @@
 <meta name="description" content="OP360 accompagne les dirigeants de PME, ETI et investisseurs pour transformer leurs ambitions en résultats opérationnels. Diagnostic OP360 en 8 jours.">
 <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#1a2332">
 <style>
 /* ── HERO ── */
 .hero {
@@ -966,6 +966,14 @@ document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => {
 }).join('');
 
 initReveal();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+      .catch(function() { /* SW non supporté ou bloqué — silencieux */ });
+  });
+}
 </script>
 </body>
 </html>
