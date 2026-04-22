@@ -942,20 +942,21 @@ const _photoStyle = {
 };
 
 const _ancres = {
-  'Annie Belquin':    { desktop: 'profil-annie',      mobile: 'carousel-annie' },
-  'Richard Paquette': { desktop: 'profil-richard',    mobile: 'carousel-richard' },
-  'Suzanne Grimal':   { desktop: 'profil-suzanne',    mobile: 'carousel-suzanne' },
-  'Christophe Raix':  { desktop: 'profil-christophe', mobile: 'carousel-christophe' }
+  'Annie Belquin':    { desktop: 'equipe.html#profil-annie',      mobile: 'https://www.linkedin.com/in/anniebelquin/' },
+  'Richard Paquette': { desktop: 'equipe.html#profil-richard',    mobile: 'https://www.linkedin.com/in/richard-paquette-3011tv/' },
+  'Suzanne Grimal':   { desktop: 'equipe.html#profil-suzanne',    mobile: 'https://www.linkedin.com/in/suzanne-grimal/' },
+  'Christophe Raix':  { desktop: 'equipe.html#profil-christophe', mobile: 'https://www.linkedin.com/in/christopheraix/' }
 };
 
 document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => {
   const fullName = e.prenom + ' ' + e.nom;
   const ancres = _ancres[fullName] || { desktop: '', mobile: '' };
   return `
-  <a href="equipe.html#${ancres.desktop}"
-     data-mobile-href="equipe.html#${ancres.mobile}"
+  <a href="${ancres.desktop}"
+     data-mobile-href="${ancres.mobile}"
+     data-mobile-target="_blank"
      class="equipe-portrait-link"
-     onclick="if(window.innerWidth < 768){ this.href=this.dataset.mobileHref; }">
+     onclick="if(window.innerWidth < 768){ this.href=this.dataset.mobileHref; this.target=this.dataset.mobileTarget; }">
     <div class="equipe-portrait">
       <img class="equipe-photo" src="${OP360.photos[e.photo]}" alt="${fullName}" width="120" height="120" loading="eager" style="${_photoStyle[fullName] || 'object-fit: cover; object-position: center center;'}">
       <div class="equipe-nom">${e.prenom} ${e.nom}</div>
