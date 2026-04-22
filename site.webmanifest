@@ -3,7 +3,7 @@
   "short_name": "OP360",
   "description": "De la Vision à l'Exécution",
   "lang": "fr",
-  "start_url": "/",
+  "start_url": "/?pwa=v2",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
