@@ -413,6 +413,18 @@
   border-color: var(--cyan);
   transform: scale(1.04);
 }
+.equipe-portrait-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.equipe-portrait-link:hover .equipe-photo {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,212,170,0.25);
+}
+.equipe-portrait-link:hover .equipe-nom {
+  color: var(--cyan);
+}
 .equipe-nom {
   font-size: 15px;
   font-weight: 700;
@@ -927,16 +939,29 @@ const _photoStyle = {
   'Richard Paquette': 'object-fit: cover; object-position: center 25%;'
 };
 
+const _ancres = {
+  'Annie Belquin':    { desktop: 'profil-annie',      mobile: 'carousel-annie' },
+  'Richard Paquette': { desktop: 'profil-richard',    mobile: 'carousel-richard' },
+  'Suzanne Grimal':   { desktop: 'profil-suzanne',    mobile: 'carousel-suzanne' },
+  'Christophe Raix':  { desktop: 'profil-christophe', mobile: 'carousel-christophe' }
+};
+
 document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => {
   const fullName = e.prenom + ' ' + e.nom;
+  const ancres = _ancres[fullName] || { desktop: '', mobile: '' };
   return `
-  <div class="equipe-portrait">
-    <img class="equipe-photo" src="${OP360.photos[e.photo]}" alt="${fullName}" width="120" height="120" loading="eager" style="${_photoStyle[fullName] || 'object-fit: cover; object-position: center center;'}">
-    <div class="equipe-nom">${e.prenom} ${e.nom}</div>
-    <div class="equipe-titre">${e.titre}</div>
-    <div class="equipe-mobile-sous-titre">${_mobileSousTitres[fullName] || ''}</div>
-    <div class="equipe-expertise">${e.expertise}</div>
-  </div>`;
+  <a href="equipe.html#${ancres.desktop}"
+     data-mobile-href="equipe.html#${ancres.mobile}"
+     class="equipe-portrait-link"
+     onclick="if(window.innerWidth < 768){ this.href=this.dataset.mobileHref; }">
+    <div class="equipe-portrait">
+      <img class="equipe-photo" src="${OP360.photos[e.photo]}" alt="${fullName}" width="120" height="120" loading="eager" style="${_photoStyle[fullName] || 'object-fit: cover; object-position: center center;'}">
+      <div class="equipe-nom">${e.prenom} ${e.nom}</div>
+      <div class="equipe-titre">${e.titre}</div>
+      <div class="equipe-mobile-sous-titre">${_mobileSousTitres[fullName] || ''}</div>
+      <div class="equipe-expertise">${e.expertise}</div>
+    </div>
+  </a>`;
 }).join('');
 
 initReveal();
