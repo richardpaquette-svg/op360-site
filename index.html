@@ -396,6 +396,7 @@
   flex: 0 0 200px;
   scroll-snap-align: start;
   text-align: center;
+  opacity: 1;
 }
 
 .equipe-photo {
@@ -939,7 +940,7 @@ const _photoStyle = {
 document.getElementById('equipe-grid').innerHTML = OP360.equipe.map(e => {
   const fullName = e.prenom + ' ' + e.nom;
   return `
-  <div class="equipe-portrait reveal">
+  <div class="equipe-portrait">
     <img class="equipe-photo" src="${OP360.photos[e.photo]}" alt="${fullName}" width="120" height="120" loading="eager" style="${_photoStyle[fullName] || 'object-fit: cover; object-position: center center;'}">
     <div class="equipe-nom">${e.prenom} ${e.nom}</div>
     <div class="equipe-titre">${e.titre}</div>
