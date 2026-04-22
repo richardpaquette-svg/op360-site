@@ -7,6 +7,9 @@
 const LOGO_SVG    = `<img src="logo-white.png" alt="Operating Partners 360" class="logo-img">`;
 const LOGO_SVG_SM = `<img src="logo-white.png" alt="Operating Partners 360" class="logo-img-sm">`;
 
+const _SHARE_ICON = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>`;
+const _CHECK_ICON = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`;
+
 // ── Navigation ────────────────────────────────
 function buildNav(activePage) {
   const pages = [
@@ -32,6 +35,14 @@ function buildNav(activePage) {
         </div>
       </div>
       <div class="nav-ctas">
+        <div class="nav-share-wrap">
+          <button class="nav-share" id="nav-share-btn" aria-label="Partager cette page">${_SHARE_ICON}</button>
+          <div class="nav-share-dropdown" id="nav-share-dropdown" hidden>
+            <a href="#" id="nav-share-copy">📋 Copier le lien</a>
+            <a href="#" id="nav-share-email">📧 Envoyer par email</a>
+            <a href="#" id="nav-share-linkedin">💼 Partager sur LinkedIn</a>
+          </div>
+        </div>
         <a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta--rdv">Planifier un RDV</a>
         <a href="contact.html" class="nav-cta">Nous contacter</a>
       </div>
@@ -44,6 +55,8 @@ function buildNav(activePage) {
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
+
+  initShareButton();
 }
 
 function toggleMenu() {
@@ -124,6 +137,66 @@ function buildFooter() {
         </div>
       </div>
     </footer>`;
+}
+
+// ── Share Button ──────────────────────────────
+function initShareButton() {
+  const btn      = document.getElementById('nav-share-btn');
+  const dropdown = document.getElementById('nav-share-dropdown');
+  if (!btn || !dropdown) return;
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    // Mobile: use Web Share API if available
+    if (navigator.share) {
+      navigator.share({ title: document.title, url: location.href }).catch(() => {});
+      return;
+    }
+
+    // Desktop: toggle dropdown
+    const isHidden = dropdown.hasAttribute('hidden');
+    if (isHidden) {
+      dropdown.removeAttribute('hidden');
+    } else {
+      dropdown.setAttribute('hidden', '');
+    }
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!dropdown.hasAttribute('hidden') && !btn.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.setAttribute('hidden', '');
+    }
+  });
+
+  // Copy link
+  document.getElementById('nav-share-copy').addEventListener('click', (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(location.href).then(() => {
+      const a = document.getElementById('nav-share-copy');
+      const orig = a.innerHTML;
+      a.innerHTML = `${_CHECK_ICON} Lien copié !`;
+      setTimeout(() => { a.innerHTML = orig; dropdown.setAttribute('hidden', ''); }, 2000);
+    });
+  });
+
+  // Email
+  document.getElementById('nav-share-email').addEventListener('click', (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(document.title);
+    const body    = encodeURIComponent(location.href);
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    dropdown.setAttribute('hidden', '');
+  });
+
+  // LinkedIn
+  document.getElementById('nav-share-linkedin').addEventListener('click', (e) => {
+    e.preventDefault();
+    const url = encodeURIComponent(location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'noopener,width=600,height=600');
+    dropdown.setAttribute('hidden', '');
+  });
 }
 
 // ── Scroll Reveal ─────────────────────────────
