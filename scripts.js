@@ -226,6 +226,14 @@ function initReveal() {
   document.querySelectorAll('.reveal-label').forEach(el => {
     observer.observe(el);
   });
+
+  // Fallback : force .visible on any .reveal inside overflow-x containers
+  // after 500 ms in case IntersectionObserver doesn't fire (Android Chrome)
+  setTimeout(() => {
+    document.querySelectorAll('.equipe-scroll-track .reveal, .temos-grid .reveal').forEach(el => {
+      el.classList.add('visible');
+    });
+  }, 500);
 }
 
 // ── Compteurs animés ──────────────────────────
