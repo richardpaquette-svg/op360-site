@@ -1,4 +1,4 @@
-const CACHE_NAME = 'op360-v1';
+const CACHE_NAME = 'op360-v2';
 
 const PRECACHE_URLS = [
   '/',
@@ -8,7 +8,8 @@ const PRECACHE_URLS = [
   '/favicon.svg',
   '/logo-white.png',
   '/logo-color.png',
-  '/apple-touch-icon.png'
+  '/apple-touch-icon.png',
+  '/site.webmanifest'
 ];
 
 self.addEventListener('install', (event) => {
@@ -23,7 +24,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((keys) =>
       Promise.all(
         keys
-          .filter((key) => !key.startsWith('op360-v1'))
+          .filter((key) => key !== CACHE_NAME)
           .map((key) => caches.delete(key))
       )
     )
@@ -43,6 +44,14 @@ self.addEventListener('fetch', (event) => {
   const isHTML = request.destination === 'document' ||
                  url.pathname.endsWith('.html') ||
                  url.pathname === '/';
+
+  // Toujours resservir le manifest depuis le réseau
+  const isManifest = url.pathname === '/site.webmanifest';
+
+  if (isManifest) {
+    event.respondWith(fetch(request));
+    return;
+  }
 
   if (isHTML) {
     // Network-first for HTML pages
