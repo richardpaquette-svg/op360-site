@@ -36,10 +36,10 @@ const OP360 = {
     workshop:     "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&q=80", // Workshop tableau blanc
     diagnostic:   "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80", // Dashboard stratégie
     // Photos fondateurs — fichiers locaux servis par Cloudflare Pages
-    annie:        "/public/team/annie.png",
-    christophe:   "/public/team/christophe.png",
-    suzanne:      "/public/team/suzanne.png",
-    richard:      "/public/team/richard.png",
+    annie:        "public/team/annie.png",
+    christophe:   "public/team/christophe.png",
+    suzanne:      "public/team/suzanne.png",
+    richard:      "public/team/richard.png",
   },
 
   // ── PAGE HOME ───────────────────────────────────
