@@ -74,7 +74,7 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 }
 .nav-cta:hover { background: var(--cyan-mid); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,212,170,0.25); }
 
-.nav-share-wrap { position: relative; flex-shrink: 0; }
+.nav-share-wrap { position: relative; flex-shrink: 0; display: flex; align-items: center; }
 .nav-share {
   background: transparent;
   border: 1.5px solid rgba(0,212,170,0.4);
@@ -397,6 +397,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .nav-burger { display: flex; }
   .nav-ctas { display: flex; }
   .nav-cta { display: none; }
+  .nav-share-wrap { display: none; }
   .nav-links.open .nav-cta-mobile {
     display: flex;
     justify-content: center;
