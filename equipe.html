@@ -249,6 +249,11 @@
     width: 20px;
     border-radius: 4px;
   }
+
+  .carousel-card-quote { font-size: 13px; font-style: italic; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0 0 10px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: center; }
+  .carousel-card-bio { font-size: 12px; color: rgba(255,255,255,0.55); margin: 0 0 14px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; width: 100%; }
+  .carousel-card-tags-row { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 16px; }
+  .carousel-card-tag-pill { font-size: 11px; font-weight: 600; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.25); border-radius: 20px; padding: 4px 10px; color: var(--cyan); }
 }
 </style>
 </head>
@@ -401,9 +406,15 @@
       <div class="carousel-card" id="carousel-annie">
         <img class="carousel-card-photo" src="/public/team/annie.png" alt="Annie Belquin" width="96" height="96" loading="lazy">
         <div class="carousel-card-nom">Annie Belquin</div>
-        <div class="carousel-card-titre">Associée</div>
         <div class="carousel-card-sep"></div>
         <div class="carousel-card-role">Opérations, Gouvernance &amp; Transformation</div>
+        <div class="carousel-card-quote">« J'ai été des 2 côtés de la décision — jamais hors sol. »</div>
+        <div class="carousel-card-bio">25 ans DG · ETI/PME · Safran · HORIBA · Administratrice ESSEC</div>
+        <div class="carousel-card-tags-row">
+          <span class="carousel-card-tag-pill">Gouvernance</span>
+          <span class="carousel-card-tag-pill">Transformation</span>
+          <span class="carousel-card-tag-pill">Opérations</span>
+        </div>
         <a href="https://www.linkedin.com/in/anniebelquin/" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
@@ -414,9 +425,15 @@
       <div class="carousel-card" id="carousel-richard">
         <img class="carousel-card-photo" src="/public/team/richard.png" alt="Richard Paquette" width="96" height="96" loading="lazy">
         <div class="carousel-card-nom">Richard Paquette</div>
-        <div class="carousel-card-titre">Associé</div>
         <div class="carousel-card-sep"></div>
         <div class="carousel-card-role">Exécution opérationnelle &amp; Transformation</div>
+        <div class="carousel-card-quote">« Transformer les ambitions stratégiques en plans d'exécution concrets. »</div>
+        <div class="carousel-card-bio">25 ans DG · PME/ETI · Tech · Services B2B · International</div>
+        <div class="carousel-card-tags-row">
+          <span class="carousel-card-tag-pill">Exécution</span>
+          <span class="carousel-card-tag-pill">Transformation</span>
+          <span class="carousel-card-tag-pill">Scale-up</span>
+        </div>
         <a href="https://www.linkedin.com/in/richard-paquette-3011tv/" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
@@ -427,9 +444,15 @@
       <div class="carousel-card" id="carousel-suzanne">
         <img class="carousel-card-photo" src="/public/team/suzanne.png" alt="Suzanne Grimal" width="96" height="96" loading="lazy" style="object-position: center center;">
         <div class="carousel-card-nom">Suzanne Grimal</div>
-        <div class="carousel-card-titre">Associée</div>
         <div class="carousel-card-sep"></div>
         <div class="carousel-card-role">Finance, Transmission &amp; Création de valeur</div>
+        <div class="carousel-card-quote">« La rigueur financière au bénéfice de la vision entrepreneuriale. »</div>
+        <div class="carousel-card-bio">30 ans · Banque d'investissement · Private Equity · Réseau Entreprendre</div>
+        <div class="carousel-card-tags-row">
+          <span class="carousel-card-tag-pill">Finance</span>
+          <span class="carousel-card-tag-pill">Transmission</span>
+          <span class="carousel-card-tag-pill">Private Equity</span>
+        </div>
         <a href="https://www.linkedin.com/in/suzanne-grimal/" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
@@ -440,9 +463,15 @@
       <div class="carousel-card" id="carousel-christophe">
         <img class="carousel-card-photo" src="/public/team/christophe.png" alt="Christophe Raix" width="96" height="96" loading="lazy">
         <div class="carousel-card-nom">Christophe Raix</div>
-        <div class="carousel-card-titre">Associé</div>
         <div class="carousel-card-sep"></div>
         <div class="carousel-card-role">IA industrielle, Produit &amp; Tech</div>
+        <div class="carousel-card-quote">« Simplifier la complexité pour décider plus vite et plus juste. »</div>
+        <div class="carousel-card-bio">Entrepreneur · Deeptech · Lean Six Sigma Black Belt · SaaS OP360</div>
+        <div class="carousel-card-tags-row">
+          <span class="carousel-card-tag-pill">IA industrielle</span>
+          <span class="carousel-card-tag-pill">Produit SaaS</span>
+          <span class="carousel-card-tag-pill">Excellence opéra.</span>
+        </div>
         <a href="https://www.linkedin.com/in/christopheraix/" target="_blank" rel="noopener noreferrer" class="carousel-card-linkedin">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
