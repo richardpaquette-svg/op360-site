@@ -1,4 +1,4 @@
-const CACHE_NAME = 'op360-v2';
+const CACHE_NAME = 'op360-v3';
 
 const PRECACHE_URLS = [
   '/',
@@ -48,7 +48,11 @@ self.addEventListener('fetch', (event) => {
   // Toujours resservir le manifest depuis le réseau
   const isManifest = url.pathname === '/site.webmanifest';
 
-  if (isManifest) {
+  // Network-first pour les icônes PWA
+  const isPWAIcon = url.pathname === '/icon-maskable.png' ||
+                    url.pathname === '/apple-touch-icon.png';
+
+  if (isManifest || isPWAIcon) {
     event.respondWith(fetch(request));
     return;
   }
