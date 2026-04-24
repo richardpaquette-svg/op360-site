@@ -27,7 +27,7 @@
   --shadow-hover: 0 12px 40px rgba(0,212,170,0.15);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; /* navbar 68px + marge 20px */ }
 body { font-family: var(--font); font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--navy); background: var(--white); overflow-x: clip; }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; }
