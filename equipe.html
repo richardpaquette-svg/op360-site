@@ -114,146 +114,114 @@
   .hero-equipe-cta a { min-width: 0; width: 100%; }
   .equipe-cta-section { padding: 56px 20px; }
 
-  /* Masquer les cartes desktop */
-  .fondateur-card { display: none !important; }
-
-  /* Afficher le carousel */
-  .fondateurs-carousel-outer {
-    display: block;
-    width: calc(100% + 40px);
-    margin: 24px -20px 0;
-    overflow: hidden;
+  /* Afficher les cartes desktop en mode vertical simplifié */
+  .fondateur-card {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--gray-border);
+    grid-template-columns: unset;
+  }
+  .fondateur-card:nth-child(even) {
+    grid-template-columns: unset;
+  }
+  .fondateur-card:nth-child(even) .fondateur-visual,
+  .fondateur-card:nth-child(even) .fondateur-content {
+    order: unset;
   }
 
-  /* Piste de défilement */
-  .fondateurs-carousel {
-    display: flex;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    padding: 4px 20px 20px;
-    scrollbar-width: none;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .fondateurs-carousel::-webkit-scrollbar { display: none; }
-
-  /* ── Carte épurée ── */
-  .carousel-card {
-    flex: 0 0 72vw;
-    min-width: 0;
-    scroll-snap-align: center;
-    background: var(--navy);
-    border: 1px solid rgba(0,212,170,0.18);
-    border-radius: 18px;
-    padding: 32px 20px 28px;
+  /* Photo centrée, plus petite */
+  .fondateur-visual {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0;
   }
-
-  /* Photo */
-  .carousel-card-photo {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    border: 2px solid rgba(0,212,170,0.5);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-    margin-bottom: 20px;
-    flex-shrink: 0;
+  .fondateur-photo {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 12px;
   }
-
-  /* Nom */
-  .carousel-card-nom {
+  .fondateur-nom {
     font-size: 17px;
-    font-weight: 700;
-    color: var(--white);
-    letter-spacing: -0.01em;
-    margin-bottom: 6px;
   }
-
-  /* Titre court */
-  .carousel-card-titre { display: none; }
-
-  /* Séparateur cyan */
-  .carousel-card-sep {
-    width: 28px;
-    height: 2px;
-    background: var(--cyan);
-    border-radius: 2px;
-    margin: 0 auto 14px;
-    flex-shrink: 0;
+  .fondateur-titre {
+    font-size: 13px;
+    margin-bottom: 12px;
   }
-
-  /* Rôle */
-  .carousel-card-role {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--cyan);
-    line-height: 1.45;
-    margin-bottom: 20px;
-  }
-
-  /* LinkedIn */
-  .carousel-card-linkedin {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+  .fondateur-linkedin {
     font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    border: 1px solid rgba(255,255,255,0.18);
-    border-radius: 6px;
     padding: 7px 14px;
-    min-height: 32px;
-    margin-top: auto;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .carousel-card-linkedin:hover,
-  .carousel-card-linkedin:active {
-    border-color: var(--cyan);
-    color: var(--cyan);
   }
 
-  /* ── Éléments anciens — masqués (rétrocompat) ── */
-  .carousel-card-header,
-  .carousel-card-identity,
-  .carousel-card-citation,
-  .carousel-card-body,
-  .carousel-card-signature,
-  .carousel-card-tags { display: none; }
+  /* Contenu texte */
+  .fondateur-content h3 {
+    display: none;
+  }
+  .fondateur-content .fondateur-role {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .fondateur-citation {
+    font-size: 14px;
+    padding-left: 12px;
+    margin-bottom: 16px;
+  }
+  .fondateur-content p {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+  .fondateur-bloc-titre {
+    font-size: 11px;
+    margin: 14px 0 4px;
+  }
+  .fondateur-signature {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  .fondateur-refs {
+    font-size: 12px;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .fondateur-tags {
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .fondateur-tag {
+    font-size: 12px;
+    padding: 5px 11px;
+  }
+  .fondateur-tag-sector {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
 
-  /* Dots */
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 0 4px;
-  }
-  .carousel-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: rgba(0,212,170,0.25);
-    transition: background 0.25s, transform 0.25s, width 0.25s;
-    cursor: pointer;
-    border: none;
-  }
-  .carousel-dot.active {
-    background: var(--cyan);
-    transform: scale(1.25);
-    width: 20px;
-    border-radius: 4px;
+  /* Masquer le carousel (devenu inutile) */
+  .fondateurs-carousel-outer {
+    display: none !important;
   }
 
-  .carousel-card-quote { font-size: 13px; font-style: italic; color: rgba(255,255,255,0.75); line-height: 1.5; margin: 0 0 10px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-align: center; }
-  .carousel-card-bio { font-size: 12px; color: rgba(255,255,255,0.55); margin: 0 0 14px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; width: 100%; }
-  .carousel-card-tags-row { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 16px; }
-  .carousel-card-tag-pill { font-size: 11px; font-weight: 600; background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.25); border-radius: 20px; padding: 4px 10px; color: var(--cyan); }
+  /* Section fond cohérent */
+  .fondateurs-section {
+    background: var(--gray-bg);
+  }
+
+  /* Fond card blanc sur chaque profil */
+  .fondateur-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-border);
+    padding: 24px 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .fondateur-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 }
 </style>
 </head>
@@ -513,44 +481,7 @@ buildNav('equipe.html');
 buildFooter();
 initReveal();
 
-// Carousel mobile — dots + IntersectionObserver
-(function () {
-  var outer = document.querySelector('.fondateurs-carousel-outer');
-  if (!outer || getComputedStyle(outer).display === 'none') return;
 
-  var carousel = document.getElementById('fondateursCarousel');
-  var dots = document.querySelectorAll('.carousel-dot');
-  var cards = carousel ? carousel.querySelectorAll('.carousel-card') : [];
-  if (!carousel || !cards.length || !dots.length) return;
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        var idx = Array.from(cards).indexOf(entry.target);
-        dots.forEach(function (d, i) {
-          d.classList.toggle('active', i === idx);
-          d.setAttribute('aria-selected', i === idx ? 'true' : 'false');
-        });
-      }
-    });
-  }, { root: carousel, threshold: 0.6 });
-
-  cards.forEach(function (card) { observer.observe(card); });
-
-  dots.forEach(function (dot) {
-    dot.addEventListener('click', function () {
-      var idx = parseInt(dot.getAttribute('data-index'), 10);
-      var card = cards[idx];
-      if (card) {
-        carousel.scrollTo({ left: card.offsetLeft - 20, behavior: 'smooth' });
-      }
-    });
-  });
-
-  window.addEventListener('resize', function () {
-    if (getComputedStyle(outer).display === 'none') observer.disconnect();
-  });
-}());
 </script>
 <script>
 if ('serviceWorker' in navigator) {
