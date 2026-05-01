@@ -3,19 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | OP360</title>
+<title>Contact — Échangeons | OP360</title>
 <meta name="description" content="Contactez OP360 pour échanger sur vos enjeux opérationnels. Réponse sous 24h.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#1a2332">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1a2332">
 </head>
 <body class="page-interior">
+
 <div id="nav-placeholder"></div>
+
 <div id="footer-placeholder"></div>
-<script src="contenu.js"></script><script src="scripts.js"></script>
-<script>buildNav('contact.html');buildFooter();initReveal();</script>
-<script>if('serviceWorker'in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js',{scope:'/'}).catch(function(){});});}</script>
+
+<script src="contenu.js"></script>
+<script src="scripts.js"></script>
+<script>
+buildNav('contact.html');
+buildFooter();
+initReveal();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+      .catch(function() { /* SW non supporté ou bloqué — silencieux */ });
+  });
+}
+</script>
 </body>
 </html>

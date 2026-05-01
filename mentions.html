@@ -4,18 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mentions légales | OP360</title>
-<meta name="description" content="Mentions légales OP360.">
+<meta name="description" content="Mentions légales du site Operating360.com — éditeur, hébergeur, données personnelles.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#1a2332">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1a2332">
+<style>
+.mentions-page { background: var(--white); padding: 120px 48px 80px; }
+.mentions-page .container { max-width: 800px; }
+.mentions-page h1 { font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: var(--navy); margin-bottom: 40px; letter-spacing: -0.02em; }
+.mentions-page h2 { font-size: 20px; font-weight: 700; color: var(--navy); margin: 36px 0 12px; }
+.mentions-page p, .mentions-page li { font-size: 15px; color: var(--gray-text); line-height: 1.7; margin-bottom: 12px; }
+.mentions-page a { color: var(--cyan-dark); text-decoration: underline; }
+@media (max-width: 768px) { .mentions-page { padding: 90px 20px 60px; } }
+</style>
 </head>
 <body class="page-interior">
+
 <div id="nav-placeholder"></div>
+
+<section class="mentions-page">
+  <div class="container">
+    <h1>Mentions légales</h1>
+    <h2>Éditeur du site</h2>
+    <p>Le site <strong>operating360.com</strong> est édité par la société <strong>Operating360 SAS</strong>, dont le siège social est situé en France.</p>
+    <p>Directeur de la publication : Richard Paquette<br>
+    Contact : <a href="mailto:contact@operating360.com">contact@operating360.com</a></p>
+    <h2>Hébergeur</h2>
+    <p>Ce site est hébergé par <strong>Cloudflare Pages</strong> (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA).</p>
+    <h2>Propriété intellectuelle</h2>
+    <p>L’ensemble des contenus présents sur ce site (textes, images, graphismes, logo, icônes) sont la propriété exclusive de Operating360 SAS ou de ses partenaires, et sont protégés par les lois françaises et internationales relatives à la propriété intellectuelle.</p>
+    <h2>Données personnelles</h2>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d’un droit d’accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez-nous à <a href="mailto:contact@operating360.com">contact@operating360.com</a>.</p>
+    <h2>Cookies</h2>
+    <p>Ce site n’utilise pas de cookies publicitaires. Des cookies techniques peuvent être utilisés pour le bon fonctionnement du site.</p>
+  </div>
+</section>
+
 <div id="footer-placeholder"></div>
-<script src="contenu.js"></script><script src="scripts.js"></script>
-<script>buildNav('mentions.html');buildFooter();initReveal();</script>
-<script>if('serviceWorker'in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js',{scope:'/'}).catch(function(){});});}</script>
+
+<script src="contenu.js"></script>
+<script src="scripts.js"></script>
+<script>
+buildNav('mentions.html');
+buildFooter();
+initReveal();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+      .catch(function() { /* SW non supporté ou bloqué — silencieux */ });
+  });
+}
+</script>
 </body>
 </html>
