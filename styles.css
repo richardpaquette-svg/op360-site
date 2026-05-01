@@ -540,3 +540,23 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 .page-interior h2.section-title {
   font-size: clamp(24px, 3vw, 40px);
 }
+
+/* ══════════════════════════════════════════════
+   P5-B — Trait décoratif cyan gauche sur hero h1
+   Scope : .page-interior uniquement
+   ══════════════════════════════════════════════ */
+.page-interior h1 {
+  position: relative;
+  padding-left: 20px;
+}
+.page-interior h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  bottom: 0.1em;
+  width: 4px;
+  background: var(--cyan);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0, 212, 170, 0.7);
+}
