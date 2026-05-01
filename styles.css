@@ -348,43 +348,9 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 
 /* ══════════════════════════════════════════════
    EFFETS VISUELS P2 — mai 2026
-   A1 : Hero mesh-gradient + grain SVG
    A5 : Témoignages dot-pattern
    A6 : CTA final dégradé navy
    ══════════════════════════════════════════════ */
-
-/* ── A1 : HERO — mesh gradient + grain de texture ── */
-.hero {
-  position: relative;
-}
-
-/* Couche 1 : deux halos radial cyan — opacités amplifiées (×2.5) */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 15% 50%, rgba(0,212,170,0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 80% at 85% 20%, rgba(0,212,170,0.12) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Couche 2 : grain SVG inline (feTurbulence) — discret, 3 % opacité */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23grain)' opacity='0.03'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  pointer-events: none;
-  z-index: 1;
-  mix-blend-mode: overlay;
-}
-
-/* S'assurer que le contenu hero passe au-dessus des pseudo-éléments */
-.hero-content { z-index: 2; }
 
 /* ── A5 : TÉMOIGNAGES — dot-pattern amplifié ── */
 .temos-section {
@@ -407,7 +373,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 .temos-section > * { position: relative; z-index: 1; }
 .temos-section .container { position: relative; z-index: 1; }
 
-/* ── A6 : CTA FINAL — dégradé navy profond + bordure cyan top amplifiée ── */
+/* ── A6 : CTA FINAL — dégradé navy profond + bordure cyan top ── */
 .cta-section {
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 100%) !important;
   border-top: 1px solid rgba(0,212,170,0.35);
@@ -415,19 +381,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   overflow: hidden;
 }
 
-/* Halo décoratif cyan amplifié en bas à droite */
-.cta-section::before {
-  content: '';
-  position: absolute;
-  bottom: -60px;
-  right: -80px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(0,212,170,0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-/* S'assurer que le contenu CTA passe au-dessus du halo */
+/* S'assurer que le contenu CTA passe au-dessus */
 .cta-section > * { position: relative; z-index: 1; }
 .cta-section .container { position: relative; z-index: 1; }
 
