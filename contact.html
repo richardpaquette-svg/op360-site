@@ -1,176 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parlons de vos enjeux — Contact & prise de rendez-vous | OP360</title>
-<meta name="description" content="Deux options simples pour échanger avec un Operating Partner OP360 : écrire un email ou choisir directement un créneau de rendez-vous.">
-<link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#1a2332">
-<style>
-/* ── HERO ── */
-.hero-contact {
-  min-height: 50vh; background: var(--navy); position: relative; overflow: hidden;
-  display: flex; align-items: center; padding: 110px 48px 80px; justify-content: center; text-align: center;
-}
-.hero-contact-photo {
-  position: absolute; inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=80');
-  background-size: cover; background-position: center top; opacity: 0.1;
-}
-.hero-contact-overlay { position: absolute; inset: 0; background: rgba(26,35,50,0.9); }
-.hero-contact-content { position: relative; z-index: 2; max-width: 680px; }
-.hero-contact h1 {
-  font-size: clamp(30px, 5vw, 52px); font-weight: 700; color: var(--white);
-  line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 14px;
-}
-.hero-contact-sub {
-  font-size: clamp(20px, 2.5vw, 26px); font-weight: 300;
-  color: rgba(255,255,255,0.85); line-height: 1.4; margin-bottom: 10px;
-}
-.hero-contact-intro {
-  font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.85); line-height: 1.6;
-}
-
-/* ── CONTACT OPTIONS ── */
-.contact-section { background: var(--white); padding: 96px 48px; }
-.contact-options {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 56px;
-}
-.contact-card {
-  background: var(--card-bg); border: 1.5px solid var(--gray-border);
-  border-radius: var(--radius); padding: 48px 40px;
-  display: flex; flex-direction: column; gap: 16px;
-  transition: all 0.25s; box-shadow: 0 1px 3px rgba(15,23,42,0.06);
-}
-.contact-card:hover { border-color: var(--cyan); box-shadow: var(--shadow-hover); transform: translateY(-3px); }
-.contact-card h2 {
-  font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; color: var(--navy);
-  line-height: 1.2; margin: 0;
-}
-.contact-card p {
-  font-size: 16px; color: var(--gray-text); line-height: 1.75; margin: 0; flex-grow: 1;
-}
-.contact-card .btn-primary,
-.contact-card .btn-navy { margin-top: 8px; text-align: center; }
-
-/* ── COORDONNÉES ── */
-.coords-section { background: var(--gray-bg); padding: 80px 48px; }
-.coords-inner { max-width: 640px; }
-.coords-title { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 32px; letter-spacing: -0.02em; }
-.coords-list { display: flex; flex-direction: column; gap: 14px; }
-.coord-item { display: flex; align-items: center; gap: 16px; padding: 16px 20px; background: var(--white); border: 1px solid var(--gray-border); border-radius: 10px; transition: border-color 0.2s; }
-.coord-item:hover { border-color: var(--cyan); }
-.coord-icon { width: 40px; height: 40px; background: var(--cyan-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
-.coord-label { font-size: 11px; font-weight: 700; color: var(--gray-text); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px; }
-.coord-value { font-size: 14px; font-weight: 600; color: var(--navy); }
-.coord-value a { color: var(--navy); transition: color 0.2s; }
-.coord-value a:hover { color: var(--cyan); }
-
-@media (max-width: 768px) {
-  .hero-contact { min-height: auto; padding: 80px 20px 48px; }
-  .contact-section { padding: 56px 20px; }
-  .contact-options { grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
-  .contact-card { padding: 32px 24px; }
-  .coords-section { padding: 56px 20px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | OP360</title>
+  <meta name="description" content="Parlez à un expert OP360. Appel gratuit, sans engagement.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#1a2332">
 </head>
-<body>
+<body class="page-interior">
 
-<div id="nav-placeholder"></div>
+<div id="scroll-progress"></div>
 
-<!-- HERO -->
-<section class="hero-contact">
-  <div class="hero-contact-photo"></div>
-  <div class="hero-contact-overlay"></div>
-  <div class="hero-contact-content">
-    <h1>Parlons de vos enjeux</h1>
-    <p class="hero-contact-sub">Contact &amp; prise de rendez‑vous avec un pair‑dirigeant</p>
-    <p class="hero-contact-intro">Deux options simples pour échanger avec un Operating Partner : vous nous écrivez votre contexte, ou vous choisissez directement un créneau de rendez‑vous.</p>
-  </div>
-</section>
-
-<!-- CONTACT OPTIONS -->
-<section class="contact-section">
-  <div class="container">
-    <div class="contact-options">
-
-      <div class="contact-card reveal">
-        <h2>Écrire à un Operating Partner</h2>
-        <p>Expliquez brièvement votre contexte, vos enjeux et vos disponibilités. Un Operating Partner vous répondra rapidement.</p>
-        <a class="btn-primary" href="mailto:contact@operating360.com?subject=Contact%20OP360%20-%20Prise%20de%20contact&body=Bonjour%20OP360%2C%0A%0AJe%20souhaite%20%C3%A9changer%20%C3%A0%20propos%20de%20...">Nous contacter par email</a>
-      </div>
-
-      <div class="contact-card reveal">
-        <h2>Choisir un créneau de rendez‑vous</h2>
-        <p>Choisissez un créneau de 30 minutes dans notre agenda pour échanger directement avec un Operating Partner.</p>
-        <a class="btn-navy" href="https://eu.bigin.online/org20111341014/bookings/contact-op360#/" target="_blank" rel="noopener">Voir les créneaux disponibles</a>
-      </div>
-
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="logo-white.png" alt="OP360" class="logo-img">
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="pourqui.html">Pour qui</a>
+    <a href="offres.html">Offres</a>
+    <a href="accompagnement.html">Accompagnement</a>
+    <a href="equipe.html">Équipe</a>
+    <a href="contact.html" class="active">Contact</a>
+    <div class="nav-cta-mobile">
+      <a href="contact.html" class="nav-cta">Parler à un expert</a>
     </div>
   </div>
+  <div class="nav-ctas">
+    <a href="contact.html" class="nav-cta">Parler à un expert</a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section style="background:var(--navy);padding-top:120px;padding-bottom:64px;">
+  <div class="container">
+    <p class="section-label reveal-label">Discutons</p>
+    <h1 class="reveal" style="font-size:clamp(32px,5vw,58px);font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-0.03em;margin-bottom:20px;max-width:700px;">Parlez à un expert OP360</h1>
+    <p class="reveal" style="font-size:18px;color:rgba(255,255,255,0.65);max-width:560px;line-height:1.7;">Appel de 30 minutes, gratuit, sans engagement. Nous évaluons ensemble si OP360 est la bonne réponse à votre situation.</p>
+  </div>
 </section>
 
-<!-- COORDONNÉES -->
-<section class="coords-section">
+<section style="background:var(--white);">
   <div class="container">
-    <div class="coords-inner reveal">
-      <div class="section-label">Nos coordonnées</div>
-      <p class="coords-title">Operating Partners 360</p>
-      <div class="coords-list">
-        <div class="coord-item">
-          <div class="coord-icon">📍</div>
-          <div>
-            <div class="coord-label">Adresse</div>
-            <div class="coord-value">99 avenue Achille Peretti — 92200 Neuilly‑sur‑Seine</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+      <div class="reveal">
+        <h2 class="section-title" style="margin-bottom:32px;">Trois façons de nous joindre</h2>
+        <div style="display:flex;flex-direction:column;gap:24px;">
+          <div class="cta-contact-item" style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:44px;height:44px;background:rgba(0,212,170,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.15 3.18 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+            </div>
+            <div>
+              <p style="font-weight:700;color:var(--navy);margin-bottom:4px;">Téléphone</p>
+              <a href="tel:+33600000000" style="color:var(--cyan);font-size:15px;">+33 6 00 00 00 00</a>
+            </div>
+          </div>
+          <div class="cta-contact-item" style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:44px;height:44px;background:rgba(0,212,170,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p style="font-weight:700;color:var(--navy);margin-bottom:4px;">Email</p>
+              <a href="mailto:contact@operating360.com" style="color:var(--cyan);font-size:15px;">contact@operating360.com</a>
+            </div>
+          </div>
+          <div class="cta-contact-item" style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:44px;height:44px;background:rgba(0,212,170,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <p style="font-weight:700;color:var(--navy);margin-bottom:4px;">LinkedIn</p>
+              <a href="https://linkedin.com/company/operating360" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-size:15px;">operating360</a>
+            </div>
           </div>
         </div>
-        <a class="coord-item" href="https://operating360.com" target="_blank" rel="noopener">
-          <div class="coord-icon">🌐</div>
+      </div>
+      <div class="reveal">
+        <h2 class="section-title" style="margin-bottom:32px;">Envoyez-nous un message</h2>
+        <form style="display:flex;flex-direction:column;gap:20px;" onsubmit="return false;">
           <div>
-            <div class="coord-label">Site web</div>
-            <div class="coord-value"><span>operating360.com</span></div>
+            <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px;">Nom complet</label>
+            <input type="text" placeholder="Jean Dupont" style="width:100%;padding:12px 16px;border:1.5px solid var(--gray-border);border-radius:8px;font-size:15px;color:var(--navy);background:var(--white);transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--cyan)'" onblur="this.style.borderColor='var(--gray-border)'">
           </div>
-        </a>
-        <a class="coord-item" href="mailto:contact@operating360.com">
-          <div class="coord-icon">✉</div>
           <div>
-            <div class="coord-label">Email</div>
-            <div class="coord-value"><span>contact@operating360.com</span></div>
+            <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px;">Email professionnel</label>
+            <input type="email" placeholder="jean@entreprise.com" style="width:100%;padding:12px 16px;border:1.5px solid var(--gray-border);border-radius:8px;font-size:15px;color:var(--navy);background:var(--white);transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--cyan)'" onblur="this.style.borderColor='var(--gray-border)'">
           </div>
-        </a>
-        <a class="coord-item" href="https://www.linkedin.com/company/operating360/" target="_blank" rel="noopener">
-          <div class="coord-icon">in</div>
           <div>
-            <div class="coord-label">LinkedIn</div>
-            <div class="coord-value"><span>Operating Partners 360</span></div>
+            <label style="display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px;">Votre situation</label>
+            <textarea rows="4" placeholder="Décrivez brièvement votre situation ou votre besoin..." style="width:100%;padding:12px 16px;border:1.5px solid var(--gray-border);border-radius:8px;font-size:15px;color:var(--navy);background:var(--white);resize:vertical;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--cyan)'" onblur="this.style.borderColor='var(--gray-border)'"></textarea>
           </div>
-        </a>
+          <button type="submit" class="btn-primary">Envoyer le message</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
 
-<div id="footer-placeholder"></div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          <img src="logo-white.png" alt="OP360" class="logo-img-sm">
+        </div>
+        <p class="footer-brand-tagline">Le management opérationnel intégré pour PME, ETI et leurs investisseurs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Offres</h4>
+        <ul>
+          <li><a href="accompagnement.html">Accompagnement</a></li>
+          <li><a href="due-diligence.html">Due Diligence</a></li>
+          <li><a href="diagnostic.html">Diagnostic</a></li>
+          <li><a href="formations.html">Formations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pour qui</h4>
+        <ul>
+          <li><a href="pme.html">PME</a></li>
+          <li><a href="eti.html">ÉTI</a></li>
+          <li><a href="investisseurs.html">Investisseurs</a></li>
+          <li><a href="dirigeants.html">Dirigeants</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>OP360</h4>
+        <ul>
+          <li><a href="equipe.html">Équipe</a></li>
+          <li><a href="notre-differenciation.html">Notre différenciation</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-mobile">
+      <p class="footer-mobile-title">Navigation</p>
+      <div class="footer-mobile-links">
+        <a href="pourqui.html">Pour qui</a>
+        <a href="offres.html">Offres</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="contact.html">Contact</a>
+        <a href="mentions.html">Mentions légales</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 OP360. Tous droits réservés.</span>
+      <a href="mentions.html">Mentions légales</a>
+    </div>
+  </div>
+</footer>
 
-<script src="contenu.js"></script>
 <script src="scripts.js"></script>
-<script>
-buildNav('contact.html');
-buildFooter();
-initReveal();
-</script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
-      .catch(function() { /* SW non supporté ou bloqué — silencieux */ });
-  });
-}
-</script>
 </body>
 </html>
