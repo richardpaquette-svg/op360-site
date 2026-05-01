@@ -32,6 +32,13 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
+// Helper : ne mettre en cache que les réponses complètes (pas 206 Partial)
+function safePut(cache, request, response) {
+  if (response && response.ok && response.status !== 206) {
+    cache.put(request, response);
+  }
+}
+
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -63,7 +70,7 @@ self.addEventListener('fetch', (event) => {
       fetch(request)
         .then((response) => {
           const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          caches.open(CACHE_NAME).then((cache) => safePut(cache, request, clone));
           return response;
         })
         .catch(() => caches.match(request))
@@ -75,7 +82,7 @@ self.addEventListener('fetch', (event) => {
         if (cached) return cached;
         return fetch(request).then((response) => {
           const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          caches.open(CACHE_NAME).then((cache) => safePut(cache, request, clone));
           return response;
         });
       })
