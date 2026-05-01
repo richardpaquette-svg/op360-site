@@ -338,9 +338,31 @@ function initCyanBar() {
   observer.observe(container);
 }
 
+// ── P4-A : Scroll Progress Bar ────────────────
+function initScrollProgress() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const bar = document.createElement('div');
+  bar.id = 'scroll-progress';
+  bar.setAttribute('role', 'progressbar');
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.prepend(bar);
+
+  function updateBar() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+
+  window.addEventListener('scroll', updateBar, { passive: true });
+  updateBar();
+}
+
 // ── Init page ─────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initCounters();
   initCyanBar();
+  initScrollProgress();
 });
