@@ -27,6 +27,8 @@
   --shadow-hover: 0 12px 40px rgba(0,212,170,0.15);
   --border-alpha: rgba(26,35,50,0.10);
   --border-alpha-strong: rgba(26,35,50,0.16);
+  /* P5-C — token letter-spacing labels */
+  --ls-label: 0.10em;
 }
 
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
@@ -225,7 +227,18 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 section { padding: 72px 48px 48px; }
 .container { max-width: 1120px; margin: 0 auto; }
 
-.section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px; }
+/* ══════════════════════════════════════════════
+   P5-C — Letter-spacing harmonisé labels
+   Avant : .section-label avait 0.12em hardcodé
+   Après : toutes les variantes utilisent --ls-label
+   ══════════════════════════════════════════════ */
+.section-label {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 10px;
+}
 .section-label-white { color: rgba(0,212,170,0.7); }
 
 h2.section-title { font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--navy); line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 14px; }
