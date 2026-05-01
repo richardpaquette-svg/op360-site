@@ -83,7 +83,7 @@ function buildFooter() {
           <div class="footer-col">
             <h4>Nos Offres</h4>
             <ul>
-              <li><a href="diagnostic.html">Diagnostic Flash</a></li>
+              <li><a href="diagnostic.html">Diagnostic OP360</a></li>
               <li><a href="shadow-codir.html">Shadow Codir</a></li>
               <li><a href="accompagnement.html">Accompagnement Terrain</a></li>
             </ul>

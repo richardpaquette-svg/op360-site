@@ -100,7 +100,7 @@ const OP360 = {
       nb:"5",
       icone:`<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
       titre:"Pairs qui ont vécu vos défis",
-      desc:"Plateforme SaaS pour piloter vos projets stratégiques."
+      desc:"Un collectif pluridisciplinaire mobilisable à la demande — stratégie, finance, digital, RSE — avec un interlocuteur central."
     },
     {
       nb:"6",
