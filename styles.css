@@ -17,12 +17,14 @@
   --cyan-mid: #00bfa0;
   --tangerine: #F79009;
   --white: #ffffff;
-  --gray-bg: #f7f9fc;
+  /* C1 — blanc cassé chaud, moins "template web" qu'un bleuté froid */
+  --gray-bg: #f8f7f4;
   --card-bg: #edf2f7;
   --gray-border: #e2e8f0;
   --gray-text: #4a5568;
   --font: 'Source Sans Pro', -apple-system, sans-serif;
-  --radius: 12px;
+  /* C3 — radius 10px, moins "bubbly" que 12px */
+  --radius: 10px;
   --shadow: 0 4px 24px rgba(0,0,0,0.07);
   --shadow-hover: 0 12px 40px rgba(0,212,170,0.15);
   --border-alpha: rgba(26,35,50,0.10);
@@ -115,6 +117,8 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 .nav-links a.active { color: var(--cyan); }
 .nav-links a:hover::after,
 .nav-links a.active::after { transform: scaleX(1); }
+/* L2 — active state plus lisible : bold en plus du soulignement cyan */
+.nav-links a.active { font-weight: 700; }
 
 .nav-ctas {
   display: flex;
