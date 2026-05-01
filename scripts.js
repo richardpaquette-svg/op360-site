@@ -31,6 +31,7 @@ function buildNav(activePage) {
       </a>
       <div class="nav-links" id="nav-links">${links}
         <div class="nav-cta-mobile">
+          <a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener" class="btn-secondary" style="font-size:14px;padding:13px 32px;">Planifier un RDV</a>
           <a href="contact.html" class="btn-primary" style="font-size:14px;padding:13px 32px;">Prendre contact</a>
         </div>
       </div>
@@ -46,7 +47,7 @@ function buildNav(activePage) {
         <a href="${OP360.entreprise.rdv}" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta--rdv">Planifier un RDV</a>
         <a href="contact.html" class="nav-cta">Nous contacter</a>
       </div>
-      <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+      <button class="nav-burger" id="nav-burger" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </nav>`;
@@ -60,8 +61,35 @@ function buildNav(activePage) {
 }
 
 function toggleMenu() {
-  document.getElementById('nav-links').classList.toggle('open');
+  const navLinks = document.getElementById('nav-links');
+  const burger   = document.getElementById('nav-burger');
+  const isOpen   = navLinks.classList.toggle('open');
+  burger.classList.toggle('is-open', isOpen);
+  burger.setAttribute('aria-expanded', isOpen);
 }
+
+function closeMenu() {
+  const navLinks = document.getElementById('nav-links');
+  const burger   = document.getElementById('nav-burger');
+  if (!navLinks || !navLinks.classList.contains('open')) return;
+  navLinks.classList.remove('open');
+  burger.classList.remove('is-open');
+  burger.setAttribute('aria-expanded', 'false');
+}
+
+document.addEventListener('click', (e) => {
+  const burger = document.getElementById('nav-burger');
+  const nav    = document.getElementById('navbar');
+  if (burger && nav && !nav.contains(e.target)) {
+    closeMenu();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#nav-links a').forEach(a => {
+    a.addEventListener('click', closeMenu);
+  });
+});
 
 // ── Footer ────────────────────────────────────
 const LINKEDIN_ICON = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex-shrink:0;vertical-align:middle;margin-right:5px;position:relative;top:-1px"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`;

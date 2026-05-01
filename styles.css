@@ -112,6 +112,9 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 .nav-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 .nav-cta-mobile { display: none; }
 .nav-burger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+.nav-burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ── BOUTONS ── */
 .btn-primary {
@@ -359,7 +362,9 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .nav-share-wrap { display: none; }
   .nav-links.open .nav-cta-mobile {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     padding: 16px 24px 20px;
     border-top: 1px solid rgba(0,212,170,0.15);
   }
