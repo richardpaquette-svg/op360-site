@@ -52,7 +52,6 @@ function buildNav(activePage) {
       </button>
     </nav>`;
 
-  // Scroll effect
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
@@ -175,30 +174,21 @@ function initShareButton() {
 
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
-
-    // Mobile: use Web Share API if available
     if (navigator.share) {
       navigator.share({ title: document.title, url: location.href }).catch(() => {});
       return;
     }
-
-    // Desktop: toggle dropdown
     const isHidden = dropdown.hasAttribute('hidden');
-    if (isHidden) {
-      dropdown.removeAttribute('hidden');
-    } else {
-      dropdown.setAttribute('hidden', '');
-    }
+    if (isHidden) { dropdown.removeAttribute('hidden'); }
+    else { dropdown.setAttribute('hidden', ''); }
   });
 
-  // Close dropdown on outside click
   document.addEventListener('click', (e) => {
     if (!dropdown.hasAttribute('hidden') && !btn.contains(e.target) && !dropdown.contains(e.target)) {
       dropdown.setAttribute('hidden', '');
     }
   });
 
-  // Copy link
   document.getElementById('nav-share-copy').addEventListener('click', (e) => {
     e.preventDefault();
     navigator.clipboard.writeText(location.href).then(() => {
@@ -209,7 +199,6 @@ function initShareButton() {
     });
   });
 
-  // Email
   document.getElementById('nav-share-email').addEventListener('click', (e) => {
     e.preventDefault();
     const subject = encodeURIComponent(document.title);
@@ -218,7 +207,6 @@ function initShareButton() {
     dropdown.setAttribute('hidden', '');
   });
 
-  // LinkedIn
   document.getElementById('nav-share-linkedin').addEventListener('click', (e) => {
     e.preventDefault();
     const url = encodeURIComponent(location.href);
@@ -235,28 +223,22 @@ function initReveal() {
     });
   }, { threshold: 0.08 });
 
-  document.querySelectorAll('.reveal').forEach((el, i) => {
+  document.querySelectorAll('.reveal').forEach((el) => {
     const siblings = el.parentElement.querySelectorAll('.reveal');
     const idx = Array.from(siblings).indexOf(el);
     el.style.transitionDelay = `${idx * 0.08}s`;
     observer.observe(el);
   });
 
-  document.querySelectorAll('.reveal-slide-right').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.reveal-slide-right').forEach(el => observer.observe(el));
 
   document.querySelectorAll('.reveal-stagger').forEach((el, i) => {
     el.style.setProperty('--stagger-i', i);
     observer.observe(el);
   });
 
-  document.querySelectorAll('.reveal-label').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.reveal-label').forEach(el => observer.observe(el));
 
-  // Fallback : force .visible on any .reveal inside overflow-x containers
-  // after 500 ms in case IntersectionObserver doesn't fire (Android Chrome)
   setTimeout(() => {
     document.querySelectorAll('.equipe-scroll-track .reveal, .temos-grid .reveal').forEach(el => {
       el.classList.add('visible');
@@ -266,12 +248,12 @@ function initReveal() {
 
 // ── Compteurs animés ──────────────────────────
 function animateCounter(el) {
-  const target  = parseFloat(el.dataset.count);
-  const suffix  = el.dataset.suffix  || '';
-  const prefix  = el.dataset.prefix  || '';
-  const decimal = el.dataset.decimal === 'true';
+  const target   = parseFloat(el.dataset.count);
+  const suffix   = el.dataset.suffix  || '';
+  const prefix   = el.dataset.prefix  || '';
+  const decimal  = el.dataset.decimal === 'true';
   const duration = 1400;
-  const start   = performance.now();
+  const start    = performance.now();
 
   el.classList.add('count-animated', 'counting');
 
@@ -279,12 +261,8 @@ function animateCounter(el) {
     const elapsed  = now - start;
     const progress = Math.min(elapsed / duration, 1);
     const eased    = 1 - Math.pow(1 - progress, 3);
-    const current  = decimal
-      ? (eased * target).toFixed(1)
-      : Math.round(eased * target);
-
+    const current  = decimal ? (eased * target).toFixed(1) : Math.round(eased * target);
     el.textContent = prefix + current + suffix;
-
     if (progress < 1) {
       requestAnimationFrame(tick);
     } else {
@@ -359,10 +337,30 @@ function initScrollProgress() {
   updateBar();
 }
 
+// ── P4-D : Page fade-in via .page-loaded ──────
+// body démarre à opacity:0 (CSS). On ajoute .page-loaded
+// après DOMContentLoaded pour déclencher la transition.
+// Avantage vs animation: aucun nouveau stacking context,
+// scroll natif non affecté.
+function initPageFadeIn() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.body.classList.add('page-loaded');
+    return;
+  }
+  // requestAnimationFrame garantit que le navigateur a bien
+  // appliqué opacity:0 avant de déclencher la transition.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.body.classList.add('page-loaded');
+    });
+  });
+}
+
 // ── Init page ─────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initCounters();
   initCyanBar();
   initScrollProgress();
+  initPageFadeIn();
 });
