@@ -1,10 +1,10 @@
 /* ============================================
    STYLES PARTAGÉS — OP360
-   Police : Source Sans Pro
+   Police : DM Sans (weight 700, tracking -0.015em)
    Couleurs : Navy #1a2332 | Cyan #00d4aa | Blanc #ffffff
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -17,30 +17,21 @@
   --cyan-mid: #00bfa0;
   --tangerine: #F79009;
   --white: #ffffff;
-  /* C1 — blanc cassé chaud, moins "template web" qu'un bleuté froid */
   --gray-bg: #f8f7f4;
   --card-bg: #edf2f7;
   --gray-border: #e2e8f0;
   --gray-text: #4a5568;
-  --font: 'Source Sans Pro', -apple-system, sans-serif;
-  /* C3 — radius 10px, moins "bubbly" que 12px */
+  --font: 'DM Sans', -apple-system, sans-serif;
   --radius: 10px;
   --shadow: 0 4px 24px rgba(0,0,0,0.07);
   --shadow-hover: 0 12px 40px rgba(0,212,170,0.15);
   --border-alpha: rgba(26,35,50,0.10);
   --border-alpha-strong: rgba(26,35,50,0.16);
-  /* P5-C — token letter-spacing labels */
   --ls-label: 0.10em;
 }
 
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 
-/* ══════════════════════════════════════════════
-   P4-D — Fade-in global au chargement
-   Technique : body démarre à opacity:0, JS ajoute
-   .page-loaded après DOMContentLoaded → transition
-   douce 350ms. Aucun impact sur le scroll.
-   ══════════════════════════════════════════════ */
 body {
   font-family: var(--font); font-weight: 400; font-size: 16px; line-height: 1.6;
   color: var(--navy); background: var(--white); overflow-x: clip;
@@ -57,9 +48,7 @@ body.page-loaded {
 img { max-width: 100%; display: block; }
 a { text-decoration: none; }
 
-/* ══════════════════════════════════════════════
-   P4-A — Scroll progress bar cyan 2px (fixed, top: 68px)
-   ══════════════════════════════════════════════ */
+/* ── SCROLL PROGRESS ── */
 #scroll-progress {
   position: fixed;
   top: 68px;
@@ -92,9 +81,6 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 
 .nav-links { display: flex; align-items: center; gap: 32px; }
 
-/* ══════════════════════════════════════════════
-   P4-B — Nav links : underline slide gauche→droite
-   ══════════════════════════════════════════════ */
 .nav-links a {
   font-size: 14px; font-weight: 600;
   color: rgba(255,255,255,0.7);
@@ -117,7 +103,6 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 .nav-links a.active { color: var(--cyan); }
 .nav-links a:hover::after,
 .nav-links a.active::after { transform: scaleX(1); }
-/* L2 — active state plus lisible : bold en plus du soulignement cyan */
 .nav-links a.active { font-weight: 700; }
 
 .nav-ctas {
@@ -232,11 +217,6 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.35); }
 section { padding: 72px 48px 48px; }
 .container { max-width: 1120px; margin: 0 auto; }
 
-/* ══════════════════════════════════════════════
-   P5-C — Letter-spacing harmonisé labels
-   Avant : .section-label avait 0.12em hardcodé
-   Après : toutes les variantes utilisent --ls-label
-   ══════════════════════════════════════════════ */
 .section-label {
   font-size: 12px; font-weight: 700;
   letter-spacing: var(--ls-label);
@@ -296,22 +276,18 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 .logo-img    { height: 40px; width: auto; flex-shrink: 0; max-width: none; }
 .logo-img-sm { height: 32px; width: auto; flex-shrink: 0; max-width: none; }
 
-/* ── ICÔNES SVG dans les grilles ── */
+/* ── ICÔNES SVG ── */
 .moment-icon-wrap svg,
 .livrable-icon svg {
   display: block;
   flex-shrink: 0;
 }
 
-/* ── MOMENTS CLÉS : fond icône Tangerine ── */
 .moments-section .moment-icon-wrap {
   background: rgba(247, 144, 9, 0.12);
 }
 
-/* ══════════════════════════════════════════════
-   REVEAL AU SCROLL — système d'animations ciblées
-   ══════════════════════════════════════════════ */
-
+/* ── REVEAL AU SCROLL ── */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -353,44 +329,13 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   }
 }
 
-/* ══════════════════════════════════════════════
-   EFFETS VISUELS P1 — ajoutés avril 2026
-   ══════════════════════════════════════════════ */
-
+/* ── EFFETS VISUELS ── */
 .count-animated { transition: color 0.15s ease; }
 .count-animated.counting { color: var(--cyan); }
-
-@keyframes cyanBarGrow {
-  from { background-size: 4px 0%; }
-  to   { background-size: 4px 100%; }
-}
 
 .diff-home-container {
   position: relative;
   overflow: hidden;
-}
-.diff-home-container::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--cyan), var(--cyan-mid));
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  border-radius: 0 2px 2px 0;
-}
-.diff-home-container.bar-visible::before {
-  transform: scaleY(1);
-}
-
-@keyframes cyanShimmer {
-  0%   { background-position: 0% 0%; }
-  50%  { background-position: 0% 100%; }
-  100% { background-position: 0% 0%; }
-}
-.diff-home-container {
   border-left: 4px solid transparent;
   background-image: linear-gradient(var(--navy), var(--navy)),
                     linear-gradient(to bottom, var(--cyan), var(--cyan-mid) 50%, var(--cyan));
@@ -398,6 +343,12 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   background-clip: padding-box, border-box;
   background-size: auto, 4px 200%;
   animation: cyanShimmer 4s ease-in-out infinite;
+}
+
+@keyframes cyanShimmer {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
 @media (hover: hover) {
@@ -422,10 +373,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
     border-color: rgba(0,212,170,0.6);
   }
 }
-
-/* ══════════════════════════════════════════════
-   EFFETS VISUELS P2 — mai 2026
-   ══════════════════════════════════════════════ */
 
 .temos-section {
   position: relative;
@@ -452,10 +399,6 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
 }
 .cta-section > * { position: relative; z-index: 1; }
 .cta-section .container { position: relative; z-index: 1; }
-
-/* ══════════════════════════════════════════════
-   EFFETS VISUELS P3 — mai 2026
-   ══════════════════════════════════════════════ */
 
 @media (hover: hover) {
   .temo-card {
@@ -533,23 +476,9 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   .parcours-section .section-intro:last-of-type { display: none !important; }
 }
 
-/* ══════════════════════════════════════════════
-   P5-A — Fluid type pages intérieures
-   Scope : .page-interior uniquement — zéro impact
-   sur index.html ni aucune page sans cette classe.
-   ══════════════════════════════════════════════ */
+/* ── PAGES INTÉRIEURES ── */
 .page-interior h1 {
   font-size: clamp(30px, 4.5vw, 54px);
-}
-.page-interior h2.section-title {
-  font-size: clamp(24px, 3vw, 40px);
-}
-
-/* ══════════════════════════════════════════════
-   P5-B — Trait décoratif cyan gauche sur hero h1
-   Scope : .page-interior uniquement
-   ══════════════════════════════════════════════ */
-.page-interior h1 {
   position: relative;
   padding-left: 20px;
 }
@@ -563,4 +492,7 @@ footer { background: var(--navy-dark); padding: 64px 48px 32px; }
   background: var(--cyan);
   border-radius: 2px;
   box-shadow: 0 0 8px rgba(0, 212, 170, 0.7);
+}
+.page-interior h2.section-title {
+  font-size: clamp(24px, 3vw, 40px);
 }
