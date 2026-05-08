@@ -288,18 +288,28 @@
   display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--white); margin-bottom: 16px;
 }
+/* 3 colonnes pour les 3 labels validés */
 .diff-home-grid {
-  display: grid; grid-template-columns: repeat(6, 1fr); gap: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
 }
 .diff-home-item {
-  display: flex; flex-direction: row; align-items: center;
-  gap: 10px; padding: 0 16px;
+  display: flex; flex-direction: row; align-items: flex-start;
+  gap: 14px; padding: 0 24px;
   border-right: 1px solid rgba(255,255,255,0.1);
 }
 .diff-home-item:first-child { padding-left: 0; }
 .diff-home-item:last-child { border-right: none; }
-.diff-home-item svg { flex-shrink: 0; width: 28px !important; height: 28px !important; }
-.diff-home-titre { font-size: 13px; font-weight: 700; color: var(--white); line-height: 1.35; }
+.diff-home-item svg { flex-shrink: 0; width: 28px !important; height: 28px !important; margin-top: 2px; }
+.diff-home-item-body { display: flex; flex-direction: column; gap: 4px; }
+.diff-home-titre {
+  font-size: 13px; font-weight: 700;
+  color: var(--white); line-height: 1.35;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.diff-home-desc {
+  font-size: 13px; font-weight: 400;
+  color: rgba(255,255,255,0.65); line-height: 1.5;
+}
 
 /* ── OFFRES ── */
 /* Section offres sur fond Navy — rythme visuel Navy/blanc/gris restauré */
@@ -690,11 +700,11 @@
   .moments-section .section-intro { display: none; }
   .diff-bandeau { display: none; }
   .diff-home-container { padding: 16px 20px; }
-  .diff-home-grid { grid-template-columns: repeat(2, 1fr); gap: 12px 0; }
-  .diff-home-item { padding: 8px 12px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  /* FIX: reset du padding-left:0 desktop — Shadow Codir aligné comme les autres items */
-  .diff-home-item:first-child { padding-left: 12px; }
-  .diff-home-item:nth-last-child(-n+2) { border-bottom: none; }
+  /* 1 colonne sur mobile pour les 3 labels */
+  .diff-home-grid { grid-template-columns: 1fr; gap: 12px; }
+  .diff-home-item { padding: 8px 0; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .diff-home-item:last-child { border-bottom: none; }
+  .diff-home-desc { display: none; }
 }
 </style>
 </head>
@@ -821,9 +831,9 @@
         </div>
       </div>
     </div>
-    <!-- 6 DIFFÉRENCIATEURS — sans classe reveal : apparition instantanée -->
+    <!-- 3 DIFFÉRENCIATEURS HERO — sans classe reveal : apparition instantanée -->
     <div class="diff-home-container">
-      <span class="diff-home-label">Ce qui fait notre différence</span>
+      <span class="diff-home-label">Ce qui nous définit</span>
       <div class="diff-home-grid" id="diff-home-grid"></div>
     </div>
   </div>
@@ -908,7 +918,10 @@ document.getElementById('diff-bandeau-grid') && (document.getElementById('diff-b
 document.getElementById('diff-home-grid').innerHTML = OP360.differenciateurs.map(d => `
   <div class="diff-home-item">
     ${d.icone}
-    <span class="diff-home-titre">${d.titre}</span>
+    <div class="diff-home-item-body">
+      <span class="diff-home-titre">${d.titre}</span>
+      <span class="diff-home-desc">${d.desc}</span>
+    </div>
   </div>`).join('');
 
 document.getElementById('temos-grid').innerHTML = OP360.temoignages.map(t => `
